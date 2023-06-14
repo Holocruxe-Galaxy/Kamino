@@ -1,5 +1,5 @@
 
-# Centralización del código para web básuca de Holocruxe
+# Centralización del código para web básica de Holocruxe
 
 Esta es la suma del código del squad web para la creación de la landing page de Holocruxe.
 
