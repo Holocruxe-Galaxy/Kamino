@@ -1,0 +1,10 @@
+@import url('./normalize.css');
+
+html {
+  background: rgb(32, 67, 94);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 67, 94, 1) 0%,
+    rgba(15, 44, 67, 1) 100%
+  );
+}
