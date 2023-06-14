@@ -1,6 +1,6 @@
 .features_container {
   position: relative;
-  max-width: 620px;
+  max-width: 700px;
   z-index: 2;
   min-height: 60vh;
   position: relative;
@@ -28,6 +28,9 @@
   /* color: #0f2c43; */
   font-weight: 800;
   letter-spacing: 1px;
+}
+.features_container p {
+  margin-top: 15px;
 }
 .configure {
   margin-top: 300px;
