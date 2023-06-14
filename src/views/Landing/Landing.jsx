@@ -1,26 +1,11 @@
-import React from 'react';
-import styles from './Landing.module.css';
+import React from "react";
+import styles from "./Landing.module.css";
+import Hero from "../../components/Hero/Hero";
 
 const Landing = () => {
   return (
     <main className="container">
-      <section className="hero-container" id="section1">
-        <div className="hero">
-          <h2>
-            <span>Live </span>
-            <span>Experiment </span>
-            <span>Configure</span>
-          </h2>
-          <h1>Leave a legacy</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            labore tenetur, sit reiciendis nesciunt fugit hic modi quam earum
-            nisi.
-          </p>
-          <button>Know more</button>
-          <button className="cta">Let the magic begin!</button>
-        </div>
-      </section>
+      <Hero></Hero>
 
       <section id="features" className="features">
         <div className="vertical-line-1"></div>
