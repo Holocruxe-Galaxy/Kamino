@@ -22,7 +22,6 @@ const Landing = () => {
         img="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjg3NGQwM2Y4YmRhYjI0ZjJjNjMwYTIwYmE2NWNhZTg2YjY0ZTc2NiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4T1FGdX8Klmfp4aSbW/giphy.gif"
         src="The adventure of life"
       />
-
       <Feature
         verb="Configure"
         phrase="Take control of your privacy and set the stage"
