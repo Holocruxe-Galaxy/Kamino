@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Navbar.module.css';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const svgVariants = {
@@ -140,9 +141,16 @@ const Navbar = () => {
         </motion.svg>
       </div>
       <nav className={styles.navbar}>
-        <a href="#">Home</a>
-        <a href="#features">Features </a>
-        <a href="#waitlist">Waitlist</a>
+        <NavLink to="/" className={styles.link}>
+          Home
+        </NavLink>
+        <NavLink to="#features" className={styles.link}>
+          Features
+        </NavLink>
+        <NavLink to="#waitlis" className={styles.link}>
+          Waitlist
+        </NavLink>
+
         <button className="ghost" href="#">
           Login
         </button>
