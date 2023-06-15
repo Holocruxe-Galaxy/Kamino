@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  opacity: 0;
+  animation: hideContent 2s forwards;
+  animation-delay: 3.75s;
+  overflow: hidden;
+}
+
+@keyframes hideContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.svgIndex {
+  margin-left: 10rem;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 76%;
+}
