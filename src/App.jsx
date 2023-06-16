@@ -1,10 +1,11 @@
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Landing from './views/Landing/Landing';
-import About from './views/About/About';
-import Footer from './components/Footer/Footer';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Landing from "./views/Landing/Landing";
+import About from "./views/About/About";
+import Footer from "./components/Footer/Footer";
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
+import Faqs from "./views/Faqs/Faqs";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faqs" element={<Faqs />} />
       </Routes>
       <Footer />
     </>
