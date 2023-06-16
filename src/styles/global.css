@@ -4,7 +4,7 @@
 html {
   background: var(--dark);
   background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 100%);
-  animation: hide 7.5s;
+  /* animation: hide 7.5s; */
 }
 
 @keyframes hide {

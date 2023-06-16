@@ -10,17 +10,16 @@ const Landing = () => {
   const svgDiv = useRef();
   const { scrollYProgress } = useScroll({
     target: svgDiv,
-    offset: ['start end', 'end end'],
+    offset: ['start end', 'end start'],
   });
-  const length = useTransform(scrollYProgress, [0, 0.8], [0.075, 1]);
-  const length2 = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
-  const length3 = useTransform(scrollYProgress, [0.55, 1.3], [0, 1]);
-  const length4 = useTransform(scrollYProgress, [0.65, 0.95], [0, 1]);
+  const length = useTransform(scrollYProgress, [0.07, 0.86], [0, 1]);
+  const length2 = useTransform(scrollYProgress, [0.35, 1.175], [0, 1]);
+  const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
   return (
     <main className={styles.container}>
       <Hero></Hero>
 
-      <div ref={svgDiv}>
+      <div ref={svgDiv} className={styles.features}>
         <Feature
           verb="Live"
           phrase="Embrace the adventure of life"
@@ -44,91 +43,145 @@ const Landing = () => {
         />
 
         <motion.svg
-          viewBox="0 0 80 1066"
+          width="105"
+          height="999"
+          viewBox="0 0 105 999"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={styles.svgIndex}
         >
-          <circle cx="40" cy="4" r="4" fill="#59C1BD" />
+          <circle cx="50" cy="4" r="4" fill="#59C1BD" />
           <motion.path
-            d="M23.1729 4.17896C16.0915 7.92291 10.4611 13.9216 7.17291 21.2255C3.88473 28.5293 3.12661 36.7212 5.01855 44.5044C6.91048 52.2877 11.3444 59.2176 17.6185 64.1974C23.8926 69.1772 31.6484 71.9224 39.6584 71.9984M39.6584 71.9984C47.6683 72.0744 55.4749 69.4769 61.8423 64.6171C68.2098 59.7573 72.7744 52.9127 74.8138 45.1668C76.8531 37.4209 76.2506 29.2161 73.1016 21.8511C69.9527 14.4862 64.4372 8.38172 57.4281 4.50404M39.6584 71.9984V334.5"
-            stroke="url(#paint0_linear_32_61)"
-            strokeWidth="8"
-            strokeLinecap="round"
+            d="M29.2976 7.65277C19.9541 12.6869 12.5251 20.7526 8.18648 30.5734C3.84791 40.3941 2.84761 51.4089 5.34392 61.8741C7.84022 72.3394 13.6905 81.6573 21.9688 88.3531C30.2471 95.0489 40.4805 98.7401 51.0493 98.8423M51.0493 98.8423C61.618 98.9445 71.9182 95.4519 80.3198 88.9174C88.7213 82.383 94.7441 73.1798 97.4348 62.7647C100.126 52.3496 99.3307 41.3175 95.1758 31.4146C91.0209 21.5118 83.7435 13.3038 74.4954 8.08988M51.0493 98.8423V451.8"
+            stroke="url(#paint0_linear_48_15)"
+            stroke-width="8"
+            stroke-linecap="round"
             pathLength={length}
           />
-          <circle cx="40" cy="334" r="4" fill="#59C1BD" />
+          <circle cx="51" cy="452" r="4" fill="#59C1BD" />
           <motion.path
-            d="M23.1729 334.179C16.0915 337.923 10.4611 343.922 7.17291 351.225C3.88473 358.529 3.12661 366.721 5.01855 374.504C6.91048 382.288 11.3444 389.218 17.6185 394.197C23.8926 399.177 31.6484 401.922 39.6584 401.998M39.6584 401.998C47.6683 402.074 55.4749 399.477 61.8423 394.617C68.2098 389.757 72.7744 382.913 74.8138 375.167C76.8531 367.421 76.2506 359.216 73.1016 351.851C69.9527 344.486 64.4372 338.382 57.4281 334.504M39.6584 401.998V664.5"
-            stroke="url(#paint1_linear_32_61)"
-            strokeWidth="8"
-            strokeLinecap="round"
+            d="M30.2976 455.653C20.9541 460.687 13.5251 468.753 9.18648 478.573C4.84791 488.394 3.84761 499.409 6.34392 509.874C8.84022 520.339 14.6905 529.657 22.9688 536.353C31.2471 543.049 41.4805 546.74 52.0493 546.842M52.0493 546.842C62.618 546.944 72.9182 543.452 81.3198 536.917C89.7213 530.383 95.7441 521.18 98.4348 510.765C101.126 500.35 100.331 489.318 96.1758 479.415C92.0209 469.512 84.7435 461.304 75.4954 456.09M52.0493 546.842V899.8"
+            stroke="url(#paint1_linear_48_15)"
+            stroke-width="8"
+            stroke-linecap="round"
             pathLength={length2}
           />
-          <circle cx="40" cy="664" r="4" fill="#59C1BD" />
+          <circle cx="52" cy="900" r="4" fill="#59C1BD" />
           <motion.path
-            d="M23.1729 664.179C16.0915 667.923 10.4611 673.922 7.17291 681.225C3.88473 688.529 3.12661 696.721 5.01855 704.504C6.91048 712.288 11.3444 719.218 17.6185 724.197C23.8926 729.177 31.6484 731.922 39.6584 731.998M39.6584 731.998C47.6683 732.074 55.4749 729.477 61.8423 724.617C68.2098 719.757 72.7744 712.913 74.8138 705.167C76.8531 697.421 76.2506 689.216 73.1016 681.851C69.9527 674.486 64.4372 668.382 57.4281 664.504M39.6584 731.998V994.5"
-            stroke="url(#paint2_linear_32_61)"
-            strokeWidth="8"
-            strokeLinecap="round"
+            d="M31.2976 903.653C21.9541 908.687 14.5251 916.753 10.1865 926.573C5.84791 936.394 4.84761 947.409 7.34392 957.874C9.84022 968.339 15.6905 977.657 23.9688 984.353C32.2471 991.049 42.4805 994.74 53.0493 994.842C63.618 994.944 73.9182 991.452 82.3198 984.917C90.7213 978.383 96.7441 969.18 99.4348 958.765C102.126 948.35 101.331 937.318 97.1758 927.415C93.0209 917.512 85.7435 909.304 76.4954 904.09"
+            stroke="url(#paint2_linear_48_15)"
+            stroke-width="8"
+            stroke-linecap="round"
             pathLength={length3}
-          />
-          <circle cx="40" cy="994" r="4" fill="#59C1BD" />
-          <motion.path
-            d="M23.1729 994.179C16.0915 997.923 10.4611 1003.92 7.17291 1011.23C3.88473 1018.53 3.12661 1026.72 5.01855 1034.5C6.91048 1042.29 11.3444 1049.22 17.6185 1054.2C23.8926 1059.18 31.6484 1061.92 39.6584 1062C47.6683 1062.07 55.4749 1059.48 61.8423 1054.62C68.2098 1049.76 72.7744 1042.91 74.8138 1035.17C76.8531 1027.42 76.2506 1019.22 73.1016 1011.85C69.9527 1004.49 64.4372 998.382 57.4281 994.504"
-            stroke="url(#paint3_linear_32_61)"
-            strokeWidth="8"
-            strokeLinecap="round"
-            pathLength={length4}
           />
           <defs>
             <linearGradient
-              id="paint0_linear_32_61"
-              x1="40"
-              y1="4.17896"
-              x2="40"
-              y2="334.5"
+              id="paint0_linear_48_15"
+              x1="51.5"
+              y1="7.65277"
+              x2="51.5"
+              y2="451.8"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.479622" stopColor="#F7F9F9" />
-              <stop offset="1" stopColor="#59C1BD" />
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
             </linearGradient>
             <linearGradient
-              id="paint1_linear_32_61"
-              x1="40"
-              y1="334.179"
-              x2="40"
-              y2="664.5"
+              id="paint1_linear_48_15"
+              x1="52.5"
+              y1="455.653"
+              x2="52.5"
+              y2="899.8"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.479622" stopColor="#F7F9F9" />
-              <stop offset="1" stopColor="#59C1BD" />
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
             </linearGradient>
             <linearGradient
-              id="paint2_linear_32_61"
-              x1="40"
-              y1="664.179"
-              x2="40"
-              y2="994.5"
+              id="paint2_linear_48_15"
+              x1="53.5"
+              y1="903.653"
+              x2="53.5"
+              y2="1347.8"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.479622" stopColor="#F7F9F9" />
-              <stop offset="1" stopColor="#59C1BD" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_32_61"
-              x1="40"
-              y1="994.179"
-              x2="40"
-              y2="1324.5"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0.479622" stopColor="#F7F9F9" />
-              <stop offset="0.941162" stopColor="#1C3C54" />
-              <stop offset="1" stopColor="#59C1BD" />
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
             </linearGradient>
           </defs>
         </motion.svg>
+
+        {/* <motion.svg
+          width="105"
+          height="1000"
+          viewBox="0 0 105 1000"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={styles.svgIndex}
+        >
+          <circle cx="50" cy="4" r="4" fill="#59C1BD" />
+          <motion.path
+            d="M29.2976 7.65277C19.9541 12.6869 12.5251 20.7526 8.18648 30.5734C3.84791 40.3941 2.84761 51.4089 5.34392 61.8741C7.84022 72.3394 13.6905 81.6573 21.9688 88.3531C30.2471 95.0489 40.4805 98.7401 51.0493 98.8423M51.0493 98.8423C61.618 98.9445 71.9182 95.4519 80.3198 88.9174C88.7213 82.383 94.7441 73.1798 97.4348 62.7647C100.126 52.3496 99.3307 41.3175 95.1758 31.4146C91.0209 21.5118 83.7435 13.3038 74.4954 8.08988M51.0493 98.8423V452M45 41L55 29V71"
+            stroke="url(#paint0_linear_52_46)"
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            pathLength={length}
+          />
+          <circle cx="51" cy="452" r="4" fill="#59C1BD" />
+          <motion.path
+            d="M30.2976 455.653C20.9541 460.687 13.5251 468.753 9.18648 478.573C4.84791 488.394 3.84761 499.409 6.34392 509.874C8.84022 520.339 14.6905 529.657 22.9688 536.353C31.2471 543.049 41.4805 546.74 52.0493 546.842M52.0493 546.842C62.618 546.944 72.9182 543.452 81.3198 536.917C89.7213 530.383 95.7441 521.18 98.4348 510.765C101.126 500.35 100.331 489.318 96.1758 479.415C92.0209 469.512 84.7435 461.304 75.4954 456.09M52.0493 546.842V900M37.5 488.5C37.5 488.5 39.0493 478.573 52.0493 478.573C65.0493 478.573 65 478.573 68 488.5C71 498.427 37.5 520.5 37.5 520.5H70.5"
+            stroke="url(#paint1_linear_52_46)"
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            pathLength={length2}
+          />
+          <circle cx="52" cy="901" r="4" fill="#59C1BD" />
+          <motion.path
+            d="M31.2976 904.653C21.9541 909.687 14.5251 917.753 10.1865 927.573C5.84791 937.394 4.84761 948.409 7.34392 958.874C9.84022 969.339 15.6905 978.657 23.9688 985.353C32.2471 992.049 42.4805 995.74 53.0493 995.842C63.618 995.944 73.9182 992.452 82.3198 985.917C90.7213 979.383 96.7441 970.18 99.4348 959.765C102.126 949.35 101.331 938.318 97.1758 928.415C93.0209 918.512 85.7435 910.304 76.4954 905.09M39 933.5C39 933.5 39 926 52 926C65 926 71.5 926 71.5 935C71.5 944 58.5 946.5 58.5 946.5C58.5 946.5 71.5 944.529 71.5 959.765C71.5 975 56.5 972.5 47.5 972.5C38.5 972.5 39 965.5 39 965.5"
+            stroke="url(#paint2_linear_52_46)"
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            pathLength={length3}
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_52_46"
+              x1="51.5"
+              y1="7.65277"
+              x2="51.5"
+              y2="451.8"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_52_46"
+              x1="52.5"
+              y1="455.653"
+              x2="52.5"
+              y2="899.8"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
+            </linearGradient>
+            <linearGradient
+              id="paint2_linear_52_46"
+              x1="53.5"
+              y1="904.653"
+              x2="53.5"
+              y2="1348.8"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.479622" stop-color="#F7F9F9" />
+              <stop offset="1" stop-color="#59C1BD" />
+            </linearGradient>
+          </defs>
+        </motion.svg> */}
       </div>
       <Waitlist />
       <EarthCanvas />
