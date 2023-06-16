@@ -17,7 +17,7 @@
     transform: translateY(0);
   }
 }
-.features {
+.featuresContainer {
   position: relative;
 }
 
@@ -26,7 +26,6 @@
   position: absolute;
   top: 10%;
   left: 0;
-  height: 76%;
-  margin-top: 400px;
-
+  height: 85%;
+  width: auto;
 }

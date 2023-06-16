@@ -9,7 +9,7 @@
 
 .mission {
   margin: 5rem 0;
-  width: 50%;
+  width: 65%;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,7 +18,7 @@
 .mission .title {
   margin: auto 0;
   margin-right: 1rem;
-  text-align: right;
+  text-align: center;
 
   font-size: 5rem;
   text-transform: uppercase;
@@ -48,7 +48,7 @@
 
 .values {
   margin: 5rem 0;
-  width: 50%;
+  width: 65%;
 }
 
 .values .title {
