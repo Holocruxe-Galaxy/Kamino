@@ -3,6 +3,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useFrame, Canvas, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import styles from './modelviewer.css?inline';
+import Lights from "./lights";
 
 const Model = ({ scene, scale, position, mixer }) => {
   useFrame((state, delta) => mixer.update(delta));
@@ -38,6 +39,7 @@ const ModelViewer = ({ modelPath, modelScale = 5 }) => {
       <Canvas
         style={{ width: '1200px', height: '1000px' }}
       >
+        <Lights/>
         <directionalLight position={[2.5, 8, 5]} intensity={1} />
         <directionalLight position={[-2.5, -8, -5]} intensity={0.7} />
         <Suspense fallback={null}>

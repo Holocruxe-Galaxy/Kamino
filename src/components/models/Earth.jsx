@@ -28,7 +28,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <Canvas className="earth-canvas" style={{height: '500px'}}>
+    <Canvas className="earth-canvas" style={{height: '1000px'}}>
     <Suspense fallback={<CanvasLoader />}>
       <OrbitControls
         enableZoom={false}
