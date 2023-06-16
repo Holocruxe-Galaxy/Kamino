@@ -9,17 +9,10 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Navbar />
-<<<<<<< HEAD
-      <EarthCanvas/>
-      <Landing />
-      <Waitlist/>
-=======
-      <Routes>
+      <Navbar /><Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
       </Routes>
->>>>>>> 149dfc9068ed4537c2a2c01ad3d3434695005975
       <Footer />
     </>
   );
