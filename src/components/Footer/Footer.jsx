@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './Footer.module.css';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import styles from "./Footer.module.css";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
           <NavLink to="/about" className={styles.navlink}>
             About Us
           </NavLink>
-          <NavLink to="#" className={styles.navlink}>
+          <NavLink to="/faqs" className={styles.navlink}>
             FAQ
           </NavLink>
           <NavLink to="#" className={styles.navlink}>
