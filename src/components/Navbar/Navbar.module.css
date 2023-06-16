@@ -1,28 +1,12 @@
 .container {
-  /* background-color: #fff; */
   padding: 1rem 2rem;
   width: 100%;
   height: 10vh;
   display: flex;
-
-  /* animation: containerHeight 7.5s forwards; */
 }
-
-/* @keyframes containerHeight {
-  0% {
-    height: 100vh;
-  }
-  50% {
-    height: 100vh;
-  }
-  100% {
-    height: 10vh;
-  }
-} */
 
 .logoContainer {
   position: relative;
-  /* background-color: red; */
   flex: 1;
   display: flex;
   align-items: center;
@@ -53,7 +37,7 @@
   color: var(--white);
 }
 
-.navbar > a {
+.link {
   position: relative;
   margin: 0 1rem;
   text-decoration: none;
@@ -61,12 +45,12 @@
   transition: 0.3s ease transform;
 }
 
-.navbar > a:hover {
+.link:hover {
   transform: scale(1.2);
 }
 
-.navbar > a:before,
-.navbar > a:after {
+.link:before,
+.link:after {
   content: '';
   position: absolute;
 
@@ -74,7 +58,7 @@
   transform: scale(0);
 }
 
-.navbar > a::before {
+.link::before {
   border-radius: 50%;
   top: -15%;
   left: -15%;
@@ -84,7 +68,7 @@
   transition: 0.5s ease transform;
 }
 
-nav a:after {
+.link:after {
   bottom: -35%;
   left: 0;
   width: 100%;
@@ -94,8 +78,8 @@ nav a:after {
   transition: 0.5s ease transform;
 }
 
-.navbar > a:hover::before,
-.navbar > a:hover::after {
+.link:hover::before,
+.link:hover::after {
   transform: scale(1);
 }
 
