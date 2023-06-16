@@ -10,8 +10,7 @@ import Faqs from "./views/Faqs/Faqs";
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
+      <Navbar /><Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />

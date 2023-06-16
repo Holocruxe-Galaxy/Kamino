@@ -28,17 +28,18 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <Canvas className="earth-canvas" style={{ height: '500px' }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Earth />
-        <Stars />
-        <Preload all />
-      </Suspense>
+    <Canvas className="earth-canvas" style={{height: '1000px'}}>
+    <Suspense fallback={<CanvasLoader />}>
+      <OrbitControls
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
+      <Earth />
+      <Stars/>
+      <Preload all />
+    </Suspense>
+
     </Canvas>
   );
 };

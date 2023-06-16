@@ -1,0 +1,13 @@
+.canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    width: 1200px;
+}
+  
+  .canvas {
+    width: 1200px;
+    height: 1200px;
+  }
+  

@@ -17,31 +17,31 @@ const Landing = () => {
   const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
   return (
     <main className={styles.container}>
+      <EarthCanvas />
       <Hero></Hero>
+      <div ref={svgDiv}>
+      <Feature
+  verb="Live"
+  phrase="Embrace the adventure of life"
+  paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
+  modelPath="./live/scene.gltf"
+/>
+<Feature
+  verb="Story"
+  phrase="Tell your story"
+  paragraph="Craft a narrative that captures the essence of your experiences."
+  modelPath="./story/scene.gltf"
+  modelType="story"
+/>
 
-      <div ref={svgDiv} className={styles.features}>
-        <Feature
-          verb="Live"
-          phrase="Embrace the adventure of life"
-          paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
-          img="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjg3NGQwM2Y4YmRhYjI0ZjJjNjMwYTIwYmE2NWNhZTg2YjY0ZTc2NiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4T1FGdX8Klmfp4aSbW/giphy.gif"
-          src="The adventure of life"
-        />
-        <Feature
-          verb="Experiment"
-          phrase="Embrace the adventure of life"
-          paragraph="Customize your digital experience by granting permissions, adjusting privacy preferences, and shaping the platform to suit your unique needs and desires."
-          img="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjg3NGQwM2Y4YmRhYjI0ZjJjNjMwYTIwYmE2NWNhZTg2YjY0ZTc2NiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4T1FGdX8Klmfp4aSbW/giphy.gif"
-          src="The adventure of life"
-        />
-        <Feature
-          verb="Configure"
-          phrase="Take control of your privacy and set the stage"
-          paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
-          img="/product.png"
-          src="The adventure of life"
-        />
 
+<Feature
+  verb="Legacy"
+  phrase="Build your legacy"
+  paragraph="Create something that will have a lasting impact."
+  modelPath="./legacy/scene.gltf"
+  modelType="legacy" 
+/>
         <motion.svg
           width="105"
           height="999"
@@ -112,7 +112,6 @@ const Landing = () => {
         </motion.svg>
       </div>
       <Waitlist />
-      <EarthCanvas />
     </main>
   );
 };

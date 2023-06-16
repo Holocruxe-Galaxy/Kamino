@@ -5,9 +5,9 @@ const Hero = () => {
     <section className={styles.hero_container}>
       <div className={styles.hero}>
         <h2>
-          <span>Live </span>
-          <span>Experiment </span>
-          <span>Configure</span>
+          <span>Live your life </span>
+          <span>create your story </span>
+          
         </h2>
         <h1>Leave a legacy</h1>
         <p>
