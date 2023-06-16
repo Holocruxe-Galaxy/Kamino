@@ -1,14 +1,14 @@
-import React, { Suspense, useRef } from "react";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import CanvasLoader from "./Loader";
-import { Canvas } from "@react-three/fiber";
-import './earth.css'
-import Stars from "../Stars/stars";
+import React, { Suspense, useRef } from 'react';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
+import CanvasLoader from './Loader';
+import { Canvas } from '@react-three/fiber';
+import './earth.css';
+import Stars from '../Stars/stars';
 
 const Earth = () => {
   const earthRef = useRef();
-  const earth = useGLTF("./planet/scene.gltf");
+  const earth = useGLTF('./planet/scene.gltf');
 
   useFrame(() => {
     if (earthRef.current) {
@@ -16,13 +16,13 @@ const Earth = () => {
     }
   });
 
-  return (    
-      <primitive 
-        ref={earthRef}
-        object={earth.scene}
-        scale={2.8}
-        position={[0, 0.5, 0]} //la posicion!
-      />    
+  return (
+    <primitive
+      ref={earthRef}
+      object={earth.scene}
+      scale={2.8}
+      position={[0, 0.5, 0]} //la posicion!
+    />
   );
 };
 
@@ -39,6 +39,7 @@ const EarthCanvas = () => {
       <Stars/>
       <Preload all />
     </Suspense>
+
     </Canvas>
   );
 };

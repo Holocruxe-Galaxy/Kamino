@@ -9,7 +9,7 @@ const Navbar = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 3,
         ease: 'easeInOut',
       },
     },

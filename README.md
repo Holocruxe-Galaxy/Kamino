@@ -1,8 +1,6 @@
-
 # Centralización del código para web básica de Holocruxe
 
 Esta es la suma del código del squad web para la creación de la landing page de Holocruxe.
-
 
 ## Authors
 
@@ -10,11 +8,9 @@ Esta es la suma del código del squad web para la creación de la landing page d
 - [@FerCazon](https://www.github.com/FerCazon)
 - [@marciahe](https://www.github.com/marciahe)
 
-
 ## Demo
 
-TBD
-
+- [holocruxe-team.vercel.app](https://holocruxe-team.vercel.app/)
 
 ## Run Locally
 
@@ -39,6 +35,5 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  npm run dev
 ```
-
