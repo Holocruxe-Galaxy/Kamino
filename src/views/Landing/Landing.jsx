@@ -17,7 +17,7 @@ const Landing = () => {
   const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
   return (
     <main className={styles.container}>
-      {/* <EarthCanvas /> */}
+      <EarthCanvas />
       <Hero></Hero>
       <div ref={svgDiv} className={styles.featuresContainer}>
         <Feature
