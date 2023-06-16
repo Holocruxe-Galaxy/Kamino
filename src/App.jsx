@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <Navbar />
+      <EarthCanvas/>
       <Landing />
       <Waitlist/>
-      <EarthCanvas/>
       <Footer />
     </>
   );
