@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import styles from "./Faqs.module.css";
+import AnimationBg from "../../components/AnimationBg/AnimationBg";
 
 const Panel = ({ question, answer, activeTab, index, activateTab }) => {
   const [height, setHeight] = useState(0);
@@ -47,20 +48,23 @@ const Faqs = () => {
   };
 
   return (
-    <main className={styles.container}>
-      <div className={styles.accordion} role="tablist">
-        <h1>FAQs</h1>
-        {panels.map((panel, index) => (
-          <Panel
-            key={index}
-            activeTab={activeTab}
-            index={index}
-            {...panel}
-            activateTab={() => activateTab(index)}
-          />
-        ))}
-      </div>
-    </main>
+    <>
+      <AnimationBg />
+      <main className={styles.container}>
+        <div className={styles.accordion} role="tablist">
+          <h1>FAQs</h1>
+          {panels.map((panel, index) => (
+            <Panel
+              key={index}
+              activeTab={activeTab}
+              index={index}
+              {...panel}
+              activateTab={() => activateTab(index)}
+            />
+          ))}
+        </div>
+      </main>
+    </>
   );
 };
 
