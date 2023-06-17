@@ -32,9 +32,6 @@ const Footer = () => {
           <NavLink to="/faqs" className={styles.navlink}>
             FAQ
           </NavLink>
-          <NavLink to="#" className={styles.navlink}>
-            Join the team
-          </NavLink>
         </p>
 
         <p>Holocruxe &copy; 2023</p>
