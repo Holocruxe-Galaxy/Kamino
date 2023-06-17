@@ -29,6 +29,7 @@ const Navbar = () => {
   return (
     <header className={styles.container}>
       <div className={styles.logoContainer}>
+      <NavLink to="/">
         <motion.svg
           viewBox="0 0 695 117"
           fill="none"
@@ -139,6 +140,7 @@ const Navbar = () => {
             variants={pathVariants}
           />
         </motion.svg>
+        </NavLink>
       </div>
       <nav className={styles.navbar}>
         <NavLink to="/" className={styles.link}>
