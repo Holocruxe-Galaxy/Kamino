@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './Navbar.module.css';
-import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import styles from "./Navbar.module.css";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const svgVariants = {
@@ -10,7 +10,7 @@ const Navbar = () => {
       opacity: 1,
       transition: {
         duration: 3,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
@@ -21,7 +21,7 @@ const Navbar = () => {
       pathLength: 1,
       transition: {
         duration: 3,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
@@ -158,6 +158,9 @@ const Navbar = () => {
           Create Account
         </button>
         <div className={styles.indicator}></div>
+      </nav>
+      <nav className={styles.mobile}>
+        <img className={styles.hamburger} src="../../public/menu.png" />
       </nav>
     </header>
   );

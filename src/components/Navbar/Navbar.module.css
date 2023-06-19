@@ -52,7 +52,7 @@
 
 .link:before,
 .link:after {
-  content: '';
+  content: "";
   position: absolute;
 
   background-color: var(--aqua);
@@ -152,5 +152,28 @@ nav button:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* NAVBAR mobile */
+.mobile {
+  display: none;
+}
+.hamburger {
+  width: 32px;
+  right: 30px;
+  top: 20px;
+  position: absolute;
+}
+
+@media screen and (max-width: 920px) {
+  .navbar {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .navbar {
+    max-width: 80%;
   }
 }
