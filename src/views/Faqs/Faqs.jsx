@@ -19,13 +19,13 @@ const Panel = ({ question, answer, activeTab, index, activateTab }) => {
   const innerStyle = { height: `${isActive ? height : 0}px` };
 
   return (
-    <div
-      className={styles.panel}
-      role="tabpanel"
-      aria-expanded={isActive}
-      ref={panelRef}
-    >
-      <button className={styles.panel_label} role="tab" onClick={activateTab}>
+    <div className={styles.panel} role="tabpanel" ref={panelRef}>
+      <button
+        className={`${styles.panel_label} ${isActive ? styles.active : ""}`}
+        role="tab"
+        onClick={activateTab}
+        aria-expanded={isActive}
+      >
         {question}
       </button>
       <div
@@ -49,7 +49,6 @@ const Faqs = () => {
 
   return (
     <>
-      <AnimationBg />
       <main className={styles.container}>
         <div className={styles.accordion} role="tablist">
           <h1>FAQs</h1>
@@ -64,6 +63,7 @@ const Faqs = () => {
           ))}
         </div>
       </main>
+      <AnimationBg />
     </>
   );
 };

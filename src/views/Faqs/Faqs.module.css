@@ -52,17 +52,17 @@
   margin-top: -2px;
   background-color: #372717;
 }
-.panel_label:before {
+.panel_label[aria-expanded="false"]:before {
   transform: rotate(-90deg);
   transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
-.panel[aria-expanded="true"] .panel__content {
+.panel[aria-expanded="true"] .panel_content {
   opacity: 1;
 }
-.panel[aria-expanded="true"] .panel__label {
+.panel[aria-expanded="true"] .panel_label {
   color: #957029;
 }
-.panel[aria-expanded="true"] .panel__label:before {
+.panel[aria-expanded="true"] .panel_label[aria-expanded="true"]:before {
   transform: rotate(0deg);
 }
 .panel_inner {
