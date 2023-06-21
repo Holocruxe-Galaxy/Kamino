@@ -88,9 +88,10 @@ button {
     margin: 20px auto 40px;
     width: 600px;
   }
-  canvas {
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+  .hero h1 {
+    font-size: 60px;
+  }
+  .hero h2 {
+    font-size: 40px;
   }
 }

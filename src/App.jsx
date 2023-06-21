@@ -6,16 +6,19 @@ import Footer from "./components/Footer/Footer";
 
 import { Route, Routes } from "react-router-dom";
 import Faqs from "./views/Faqs/Faqs";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
-      <Navbar /><Routes>
+      <Navbar />
+      <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

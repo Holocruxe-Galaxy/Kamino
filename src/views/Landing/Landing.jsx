@@ -1,16 +1,16 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import styles from './Landing.module.css';
-import Hero from '../../components/Hero/Hero';
-import Feature from '../../components/Feature/Feature';
-import Waitlist from '../../components/Waitlist/waitlist';
-import EarthCanvas from '../../components/models/Earth';
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import styles from "./Landing.module.css";
+import Hero from "../../components/Hero/Hero";
+import Feature from "../../components/Feature/Feature";
+import Waitlist from "../../components/Waitlist/waitlist";
+import EarthCanvas from "../../components/models/Earth";
 
 const Landing = () => {
   const svgDiv = useRef();
   const { scrollYProgress } = useScroll({
     target: svgDiv,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const length = useTransform(scrollYProgress, [0.07, 0.86], [0, 1]);
   const length2 = useTransform(scrollYProgress, [0.35, 1.175], [0, 1]);
