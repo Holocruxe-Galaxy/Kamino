@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 const StoryModel = () => {
   const groupRef = useRef();
-  const { scene, animations } = useGLTF("./book/scene.gltf");
+  const { scene, animations } = useGLTF("./book/scene2.gltf");
   const [mixer] = useState(new THREE.AnimationMixer(scene));
 
   animations.forEach((clip) => mixer.clipAction(clip).play());
