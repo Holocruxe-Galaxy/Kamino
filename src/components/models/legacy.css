@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1200px;
-    width: 1200px;
+    height: 700px;
+    width: 1000px;
 }
   
   .canvas {
-    width: 1200px;
-    height: 1200px;
+    width: 1000px;
+    height: 700px;
   }
   
