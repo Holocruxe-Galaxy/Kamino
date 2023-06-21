@@ -30,7 +30,7 @@ const Landing = () => {
           verb="Story"
           phrase="Tell your story"
           paragraph="Craft a narrative that captures the essence of your experiences."
-          modelPath="./story/scene.gltf"
+          modelPath="./book/scene.gltf"
           modelType="story"
         />
 
@@ -38,7 +38,7 @@ const Landing = () => {
           verb="Legacy"
           phrase="Build your legacy"
           paragraph="Create something that will have a lasting impact."
-          modelPath="./legacy/scene.gltf"
+          modelPath="./holocruxe/holocruxelogov2.gltf"
           modelType="legacy"
         />
         <motion.svg

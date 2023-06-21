@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 const StoryModel = () => {
   const groupRef = useRef();
-  const { scene, animations } = useGLTF("./story/scene.gltf");
+  const { scene, animations } = useGLTF("./book/scene.gltf");
   const [mixer] = useState(new THREE.AnimationMixer(scene));
 
   animations.forEach((clip) => mixer.clipAction(clip).play());
@@ -20,8 +20,8 @@ const StoryModel = () => {
       <directionalLight position={[2.5, 8, 5]} intensity={1} />
       <primitive
         object={scene}
-        scale={1}
-        position={[-1, 0, 0]}
+        scale={0.55}
+        position={[-0.5, 0.15, 0]}
       />
     </group>
   );
