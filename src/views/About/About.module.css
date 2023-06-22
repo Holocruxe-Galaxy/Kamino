@@ -13,6 +13,8 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  overflow-x: hidden;
 }
 
 .mission .title {
@@ -33,7 +35,21 @@
 
   grid-column: 1;
   grid-row: 1;
+
+  animation: appearL 2s ease;
 }
+
+@keyframes appearL {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .mission .text {
   margin: auto;
   margin-left: 3rem;
@@ -44,6 +60,19 @@
 
   grid-column: 2 / span 2;
   grid-row: 1;
+
+  animation: appearR 2s ease;
+}
+
+@keyframes appearR {
+  from {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .values {
@@ -65,15 +94,30 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  animation: appearO 2s ease;
+}
+
+@keyframes appearO {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .value {
   margin: 5rem 2rem;
   display: flex;
+
+  animation: appearL 1s ease;
 }
 
 .values > .value:nth-of-type(even) {
   flex-direction: row-reverse;
+
+  animation: appearR 1s ease;
 }
 
 .value > strong {
