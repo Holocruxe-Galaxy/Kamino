@@ -1,7 +1,15 @@
-import React from "react";
-import styles from "./About.module.css";
+import React, { useEffect } from 'react';
+import styles from './About.module.css';
 
 const About = () => {
+  const hasVisited = sessionStorage.getItem('visited');
+
+  useEffect(() => {
+    if (!hasVisited) {
+      sessionStorage.setItem('visited', 'true');
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.mission}>

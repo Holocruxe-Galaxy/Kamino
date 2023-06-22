@@ -4,6 +4,9 @@
   overflow: hidden;
 
   animation: hideContent 2s forwards;
+}
+
+.containerAnim {
   animation-delay: 3.75s;
 }
 

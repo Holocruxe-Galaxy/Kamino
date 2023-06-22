@@ -1,16 +1,20 @@
-import React from "react";
-import styles from "./Navbar.module.css";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import styles from './Navbar.module.css';
+import { motion } from 'framer-motion';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const hasVisited = sessionStorage.getItem('visited');
+
   const svgVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         duration: 3,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
   };
@@ -21,14 +25,18 @@ const Navbar = () => {
       pathLength: 1,
       transition: {
         duration: 3,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
   };
 
   return (
     <header className={styles.container}>
-      <div className={styles.logoContainer}>
+      <div
+        className={`${styles.logoContainer} ${
+          !hasVisited && location.pathname === '/' && styles.logoContainerAnim
+        }`}
+      >
         <NavLink to="/">
           <motion.svg
             viewBox="0 0 695 117"
@@ -37,7 +45,9 @@ const Navbar = () => {
             variants={svgVariants}
             initial="hidden"
             animate="visible"
-            className={styles.svgLogo}
+            className={`${styles.svgLogo} ${
+              !hasVisited && location.pathname === '/' && styles.svgLogoAnim
+            }`}
           >
             <motion.path
               d="M685.157 32.565C683.69 30.77 683.955 28.125 685.75 26.6574C687.545 25.1897 690.19 25.4551 691.658 27.2502C693.126 29.0453 692.86 31.6902 691.065 33.1578C689.27 34.6255 686.625 34.3601 685.157 32.565Z"
@@ -152,23 +162,38 @@ const Navbar = () => {
           </motion.svg>
         </NavLink>
       </div>
-      <nav className={styles.navbar}>
-        <NavLink to="/" className={styles.link}>
+      <nav
+        className={`${
+          !hasVisited && location.pathname === '/'
+            ? styles.navbarAnim
+            : styles.navbar
+        }`}
+      >
+        <NavLink
+          to="/"
+          className={`${styles.link} ${
+            location.pathname === '/' && styles.activeLink
+          }`}
+        >
           Home
         </NavLink>
-        <NavLink to="#features" className={styles.link}>
-          Features
+        <NavLink
+          to="/about"
+          className={`${styles.link} ${
+            location.pathname === '/about' ? styles.activeLink : null
+          }`}
+        >
+          About Us
         </NavLink>
-        <NavLink to="#waitlis" className={styles.link}>
+        <NavLink
+          to="/"
+          className={`${styles.link} ${
+            location.pathname === '/waitlist' ? styles.activeLink : null
+          }`}
+        >
           Waitlist
         </NavLink>
 
-        <button className="ghost" href="#">
-          Login
-        </button>
-        <button className="" href="#">
-          Create Account
-        </button>
         <div className={styles.indicator}></div>
       </nav>
       <nav className={styles.mobile}>
