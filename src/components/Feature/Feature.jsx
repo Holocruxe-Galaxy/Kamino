@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from "./Feature.module.css";
+import styles from './Feature.module.css';
 import ModelViewer from '../models/modelviewer';
 import StoryModelViewer from '../models/story';
 import LegacyModelCanvas from '../models/legacy';
-
 
 const Feature = (props) => {
   return (

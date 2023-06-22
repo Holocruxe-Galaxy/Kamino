@@ -1,22 +1,36 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./Landing.module.css";
-import Hero from "../../components/Hero/Hero";
-import Feature from "../../components/Feature/Feature";
-import Waitlist from "../../components/Waitlist/waitlist";
-import EarthCanvas from "../../components/models/Earth";
+import React, { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import styles from './Landing.module.css';
+import Hero from '../../components/Hero/Hero';
+import Feature from '../../components/Feature/Feature';
+import Waitlist from '../../components/Waitlist/waitlist';
+import EarthCanvas from '../../components/models/Earth';
 
 const Landing = () => {
   const svgDiv = useRef();
   const { scrollYProgress } = useScroll({
     target: svgDiv,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
   const length = useTransform(scrollYProgress, [0.07, 0.86], [0, 1]);
   const length2 = useTransform(scrollYProgress, [0.35, 1.175], [0, 1]);
   const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
+
+  const hasVisited = sessionStorage.getItem('visited');
+
+  useEffect(() => {
+    console.log(hasVisited);
+    if (!hasVisited) {
+      sessionStorage.setItem('visited', 'true');
+    }
+  }, []);
+
   return (
-    <main className={styles.container}>
+    <main
+      className={`${styles.container} ${
+        !hasVisited && location.pathname === '/' && styles.containerAnim
+      }`}
+    >
       <EarthCanvas />
       <Hero></Hero>
       <div ref={svgDiv} className={styles.featuresContainer}>
