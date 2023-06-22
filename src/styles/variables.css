@@ -1,0 +1,13 @@
+:root {
+  /**  Colors **/
+  --dark: #20435e;
+  --darker: #0f2c43;
+  --white: #f7f9f9;
+  --aqua: #59c1bd;
+  --light-aqua: #8dd3d1;
+  --lighter-aqua: #c2e6e5;
+
+  /** Fonts **/
+  --main-font: Verdana, Geneva, Tahoma, sans-serif;
+  --second-font: 'Inter', sans-serif;
+}
