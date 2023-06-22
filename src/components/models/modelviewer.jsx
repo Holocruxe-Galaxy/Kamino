@@ -30,14 +30,14 @@ const ModelLoader = ({ modelPath, modelScale }) => {
     }
   });
 
-  return mixer ? <Model scene={scene} scale={modelScale} position={[-1, 0, 0]} mixer={mixer} /> : null;
+  return mixer ? <Model scene={scene} scale={modelScale} position={[-0.5, 0, 0]} mixer={mixer} /> : null;
 };
 
-const ModelViewer = ({ modelPath, modelScale = 5 }) => {
+const ModelViewer = ({ modelPath, modelScale = 14 }) => {
   return (
     <div className={styles.canvasContainer}>
       <Canvas
-        style={{ width: '1200px', height: '1000px' }}
+        style={{ width: '800px', height: '500px', top: '150px' }}
       >
         <Lights/>
         <directionalLight position={[2.5, 8, 5]} intensity={1} />

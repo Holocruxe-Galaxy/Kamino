@@ -5,6 +5,8 @@ import CanvasLoader from "./Loader";
 import { Canvas } from "@react-three/fiber";
 import "./earth.css";
 import Stars from "../Stars/stars";
+import CircleSvg from '../../icons/Ellipse 3.svg'
+import IconSvg from '../../icons/mouse.svg'
 
 const Earth = () => {
   const earthRef = useRef();
@@ -28,6 +30,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
+    <div style={{ position: 'relative' }}> {/* Set relative positioning on the parent div */}
     <Canvas className="earth-canvas" style={{ height: "1000px" }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -41,6 +44,13 @@ const EarthCanvas = () => {
         <Preload all />
       </Suspense>
     </Canvas>
+    <img src={CircleSvg} alt="circle" style={{ position: 'absolute', bottom: '350px', right: '300px' }} />
+    <img src={IconSvg} alt="icon" style={{ position: 'absolute', bottom: '370px', right: '315px' }} />
+    <div style={{ position: 'absolute', bottom: '300px', right: '290px', userSelect: 'none', color: 'white' }}>
+        <p>Click in</p>
+        <p>the world</p>
+      </div>
+    </div>
   );
 };
 
