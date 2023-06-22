@@ -48,8 +48,10 @@
   content: none;
 }
 
-.footerDistributed .footerRight {
+.footerRight {
   margin-top: 20px;
+  min-width: 230px;
+  text-align: right;
 }
 
 .footerDistributed .footerCenter {
