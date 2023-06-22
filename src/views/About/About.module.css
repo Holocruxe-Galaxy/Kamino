@@ -9,7 +9,7 @@
 
 .mission {
   margin: 5rem 0;
-  width: 65%;
+  width: 85%;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -37,7 +37,7 @@
 .mission .text {
   margin: auto;
   margin-left: 3rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-family: var(--second-font);
   font-weight: 300;
@@ -48,12 +48,12 @@
 
 .values {
   margin: 5rem 0;
-  width: 65%;
+  width: 85%;
 }
 
 .values .title {
   margin: 2rem 0;
-  text-align: right;
+  text-align: center;
 
   font-size: 5rem;
   text-transform: uppercase;
@@ -77,12 +77,11 @@
 }
 
 .value > strong {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   padding: 1rem;
-  background-color: var(--white);
-  color: var(--dark);
+  color: var(--white);
   border-radius: 10px;
-  font-size: 2.5rem;
+  font-size: 3rem;
 
   display: flex;
   justify-content: center;
@@ -90,8 +89,8 @@
 }
 
 .value > p {
-  margin: auto 1rem;
-  font-size: 1.3rem;
+  margin: auto 1.5rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-family: var(--second-font);
   font-weight: 300;
