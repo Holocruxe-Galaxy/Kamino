@@ -20,7 +20,7 @@ const StoryModel = () => {
       <directionalLight position={[2.5, 8, 5]} intensity={1} />
       <primitive
         object={scene}
-        scale={0.55}
+        scale={0.60}
         position={[-0.5, 0.15, 0]}
       />
     </group>
@@ -30,7 +30,7 @@ const StoryModel = () => {
 const StoryModelViewer = () => {
   return (
     <div className={styles.canvasContainer}>
-      <Canvas style={{ width: '1200px', height: '1000px' }}>
+      <Canvas style={{ width: '1200px', height: '800px', left: '-200px', top: '20px' }}>
         <Suspense fallback={null}>
           <OrbitControls
             enableZoom={false}

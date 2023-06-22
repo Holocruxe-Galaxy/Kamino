@@ -12,7 +12,7 @@ const LegacyModel = () => {
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.002; 
+      modelRef.current.rotation.y += 0.003; 
     }
   });
 
@@ -23,7 +23,7 @@ const LegacyModel = () => {
     <primitive
       ref={modelRef}
       object={model.scene}
-      scale={1} 
+      scale={1.2} 
       position={[-1.7, -0.1, 0]} 
       />
       </group>
@@ -33,8 +33,7 @@ const LegacyModel = () => {
 const LegacyModelCanvas = () => {
   return (
         <div className={styles.canvasContainer}>
-
-    <Canvas className="legacy-model-canvas" style={{ width: '1200px', height: '700px' }}>
+    <Canvas className="legacy-model-canvas" style={{ width: '1200px', height: '500px', left: '-120px' }}>
       <Suspense fallback={<CanvasLoader />}>
       <OrbitControls
   enableZoom={false}

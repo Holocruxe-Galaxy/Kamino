@@ -24,7 +24,7 @@ const Landing = () => {
           verb="Live"
           phrase="Embrace the adventure of life"
           paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
-          modelPath="./live/scene.gltf"
+          modelPath="./live/scene4.gltf"
         />
         <Feature
           verb="Story"
