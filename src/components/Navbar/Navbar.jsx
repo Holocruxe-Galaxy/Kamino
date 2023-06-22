@@ -163,10 +163,8 @@ const Navbar = () => {
         </NavLink>
       </div>
       <nav
-        className={`${
-          !hasVisited && location.pathname === '/'
-            ? styles.navbarAnim
-            : styles.navbar
+        className={`${styles.navbar} ${
+          !hasVisited && location.pathname === '/' && styles.navbarAnim
         }`}
       >
         <NavLink
