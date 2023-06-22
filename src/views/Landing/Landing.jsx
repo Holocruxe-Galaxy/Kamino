@@ -1,34 +1,34 @@
-import React, { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import styles from './Landing.module.css';
-import Hero from '../../components/Hero/Hero';
-import Feature from '../../components/Feature/Feature';
-import Waitlist from '../../components/Waitlist/waitlist';
-import EarthCanvas from '../../components/models/Earth';
+import React, { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import styles from "./Landing.module.css";
+import Hero from "../../components/Hero/Hero";
+import Feature from "../../components/Feature/Feature";
+import Waitlist from "../../components/Waitlist/waitlist";
+import EarthCanvas from "../../components/models/Earth";
 
 const Landing = () => {
   const svgDiv = useRef();
   const { scrollYProgress } = useScroll({
     target: svgDiv,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const length = useTransform(scrollYProgress, [0.07, 0.86], [0, 1]);
   const length2 = useTransform(scrollYProgress, [0.35, 1.175], [0, 1]);
   const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
 
-  const hasVisited = sessionStorage.getItem('visited');
+  const hasVisited = sessionStorage.getItem("visited");
 
   useEffect(() => {
     console.log(hasVisited);
     if (!hasVisited) {
-      sessionStorage.setItem('visited', 'true');
+      sessionStorage.setItem("visited", "true");
     }
   }, []);
 
   return (
     <main
       className={`${styles.container} ${
-        !hasVisited && location.pathname === '/' && styles.containerAnim
+        !hasVisited && location.pathname === "/" && styles.containerAnim
       }`}
     >
       <EarthCanvas />
@@ -38,7 +38,7 @@ const Landing = () => {
           verb="Live"
           phrase="Embrace the adventure of life"
           paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
-          modelPath="./live/scene4.gltf"
+          modelPath="./rocket/scene.gltf"
         />
         <Feature
           verb="Story"
