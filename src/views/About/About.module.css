@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: 'Titan One', 'Quicksand', sans-serif;
 }
 
 .mission {
@@ -117,6 +118,7 @@
   flex-direction: row-reverse;
 
   animation: appearR 1s ease;
+  text-align: end;
 }
 
 .value > strong {
@@ -125,6 +127,7 @@
   color: var(--white);
   border-radius: 10px;
   font-size: 3rem;
+  font-weight: 300;
 
   display: flex;
   justify-content: center;

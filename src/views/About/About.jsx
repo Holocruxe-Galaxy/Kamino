@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import styles from "./About.module.css";
+import React, { useEffect } from 'react';
+import styles from './About.module.css';
 
 const About = () => {
-  const hasVisited = sessionStorage.getItem("visited");
+  const hasVisited = sessionStorage.getItem('visited');
 
   useEffect(() => {
     if (!hasVisited) {
-      sessionStorage.setItem("visited", "true");
+      sessionStorage.setItem('visited', 'true');
     }
   }, []);
 
@@ -52,7 +52,7 @@ const About = () => {
             Respecting users' privacy and providing them with clear and
             transparent choices about how their personal data is used and
             shared. Ensure robust security measures to protect sensitive
-            information,
+            information.
           </p>
         </div>
       </div>

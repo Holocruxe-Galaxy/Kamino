@@ -33,7 +33,7 @@
   width: auto;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1460px) {
   .svgIndex {
     display: none;
   }
