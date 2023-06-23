@@ -5,8 +5,8 @@ import CanvasLoader from "./Loader";
 import { Canvas } from "@react-three/fiber";
 import "./earth.css";
 import Stars from "../Stars/stars";
-import CircleSvg from '../../icons/Ellipse 3.svg'
-import IconSvg from '../../icons/mouse.svg'
+import CircleSvg from "../../icons/Ellipse 3.svg";
+import IconSvg from "../../icons/mouse.svg";
 
 const Earth = () => {
   const earthRef = useRef();
@@ -30,25 +30,44 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <div style={{ position: 'relative' }}>
-    <Canvas className="earth-canvas" style={{ height: "1000px" }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+    <div style={{ position: "relative" }}>
+      <Canvas className="earth-canvas" style={{ height: "1000px" }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Earth />
+          <Stars />
+          <Preload all />
+        </Suspense>
+      </Canvas>
+      <div className="svg-click">
+        <img
+          src={CircleSvg}
+          alt="circle"
+          style={{ position: "absolute", bottom: "300px", right: "100px" }}
         />
-        <Earth />
-        <Stars />
-        <Preload all />
-      </Suspense>
-    </Canvas>
-    <img src={CircleSvg} alt="circle" style={{ position: 'absolute', bottom: '350px', right: '300px' }} />
-    <img src={IconSvg} alt="icon" style={{ position: 'absolute', bottom: '370px', right: '315px' }} />
-    <div style={{ position: 'absolute', bottom: '300px', right: '290px', userSelect: 'none', color: 'white' }}>
-        <p>Click in</p>
-        <p>the world</p>
+        <img
+          src={IconSvg}
+          alt="icon"
+          style={{ position: "absolute", bottom: "320px", right: "115px" }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "250px",
+            right: "100px",
+            userSelect: "none",
+            color: "white",
+            textAlign: "center",
+          }}
+        >
+          <p>Click in</p>
+          <p>the world</p>
+        </div>
       </div>
     </div>
   );
