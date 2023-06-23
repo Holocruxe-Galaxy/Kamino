@@ -13,7 +13,7 @@
   margin: 10px;
   margin-bottom: 20px;
 }
-.text_section { 
+.text_section {
   font-size: 20px;
   color: white;
   margin: 0;
@@ -111,34 +111,23 @@
   position: relative;
 }
 
-.title::before, .title::after {
-  content: "";
+.title::before,
+.title::after {
+  content: '';
   position: absolute;
   top: 50%;
-<<<<<<< HEAD
-  width: 50%;
-=======
   width: 30%;
->>>>>>> c6511cc03bf62dee21cee7e9139bdcd871a9cdf4
   height: 1px;
   background: linear-gradient(to right, #20435e, #fff 50%);
   background-size: 200% 100%;
 }
 
 .title::before {
-<<<<<<< HEAD
-  left: -50%;
-}
-
-.title::after {
-  right: -50%;
-=======
   left: -10%;
 }
 
 .title::after {
   right: -10%;
->>>>>>> c6511cc03bf62dee21cee7e9139bdcd871a9cdf4
   background: linear-gradient(to left, #20435e, #fff 50%);
 }
 
