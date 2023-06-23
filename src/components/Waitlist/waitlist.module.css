@@ -5,12 +5,24 @@
   scroll-snap-align: start;
   text-align: center;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 5px;
   padding-top: 10px;
   margin: 10px;
+  margin-bottom: 20px;
 }
+.text_section { 
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .waitlist h2 {
   color: #fff;
   font-weight: 100;
@@ -24,6 +36,7 @@
   gap: 10px;
   width: 500px;
   margin: 0 auto;
+  margin-top: 150px;
 }
 .join_waitlist p {
   color: white;
@@ -89,4 +102,36 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title::before, .title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(to right, #20435e, #fff 50%);
+  background-size: 200% 100%;
+}
+
+.title::before {
+  left: -50%;
+}
+
+.title::after {
+  right: -50%;
+  background: linear-gradient(to left, #20435e, #fff 50%);
+}
+
+.form_and_model {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 10%;
 }
