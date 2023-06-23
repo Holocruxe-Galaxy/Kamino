@@ -30,7 +30,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <div style={{ position: 'relative' }}> {/* Set relative positioning on the parent div */}
+    <div style={{ position: 'relative' }}>
     <Canvas className="earth-canvas" style={{ height: "1000px" }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
