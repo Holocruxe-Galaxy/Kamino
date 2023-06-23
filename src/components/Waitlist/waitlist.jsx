@@ -1,6 +1,3 @@
-import React from "react";
-import Stars from "../Stars/stars";
-import { Canvas } from "@react-three/fiber";
 import styles from "./waitlist.module.css";
 import LegacyModelCanvas from '../models/legacy'
 
