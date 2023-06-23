@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Landing.module.css";
 import Hero from "../../components/Hero/Hero";
 import Feature from "../../components/Feature/Feature";
-import Waitlist from "../../components/Waitlist/waitlist";
 import EarthCanvas from "../../components/models/Earth";
 import Container from "../../components/Waitlist/waitlistcontainer";
 import { Canvas } from "@react-three/fiber";
