@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: 'Titan One', 'Quicksand', sans-serif;
 }
 
 .mission {
@@ -13,8 +14,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
-  overflow-x: hidden;
+  grid-auto-flow: column;
 }
 
 .mission .title {
@@ -118,6 +118,7 @@
   flex-direction: row-reverse;
 
   animation: appearR 1s ease;
+  text-align: end;
 }
 
 .value > strong {
@@ -126,6 +127,7 @@
   color: var(--white);
   border-radius: 10px;
   font-size: 3rem;
+  font-weight: 300;
 
   display: flex;
   justify-content: center;
@@ -141,4 +143,64 @@
 
   grid-column: 2 / span 2;
   grid-row: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-bottom: 2rem;
+  }
+
+  .mission .title {
+    margin: 0;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin-bottom: 3rem;
+
+    font-size: 2.5rem;
+  }
+
+  .mission .text {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .values {
+    margin: 0;
+  }
+
+  .values .title {
+    font-size: 2.5rem;
+  }
+
+  .value > strong {
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 1.75rem;
+  }
+
+  .value > p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .value {
+    margin: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .values > .value:nth-of-type(even) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .values > .value:nth-of-type(even) > p {
+    text-align: end;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 920px) {
 }

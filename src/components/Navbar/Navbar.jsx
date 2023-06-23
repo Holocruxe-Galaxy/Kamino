@@ -184,7 +184,7 @@ const Navbar = () => {
           About Us
         </NavLink>
         <NavLink
-          to="/"
+          to="/waitlist"
           className={`${styles.link} ${
             location.pathname === '/waitlist' ? styles.activeLink : null
           }`}

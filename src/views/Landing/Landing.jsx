@@ -3,8 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Landing.module.css";
 import Hero from "../../components/Hero/Hero";
 import Feature from "../../components/Feature/Feature";
-import Waitlist from "../../components/Waitlist/waitlist";
 import EarthCanvas from "../../components/models/Earth";
+import Container from "../../components/Waitlist/waitlistcontainer";
+import { Canvas } from "@react-three/fiber";
+import Stars from "../../components/Stars/stars";
 
 const Landing = () => {
   const svgDiv = useRef();
@@ -31,6 +33,14 @@ const Landing = () => {
         !hasVisited && location.pathname === "/" && styles.containerAnim
       }`}
     >
+      <Canvas style={{
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        zIndex:'-1'
+      }}>
+        <Stars />
+      </Canvas>
       <EarthCanvas />
       <Hero></Hero>
       <div ref={svgDiv} className={styles.featuresContainer}>
@@ -39,6 +49,7 @@ const Landing = () => {
           phrase="Embrace the adventure of life"
           paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
           modelPath="./rocket/scene.gltf"
+          modelType='rocket'
         />
         <Feature
           verb="Story"
@@ -124,7 +135,7 @@ const Landing = () => {
           </defs>
         </motion.svg>
       </div>
-      <Waitlist />
+      <Container/>
     </main>
   );
 };

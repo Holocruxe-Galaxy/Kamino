@@ -8,29 +8,28 @@
   text-align: center;
   color: white;
   margin: 0 auto;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 .features_container h4 {
-  font-size: 60px;
+  font-size: 40px;
   padding-bottom: 15px;
   margin: 0;
   /* color: #0f2c43; */
   color: white;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 .features_container h3 {
-  font-size: 40px;
+  font-size: 45px;
   color: white;
-
   margin: 0;
-  /* color: #0f2c43; */
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 .features_container p {
   margin-top: 15px;
+  font-size: 22px;
 }
 .configure {
   margin-top: 300px;
@@ -40,7 +39,7 @@
 }
 .vertical_line {
   position: absolute;
-  top: -200px;
+  top: -150px;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 200px;

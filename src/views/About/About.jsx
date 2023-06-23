@@ -18,6 +18,7 @@ const About = () => {
           At Holocruxe we are a passionate team that believes in the power of
           memories and experiences.
           <br />
+          <br />
           Holocruxe is a company that creates a platform to help people capture
           and preserve their memories. The platform uses artificial intelligence
           to create a virtual diary that captures the essence of a preson's
@@ -26,6 +27,7 @@ const About = () => {
         </p>
       </div>
 
+      <div className={styles.vertical_line}></div>
       <div className={styles.values}>
         <h3 className={styles.title}>OUR VALUES</h3>
         <div className={styles.value}>
@@ -50,7 +52,7 @@ const About = () => {
             Respecting users' privacy and providing them with clear and
             transparent choices about how their personal data is used and
             shared. Ensure robust security measures to protect sensitive
-            information,
+            information.
           </p>
         </div>
       </div>
