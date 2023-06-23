@@ -115,18 +115,18 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 50%;
+  width: 30%;
   height: 1px;
   background: linear-gradient(to right, #20435e, #fff 50%);
   background-size: 200% 100%;
 }
 
 .title::before {
-  left: -50%;
+  left: -10%;
 }
 
 .title::after {
-  right: -50%;
+  right: -10%;
   background: linear-gradient(to left, #20435e, #fff 50%);
 }
 

@@ -1,4 +1,3 @@
-import LegacyModelCanvas from "../models/legacy";
 import Waitlist from "./waitlist";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../Stars/stars";
