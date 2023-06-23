@@ -7,4 +7,7 @@
   .earth-canvas {
     height: 85vh !important;
   }
+  .svg-click {
+    display: none;
+  }
 }
