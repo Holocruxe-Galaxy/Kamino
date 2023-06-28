@@ -7,7 +7,7 @@ import CanvasLoader from "./Loader";
 
 const RocketModel = () => {
   const groupRef = useRef();
-  const { scene, animations } = useGLTF("/rocket/scene.gltf"); 
+  const { scene, animations } = useGLTF("/rocket/rocket2.glb"); 
   const [mixer] = useState(new THREE.AnimationMixer(scene));
 
   animations.forEach((clip) => mixer.clipAction(clip).play());
