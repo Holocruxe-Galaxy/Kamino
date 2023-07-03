@@ -6,8 +6,7 @@ import styles from './legacy.css?inline';
 
 const LegacyModel = () => {
   const modelRef = useRef();
-  const model = useGLTF("./holocruxe/holocruxerecor.glb");  
-
+  const model = useGLTF("./holocruxe/compress.glb");  
  
   return (
     <group>
