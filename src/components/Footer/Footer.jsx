@@ -26,18 +26,26 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerRight}>
-        <NavLink to="#" className={styles.navlink}>
+        <a
+          href="https://www.instagram.com/holocruxe/"
+          className={styles.navlink}
+          target="_blank"
+        >
           <img src="/instagram.png" alt="Instagram" />
-        </NavLink>
-        <NavLink to="#" className={styles.navlink}>
+        </a>
+        {/* <a href="#" className={styles.navlink} target="_blank">
           <img src="/facebook.png" alt="Facebook" />
-        </NavLink>
-        <NavLink to="#" className={styles.navlink}>
+        </a>
+        <a href="#" className={styles.navlink} target="_blank">
           <img src="/twitter.png" alt="Twitter" />
-        </NavLink>
-        <NavLink to="#" className={styles.navlink}>
+        </a> */}
+        <a
+          href="https://www.linkedin.com/company/holocruxe/"
+          className={styles.navlink}
+          target="_blank"
+        >
           <img src="/linkedin.png" alt="LinkedIn" />
-        </NavLink>
+        </a>
       </div>
       <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>
     </footer>

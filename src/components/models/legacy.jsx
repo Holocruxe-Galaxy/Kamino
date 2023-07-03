@@ -1,30 +1,24 @@
 import React, { Suspense, useRef } from "react";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 import CanvasLoader from "./Loader"; 
 import { Canvas } from "@react-three/fiber";
 import styles from './legacy.css?inline';
 
 const LegacyModel = () => {
   const modelRef = useRef();
-  const model = useGLTF("./holocruxe/holocruxelogov2.gltf"); 
+  const model = useGLTF("./holocruxe/compress.glb");  
+
  
-
-  useFrame(() => {
-    if (modelRef.current) {
-      modelRef.current.rotation.y += 0.003; 
-    }
-  });
-
   return (
     <group>
     <ambientLight intensity={0.5} />
-    <directionalLight position={[2.5, 8, 5]} intensity={1} />
+    <directionalLight position={[2.5, 1, 5]} intensity={1.5} />
     <primitive
       ref={modelRef}
       object={model.scene}
-      scale={1.2} 
-      position={[-1.7, -0.1, 0]} 
+      scale={1.6} 
+      position={[2, -0.1, 1]} 
+      rotation={[0, Math.PI, 0]}
       />
       </group>
   );
@@ -38,6 +32,7 @@ const LegacyModelCanvas = () => {
       <OrbitControls
   enableZoom={false}
   enablePan={false}
+  enableRotate={false}
   maxPolarAngle={Math.PI / 2}
   minPolarAngle={Math.PI / 2}/>
         <LegacyModel />

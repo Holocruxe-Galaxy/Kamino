@@ -15,7 +15,7 @@
   font-size: 90px;
   text-transform: uppercase;
   margin: 0;
-  /* color: #59c1bd; */
+  font-family: "Titan One", "Quicksand", sans-serif;
   font-weight: 800;
   letter-spacing: 3px;
   /* background: #59c1bd; */
@@ -41,21 +41,23 @@
   font-size: 50px;
   margin: 0;
   color: #f7f9f9;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 4px;
 }
 .hero p {
   color: white;
-  max-width: 620px;
+  max-width: 650px;
   margin: 20px auto 40px;
   margin-bottom: 40px;
   text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
 }
-p {
-  font-size: 18px;
+strong {
+  font-weight: 500;
+  line-height: 1.8;
 }
 button {
-  font-family: "Inter", sans-serif;
   padding: 14px 25px;
   border: white solid 1px;
   border-radius: 10px;

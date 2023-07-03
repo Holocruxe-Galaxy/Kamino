@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Faqs from './views/Faqs/Faqs';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import WaitlistView from './views/Waitlist/WaitlistView';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path="/waitlist" element={<WaitlistView />} />
       </Routes>
       <Footer />
       <ScrollToTop />

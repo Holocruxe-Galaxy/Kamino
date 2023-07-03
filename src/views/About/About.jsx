@@ -13,49 +13,46 @@ const About = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mission}>
-        <h3 className={styles.title}>
-          ¿Quienes <br /> somos?
-        </h3>
+        <h3 className={styles.title}>WHO WE ARE?</h3>
         <p className={styles.text}>
-          En Holocruxe somos un equipo apasionado que creemos en el poder de los
-          recuerdos y las experiencias. Nuestra misión en Holocruxe es ofrecer
-          una plataforma integral que capture todos los momentos significativos
-          y experiencias de vida de cada individuo. Queremos ayudar a las
-          personas a conectar todos los aspectos de su existencia en un único
-          lugar digital, donde se puedan vincular con todas sus redes sociales y
-          generar un diario virtual interactivo. Con la ayuda de la inteligencia
-          artificial, nuestra aplicación tiene como objetivo recrear la vida de
-          una persona de manera auténtica y dinámica. Esto permite a nuestros
-          usuarios revivir sus recuerdos de una manera más rica y profunda,
-          creando un diario virtual que captura la esencia misma de su vida.
+          At Holocruxe we are a passionate team that believes in the power of
+          memories and experiences.
+          <br />
+          <br />
+          Holocruxe is a company that creates a platform to help people capture
+          and preserve their memories. The platform uses artificial intelligence
+          to create a virtual diary that captures the essence of a preson's
+          life. This allows users to relive their memories in a richer and
+          depper way.
         </p>
       </div>
 
+      <div className={styles.vertical_line}></div>
       <div className={styles.values}>
-        <h3 className={styles.title}>Nuestros Valores</h3>
+        <h3 className={styles.title}>OUR VALUES</h3>
         <div className={styles.value}>
-          <strong>Autenticidad</strong>
+          <strong>Authenticity</strong>
           <p>
-            Fomentar la honestidad y la autenticidad al capturar y compartir
-            recuerdos, alentando a los usuarios a ser ellos mismos y a compartir
-            sus experiencias tal como las vivieron.
+            Promote honesty and authenticity by capturing and sharing memories,
+            ecouraging users to be themselves and share their experiences as
+            they lived them.
           </p>
         </div>
         <div className={styles.value}>
-          <strong>Conexion</strong>
+          <strong>Connection</strong>
           <p>
-            Promover la conexión humana al permitir a los usuarios compartir sus
-            recuerdos con amigos, familiares y seres queridos, y proporcionar
-            herramientas para fortalecer los lazos y las relaciones.
+            Promote human connection by enabling users to share theirmemories
+            with friends , family and loved ones, and provide toold to
+            strengthen bonds and relationships.
           </p>
         </div>
         <div className={styles.value}>
-          <strong>Privacidad</strong>
+          <strong>Privacy</strong>
           <p>
-            Respetar la privacidad de los usuarios y brindarles opciones claras
-            y transparentes sobre cómo se utilizan y comparten sus datos
-            personales. Garantizar medidas de seguridad sólidas para proteger la
-            información sensible.
+            Respecting users' privacy and providing them with clear and
+            transparent choices about how their personal data is used and
+            shared. Ensure robust security measures to protect sensitive
+            information.
           </p>
         </div>
       </div>

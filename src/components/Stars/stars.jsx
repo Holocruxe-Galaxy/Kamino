@@ -5,7 +5,7 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(15000), { radius: 6.0 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(30000), { radius: 10.0 }));
 
   for (let i = 0; i < sphere.length; i += 3) {
     const dx = sphere[i];
@@ -20,7 +20,7 @@ const Stars = (props) => {
 
   useFrame(() => {
     for (let i = 0; i < sphere.length; i += 3) {
-      sphere[i + 2] -= 0.02; // velocidad
+      sphere[i + 2] -= 0.01; // velocidad
   
       if (sphere[i + 2] < -5) {
         
@@ -31,11 +31,11 @@ const Stars = (props) => {
        
         sphere[i] = radius * Math.sin(phi) * Math.cos(theta); 
         sphere[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
-        sphere[i + 2] = 5 + radius * Math.cos(phi); // posicion
+        sphere[i + 2] = 1 + radius * Math.cos(phi); // posicion
   
        
         const dx = sphere[i];
-        const dy = sphere[i + 1];
+        const dy = sphere[i + 1];        
         const dz = sphere[i + 2];
         const d = Math.sqrt(dx * dx + dy * dy + dz * dz);
         const k = Math.max(0.1, d);
@@ -54,7 +54,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#59c1bd"
-          size={0.059}
+          size={props.size || 0.010}
           sizeAttenuation={true}
           depthWrite={false}
         />

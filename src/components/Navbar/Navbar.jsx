@@ -163,10 +163,8 @@ const Navbar = () => {
         </NavLink>
       </div>
       <nav
-        className={`${
-          !hasVisited && location.pathname === '/'
-            ? styles.navbarAnim
-            : styles.navbar
+        className={`${styles.navbar} ${
+          !hasVisited && location.pathname === '/' && styles.navbarAnim
         }`}
       >
         <NavLink
@@ -186,7 +184,7 @@ const Navbar = () => {
           About Us
         </NavLink>
         <NavLink
-          to="/"
+          to="/waitlist"
           className={`${styles.link} ${
             location.pathname === '/waitlist' ? styles.activeLink : null
           }`}

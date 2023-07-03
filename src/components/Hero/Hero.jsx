@@ -7,16 +7,16 @@ const Hero = () => {
         <h2>
           <span>Live your life </span>
           <span>create your story </span>
-          
         </h2>
         <h1>Leave a legacy</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          labore tenetur, sit reiciendis nesciunt fugit hic modi quam earum
-          nisi.
+          Travel through your memories. Relive your past, reinvent your future
+          by combining magic and artificial intelligence. Connect with your
+          memories in a different way. <br />
+          <strong>Welcome to HOLOCRUXE!</strong>
         </p>
-        <button>Know more</button>
-        <button className={styles.cta}>Let the magic begin!</button>
+        {/* <button>Know more</button>
+        <button className={styles.cta}>Let the magic begin!</button> */}
       </div>
     </section>
   );

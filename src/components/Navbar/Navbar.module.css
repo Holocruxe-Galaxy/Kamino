@@ -22,7 +22,7 @@
 }
 
 .svgLogo {
-  width: 200px;
+  width: 15rem;
 }
 
 .navbar {
@@ -37,14 +37,6 @@
 }
 
 .navbarAnim {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-
-  font-size: 1rem;
-  opacity: 0;
-  animation: entranceNavbar 1s forwards ease;
   animation-delay: 6.5s;
 }
 
@@ -106,7 +98,7 @@
   position: absolute;
   transform: scale(1);
 
-  background-color: var(--white);
+  background-color: var(--aqua);
   transition: 0.5s ease all;
 }
 
@@ -214,13 +206,41 @@ nav button:hover {
 }
 
 @media screen and (max-width: 920px) {
+  .svgLogo {
+    width: 10rem;
+  }
   .navbar {
     display: none;
   }
   .mobile {
     display: flex;
+    flex: 1;
   }
-  .navbar {
-    max-width: 80%;
+
+  @keyframes entranceLogo {
+    0% {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    75% {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%) scale(1);
+    }
   }
 }
