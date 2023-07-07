@@ -133,6 +133,7 @@
 
 .form_and_model {
   display: flex;
-  justify-content: flex-end;
-  padding-left: 10%;
+  justify-content: flex;
+  margin-top: -150px;
+  
 }

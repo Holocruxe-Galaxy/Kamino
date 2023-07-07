@@ -26,8 +26,7 @@ const Waitlist = () => {
             required
           />
           <button type="submit">Step inside!</button>
-        </form>
-        <LegacyModelCanvas />
+        </form>      
       </div>
     </section>
   );

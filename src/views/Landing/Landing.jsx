@@ -19,6 +19,7 @@ const Landing = () => {
   const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
 
   const hasVisited = sessionStorage.getItem("visited");
+  const waitlistRef = useRef(null);
 
   useEffect(() => {
     console.log(hasVisited);
@@ -48,7 +49,7 @@ const Landing = () => {
           verb="Live"
           phrase="Embrace the adventure of life"
           paragraph="Create unforgettable moments that will leave an indelible mark on the canvas of your future. Let laughter and joy permeate your days, as you craft a collection of incredible memories that will ignite your heart whenever you reflect upon them."
-          modelPath="./rocket/scene.gltf"
+          modelPath="./rocket/rocket2.gltf"
           modelType='rocket'
         />
         <Feature
@@ -135,7 +136,7 @@ const Landing = () => {
           </defs>
         </motion.svg>
       </div>
-      <Container/>
+      <Container ref={waitlistRef}/>
     </main>
   );
 };
