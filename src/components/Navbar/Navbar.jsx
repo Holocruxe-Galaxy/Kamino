@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
 import { motion } from 'framer-motion';
 import { NavLink, useLocation } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const location = useLocation();
@@ -183,14 +184,15 @@ const Navbar = () => {
         >
           About Us
         </NavLink>
-        <NavLink
-          to="/waitlist"
-          className={`${styles.link} ${
-            location.pathname === '/waitlist' ? styles.activeLink : null
-          }`}
-        >
-          Waitlist
-        </NavLink>
+        <Link
+  to="waitlist"
+  spy={true}
+  smooth={true}
+  offset={-70}
+  duration={500}
+>
+  Waitlist
+</Link>
 
         <div className={styles.indicator}></div>
       </nav>
