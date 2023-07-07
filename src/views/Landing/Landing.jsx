@@ -8,6 +8,8 @@ import Container from "../../components/Waitlist/waitlistcontainer";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars/stars";
 
+
+
 const Landing = () => {
   const svgDiv = useRef();
   const { scrollYProgress } = useScroll({

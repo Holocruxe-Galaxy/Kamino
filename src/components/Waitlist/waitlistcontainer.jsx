@@ -4,9 +4,10 @@ import Waitlist from './waitlist';
 import { Canvas } from '@react-three/fiber';
 import Stars from '../Stars/stars';
 
-const Container = () => {
+const Container = React.forwardRef((props, ref) => {
   return (
     <div
+    id="waitlist"
       style={{
         position: 'relative',
         display: 'flex',
@@ -29,6 +30,6 @@ const Container = () => {
       <Waitlist />
     </div>
   );
-};
+})
 
 export default Container;
