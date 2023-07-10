@@ -7,6 +7,7 @@ import EarthCanvas from "../../components/models/Earth";
 import Container from "../../components/Waitlist/waitlistcontainer";
 import { Canvas } from "@react-three/fiber";
 import Stars from "../../components/Stars/stars";
+import {isMobile} from 'react-device-detect'
 
 
 
@@ -44,7 +45,9 @@ const Landing = () => {
       }}>
         <Stars />
       </Canvas>
+      <div className={isMobile ? "disable-touch" : ""}>
       <EarthCanvas />
+      </div>
       <Hero></Hero>
       <div ref={svgDiv} className={styles.featuresContainer}>
         <Feature
