@@ -8,6 +8,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Faqs from './views/Faqs/Faqs';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import WaitlistView from './views/Waitlist/WaitlistView';
+import Holoref from './views/HoloRef/holoref';
+import Cam from './views/Cam/cam';
+import WebcamCapture from './components/models/webcamcapture';
 
 function App() {
   const location = useLocation();
@@ -25,6 +28,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/waitlist" element={<WaitlistView />} />
+        <Route path='/holoref' element={<Holoref/>} />
+        <Route path='/cam' element={<WebcamCapture/>} />
       </Routes>
       <Footer />
       <ScrollToTop />
