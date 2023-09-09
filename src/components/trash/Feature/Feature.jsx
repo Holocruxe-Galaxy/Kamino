@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Feature.module.css';
-import StoryModelViewer from '../models/story';
-import LegacyModelCanvas from '../models/legacy';
-import RocketModelViewer from '../models/rocket';
+import StoryModelViewer from '../../models/trash/story';
+import LegacyModelCanvas from '../../models/trash/legacy';
+import RocketModelViewer from '../../models/trash/rocket';
 
 const Feature = (props) => {
   return (
@@ -14,7 +14,7 @@ const Feature = (props) => {
       {props.modelPath ? (
         props.modelType === 'story' ? (
           <StoryModelViewer modelPath="./story/scene.gltf" modelScale={1} />
-        ) : props.modelType === 'rocket' ? (  
+        ) : props.modelType === 'rocket' ? (
           <RocketModelViewer />
         ) : (
           <img src={props.img} alt={props.src} />

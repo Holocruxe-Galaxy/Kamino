@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import Stars from "../Stars/stars";
-import { Canvas } from "@react-three/fiber";
+import {useState} from "react";
+// import Stars from "../Stars/stars";
+// import { Canvas } from "@react-three/fiber";
 import styles from "./waitlist.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
