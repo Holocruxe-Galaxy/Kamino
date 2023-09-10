@@ -1,12 +1,12 @@
 import React, { Suspense, useRef } from 'react';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import CanvasLoader from './Loader';
+import CanvasLoader from './trash/Loader';
 import { Canvas } from '@react-three/fiber';
 import './earth.css';
-import Stars from '../Stars/stars';
-import CircleSvg from '../../icons/Ellipse 3.svg';
-import IconSvg from '../../icons/mouse.svg';
+// import Stars from '../Stars/stars';
+// import CircleSvg from '../../icons/Ellipse 3.svg';
+// import IconSvg from '../../icons/mouse.svg';
 
 const Earth = () => {
   const earthRef = useRef();
@@ -31,7 +31,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: '1000px' }}>
+      <Canvas className="earth-canvas" style={{ height: '600px' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -40,11 +40,11 @@ const EarthCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Earth />
-          <Stars />
+          {/* <Stars /> */}
           <Preload all />
         </Suspense>
       </Canvas>
-      <div className="svg-click">
+      {/* <div className="svg-click">
         <img
           src={CircleSvg}
           alt="circle"
@@ -68,7 +68,7 @@ const EarthCanvas = () => {
           <p>Click in</p>
           <p>the world</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

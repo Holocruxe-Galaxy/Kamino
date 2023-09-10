@@ -15,7 +15,7 @@
 }
 .text_section {
   font-size: 20px;
-  color: white;
+  color: var(--color-font);
   margin: 0;
   font-weight: 600;
   letter-spacing: 1px;
@@ -24,7 +24,7 @@
 }
 
 .waitlist h2 {
-  color: #fff;
+  color: var(--color-font);
   font-weight: 100;
   font-size: 40px;
 }
@@ -39,7 +39,7 @@
   margin-top: 150px;
 }
 .join_waitlist p {
-  color: white;
+  color: var(--color-font);
   margin: 20px auto 40px;
   margin-bottom: 40px;
   text-align: center;
@@ -51,37 +51,49 @@
   /* background-color: #20435e;
     border: none;
     border-bottom: 2px solid #fff; */
-  color: #fff;
+  color: var(--color-font);
   font-size: 18px;
   outline: none;
   padding: 16px 15px;
   transition: border-color 0.3s;
 
   /* From https://css.glass */
-  background: rgba(133, 145, 145, 0.77);
+  background: var(--color-input);
   border-radius: 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   border: 1px solid #c2e6e5;
 }
+.join_waitlist input::-webkit-input-placeholder {
+  color: var(--color-font);
+}
+.join_waitlist input::-moz-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input:-ms-input-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input::-ms-input-placeholder {
+  color:var(--color-font);
+}
 .join_waitlist input::placeholder {
-  color: white;
+  color:var(--color-font);
 }
 
 .join_waitlist input:focus {
-  border-color: #c2e6e5;
+  border-color: var(--color-border);
 }
 
 .join_waitlist button {
-  color: black;
-  background-color: #c2e6e5;
+  color: var(--color-btn);
+  background-color: var(--color-bgBtn);
   border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
   padding: 16px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
 }
 
 .join_waitlist button:hover {
