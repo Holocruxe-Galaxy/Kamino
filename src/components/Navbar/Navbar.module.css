@@ -103,6 +103,7 @@
   transform: scale(1);
 
   background-color: var(--aqua);
+   /* background-color: var(--color-bg); */
   transition: 0.5s ease all;
 }
 
@@ -125,6 +126,7 @@
 .activeLink:hover::before,
 .activeLink:hover::after {
   background-color: var(--aqua);
+  /* background-color: var(--color-bg); */
 }
 
 .navbar > button {

@@ -79,10 +79,10 @@ strong {
 
 button {
   padding: 14px 25px;
-  border: white solid 1px;
+  border: var(--color-border) solid 1px;
   border-radius: 10px;
-  background-color: inherit;
-  color: white;
+  background-color: var(--color-BgBtn);
+  color: var(--color-btn);
   font-size: 16px;
   /* letter-spacing: 1px; */
   cursor: pointer;
