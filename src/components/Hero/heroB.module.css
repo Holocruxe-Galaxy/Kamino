@@ -1,0 +1,70 @@
+.hero_container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background-image: url('../../../public/img/Vector\ 4.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.hero h2 {
+  margin: 5rem 0 2rem 1rem;
+  font-family: var(--font-main);
+  font-size: 2.875rem;
+  font-weight: 700;
+  color: transparent;
+  background: var(--color-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero span {
+  color: transparent;
+  background: var(--color-font);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.hero p {
+  color: var(--color-font);
+  margin-left: 1.25rem;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: 0.0375rem;
+}
+
+@media screen and (max-width: 910px) {
+  .hero {
+    width: 60%;
+    
+  }
+  
+  .hero_img {
+    width: 40%;
+    -o-object-fit:contain ;
+      object-fit: contain;
+  
+  }
+
+  .hero_img img {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p{
+    font-size: 1rem;
+  }
+  
+}

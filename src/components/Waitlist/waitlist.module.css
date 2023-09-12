@@ -12,80 +12,93 @@
   padding-top: 10px;
   margin: 10px;
   margin-bottom: 20px;
+  width: 90%;
 }
+
+.ligths {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-bottom: -0.5rem ;
+  display: flex;
+  justify-content: space-around;
+}
+
+
 .text_section {
-  font-size: 20px;
-  color: white;
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 20px;
+  /* border: 1px solid red; */
+  margin-bottom: 100px;
+  width: 100%;
+  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%); 
+  height: 8rem;
+  border-radius: 5.625rem; 
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+  
+  
 }
 
 .waitlist h2 {
-  color: #fff;
-  font-weight: 100;
-  font-size: 40px;
+  color: var(--color-font);
+  font-size: 2.25rem;
+  margin-top: 2.5rem;
 }
 .join_waitlist {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   width: 500px;
   margin: 0 auto;
   margin-top: 150px;
 }
-.join_waitlist p {
-  color: white;
-  margin: 20px auto 40px;
-  margin-bottom: 40px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 1.2;
-}
 
 .join_waitlist input {
-  /* background-color: #20435e;
-    border: none;
-    border-bottom: 2px solid #fff; */
-  color: #fff;
+  color: var(--color-font);
   font-size: 18px;
   outline: none;
-  padding: 16px 15px;
-  transition: border-color 0.3s;
-
-  /* From https://css.glass */
-  background: rgba(133, 145, 145, 0.77);
-  border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid #c2e6e5;
+  padding: 1rem;
+  background: var(--color-input);
+  border-radius: 5.625rem;
+  border: 1px solid var(--color-border);
+}
+.join_waitlist input::-webkit-input-placeholder {
+  color: var(--color-font);
+}
+.join_waitlist input::-moz-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input:-ms-input-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input::-ms-input-placeholder {
+  color:var(--color-font);
 }
 .join_waitlist input::placeholder {
-  color: white;
+  color:var(--color-font);
 }
 
 .join_waitlist input:focus {
-  border-color: #c2e6e5;
+  border-color: var(--color-border);
 }
 
 .join_waitlist button {
-  color: black;
-  background-color: #c2e6e5;
-  border-radius: 8px;
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--color-bg);
+  background: var(--color-bgBtn);
+  border-radius: 2.5rem;
+  outline: none;
   cursor: pointer;
-  font-size: 20px;
-  padding: 16px;
+  padding: 1.125rem;
+  font-size: .75rem;
   font-weight: 600;
-  transition: background-color 0.3s;
 }
 
 .join_waitlist button:hover {
-  background-color: #9ae2e0;
+  background: var(--color-hoverBtn);
+  color: var(--color-font);
+
 }
 
 #waitlist {
@@ -93,15 +106,6 @@
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   overflow: auto;
   z-index: 1;
-}
-
-.stars_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 .title {
@@ -115,20 +119,20 @@
 .title::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 75%;
   width: 30%;
   height: 1px;
-  background: linear-gradient(to right, #20435e, #fff 50%);
+  background: linear-gradient(to right, #9903f5 10%, rgba(243, 248,246, 0.87) 50% );
   background-size: 200% 100%;
 }
 
 .title::before {
-  left: -10%;
+  left: 5%;
 }
 
 .title::after {
-  right: -10%;
-  background: linear-gradient(to left, #20435e, #fff 50%);
+  right: 5%;
+  background: linear-gradient(to right, rgba(243, 248,246, 0.87), #9903f5);
 }
 
 .form_and_model {
