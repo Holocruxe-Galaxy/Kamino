@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './Landing.module.css';
@@ -11,6 +12,7 @@ import { Canvas } from '@react-three/fiber';
 // import Stars from "../../components/Stars/stars";
 import vector from '../../../public/img/vector.js';
 import Hero4 from '../../components/Hero/Hero4';
+
 
 const Landing = () => {
   const svgDiv = useRef();
@@ -48,7 +50,9 @@ const Landing = () => {
       >
         {/* <Stars /> */}
       </Canvas>
+      <div className={isMobile ? "disable-touch" : ""}>
       <EarthCanvas />
+
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
       </div>
@@ -66,11 +70,13 @@ const Landing = () => {
       </div>
       <div className={styles.vector_container}>
         <img className={styles.vector08} src={vector.vector08} alt="" />
+
       </div>
       <Hero4/>
       <Container ref={waitlistRef} />
     </main>
   );
 };
+
 
 export default Landing;
