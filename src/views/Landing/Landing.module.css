@@ -38,3 +38,8 @@
     display: none;
   }
 }
+
+
+.disable-touch {
+  pointer-events: none;
+}

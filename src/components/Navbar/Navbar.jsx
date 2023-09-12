@@ -184,6 +184,22 @@ const Navbar = () => {
         >
           About Us
         </NavLink>
+        <NavLink
+          to="/holoref"
+          className={`${styles.link} ${
+            location.pathname === '/holoref' ? styles.activeLink : null
+          }`}
+        >
+          HoloRef
+        </NavLink>
+        <NavLink
+          to="/cam"
+          className={`${styles.link} ${
+            location.pathname === '/cam' ? styles.activeLink : null
+          }`}
+        >
+          Cam
+        </NavLink>
         <Link
   to="waitlist"
   spy={true}
