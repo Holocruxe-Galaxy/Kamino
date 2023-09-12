@@ -1,7 +1,7 @@
 import { Suspense, useRef } from 'react';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { useFrame, Canvas } from '@react-three/fiber';
-import CanvasLoader from './trash/Loader';
+import CanvasLoader from './Loader';
 import './earth.css';
 // import Stars from '../Stars/stars';
 import CircleSvg from '../../icons/Ellipse 3.svg';
@@ -30,7 +30,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: '500px', marginTop: '4rem' }}>
+      <Canvas className="earth-canvas" style={{ maxHeight: '650px', marginTop: '4rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}

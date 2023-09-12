@@ -5,7 +5,7 @@ import Hero from '../../components/Hero/Hero';
 import Hero2 from '../../components/Hero/Hero2';
 import Hero3 from '../../components/Hero/Hero3';
 // import Feature from '../../components/Feature/Feature';
-// import EarthCanvas from '../../components/models/Earth';
+import EarthCanvas from '../../components/models/Earth';
 import Container from '../../components/Waitlist/waitlistcontainer';
 import { Canvas } from '@react-three/fiber';
 // import Stars from "../../components/Stars/stars";
@@ -48,7 +48,7 @@ const Landing = () => {
       >
         {/* <Stars /> */}
       </Canvas>
-      {/* <EarthCanvas /> */}
+      <EarthCanvas />
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
       </div>
