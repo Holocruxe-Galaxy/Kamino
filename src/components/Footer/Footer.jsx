@@ -28,10 +28,10 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="../../../public/img/Instagram1.png" alt="Instagram" />
+          <img src="/public/img/Instagram1.png" alt="Instagram" />
         </a>
         <a href="#" className={styles.navlink} target="_blank">
-          <img src="../../../public/img/Facebook1.png" alt="Facebook" />
+          <img src="/public/img/Facebook1.png" alt="Facebook" />
         </a>
         <a
           href="https://www.linkedin.com/company/holocruxe/"
@@ -39,7 +39,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="../../../public/img/LinkedIn1.png" alt="LinkedIn" />
+          <img src="/public/img/LinkedIn1.png" alt="LinkedIn" />
         </a>
       </div>
       <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>

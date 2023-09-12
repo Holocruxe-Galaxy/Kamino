@@ -1,12 +1,11 @@
-import React, { Suspense, useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, Canvas } from '@react-three/fiber';
 import CanvasLoader from './trash/Loader';
-import { Canvas } from '@react-three/fiber';
 import './earth.css';
 // import Stars from '../Stars/stars';
-// import CircleSvg from '../../icons/Ellipse 3.svg';
-// import IconSvg from '../../icons/mouse.svg';
+import CircleSvg from '../../icons/Ellipse 3.svg';
+import IconSvg from '../../icons/mouse.svg';
 
 const Earth = () => {
   const earthRef = useRef();
@@ -31,7 +30,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: '600px' }}>
+      <Canvas className="earth-canvas" style={{ height: '500px', marginTop: '4rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -44,21 +43,21 @@ const EarthCanvas = () => {
           <Preload all />
         </Suspense>
       </Canvas>
-      {/* <div className="svg-click">
+      <div className="svg-click">
         <img
           src={CircleSvg}
           alt="circle"
-          style={{ position: 'absolute', bottom: '300px', right: '100px' }}
+          style={{ position: 'absolute', bottom: '100px', right: '100px' }}
         />
         <img
           src={IconSvg}
           alt="icon"
-          style={{ position: 'absolute', bottom: '320px', right: '115px' }}
+          style={{ position: 'absolute', bottom: '120px', right: '115px' }}
         />
         <div
           style={{
             position: 'absolute',
-            bottom: '250px',
+            bottom: '50px',
             right: '100px',
             userSelect: 'none',
             color: 'white',
@@ -68,7 +67,7 @@ const EarthCanvas = () => {
           <p>Click in</p>
           <p>the world</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

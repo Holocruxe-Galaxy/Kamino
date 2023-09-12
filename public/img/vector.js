@@ -5,6 +5,7 @@ import vector04 from './Vector 4.svg';
 import vector05 from './Vector 5.svg';
 import vector06 from './Vector 6.svg';
 import vector07 from './Vector 7.svg';
+import vector08 from './Vector 8.svg';
 import vector09 from './Vector 9.svg';
 import vector10 from './Vector 10.svg';
 import vector11 from './Vector 11.svg';
@@ -25,6 +26,7 @@ let vector = {
   vector05,
   vector06,
   vector07,
+  vector08,
   vector09,
   vector10,
   vector11,
