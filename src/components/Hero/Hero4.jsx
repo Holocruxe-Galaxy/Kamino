@@ -1,4 +1,3 @@
-// import styles from "./Hero.module.css";
 import styles from "./heroTexto.module.css";
 
 const Hero4 = () => {

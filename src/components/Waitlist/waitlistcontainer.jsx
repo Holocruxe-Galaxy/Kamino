@@ -1,8 +1,7 @@
 import React from 'react';
-// import LegacyModelCanvas from '../models/trash/legacy';
 import Waitlist from './waitlist';
 import { Canvas } from '@react-three/fiber';
-// import Stars from '../trash/Stars/stars';
+
 
 const Container = React.forwardRef((props, ref) => {
   return (
@@ -25,7 +24,7 @@ const Container = React.forwardRef((props, ref) => {
           height: '100%',
         }}
       >
-        {/* <Stars /> */}
+      
       </Canvas>
       <Waitlist />
     </div>

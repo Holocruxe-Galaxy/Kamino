@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './waitlist.module.css';
-// import LegacyModelCanvas from '../models/trash/legacy';
+import vector from '../../../public/img/vector';
+
 
 const Waitlist = () => {
   const [name, setName] = useState('');
@@ -48,15 +49,29 @@ const Waitlist = () => {
 
   return (
     <section id="waitlist" className={styles.waitlist}>
-      <div className={styles.stars_background}></div>
-      <div className={styles.text_section} style={{ marginBottom: '100px' }}>
-        <div className={styles.title} style={{ marginBottom: '100px' }}>
+      
+      <div className={styles.ligths}>
+        <img src={vector.vector18} alt="" />
+        <div className={styles.juntos}>
+        <img src={vector.vector10} alt="" />
+        <img src={vector.vector09} alt="" />
+        </div>
+        <img src={vector.vector11} alt="" width='50rem'/>
+        <img src={vector.vector12} alt="" />
+        <img src={vector.vector13} alt="" />
+        <div className={styles.juntos}>
+        <img src={vector.vector14} alt="" />
+        <img src={vector.vector15} alt="" />
+        </div>
+        <img src={vector.vector16} alt="" />
+        <img src={vector.vector20} alt="" />
+        <img src={vector.vector19} alt="" />
+
+      </div>
+      <div className={styles.text_section}>
+        <div className={styles.title}>
           <h2>WAITLIST</h2>
         </div>
-        <p>
-          Join us on this exciting journey as we transform the way we capture
-          and celebrate the beauty of life.
-        </p>
       </div>
       <div className={styles.form_and_model}>
         <form className={styles.join_waitlist} onSubmit={handleSubmit}>
@@ -64,7 +79,7 @@ const Waitlist = () => {
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
+            placeholder="Nombre"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -84,7 +99,7 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">Step inside!</button>
+          <button type="submit">SUSCRIBIRME</button>
         </form>
       </div>
       {isRegistered && (
