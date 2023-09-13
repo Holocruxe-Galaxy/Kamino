@@ -50,6 +50,7 @@ const Landing = () => {
       ></Canvas>
       {/* <EarthCanvas /> */}
 
+
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
       </div>
