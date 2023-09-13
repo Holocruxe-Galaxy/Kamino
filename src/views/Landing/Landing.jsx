@@ -1,18 +1,18 @@
-
+// hooks
 import { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform } from 'framer-motion';
+import { Canvas } from '@react-three/fiber';
+// estilos
 import styles from './Landing.module.css';
+// imagenes
+import vector from '../../../public/img/vector.js';
+// import EarthCanvas from '../../components/models/Earth';
+// componentes
+import Container from '../../components/Waitlist/waitlistcontainer';
 import Hero from '../../components/Hero/Hero';
 import Hero2 from '../../components/Hero/Hero2';
 import Hero3 from '../../components/Hero/Hero3';
-// import Feature from '../../components/Feature/Feature';
-import EarthCanvas from '../../components/models/Earth';
-import Container from '../../components/Waitlist/waitlistcontainer';
-import { Canvas } from '@react-three/fiber';
-// import Stars from "../../components/Stars/stars";
-import vector from '../../../public/img/vector.js';
 import Hero4 from '../../components/Hero/Hero4';
-
 
 const Landing = () => {
   const svgDiv = useRef();
@@ -47,12 +47,9 @@ const Landing = () => {
           height: '100%',
           zIndex: '-1',
         }}
-      >
-        {/* <Stars /> */}
-      </Canvas>
-      <div className={isMobile ? "disable-touch" : ""}>
-        <EarthCanvas />
-      </div>
+      ></Canvas>
+      {/* <EarthCanvas /> */}
+
 
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
@@ -69,15 +66,10 @@ const Landing = () => {
       <div className={styles.vector_container}>
         <img className={styles.vector07} src={vector.vector07} alt="" />
       </div>
-      <div className={styles.vector_container}>
-        <img className={styles.vector08} src={vector.vector08} alt="" />
-
-      </div>
-      <Hero4/>
+      <Hero4 />
       <Container ref={waitlistRef} />
     </main>
   );
 };
-
 
 export default Landing;

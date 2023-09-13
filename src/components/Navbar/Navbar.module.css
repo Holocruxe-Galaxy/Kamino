@@ -47,7 +47,7 @@
 .navbar > *,
 .navbarAnim > * {
   font-family: var(--main-font);
-  color:linear-gradient(to right, #9903f5 10%, rgba(243, 248,246, 0.87) 50% );
+  color:linear-gradient(to right, #9903f5 10%, rgba(243, 248,246, 0.87) 50% ); /* color de los puntos del logo */
 }
 
 .link {
@@ -56,6 +56,9 @@
   text-decoration: none;
 
   transition: 0.3s ease transform;
+  color: var(--color-font);
+  font-family: var(--font-menu);
+  font-weight: 400;
 }
 
 .link:hover {
