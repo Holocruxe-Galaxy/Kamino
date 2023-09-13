@@ -1,5 +1,4 @@
-
-// hooks 
+// hooks
 import { useEffect, useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
@@ -14,10 +13,6 @@ import Hero from '../../components/Hero/Hero';
 import Hero2 from '../../components/Hero/Hero2';
 import Hero3 from '../../components/Hero/Hero3';
 import Hero4 from '../../components/Hero/Hero4';
-
-
-
-
 
 const Landing = () => {
   const svgDiv = useRef();
@@ -52,9 +47,7 @@ const Landing = () => {
           height: '100%',
           zIndex: '-1',
         }}
-      >
-      
-      </Canvas>
+      ></Canvas>
       {/* <EarthCanvas /> */}
 
       <div className={styles.vector_container}>
@@ -72,11 +65,10 @@ const Landing = () => {
       <div className={styles.vector_container}>
         <img className={styles.vector07} src={vector.vector07} alt="" />
       </div>
-      <Hero4/>
+      <Hero4 />
       <Container ref={waitlistRef} />
     </main>
   );
 };
-
 
 export default Landing;

@@ -17,6 +17,12 @@ import vector16 from './Vector 16.svg';
 import vector18 from './Vector 18.svg';
 import vector19 from './Vector 19.svg';
 import vector20 from './Vector 20.svg';
+import vector21 from './Vector 21.svg';
+import vector33 from './Vector 33.svg';
+import vector34 from './Vector 34.svg';
+import vector36 from './Vector 36.svg';
+import vector37 from './Vector 37.svg';
+import vector38 from './Vector 38.svg';
 
 let vector = {
   vector01,
@@ -38,6 +44,12 @@ let vector = {
   vector18,
   vector19,
   vector20,
-}
+  vector21,
+  vector33,
+  vector34,
+  vector36,
+  vector37,
+  vector38,
+};
 
 export default vector;

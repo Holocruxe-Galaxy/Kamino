@@ -3,7 +3,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './waitlist.module.css';
 import vector from '../../../public/img/vector';
 
-
 const Waitlist = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -49,24 +48,22 @@ const Waitlist = () => {
 
   return (
     <section id="waitlist" className={styles.waitlist}>
-      
       <div className={styles.ligths}>
         <img src={vector.vector18} alt="" />
-        <div className={styles.juntos}>
-        <img src={vector.vector10} alt="" />
+
+        {/* <img src={vector.vector10} alt="" /> */}
         <img src={vector.vector09} alt="" />
-        </div>
-        <img src={vector.vector11} alt="" width='50rem'/>
+
+        {/* <img src={vector.vector11} alt="" /> */}
         <img src={vector.vector12} alt="" />
         <img src={vector.vector13} alt="" />
-        <div className={styles.juntos}>
+
         <img src={vector.vector14} alt="" />
         <img src={vector.vector15} alt="" />
-        </div>
+
         <img src={vector.vector16} alt="" />
         <img src={vector.vector20} alt="" />
         <img src={vector.vector19} alt="" />
-
       </div>
       <div className={styles.text_section}>
         <div className={styles.title}>

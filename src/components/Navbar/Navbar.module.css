@@ -56,6 +56,9 @@
   text-decoration: none;
 
   transition: 0.3s ease transform;
+  color: var(--color-font);
+  font-family: var(--font-menu);
+  font-weight: 400;
 }
 
 .link:hover {
