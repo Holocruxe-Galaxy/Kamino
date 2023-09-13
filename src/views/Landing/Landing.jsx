@@ -51,7 +51,8 @@ const Landing = () => {
         {/* <Stars /> */}
       </Canvas>
       <div className={isMobile ? "disable-touch" : ""}>
-      <EarthCanvas />
+        <EarthCanvas />
+      </div>
 
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
