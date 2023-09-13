@@ -50,7 +50,7 @@ const Landing = () => {
       >
         {/* <Stars /> */}
       </Canvas>
-      <div className={isMobile ? "disable-touch" : ""}>
+      {/* <div className={isMobile ? "disable-touch" : ""}></div>ñ */}
       <EarthCanvas />
 
       <div className={styles.vector_container}>
