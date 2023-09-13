@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './About.module.css';
+import vector from '../../../public/img/vector';
 
 const About = () => {
   const hasVisited = sessionStorage.getItem('visited');
@@ -12,26 +13,47 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.mission}>
-        <h3 className={styles.title}>WHO WE ARE?</h3>
-        <p className={styles.text}>
-          At Holocruxe we are a passionate team that believes in the power of
+      
+      <div className={styles.text_section}>
+        <div className={styles.text_title}>
+          <h2>WHO WE ARE?</h2>
+        </div>
+        <img src={vector.vector33} alt="" className={styles.vector1}/>
+      </div>
+      <article className={styles.text}>
+        <p>
+          <span className={styles.title}>At Holocruxe </span>
+          we are a passionate team that believes in the power of
           memories and experiences.
-          <br />
-          <br />
+        </p> 
+        <pre><br /></pre>
+        <p>
           Holocruxe is a company that creates a platform to help people capture
           and preserve their memories. The platform uses artificial intelligence
-          to create a virtual diary that captures the essence of a preson's
+          to create a virtual diary that captures the essence of a person's
           life. This allows users to relive their memories in a richer and
-          depper way.
+          deeper way.`
         </p>
+      </article>
+      <div className={styles.text_section}>
+        <div className={styles.text_title}>
+          <h2>OUR VALUES</h2>
+        </div>
+          <div className={styles.vector2}>
+            <div>
+              <img src={vector.vector34} alt="" />
+            </div>
+            <div>
+            <img src={vector.vector36} alt="" />
+            <img src={vector.vector37} alt="" />
+            </div>
+          </div>
       </div>
-
-      <div className={styles.vertical_line}></div>
+            
       <div className={styles.values}>
-        <h3 className={styles.title}>OUR VALUES</h3>
+        
         <div className={styles.value}>
-          <strong>Authenticity</strong>
+          <h3 className={styles.title} >Authenticity</h3>
           <p>
             Promote honesty and authenticity by capturing and sharing memories,
             ecouraging users to be themselves and share their experiences as
@@ -39,7 +61,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.value}>
-          <strong>Connection</strong>
+          <h3 className={styles.title}>Connection</h3>
           <p>
             Promote human connection by enabling users to share theirmemories
             with friends , family and loved ones, and provide toold to
@@ -47,7 +69,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.value}>
-          <strong>Privacy</strong>
+          <h3 className={styles.title}>Privacy</h3>
           <p>
             Respecting users' privacy and providing them with clear and
             transparent choices about how their personal data is used and
