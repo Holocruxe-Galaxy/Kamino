@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styles from './About.module.css';
-import vector from '../../../public/img/vector';
+import vector from '../../img/vector';
 
 const About = () => {
   const hasVisited = sessionStorage.getItem('visited');

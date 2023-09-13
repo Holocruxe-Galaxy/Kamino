@@ -57,11 +57,19 @@ const Faqs = () => {
       <main className={styles.container}>
         <div className={styles.accordion} role="tablist">
           <div className={styles.hero}>
-            <img src="/public/img/rob05.png" alt="robot con signo de pregunta" className={styles.heroImg} />
-            <img src="/public/img/Vector 38.svg" alt="linea" className={styles.heroLine}/>
+            <img
+              src="../../img/rob05.png"
+              alt="robot con signo de pregunta"
+              className={styles.heroImg}
+            />
+            <img
+              src="../../img/Vector 38.svg"
+              alt="linea"
+              className={styles.heroLine}
+            />
             <h1>FAQ's</h1>
           </div>
-            
+
           {panels.map((panel, index) => (
             <Panel
               key={index}
