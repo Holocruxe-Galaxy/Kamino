@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
+    <>
+    <div className={styles.separator}></div>
     <footer className={styles.footerDistributed}>
       <div className={styles.footerLeft}>
         <img src="./holocruxe.png" />
@@ -44,6 +46,7 @@ const Footer = () => {
       </div>
       <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>
     </footer>
+    </>
   );
 };
 

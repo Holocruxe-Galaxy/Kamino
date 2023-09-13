@@ -22,7 +22,7 @@ const About = () => {
       </div>
       <article className={styles.text}>
         <p>
-          <span className={styles.title}>At Holocruxe </span>
+          <span className={styles.titleSmall}>At Holocruxe </span>
           we are a passionate team that believes in the power of
           memories and experiences.
         </p> 
@@ -41,11 +41,11 @@ const About = () => {
         </div>
           <div className={styles.vector2}>
             <div>
-              <img src={vector.vector34} alt="" />
+              <img src={vector.vector34} alt="" className={styles.vectorD} />
             </div>
-            <div>
-            <img src={vector.vector36} alt="" />
-            <img src={vector.vector37} alt="" />
+            <div className={styles.vector3}>
+            <img src={vector.vector36} alt="" className={styles.vectorI}/>
+            {/* <img src={vector.vector37} alt="" className={styles.vectorI} /> */}
             </div>
           </div>
       </div>
@@ -78,6 +78,7 @@ const About = () => {
           </p>
         </div>
       </div>
+      <img src="/public/img/rob04.png" alt="robot apoyado"  className={styles.robot}/>
     </div>
   );
 };
