@@ -1,12 +1,13 @@
 import React from 'react';
+import LegacyModelCanvas from '../models/legacy';
 import Waitlist from './waitlist';
 import { Canvas } from '@react-three/fiber';
-
+import Stars from '../Stars/stars';
 
 const Container = React.forwardRef((props, ref) => {
   return (
     <div
-      id="waitlist"
+    id="waitlist"
       style={{
         position: 'relative',
         display: 'flex',
@@ -24,11 +25,11 @@ const Container = React.forwardRef((props, ref) => {
           height: '100%',
         }}
       >
-      
+        <Stars />
       </Canvas>
       <Waitlist />
     </div>
   );
-});
+})
 
 export default Container;

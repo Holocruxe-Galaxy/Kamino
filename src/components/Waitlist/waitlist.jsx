@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import styles from './waitlist.module.css';
-import vector from '../../img/vector';
+import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import styles from "./waitlist.module.css";
+import LegacyModelCanvas from '../models/legacy';
 
 const Waitlist = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [isRegistered, setIsRegistered] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState('');
+  const [captchaValue, setCaptchaValue] = useState("");
   const [showCaptcha, setShowCaptcha] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -18,28 +18,28 @@ const Waitlist = () => {
       return;
     }
 
-    if (captchaValue === '') {
-      console.error('Please verify the captcha');
+    if (captchaValue === "") {
+      console.error("Please verify the captcha");
       return;
     }
 
-    const response = await fetch('http://localhost:3000/users', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, captchaValue }),
     });
     if (response.ok) {
       setIsRegistered(true);
     } else {
-      console.error('Registration failed');
+      console.error("Registration failed");
     }
 
     const data = await response.json();
     console.log(data);
 
-    setName('');
-    setEmail('');
-    setCaptchaValue('');
+    setName("");
+    setEmail("");
+    setCaptchaValue("");
   };
 
   const onChange = (value) => {
@@ -48,27 +48,15 @@ const Waitlist = () => {
 
   return (
     <section id="waitlist" className={styles.waitlist}>
-      <div className={styles.ligths}>
-        <img src={vector.vector18} alt="" />
-
-        {/* <img src={vector.vector10} alt="" /> */}
-        <img src={vector.vector09} alt="" />
-
-        {/* <img src={vector.vector11} alt="" /> */}
-        <img src={vector.vector12} alt="" />
-        <img src={vector.vector13} alt="" />
-
-        <img src={vector.vector14} alt="" />
-        <img src={vector.vector15} alt="" />
-
-        <img src={vector.vector16} alt="" />
-        <img src={vector.vector20} alt="" />
-        <img src={vector.vector19} alt="" />
-      </div>
-      <div className={styles.text_section}>
-        <div className={styles.title}>
+      <div className={styles.stars_background}></div>
+      <div className={styles.text_section} style={{ marginBottom: "100px" }}>
+        <div className={styles.title} style={{ marginBottom: "100px" }}>
           <h2>WAITLIST</h2>
         </div>
+        <p>
+          Join us on this exciting journey as we transform the way we capture
+          and celebrate the beauty of life.
+        </p>
       </div>
       <div className={styles.form_and_model}>
         <form className={styles.join_waitlist} onSubmit={handleSubmit}>
@@ -76,7 +64,7 @@ const Waitlist = () => {
             type="text"
             id="name"
             name="name"
-            placeholder="Nombre"
+            placeholder="Name"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -96,11 +84,11 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">SUSCRIBIRME</button>
+          <button type="submit">Step inside!</button>
         </form>
       </div>
       {isRegistered && (
-        <p style={{ color: 'green' }}>
+        <p style={{ color: "green" }}>
           Email registration added to the waitlist queue!
         </p>
       )}
