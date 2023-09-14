@@ -1,9 +1,13 @@
-import React from "react";
-import styles from "./Footer.module.css";
-import { NavLink } from "react-router-dom";
+import styles from './Footer.module.css';
+import { NavLink } from 'react-router-dom';
+import redes from '../../img/redes.js'
 
 const Footer = () => {
   return (
+    <>
+    <div className={styles.separator}>
+      
+    </div>
     <footer className={styles.footerDistributed}>
       <div className={styles.footerLeft}>
         <img src="./holocruxe.png" />
@@ -15,9 +19,6 @@ const Footer = () => {
             Home
           </NavLink>
 
-          <NavLink to="/about" className={styles.navlink}>
-            About Us
-          </NavLink>
           <NavLink to="/faqs" className={styles.navlink}>
             FAQ
           </NavLink>
@@ -30,25 +31,25 @@ const Footer = () => {
           href="https://www.instagram.com/holocruxe/"
           className={styles.navlink}
           target="_blank"
+          rel="noreferrer"
         >
-          <img src="/instagram.png" alt="Instagram" />
-        </a>
-        {/* <a href="#" className={styles.navlink} target="_blank">
-          <img src="/facebook.png" alt="Facebook" />
+          <img src={redes.instagram} alt='instagram' />
         </a>
         <a href="#" className={styles.navlink} target="_blank">
-          <img src="/twitter.png" alt="Twitter" />
-        </a> */}
+          <img src={redes.facebook} alt="Facebook" />
+        </a>
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}
           target="_blank"
+          rel="noreferrer"
         >
-          <img src="/linkedin.png" alt="LinkedIn" />
+          <img src={redes.linkedin} alt="LinkedIn" />
         </a>
       </div>
       <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>
     </footer>
+    </>
   );
 };
 
