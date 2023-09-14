@@ -1,10 +1,13 @@
 import styles from './Footer.module.css';
 import { NavLink } from 'react-router-dom';
+import redes from '../../img/redes.js'
 
 const Footer = () => {
   return (
     <>
-    <div className={styles.separator}></div>
+    <div className={styles.separator}>
+      
+    </div>
     <footer className={styles.footerDistributed}>
       <div className={styles.footerLeft}>
         <img src="./holocruxe.png" />
@@ -30,10 +33,10 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/public/img/Instagram1.png" alt="Instagram" />
+          <img src={redes.instagram} alt='instagram' />
         </a>
         <a href="#" className={styles.navlink} target="_blank">
-          <img src="/public/img/Facebook1.png" alt="Facebook" />
+          <img src={redes.facebook} alt="Facebook" />
         </a>
         <a
           href="https://www.linkedin.com/company/holocruxe/"
@@ -41,7 +44,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/public/img/LinkedIn1.png" alt="LinkedIn" />
+          <img src={redes.linkedin} alt="LinkedIn" />
         </a>
       </div>
       <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>

@@ -1,11 +1,11 @@
-// import styles from "./Hero.module.css";
+import robot from '../../img/robot';
 import styles from "./heroC.module.css";
 
 const Hero3 = () => {
   return (
     <section className={styles.hero_container}>
         <div className={styles.hero_img}>
-          <img src="../../../public/img/rob03.png" alt="Robot asomandose" />
+          <img src={robot.rob03} alt="Robot parado" />
         </div>
       <div className={styles.hero}>
         <h2>Una vida<span className={styles.title}> a tus vivencias</span></h2>

@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Faqs.module.css';
 import AnimationBg from '../../components/AnimationBg/AnimationBg';
+// imagenes
+import robot from '../../img/robot';
+import vector from '../../img/vector';
 
 const Panel = ({ question, answer, activeTab, index, activateTab }) => {
   const hasVisited = sessionStorage.getItem('visited');
@@ -58,12 +61,12 @@ const Faqs = () => {
         <div className={styles.accordion} role="tablist">
           <div className={styles.hero}>
             <img
-              src="../../img/rob05.png"
+              src={robot.rob05}
               alt="robot con signo de pregunta"
               className={styles.heroImg}
             />
             <img
-              src="../../img/Vector 38.svg"
+              src={vector.vector38}
               alt="linea"
               className={styles.heroLine}
             />

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import styles from './About.module.css';
 import vector from '../../img/vector';
+import robot from '../../img/robot';
 
 const About = () => {
   const hasVisited = sessionStorage.getItem('visited');
@@ -78,7 +79,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <img src="/public/img/rob04.png" alt="robot apoyado"  className={styles.robot}/>
+      <img src={robot.rob04} alt="robot apoyado"  className={styles.robot}/>
     </div>
   );
 };
