@@ -313,8 +313,9 @@ flex-direction: column;
   }
 
   .robot{
-    left: 8rem;
+    left: 5.5rem;
     top: 7.06rem;
+    
 }
 
 @media (min-width: 481px) and (max-width: 920px) {}}
