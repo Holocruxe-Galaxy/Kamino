@@ -14,12 +14,10 @@
 }
 
 .logoContainerAnim {
-  -webkit-animation: entranceContainer 7.5s 1 ease;
   animation: entranceContainer 7.5s 1 ease;
 }
 
 .svgLogoAnim {
-  -webkit-animation: entranceLogo 7.5s 1 ease;
   animation: entranceLogo 7.5s 1 ease;
 }
 
@@ -35,19 +33,17 @@
 
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: entranceNavbar 1.5s forwards ease;
   animation: entranceNavbar 1.5s forwards ease;
 }
 
 .navbarAnim {
-  -webkit-animation-delay: 6.5s;
   animation-delay: 6.5s;
 }
 
-.navbar>*,
-.navbarAnim>* {
+.navbar > *,
+.navbarAnim > * {
   font-family: var(--main-font);
-  color: #349aef;
+  color: var(--white);
 }
 
 .link {
@@ -56,9 +52,6 @@
   text-decoration: none;
 
   transition: 0.3s ease transform;
-  color: var(--color-font);
-  font-family: var(--font-menu);
-  font-weight: 400;
 }
 
 .link:hover {
@@ -106,7 +99,6 @@
   transform: scale(1);
 
   background-color: var(--aqua);
-  /* background-color: var(--color-bg); */
   transition: 0.5s ease all;
 }
 
@@ -129,10 +121,9 @@
 .activeLink:hover::before,
 .activeLink:hover::after {
   background-color: var(--aqua);
-  /* background-color: var(--color-bg); */
 }
 
-.navbar>button {
+.navbar > button {
   padding: 10px 20px;
   background-color: transparent;
   border: solid 1px var(--white);
@@ -141,79 +132,27 @@
   transition: all 0.3s ease;
 }
 
-.navbar>button:nth-of-type(1) {
+.navbar > button:nth-of-type(1) {
   margin: 0 1rem;
 }
 
 nav button:hover {
-  background-color: var(--color-font);
+  background-color: var(--white);
   color: var(--dark);
-  /* color: ; */
-}
-
-@-webkit-keyframes entranceContainer {
-  0% {
-    height: 98vh;
-  }
-
-  50% {
-    height: 98vh;
-  }
-
-  75% {
-    height: 100%;
-  }
-
-  100% {
-    height: 100%;
-  }
 }
 
 @keyframes entranceContainer {
   0% {
     height: 98vh;
   }
-
   50% {
     height: 98vh;
   }
-
   75% {
     height: 100%;
   }
-
   100% {
     height: 100%;
-  }
-}
-
-@-webkit-keyframes entranceLogo {
-  0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
   }
 }
 
@@ -224,21 +163,18 @@ nav button:hover {
     left: 100%;
     transform: translate(-50%, -50%) scale(3);
   }
-
   50% {
     position: absolute;
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%) scale(3);
   }
-
   75% {
     position: absolute;
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%) scale(1);
   }
-
   100% {
     position: absolute;
     top: 50%;
@@ -247,24 +183,11 @@ nav button:hover {
   }
 }
 
-@-webkit-keyframes entranceNavbar {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes entranceNavbar {
   0% {
     opacity: 0;
     transform: translateY(-100%);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -275,57 +198,23 @@ nav button:hover {
 .mobile {
   display: none;
 }
-
 .hamburger {
-  width: 1.5rem;
-  right: 2rem;
-  top: 2rem;
+  width: 32px;
+  right: 30px;
+  top: 20px;
   position: absolute;
 }
-
 
 @media screen and (max-width: 920px) {
   .svgLogo {
     width: 10rem;
   }
-
   .navbar {
     display: none;
   }
-
   .mobile {
     display: flex;
     flex: 1;
-  }
-
-  @-webkit-keyframes entranceLogo {
-    0% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    50% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    75% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%) scale(1);
-    }
   }
 
   @keyframes entranceLogo {
@@ -335,21 +224,18 @@ nav button:hover {
       left: 100%;
       transform: translate(-50%, -50%) scale(1);
     }
-
     50% {
       position: absolute;
       top: 50%;
       left: 100%;
       transform: translate(-50%, -50%) scale(1);
     }
-
     75% {
       position: absolute;
       top: 50%;
       left: 100%;
       transform: translate(-50%, -50%) scale(1);
     }
-
     100% {
       position: absolute;
       top: 50%;

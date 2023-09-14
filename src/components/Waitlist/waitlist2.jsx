@@ -1,5 +1,6 @@
-import {useState} from "react";
-// import { Canvas } from "@react-three/fiber";
+import React, {useState} from "react";
+import Stars from "../Stars/stars";
+import { Canvas } from "@react-three/fiber";
 import styles from "./waitlist.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -60,7 +61,7 @@ const Waitlist = () => {
           type="text"
           id="name"
           name="name"
-          placeholder="Nombre"
+          placeholder="Name"
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -77,7 +78,7 @@ const Waitlist = () => {
          {showCaptcha && (
           <ReCAPTCHA sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He" onChange={onChange} />
         )}
-        <button type="submit">SUSCRIBIRME</button>
+        <button type="submit">Step inside!</button>
         {isRegistered && (
           <p>Email registration added to the waitlist queue!</p>
         )}

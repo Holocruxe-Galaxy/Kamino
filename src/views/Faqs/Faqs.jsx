@@ -1,10 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Faqs.module.css';
 import AnimationBg from '../../components/AnimationBg/AnimationBg';
-// imagenes
-import robot from '../../img/robot';
-import vector from '../../img/vector';
 
 const Panel = ({ question, answer, activeTab, index, activateTab }) => {
   const hasVisited = sessionStorage.getItem('visited');
@@ -59,20 +56,7 @@ const Faqs = () => {
     <>
       <main className={styles.container}>
         <div className={styles.accordion} role="tablist">
-          <div className={styles.hero}>
-            <img
-              src={robot.rob05}
-              alt="robot con signo de pregunta"
-              className={styles.heroImg}
-            />
-            <img
-              src={vector.vector38}
-              alt="linea"
-              className={styles.heroLine}
-            />
-            <h1>FAQ's</h1>
-          </div>
-
+          <h1>FAQs</h1>
           {panels.map((panel, index) => (
             <Panel
               key={index}
