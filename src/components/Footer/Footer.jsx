@@ -35,9 +35,9 @@ const Footer = () => {
         >
           <img src={redes.instagram} alt='instagram' />
         </a>
-        <a href="#" className={styles.navlink} target="_blank">
+        {/* <a href="#" className={styles.navlink} target="_blank">
           <img src={redes.facebook} alt="Facebook" />
-        </a>
+        </a> */}
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}

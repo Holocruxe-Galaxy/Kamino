@@ -13,8 +13,8 @@
 .separator{
   width: 100vw;
   height: 4px;
-  border-top: 4px solid linear-gradient(90deg, #A376AF00 0%, #7A6CB5F5 100%);
-  border-top: 4px solid  #7A6CB5F5;
+  /* border-top: 4px solid linear-gradient(90deg, #A376AF00 0%, #7A6CB5F5 100%); */
+  border-top: 4px solid  #1E88E5;
   /* background-image: url(../../img/Vector\ 21.svg); */
 }
 
