@@ -1,9 +1,6 @@
 import vector01 from './Vector 1.svg';
-import vector02 from './Vector 2.svg';
 import vector03 from './Vector 3.svg';
-import vector04 from './Vector 4.svg';
 import vector05 from './Vector 5.svg';
-import vector06 from './Vector 6.svg';
 import vector07 from './Vector 7.svg';
 import vector08 from './Vector 8.svg';
 import vector09 from './Vector 9.svg';
@@ -26,11 +23,8 @@ import vector38 from './Vector 38.svg';
 
 let vector = {
   vector01,
-  vector02,
   vector03,
-  vector04,
   vector05,
-  vector06,
   vector07,
   vector08,
   vector09,

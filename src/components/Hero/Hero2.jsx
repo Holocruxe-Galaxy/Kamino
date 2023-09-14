@@ -1,4 +1,4 @@
-// import styles from "./Hero.module.css";
+import robot from '../../img/robot';
 import styles from './heroB.module.css';
 
 const Hero2 = () => {
@@ -13,7 +13,7 @@ const Hero2 = () => {
         </p>
         </div>
       <div className={styles.hero_img}>
-        <img src="../../../public/img/rob02.png" alt="Robot asomandose" />
+        <img src={robot.rob02} alt="Robot parado" />
       </div>
     </section>
   );

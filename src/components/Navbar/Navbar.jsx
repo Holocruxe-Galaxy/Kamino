@@ -1,7 +1,9 @@
 import styles from './Navbar.module.css';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Link } from 'react-scroll';
+import menu from '../../img/menu';
+import Mobile from './Mobile';
 
 const Navbar = () => {
   const location = useLocation();
@@ -28,6 +30,11 @@ const Navbar = () => {
         ease: 'easeInOut',
       },
     },
+  };
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -175,6 +182,7 @@ const Navbar = () => {
         >
           Home
         </NavLink>
+
         <NavLink
           to="/about"
           className={`${styles.link} ${
@@ -184,24 +192,31 @@ const Navbar = () => {
           About Us
         </NavLink>
 
-        <Link
+        <NavLink
           to="waitlist"
           className={`${styles.link} ${
-            location.pathname === '/about' ? styles.activeLink : null
+            location.pathname === '/waitlist' ? styles.activeLink : null
           }`}
-          
           spy={true}
           smooth={true}
           offset={-70}
           duration={500}
         >
           Waitlist
-        </Link>
+        </NavLink>
 
         <div className={styles.indicator}></div>
       </nav>
-      <nav className={styles.mobile}>
-        <img className={styles.hamburger} src="/menu.png" />
+      <nav className={styles.mobile} onClick={toggleMenu}>
+        {menuOpen ? (
+          <>
+          <img className={styles.hamburger} src={menu.x} />
+          <Mobile />
+          </>
+        ) : (
+          <img className={styles.hamburger} src={menu.hamb} />
+        )}
+
       </nav>
     </header>
   );

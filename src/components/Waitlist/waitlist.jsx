@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './waitlist.module.css';
-import vector from '../../../public/img/vector';
+import vector from '../../img/vector';
 
 const Waitlist = () => {
   const [name, setName] = useState('');

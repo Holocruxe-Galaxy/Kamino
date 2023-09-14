@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 // estilos
 import styles from './Landing.module.css';
 // imagenes
-import vector from '../../../public/img/vector.js';
+import vector from '../../img/vector';
 // import EarthCanvas from '../../components/models/Earth';
 // componentes
 import Container from '../../components/Waitlist/waitlistcontainer';

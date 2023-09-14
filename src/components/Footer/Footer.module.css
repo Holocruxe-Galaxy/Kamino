@@ -10,6 +10,14 @@
   justify-content: space-between;
 }
 
+.separator{
+  width: 100vw;
+  height: 4px;
+  border-top: 4px solid linear-gradient(90deg, #A376AF00 0%, #7A6CB5F5 100%);
+  border-top: 4px solid  #7A6CB5F5;
+  /* background-image: url(../../img/Vector\ 21.svg); */
+}
+
 .copy {
   color: var(--color-font);
   font-size: 14px;
