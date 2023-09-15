@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import styles from "./waitlist.module.css";
-import LegacyModelCanvas from '../models/legacy';
 
 const Waitlist = () => {
   const [name, setName] = useState("");
@@ -84,12 +83,12 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">Step inside!</button>
+          <button type="submit">SUSCRIBE</button>
         </form>
       </div>
       {isRegistered && (
-        <p style={{ color: "green" }}>
-          Email registration added to the waitlist queue!
+        <p style={{ color: 'green' }}>
+          CONGRATULATIONS! YOU ARE ALREADY ON BOARD!
         </p>
       )}
     </section>

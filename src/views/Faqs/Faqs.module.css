@@ -9,6 +9,25 @@
   overflow-y: scroll;
   margin-bottom: 100px;
 }
+
+
+.hero {
+  margin: 2rem 0 5rem -12rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.heroImg{
+  position: relative;
+  top: 5rem ;
+}
+
+.heroLine{
+  position: relative;
+  right: 8rem;
+}
+
 .container h1 {
   margin: 0 0 40px 0;
   color: white;
@@ -83,4 +102,42 @@
 }
 .panel:not(:last-child) {
   margin-bottom: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .hero{
+    margin: 2rem 0 5rem -5rem;
+  }
+
+  .heroImg{
+    top: 0;
+    left: 4rem;
+    width: 11rem;
+  }
+  
+  .heroLine{
+    right: 0;
+    width: 14rem;
+  }
+
+  .container h1 {
+    top: 3rem;
+    right: 3rem;
+    font-size: 2rem;
+  } 
+
+  
+  
+  .panel{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .panel_content{
+    font-size: 1.2rem;
+  }
+
+  .panel_label{
+    font-size: 1.2rem;
+  }
 }

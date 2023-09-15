@@ -14,13 +14,12 @@
   margin-bottom: 20px;
 }
 .text_section {
-  font-size: 20px;
-  color: white;
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
+  width: 100%;
+  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, #1E88E5 0%, #0C0C0C 100%); 
+  height: 8rem;
+  border-radius: 5.625rem; 
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);  
 }
 
 .waitlist h2 {
@@ -54,16 +53,23 @@
   color: #fff;
   font-size: 18px;
   outline: none;
-  padding: 16px 15px;
-  transition: border-color 0.3s;
+  padding: 1rem;
+  background: var(--color-input);
+  border-radius: 5.625rem;
+  border: 1px solid var(--color-border);
+}
 
-  /* From https://css.glass */
-  background: rgba(133, 145, 145, 0.77);
-  border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid #c2e6e5;
+.join_waitlist input::-webkit-input-placeholder {
+  color: var(--color-font);
+}
+.join_waitlist input::-moz-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input:-ms-input-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input::-ms-input-placeholder {
+  color:var(--color-font);
 }
 .join_waitlist input::placeholder {
   color: white;
@@ -74,9 +80,13 @@
 }
 
 .join_waitlist button {
-  color: black;
-  background-color: #c2e6e5;
-  border-radius: 8px;
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--color-font);
+  background: var(--color-bgBtn);
+  border-radius: 2.5rem;
+  outline: none;
   cursor: pointer;
   font-size: 20px;
   padding: 16px;
@@ -85,7 +95,9 @@
 }
 
 .join_waitlist button:hover {
-  background-color: #9ae2e0;
+  background: var(--color-hoverBtn);
+  color: var(--color-font);
+  
 }
 
 #waitlist {
@@ -118,7 +130,7 @@
   top: 50%;
   width: 30%;
   height: 1px;
-  background: linear-gradient(to right, #20435e, #fff 50%);
+  background: linear-gradient(to left, #1E88E5 -38.76%, #989EA4 110.08%);
   background-size: 200% 100%;
 }
 
@@ -127,13 +139,33 @@
 }
 
 .title::after {
-  right: -10%;
-  background: linear-gradient(to left, #20435e, #fff 50%);
+  right: 5%;
+  background: linear-gradient(to rigth, #1E88E5 -38.76%, #989EA4 110.08%);
 }
 
 .form_and_model {
   display: flex;
   justify-content: flex;
   margin-top: -150px;
+  
+}
+
+@media screen and (max-width: 610px){
+  
+  .ligths{
+    height: 5rem;
+  }
+
+  .text_section{
+    height: 7rem;
+  }
+
+.title::before,
+.title::after{
+  width: 20%;}
+
+  .join_waitlist {
+    width: 100%;
+  }
   
 }

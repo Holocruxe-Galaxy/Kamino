@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from "react";
+import { Suspense, useRef } from "react";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import CanvasLoader from "./Loader";
@@ -30,8 +30,8 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <div style={{ position: "relative" }}>
-      <Canvas className="earth-canvas" style={{ height: "1000px" }}>
+    <div style={{ position: 'relative' }}>
+      <Canvas className="earth-canvas" style={{ height: 'clamp( 35rem,550px, 13rem)' ,marginTop: '4rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}

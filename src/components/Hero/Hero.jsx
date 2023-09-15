@@ -4,19 +4,10 @@ const Hero = () => {
   return (
     <section className={styles.hero_container}>
       <div className={styles.hero}>
-        <h2>
-          <span>Live your life </span>
-          <span>create your story </span>
-        </h2>
-        <h1>Leave a legacy</h1>
+        <h2>A trip to<span className={styles.title}> your experience</span></h2>
         <p>
-          Travel through your memories. Relive your past, reinvent your future
-          by combining magic and artificial intelligence. Connect with your
-          memories in a different way. <br />
-          <strong>Welcome to HOLOCRUXE!</strong>
+        Holocruxe is a revolutionary platform powered by artificial intelligence that allows you to preserve your most precious memories in a secure and organized way. Can you imagine having instant access to all your data in one place? With Holocruxe, it's possible.
         </p>
-        {/* <button>Know more</button>
-        <button className={styles.cta}>Let the magic begin!</button> */}
       </div>
     </section>
   );

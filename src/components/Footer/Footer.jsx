@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -11,9 +10,11 @@ const Footer = () => {
 
       <div className={styles.footerCenter}>
         <p className={styles.footerLinks}>
-          <NavLink className={`${styles.link1} ${styles.navlink}`} to="/">
+          
+            <a className={`${styles.link1} ${styles.navlink}`} href="#">
             Home
-          </NavLink>
+            </a>
+          
 
           <NavLink to="/about" className={styles.navlink}>
             About Us
@@ -29,20 +30,17 @@ const Footer = () => {
         <a
           href="https://www.instagram.com/holocruxe/"
           className={styles.navlink}
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <img src="/instagram.png" alt="Instagram" />
         </a>
         {/* <a href="#" className={styles.navlink} target="_blank">
-          <img src="/facebook.png" alt="Facebook" />
-        </a>
-        <a href="#" className={styles.navlink} target="_blank">
-          <img src="/twitter.png" alt="Twitter" />
+          <img src={redes.facebook} alt="Facebook" />
         </a> */}
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <img src="/linkedin.png" alt="LinkedIn" />
         </a>
