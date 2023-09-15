@@ -27,7 +27,7 @@
 .text_section {
   margin-bottom: 100px;
   width: 100%;
-  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%); 
+  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, #1E88E5 0%, #0C0C0C 100%); 
   height: 8rem;
   border-radius: 5.625rem; 
   box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);  
@@ -58,6 +58,7 @@
   border-radius: 5.625rem;
   border: 1px solid var(--color-border);
 }
+
 .join_waitlist input::-webkit-input-placeholder {
   color: var(--color-font);
 }
@@ -82,7 +83,7 @@
   border: none;
   width: 50%;
   margin: 0 auto;
-  color: var(--color-bg);
+  color: var(--color-font);
   background: var(--color-bgBtn);
   border-radius: 2.5rem;
   outline: none;
@@ -95,7 +96,7 @@
 .join_waitlist button:hover {
   background: var(--color-hoverBtn);
   color: var(--color-font);
-
+  
 }
 
 #waitlist {
@@ -119,7 +120,7 @@
   top: 75%;
   width: 30%;
   height: 1px;
-  background: linear-gradient(to right, #9903f5 10%, rgba(243, 248,246, 0.87) 50% );
+  background: linear-gradient(to left, #1E88E5 -38.76%, #989EA4 110.08%);
   background-size: 200% 100%;
 }
 
@@ -129,12 +130,32 @@
 
 .title::after {
   right: 5%;
-  background: linear-gradient(to right, rgba(243, 248,246, 0.87), #9903f5);
+  background: linear-gradient(to rigth, #1E88E5 -38.76%, #989EA4 110.08%);
 }
 
 .form_and_model {
   display: flex;
   justify-content: flex;
   margin-top: -150px;
+  
+}
+
+@media screen and (max-width: 610px){
+  
+  .ligths{
+    height: 5rem;
+  }
+
+  .text_section{
+    height: 7rem;
+  }
+
+.title::before,
+.title::after{
+  width: 20%;}
+
+  .join_waitlist {
+    width: 100%;
+  }
   
 }

@@ -21,7 +21,7 @@ const Earth = () => {
     <primitive
       ref={earthRef}
       object={earth.scene}
-      scale={3}
+      scale={2.8}
       position={[0, 0.5, 0]} //la posicion!
     />
   );
@@ -30,7 +30,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ maxHeight: '35rem' ,minHeigth: '30rem'  ,marginTop: '4rem' }}>
+      <Canvas className="earth-canvas" style={{ height: 'clamp( 35rem,550px, 13rem)' ,marginTop: '4rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}

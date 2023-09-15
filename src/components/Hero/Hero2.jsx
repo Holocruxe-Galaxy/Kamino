@@ -6,10 +6,11 @@ const Hero2 = () => {
     <section className={styles.hero_container}>
       <div className={styles.hero}>
         <h2>
-          Nuestra<span className={styles.title}> misión</span>
+        Our<span className={styles.title}> mission</span>
         </h2>
         <p>
-        En Holocruxe nuestra misión es preservar y compartir las experiencias y recuerdos más preciados de las personas, utilizando la tecnología de inteligencia artificial para crear un legado duradero y significativo para las generaciones futuras.
+        Our mission is to transform the way people manage their personal information. With Holocruxe, you can create your own digital identity and take full control of your data in an increasingly complex virtual world. You no longer have to worry about losing information or searching for it on disparate platforms.
+
         </p>
         </div>
       <div className={styles.hero_img}>

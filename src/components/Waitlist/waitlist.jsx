@@ -76,7 +76,7 @@ const Waitlist = () => {
             type="text"
             id="name"
             name="name"
-            placeholder="Nombre"
+            placeholder="Name"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -96,12 +96,12 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">SUSCRIBIRME</button>
+          <button type="submit">SUSCRIBE</button>
         </form>
       </div>
       {isRegistered && (
         <p style={{ color: 'green' }}>
-          Email registration added to the waitlist queue!
+          CONGRATULATIONS! YOU ARE ALREADY ON BOARD!
         </p>
       )}
     </section>

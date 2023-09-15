@@ -15,9 +15,11 @@ const Footer = () => {
 
       <div className={styles.footerCenter}>
         <p className={styles.footerLinks}>
-          <NavLink className={`${styles.link1} ${styles.navlink}`} to="/">
+          
+            <a className={`${styles.link1} ${styles.navlink}`} href="#">
             Home
-          </NavLink>
+            </a>
+          
 
           <NavLink to="/faqs" className={styles.navlink}>
             FAQ
@@ -35,9 +37,9 @@ const Footer = () => {
         >
           <img src={redes.instagram} alt='instagram' />
         </a>
-        <a href="#" className={styles.navlink} target="_blank">
+        {/* <a href="#" className={styles.navlink} target="_blank">
           <img src={redes.facebook} alt="Facebook" />
-        </a>
+        </a> */}
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}

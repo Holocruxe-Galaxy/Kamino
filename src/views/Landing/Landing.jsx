@@ -6,7 +6,8 @@ import { Canvas } from '@react-three/fiber';
 import styles from './Landing.module.css';
 // imagenes
 import vector from '../../img/vector';
-// import EarthCanvas from '../../components/models/Earth';
+import EarthCanvas from '../../components/models/Earth';
+import Stars from '../../components/Stars/stars';
 // componentes
 import Container from '../../components/Waitlist/waitlistcontainer';
 import Hero from '../../components/Hero/Hero';
@@ -47,8 +48,12 @@ const Landing = () => {
           height: '100%',
           zIndex: '-1',
         }}
-      ></Canvas>
-      {/* <EarthCanvas /> */}
+      >
+        <Stars />
+      </Canvas>
+
+      
+      <EarthCanvas />
 
 
       <div className={styles.vector_container}>

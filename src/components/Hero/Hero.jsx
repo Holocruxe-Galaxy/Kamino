@@ -8,12 +8,10 @@ const Hero = () => {
         <img src={robot.rob01} alt="Robot asomandose" />
       </div>
       <div className={styles.hero}>
-        <h2>Un viaje<span className={styles.title}> a tus vivencias</span></h2>
+        <h2>A trip to<span className={styles.title}> your experience</span></h2>
         <p>
-        Te imaginas Una app que atrape todos tus recuerdos, se vincule con todas tus redes sociales y genere un diario para recrear su vida con inteligencia artificial ?
+        Holocruxe is a revolutionary platform powered by artificial intelligence that allows you to preserve your most precious memories in a secure and organized way. Can you imagine having instant access to all your data in one place? With Holocruxe, it's possible.
         </p>
-        {/* <button>Know more</button>
-        <button className={styles.cta}>Let the magic begin!</button> */}
       </div>
     </section>
   );

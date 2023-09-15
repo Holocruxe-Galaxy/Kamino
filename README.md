@@ -1,6 +1,22 @@
-<<<<<<< HEAD
+
 # Kamino
-=======
+
+# Refactoring version
+
+Diseño original de:
+
+- [Ana Cortese](https://www.linkedin.com/in/anacorteseux)
+- [Dayana Centorbi](https://www.linkedin.com/in/dayana-centorbi-b8aa57155)
+
+Desarrollo:
+
+- [Gianni Pasquinelli](https://github.com/Gianni03)
+
+<hr>
+
+- [Site Holocuxe](https://www.holocruxe.com/)
+
+
 # Centralización del código para web básica de Holocruxe
 
 Esta es la suma del código del squad web para la creación de la landing page de Holocruxe.
@@ -40,4 +56,4 @@ Start the server
 ```bash
   npm run dev
 ```
->>>>>>> origin/main
+

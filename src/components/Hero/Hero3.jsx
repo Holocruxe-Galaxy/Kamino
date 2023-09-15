@@ -8,9 +8,9 @@ const Hero3 = () => {
           <img src={robot.rob03} alt="Robot parado" />
         </div>
       <div className={styles.hero}>
-        <h2>Una vida<span className={styles.title}> a tus vivencias</span></h2>
+        <h2>All in <span className={styles.title}> one place</span></h2>
         <p>
-        Holocruxe podría ayudarte a hacer un mejor uso de tu tiempo y energía para que puedas crear un legado duradero y significativo para ti y para tus seres queridos.
+        Imagine never again losing an important memory or wasting time searching for information scattered across different platforms. Our Holocruxe manages your data efficiently and securely, allowing you to relive moments and access crucial information with ease.
         </p>
         
       </div>
