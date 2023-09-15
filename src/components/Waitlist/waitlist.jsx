@@ -80,7 +80,7 @@ const Waitlist = () => {
           />
           {showCaptcha && (
             <ReCAPTCHA
-              sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He"
+              sitekey="6LcxjCooAAAAAF_lW6-NN_cTWVQwtTRY0WuJgsDO"
               onChange={onChange}
             />
           )}
