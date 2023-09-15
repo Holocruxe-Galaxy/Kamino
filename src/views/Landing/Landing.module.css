@@ -1,0 +1,90 @@
+.container {
+  position: relative;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: hideContent 2s forwards;
+  animation: hideContent 2s forwards;
+}
+
+.vector_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.vector01 {
+  margin-right: 20vw;
+}
+
+.vector03{
+  width: 60%;
+  margin: -1rem 15rem 0 0;
+}
+
+.vector05{
+  width: 70%;
+  margin: 8rem 0 -2rem 0;
+}
+
+.vector07{
+  margin-top: -5rem;
+}
+
+.vector08{
+  height: 70%;
+  margin-left: 36rem;
+  margin-top: -10rem ;
+}
+
+.containerAnim {
+  -webkit-animation-delay: 3.75s;
+  animation-delay: 3.75s;
+}
+
+@-webkit-keyframes hideContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hideContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.featuresContainer {
+  position: relative;
+}
+
+.svgIndex {
+  margin-left: 10rem;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 85%;
+  width: auto;
+}
+
+@media screen and (max-width: 1460px) {
+  .svgIndex {
+    display: none;
+  }
+}
+
+
+.disable-touch {
+  pointer-events: none;
+}

@@ -1,0 +1,161 @@
+.waitlist {
+  position: relative;
+  z-index: 2;
+  min-height: 80vh;
+  scroll-snap-align: start;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.ligths {
+  
+  width: 100%;
+  margin-bottom: -0.5rem ;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.text_section {
+  margin-bottom: 100px;
+  width: 100%;
+  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, #1E88E5 0%, #0C0C0C 100%); 
+  height: 8rem;
+  border-radius: 5.625rem; 
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);  
+}
+
+.waitlist h2 {
+  color: var(--color-font);
+  font-size: 2.25rem;
+  margin-top: 2.5rem;
+}
+.join_waitlist {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.join_waitlist input {
+  color: var(--color-font);
+  font-size: 18px;
+  outline: none;
+  padding: 1rem;
+  background: var(--color-input);
+  border-radius: 5.625rem;
+  border: 1px solid var(--color-border);
+}
+
+.join_waitlist input::-webkit-input-placeholder {
+  color: var(--color-font);
+}
+.join_waitlist input::-moz-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input:-ms-input-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input::-ms-input-placeholder {
+  color:var(--color-font);
+}
+.join_waitlist input::placeholder {
+  color:var(--color-font);
+}
+
+.join_waitlist input:focus {
+  border-color: var(--color-border);
+}
+
+.join_waitlist button {
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--color-font);
+  background: var(--color-bgBtn);
+  border-radius: 2.5rem;
+  outline: none;
+  cursor: pointer;
+  padding: 1.125rem;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.join_waitlist button:hover {
+  background: var(--color-hoverBtn);
+  color: var(--color-font);
+  
+}
+
+#waitlist {
+  height: 100%;
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  overflow: auto;
+  z-index: 1;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  top: 75%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(to left, #1E88E5 -38.76%, #989EA4 110.08%);
+  background-size: 200% 100%;
+}
+
+.title::before {
+  left: 5%;
+}
+
+.title::after {
+  right: 5%;
+  background: linear-gradient(to rigth, #1E88E5 -38.76%, #989EA4 110.08%);
+}
+
+.form_and_model {
+  display: flex;
+  justify-content: flex;
+  margin-top: -150px;
+  
+}
+
+@media screen and (max-width: 610px){
+  
+  .ligths{
+    height: 5rem;
+  }
+
+  .text_section{
+    height: 7rem;
+  }
+
+.title::before,
+.title::after{
+  width: 20%;}
+
+  .join_waitlist {
+    width: 100%;
+  }
+  
+}
