@@ -23,7 +23,7 @@ const Waitlist = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:3000/users', {
+    const response = await fetch(`${import.meta.env.VITE_BACK_CONECTION}/users`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, captchaValue }),
