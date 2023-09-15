@@ -92,7 +92,7 @@ const Waitlist = () => {
           />
           {showCaptcha && (
             <ReCAPTCHA
-              sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He"
+              sitekey= {`${import.meta.env.VITE_CAPTCHA_KEY}`}
               onChange={onChange}
             />
           )}
