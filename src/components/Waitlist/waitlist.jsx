@@ -56,10 +56,10 @@ const Waitlist = () => {
 
         {/* <img src={vector.vector11} alt="" /> */}
         <img src={vector.vector12} alt="" />
-        <img src={vector.vector13} alt="" />
+        {/* <img src={vector.vector13} alt="" /> */}
 
         <img src={vector.vector14} alt="" />
-        <img src={vector.vector15} alt="" />
+        {/* <img src={vector.vector15} alt="" /> */}
 
         <img src={vector.vector16} alt="" />
         <img src={vector.vector20} alt="" />

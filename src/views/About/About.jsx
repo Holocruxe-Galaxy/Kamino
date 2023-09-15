@@ -19,7 +19,7 @@ const About = () => {
         <div className={styles.text_title}>
           <h2>WHO WE ARE?</h2>
         </div>
-        <img src={vector.vector33} alt="" className={styles.vector1}/>
+        {/* <img src={vector.vector33} alt="" className={styles.vector1}/> */}
       </div>
       <article className={styles.text}>
         <p>
@@ -40,15 +40,6 @@ const About = () => {
         <div className={styles.text_title}>
           <h2>OUR VALUES</h2>
         </div>
-          <div className={styles.vector2}>
-            <div>
-              <img src={vector.vector34} alt="" className={styles.vectorD} />
-            </div>
-            <div className={styles.vector3}>
-            <img src={vector.vector36} alt="" className={styles.vectorI}/>
-            {/* <img src={vector.vector37} alt="" className={styles.vectorI} /> */}
-            </div>
-          </div>
       </div>
             
       <div className={styles.values}>
