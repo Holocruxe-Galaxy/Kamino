@@ -6,7 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import styles from './Landing.module.css';
 // imagenes
 import vector from '../../img/vector';
-import EarthCanvas from '../../components/models/Earth';
+// import EarthCanvas from '../../components/models/Earth';
 // componentes
 import Container from '../../components/Waitlist/waitlistcontainer';
 import Hero from '../../components/Hero/Hero';
@@ -48,7 +48,7 @@ const Landing = () => {
           zIndex: '-1',
         }}
       ></Canvas>
-      <EarthCanvas />
+      {/* <EarthCanvas /> */}
 
 
       <div className={styles.vector_container}>

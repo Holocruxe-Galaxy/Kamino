@@ -15,9 +15,11 @@ const Footer = () => {
 
       <div className={styles.footerCenter}>
         <p className={styles.footerLinks}>
-          <NavLink className={`${styles.link1} ${styles.navlink}`} to="/">
+          
+            <a className={`${styles.link1} ${styles.navlink}`} href="#">
             Home
-          </NavLink>
+            </a>
+          
 
           <NavLink to="/faqs" className={styles.navlink}>
             FAQ

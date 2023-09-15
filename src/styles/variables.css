@@ -14,7 +14,7 @@
   --color-title: linear-gradient(92deg, #1E88E5 -1.02%, #86AFEC 36.25%);
   --color-font: #fff;
   /* --color-input: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%); */
-  --color-input: radial-gradient(2900.76% 50.13% at 50% 53.89%, #1E88E5 0%, #0C0C0C 100%);
+  --color-input: radial-gradient(160% 50.13% at 88% 55%, #1E88E5 0%, #0C0C0C 100%);
   --color-bgBtn: linear-gradient(90deg, #061927 0%, #4A9ADF 100%);
   --color-separator: #1E88E5;
   --color-btn: #343045;

@@ -1,14 +1,13 @@
-import {useState} from "react";
+import { useState } from 'react';
 // import { Canvas } from "@react-three/fiber";
-import styles from "./waitlist.module.css";
-import ReCAPTCHA from "react-google-recaptcha";
+import styles from './waitlist.module.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Waitlist = () => {
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState("");
+  const [captchaValue, setCaptchaValue] = useState('');
   const [showCaptcha, setShowCaptcha] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -19,34 +18,33 @@ const Waitlist = () => {
       return;
     }
 
-    if (captchaValue === "") {
-      console.error("Please verify the captcha");
+    if (captchaValue === '') {
+      console.error('Please verify the captcha');
       return;
     }
 
-    const response = await fetch("http://localhost:3000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const response = await fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, captchaValue }),
     });
     if (response.ok) {
       setIsRegistered(true);
     } else {
-      console.error("Registration failed");
+      console.error('Registration failed');
     }
 
     const data = await response.json();
     console.log(data);
 
-    setName("");
-    setEmail("");
-    setCaptchaValue("")
+    setName('');
+    setEmail('');
+    setCaptchaValue('');
   };
 
   const onChange = (value) => {
     setCaptchaValue(value);
   };
-
 
   return (
     <section id="waitlist" className={styles.waitlist}>
@@ -60,7 +58,7 @@ const Waitlist = () => {
           type="text"
           id="name"
           name="name"
-          placeholder="Nombre"
+          placeholder="Name"
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -74,13 +72,14 @@ const Waitlist = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-         {showCaptcha && (
-          <ReCAPTCHA sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He" onChange={onChange} />
+        {showCaptcha && (
+          <ReCAPTCHA
+            sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He"
+            onChange={onChange}
+          />
         )}
-        <button type="submit">SUSCRIBIRME</button>
-        {isRegistered && (
-          <p>Email registration added to the waitlist queue!</p>
-        )}
+        <button type="submit">SUSCRIBE</button>
+        {isRegistered && <p>CONGRATULATIONS! YOU ARE ALREADY ON BOARD!</p>}
       </form>
     </section>
   );

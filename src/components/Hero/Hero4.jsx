@@ -5,9 +5,9 @@ const Hero4 = () => {
     <section className={styles.hero_container}>
         
       <div className={styles.hero}>
-        <h2>Querés<span className={styles.title}> saber mas?</span></h2>
+        <h2>Do you want<span className={styles.title}> to know more?</span></h2>
         <p>
-        Sumáte a nuestra Waitlist y se de las primeras personas en probar esta experiencia única.
+        Join our waiting list and be one of the first people to try this unique experience.
         </p>
         
       </div>

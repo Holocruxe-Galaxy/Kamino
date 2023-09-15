@@ -2,8 +2,8 @@
 <path id="Vector 15" d="M91.6667 11C91.6667 16.891 86.891 21.6667 81 21.6667C75.109 21.6667 70.3333 16.891 70.3333 11C70.3333 5.10896 75.109 0.333333 81 0.333333C86.891 0.333333 91.6667 5.10896 91.6667 11ZM53.24 22.7277L54.0183 24.5701L53.24 22.7277ZM52.4617 20.8854L80.2217 9.15766L81.7783 12.8423L54.0183 24.5701L52.4617 20.8854ZM0 100C0 65.4822 20.665 34.3185 52.4617 20.8854L54.0183 24.5701C23.7025 37.3775 4 67.0899 4 100H0Z" fill="url(#paint0_linear_1118_43)"/>
 <defs>
 <linearGradient id="paint0_linear_1118_43" x1="-15.5128" y1="-43.1822" x2="92.81" y2="-41.4709" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A376AF" stop-opacity="0"/>
-<stop offset="1" stop-color="#7A6CB5" stop-opacity="0.96"/>
+<stop offset="0.0104167" stop-color="#1E88E5"/>
+<stop offset="1" stop-color="white"/> 
 </linearGradient>
 </defs>
 </svg>
