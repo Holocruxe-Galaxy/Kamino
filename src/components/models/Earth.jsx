@@ -6,6 +6,7 @@ import './earth.css';
 
 import CircleSvg from '../../icons/Ellipse 3.svg';
 import IconSvg from '../../icons/mouse.svg';
+import Stars from '../Stars/stars';
 
 const Earth = () => {
   const earthRef = useRef();
@@ -30,7 +31,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: 'clamp( 35rem,550px, 13rem)' ,marginTop: '4rem' }}>
+      <Canvas className="earth-canvas" style={{ height: '1000px' ,marginTop: '1rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -39,7 +40,7 @@ const EarthCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Earth />
-          
+          <Stars/>
           <Preload all />
         </Suspense>
       </Canvas>
