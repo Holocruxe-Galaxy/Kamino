@@ -14,6 +14,11 @@ const menu = [
     url: '/waitlist',
     id: 3
   },
+  {
+    title: 'Login',
+    url: 'login.holocruxe.com',
+    id: 4
+  }
 ];
 
 export default menu;
