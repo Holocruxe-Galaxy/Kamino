@@ -23,7 +23,7 @@ const Waitlist = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:3000/users', {
+    const response = await fetch(`${import.meta.env.VITE_BACK_CONECTION}/users`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, captchaValue }),
@@ -74,7 +74,7 @@ const Waitlist = () => {
         />
         {showCaptcha && (
           <ReCAPTCHA
-            sitekey="6LcEW_0mAAAAAPUG92t53CS7LpIQL57S5ttBz4He"
+            sitekey= {`${import.meta.env.VITE_CAPTCHA_KEY}`}
             onChange={onChange}
           />
         )}

@@ -60,17 +60,17 @@ const Landing = () => {
         <img className={styles.vector01} src={vector.vector01} alt="" />
       </div>
       <Hero />
-      <div className={styles.vector_container}>
+      {/* <div className={styles.vector_container}>
         <img className={styles.vector03} src={vector.vector03} alt="" />
-      </div>
+      </div> */}
       <Hero2 />
-      <div className={styles.vector_container}>
+      {/* <div className={styles.vector_container}>
         <img className={styles.vector05} src={vector.vector05} alt="" />
-      </div>
+      </div> */}
       <Hero3 />
-      <div className={styles.vector_container}>
+      {/* <div className={styles.vector_container}>
         <img className={styles.vector07} src={vector.vector07} alt="" />
-      </div>
+      </div> */}
       <Hero4 />
       <Container ref={waitlistRef} />
     </main>

@@ -10,6 +10,7 @@ Diseño original de:
 
 Desarrollo:
 
+- [Fernando Cazon](https://github.com/FerCazon)
 - [Gianni Pasquinelli](https://github.com/Gianni03)
 
 <hr>
