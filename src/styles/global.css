@@ -3,7 +3,6 @@
 
 html {
   background-color: var(--color-bg);
-  /* background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 100%); */
 }
 
 @-webkit-keyframes hide {
@@ -35,7 +34,7 @@ html {
   animation: hide 7.5s;
 }
 body{
-  background-color: var(--color-bg) !important;
+  background-color: var(--color-bg);
 }
 
 body::-webkit-scrollbar {

@@ -9,7 +9,6 @@
   margin-bottom: 100px;
 }
 
-
 .hero {
   margin: 2rem 0 5rem -12rem;
   display: flex;
@@ -65,7 +64,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   font-family: var(--font-secondary);
-  background: var(--color-title);
+  background: var(--color-font);
   background-size: 200% 100%;
   color: transparent;
   -webkit-background-clip: text;
@@ -85,7 +84,7 @@
   width: 22px;
   height: 2px;
   margin-top: -2px;
-  background-color: #8176AF;
+  background-color: var(--color-border);
 }
 
 .panel_label[aria-expanded="false"]:before {
@@ -147,8 +146,6 @@
     font-size: 2rem;
   } 
 
-  
-  
   .panel{
     width: 90%;
     margin: 0 auto;

@@ -39,13 +39,13 @@
   align-items: flex-start;
 }
 
-.vectorD{
+.vectorD {
   margin: 3rem 0 0 -18rem;
 }
 
-.vector3{
-display: flex;
-flex-direction: column;
+.vector3 {
+  display: flex;
+  flex-direction: column;
 }
 
 .text_title {
@@ -67,7 +67,7 @@ flex-direction: column;
   top: 75%;
   width: 30%;
   height: 1px;
-  background:linear-gradient(to left, #1E88E5 -38.76%, #989EA4 110.08%);
+  background: linear-gradient(to left, #1E88E5 -38.76%, #989EA4 110.08%);
   background-size: 200% 100%;
 }
 
@@ -80,14 +80,14 @@ flex-direction: column;
   background: linear-gradient(to rigth, #1E88E5 -38.76%, #989EA4 110.08%);
 }
 
-.titleSmall{
+.titleSmall {
   font-family: var(--font-main);
   background: var(--color-title);
   background-size: 200% 100%;
   color: transparent;
   -webkit-background-clip: text;
-    background-clip: text;
-  
+  background-clip: text;
+
 }
 
 .title {
@@ -98,9 +98,9 @@ flex-direction: column;
   background-size: 200% 100%;
   color: transparent;
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
   -webkit-animation: appearL 2s ease;
-    animation: appearL 2s ease;
+  animation: appearL 2s ease;
 }
 
 
@@ -229,7 +229,7 @@ flex-direction: column;
   margin: 5rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;          
+  align-items: flex-start;
   -webkit-animation: appearL 1s ease;
   animation: appearL 1s ease;
 }
@@ -243,7 +243,7 @@ flex-direction: column;
   font-family: var(--font-main);
 }
 
-.robot{
+.robot {
   margin-top: -10rem;
   position: relative;
   top: 6.3rem;
@@ -255,36 +255,34 @@ flex-direction: column;
   .container {
     margin-bottom: 2rem;
   }
-  
+
   .title {
     margin: 0;
     margin-bottom: 3rem;
     font-size: 2.5rem;
   }
-  
+
   .text {
     font-size: .75rem;
     text-align: left;
     font-style: normal;
     line-height: 2rem;
   }
-  
+
   .text p {
     width: 100%;
   }
-  
+
   .values {
     margin: 0;
     margin-bottom: 3rem;
   }
-  
+
   .values .title {
     font-size: 2.5rem;
     position: relative;
     right: 3rem;
   }
-
-  
 
   .value>p {
     margin: 0;
@@ -299,23 +297,24 @@ flex-direction: column;
 
   .text_section {
     height: 5rem;
-    /* border-radius: 5.625rem; */
   }
 
-  .text_title{
+  .text_title {
     margin-top: .6rem;
   }
 
   .text_title::before,
-  .text_title::after{
+  .text_title::after {
     top: 70%;
     width: 20%;
   }
 
-  .robot{
+  .robot {
     left: 5.5rem;
     top: 7.06rem;
-    
+
+  }
+
 }
 
-@media (min-width: 481px) and (max-width: 920px) {}}
+@media (min-width: 481px) and (max-width: 920px) {}
