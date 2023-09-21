@@ -35,6 +35,18 @@ export default function Mobile() {
         <NavLink to="waitlist" className={styles.linkM}>
           Waitlist
         </NavLink>
+        <svg
+          width="8"
+          height="8"
+          viewBox="0 0 8 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="4" cy="4" r="4" fill="#7A6CB5" />
+        </svg>
+        <NavLink to="https://login.holocruxe.com" className={styles.linkM}>
+          Login
+        </NavLink>
       </nav>
       <div className={styles.ligths}>
         <img src={vector.vector18} alt="" />

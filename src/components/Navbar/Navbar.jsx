@@ -204,6 +204,14 @@ const Navbar = () => {
         >
           Waitlist
         </NavLink>
+        <NavLink
+          to="https://login.holocruxe.com"
+          className={`${styles.link} ${
+            location.pathname === 'login.holocruxe.com' && styles.activeLink
+          }`}
+        >
+          Login
+        </NavLink>
 
         <div className={styles.indicator}></div>
       </nav>
