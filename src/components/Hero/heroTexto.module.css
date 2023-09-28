@@ -1,12 +1,10 @@
 .hero_container {
   width: 85%;
   margin: 0 auto;
-  margin-top: -10rem;
   margin-bottom: 10rem;
   display: flex;
   gap: 1rem;
   align-items: center;
-  
 }
 
 
