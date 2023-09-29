@@ -14,7 +14,7 @@ const Earth = () => {
 
   useFrame(() => {
     if (earthRef.current) {
-      earthRef.current.rotation.y += 0.003; // velocidad de rotacion
+      earthRef.current.rotation.y += 0.007; // velocidad de rotacion
     }
   });
 
@@ -22,7 +22,7 @@ const Earth = () => {
     <primitive
       ref={earthRef}
       object={earth.scene}
-      scale={2.8}
+      scale={2.9}
       position={[0, 0.5, 0]} //la posicion!
     />
   );
@@ -31,7 +31,7 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: '1000px' ,marginTop: '1rem' }}>
+      <Canvas className="earth-canvas" style={{ height: '800px',marginTop: '5rem'}}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -48,17 +48,17 @@ const EarthCanvas = () => {
         <img
           src={CircleSvg}
           alt="circle"
-          style={{ position: 'absolute', bottom: '100px', right: '100px' }}
+          style={{ position: 'absolute', bottom: '400px', right: '100px' }}
         />
         <img
           src={IconSvg}
           alt="icon"
-          style={{ position: 'absolute', bottom: '120px', right: '115px' }}
+          style={{ position: 'absolute', bottom: '420px', right: '115px' }}
         />
         <div
           style={{
             position: 'absolute',
-            bottom: '50px',
+            bottom: '350px',
             right: '100px',
             userSelect: 'none',
             color: 'white',

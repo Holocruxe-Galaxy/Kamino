@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 920px) {
   .earth-canvas {
-    height: 85vh !important;
+    height: 50vh !important;
   }
   .svg-click {
     display: none;
