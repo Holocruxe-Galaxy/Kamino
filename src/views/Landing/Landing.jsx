@@ -16,14 +16,6 @@ import Hero3 from '../../components/Hero/Hero3';
 import Hero4 from '../../components/Hero/Hero4';
 
 const Landing = () => {
-  const svgDiv = useRef();
-  const { scrollYProgress } = useScroll({
-    target: svgDiv,
-    offset: ['start end', 'end start'],
-  });
-  const length = useTransform(scrollYProgress, [0.07, 0.86], [0, 1]);
-  const length2 = useTransform(scrollYProgress, [0.35, 1.175], [0, 1]);
-  const length3 = useTransform(scrollYProgress, [0.65, 0.825], [0, 1]);
 
   const hasVisited = sessionStorage.getItem('visited');
   const waitlistRef = useRef(null);
@@ -60,17 +52,8 @@ const Landing = () => {
         <img className={styles.vector01} src={vector.vector01} alt="" />
       </div>
       <Hero />
-      {/* <div className={styles.vector_container}>
-        <img className={styles.vector03} src={vector.vector03} alt="" />
-      </div> */}
       <Hero2 />
-      {/* <div className={styles.vector_container}>
-        <img className={styles.vector05} src={vector.vector05} alt="" />
-      </div> */}
       <Hero3 />
-      {/* <div className={styles.vector_container}>
-        <img className={styles.vector07} src={vector.vector07} alt="" />
-      </div> */}
       <Hero4 />
       <Container ref={waitlistRef} />
     </main>
