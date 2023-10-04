@@ -1,37 +1,51 @@
-
-.mobilContainer{
-  background: var(--color-input);
+.mobilContainer {
+  background: radial-gradient(63.88% 50.88% at 52.81% 35%, #647481 0%, #093F68 100%);
   background-color: var(--color-bg);
   width: 100%;
-  /* height: 100vh; */
+  height: 100%;
+  height: calc( 1vh * 100);
   z-index: 22;
-  position: absolute;
-  top:4rem;
+  position: fixed;
+  top: 0;
   left: 0;
 }
+
+.mobileHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  padding: 0 2.5rem;
+}
+
 .navMobile {
   margin: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 15rem;
+  height: 25rem;
 }
 
-.linkM{
-  font-size: 1.125rem;
+.linkM {
+  font-size: 2.125rem;
   font-family: var(--font-main);
   background: var(--color-title);
   background-size: 200% 100%;
   color: transparent;
   -webkit-background-clip: text;
-    background-clip: text;
+  background-clip: text;
 }
 
-.ligths{
-  display: flex;
-  justify-items: center;
-  width: 70%;
-  font-size: 1rem;
-  max-height: 3rem;
+.ligths {
+  align-self: flex-end;
+  /* justify-items: flex-end; */
+  position: relative;
+  /* left: 23%; */
+  margin: 10rem 4rem 1rem 6rem;
+}
+
+.ligths svg{
+  height: 5rem;
 }
