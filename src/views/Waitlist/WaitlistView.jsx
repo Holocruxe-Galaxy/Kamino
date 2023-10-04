@@ -1,5 +1,4 @@
 import styles from '../../components/Waitlist/waitlist.module.css';
-// import Waitlist from '../../components/Waitlist/waitlist2';
 import Waitlist from '../../components/Waitlist/waitlist';
 
 
