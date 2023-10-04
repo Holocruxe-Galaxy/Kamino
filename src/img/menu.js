@@ -1,6 +1,6 @@
-import hamb from '../../public/menu.png';
-import x from '../../public/x.png';
-import logo from '../../public/Logo.png';
+import hamb from './menu.png';
+import x from './x.png';
+import logo from './Logo.png';
 
 const menu = {
   hamb,
