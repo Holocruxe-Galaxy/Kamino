@@ -22,13 +22,13 @@ const About = () => {
         {/* <img src={vector.vector33} alt="" className={styles.vector1}/> */}
       </div>
       <article className={styles.text}>
-        <p>
+        <p className={styles.sizeMobil}>
           <span className={styles.titleSmall}>At Holocruxe </span>
           we are a passionate team that believes in the power of
           memories and experiences.
         </p> 
         <pre><br /></pre>
-        <p>
+        <p className={styles.rigthText}>
           Holocruxe is a company that creates a platform to help people capture
           and preserve their memories. The platform uses artificial intelligence
           to create a virtual diary that captures the essence of a person's

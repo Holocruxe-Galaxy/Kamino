@@ -87,7 +87,7 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-
+  
 }
 
 .title {
@@ -246,59 +246,18 @@
 .robot {
   margin-top: -10rem;
   position: relative;
-  top: 6.3rem;
+  top: 6.35rem;
   left: 20rem;
 }
 
-
-@media screen and (max-width: 480px) {
+@media (max-width: 910px) {
   .container {
-    margin-bottom: 2rem;
+    margin-top: 0px;
+    padding-top: 0px;
   }
-
-  .title {
-    margin: 0;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-  }
-
-  .text {
-    font-size: .75rem;
-    text-align: left;
-    font-style: normal;
-    line-height: 2rem;
-  }
-
-  .text p {
-    width: 100%;
-  }
-
-  .values {
-    margin: 0;
-    margin-bottom: 3rem;
-  }
-
-  .values .title {
-    font-size: 2.5rem;
-    position: relative;
-    right: 3rem;
-  }
-
-  .value>p {
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .value {
-    margin: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .text_section {
+  .text_section{
     height: 5rem;
   }
-
   .text_title {
     margin-top: .6rem;
   }
@@ -308,13 +267,103 @@
     top: 70%;
     width: 20%;
   }
+  
+  .text{
+  margin-bottom: 2rem;
+  }
 
-  .robot {
+  .text p {
+    width: 95%;
+  }
+  .sizeMobil{
+    font-size: 1.5rem;
+  }
+  
+  .rigthText{
+    text-align: right;
+    line-height: 2rem;
+  }
+
+  .values {
+    margin: 0;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .value{
+    margin: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .robot{
     left: 5.5rem;
-    top: 7.06rem;
-
   }
 
 }
 
-@media (min-width: 481px) and (max-width: 920px) {}
+
+  @media screen and (max-width: 510px) {
+    .container {
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      margin: 0;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    .text {
+      font-size: .75rem;
+      text-align: left;
+      font-style: normal;
+      line-height: 2rem;
+    }
+
+    .text p {
+      width: 100%;
+    }
+
+    .values {
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+
+    .values .title {
+      font-size: 2.5rem;
+      position: relative;
+      right: 1.75rem;
+    }
+
+    .value>p {
+      margin: 0 0 0 2rem;
+      font-size: 1rem;
+    }
+
+    .value {
+      margin: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .text_section {
+      height: 5rem;
+    }
+
+    .text_title {
+      margin-top: .6rem;
+    }
+
+    .text_title::before,
+    .text_title::after {
+      top: 70%;
+      width: 20%;
+    }
+
+    .robot {
+      left: 1.5rem;
+      top: 7.06rem;
+    }
+
+  }
