@@ -15,22 +15,26 @@
   width: 90%;
 }
 
+.waitlistView {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .ligths {
-  
   width: 100%;
-  margin-bottom: -0.5rem ;
+  margin-bottom: -0.5rem;
   display: flex;
   justify-content: space-around;
 }
 
-
 .text_section {
   margin-bottom: 100px;
   width: 100%;
-  background: var(--color-input); 
+  background: var(--color-input);
   height: 8rem;
-  border-radius: 5.625rem; 
-  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);  
+  border-radius: 5.625rem;
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
 }
 
 .waitlist h2 {
@@ -38,13 +42,14 @@
   font-size: 2.25rem;
   margin-top: 2.5rem;
 }
+
 .join_waitlist {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 500px;
+  width: 31.25rem;
   margin: 0 auto;
   margin-top: 150px;
 }
@@ -62,17 +67,21 @@
 .join_waitlist input::-webkit-input-placeholder {
   color: var(--color-font);
 }
+
 .join_waitlist input::-moz-placeholder {
-  color:var(--color-font);
+  color: var(--color-font);
 }
+
 .join_waitlist input:-ms-input-placeholder {
-  color:var(--color-font);
+  color: var(--color-font);
 }
+
 .join_waitlist input::-ms-input-placeholder {
-  color:var(--color-font);
+  color: var(--color-font);
 }
+
 .join_waitlist input::placeholder {
-  color:var(--color-font);
+  color: var(--color-font);
 }
 
 .join_waitlist input:focus {
@@ -81,8 +90,8 @@
 
 .join_waitlist button {
   border: none;
-  width: 50%;
-  margin: 0 auto;
+  width: 66%;
+  margin: 1rem auto;
   color: var(--color-font);
   background: var(--color-bgBtn);
   border-radius: 2.5rem;
@@ -94,15 +103,9 @@
 }
 
 .join_waitlist button:hover {
-  background: var(--color-hoverBtn);
+  background: linear-gradient(90deg, #04206796, #1E88E5 100%);
   color: var(--color-font);
-  
-}
-
-#waitlist {
-  height: 100%;
-  overflow: auto;
-  z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .title {
@@ -135,26 +138,50 @@
 .form_and_model {
   display: flex;
   justify-content: flex;
-  margin-top: -150px;
-  
+  margin-top: -175px;
 }
 
-@media screen and (max-width: 610px){
-  
-  .ligths{
+@media screen and (max-width: 910px) {
+
+  .waitlist {
+    margin-top: -3rem;
+  }
+
+  .ligths {
+    height: 6rem;
+  }
+
+  .text_section {
+    height: 5rem;
+  }
+
+  .waitlist h2 {
+    margin-top: 1.25rem;
+  }
+
+  .title::before,
+  .title::after {
+    width: 24%;
+    top: 65%;
+  }
+
+  .join_waitlist {
+    min-width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 510px) {
+  .ligths {
     height: 4rem;
   }
 
-  .text_section{
-    height: 7rem;
+  .title::before,
+  .title::after {
+    width: 20%;
   }
-
-.title::before,
-.title::after{
-  width: 20%;}
 
   .join_waitlist {
-    width: 100%;
+    width: 20rem;
   }
-  
 }

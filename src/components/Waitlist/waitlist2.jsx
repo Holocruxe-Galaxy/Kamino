@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { Canvas } from "@react-three/fiber";
 import styles from './waitlist.module.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 
