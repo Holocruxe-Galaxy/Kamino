@@ -10,7 +10,7 @@ const Footer = () => {
     </div>
     <footer className={styles.footerDistributed}>
       <div className={styles.footerLeft}>
-        <img src="./holocruxe.png" />
+        <img src="./holocruxe.png" alt='logo' />
       </div>
 
       <div className={styles.footerCenter}>
@@ -37,9 +37,6 @@ const Footer = () => {
         >
           <img src={redes.instagram} alt='instagram' />
         </a>
-        {/* <a href="#" className={styles.navlink} target="_blank">
-          <img src={redes.facebook} alt="Facebook" />
-        </a> */}
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}
