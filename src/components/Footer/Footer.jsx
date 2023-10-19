@@ -10,15 +10,19 @@ const Footer = () => {
     </div>
     <footer className={styles.footerDistributed}>
       <div className={styles.footerLeft}>
-        <img src="./holocruxe.png" />
+        <img src="./holocruxe.png" alt='logo' />
       </div>
 
       <div className={styles.footerCenter}>
         <p className={styles.footerLinks}>
           
-            <a className={`${styles.link1} ${styles.navlink}`} href="#">
-            Home
-            </a>
+            <NavLink
+          to="/"  className={`${styles.link1} ${styles.navlink} ${
+            location.pathname === '/' && styles.activeLink
+          }`}
+        >
+          Home
+        </NavLink>
           
 
           <NavLink to="/faqs" className={styles.navlink}>
@@ -37,9 +41,6 @@ const Footer = () => {
         >
           <img src={redes.instagram} alt='instagram' />
         </a>
-        {/* <a href="#" className={styles.navlink} target="_blank">
-          <img src={redes.facebook} alt="Facebook" />
-        </a> */}
         <a
           href="https://www.linkedin.com/company/holocruxe/"
           className={styles.navlink}

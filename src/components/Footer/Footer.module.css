@@ -97,11 +97,11 @@ margin-right: 1em;
   display: none;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 910px) {
   .copyMobile {
     color: var(--color-font);
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 2rem;
     text-align: center;
     display: inline;
   }
@@ -116,6 +116,8 @@ margin-right: 1em;
   .footerDistributed {
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
+    margin-top: 1rem;
   }
   .footerDistributed .footerLeft p.footerLinks {
     line-height: 1.8;

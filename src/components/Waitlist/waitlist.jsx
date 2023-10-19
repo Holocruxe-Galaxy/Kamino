@@ -46,8 +46,6 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
-  console.log('Me estoy ejecutando y volviendo a ejecutar')
-
   return (
     <section id="waitlist" className={styles.waitlist}>
       <div className={styles.ligths}>

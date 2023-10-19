@@ -1,9 +1,9 @@
 import robot from '../../img/robot';
-import styles from "./heroA.module.css";
+import styles from "./hero.module.css";
 
 const Hero = () => {
   return (
-    <section className={styles.hero_container}>
+    <section className={`${styles.hero_container} ${styles.heroTop}`}>
       <div className={styles.hero_img}>
         <img src={robot.rob01} alt="Robot asomandose" />
       </div>
