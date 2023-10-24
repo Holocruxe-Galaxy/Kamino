@@ -1,8 +1,12 @@
-import styles from './Navbar.module.css';
+//dependencias
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { NavLink, useLocation } from 'react-router-dom';
+// imagenes
 import menu from '../../img/menu';
+// estilos
+import styles from './Navbar.module.css';
+// componentes
 import Mobile from './Mobile';
 
 const Navbar = () => {
