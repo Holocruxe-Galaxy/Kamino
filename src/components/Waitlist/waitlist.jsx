@@ -2,6 +2,8 @@ import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './waitlist.module.css';
 import vector from '../../img/vector';
+import WaitlistModal from './Modal';
+
 
 const Waitlist = () => {
   const [name, setName] = useState('');
@@ -46,6 +48,16 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <section id="waitlist" className={styles.waitlist}>
       <div className={styles.ligths}>
@@ -60,6 +72,7 @@ const Waitlist = () => {
       <div className={styles.text_section}>
         <div className={styles.title}>
           <h2>WAITLIST</h2>
+          {/* <WaitlistModal isOpen={openModal} onClose={closeModal} /> */}
         </div>
       </div>
       <div className={styles.form_and_model}>
@@ -92,10 +105,7 @@ const Waitlist = () => {
         </form>
       </div>
       {isRegistered && (
-        <p style={{ color: 'white' }}>
-          CONGRATULATIONS! YOU ARE ALREADY ON BOARD!
-        </p>
-      )}
+        <WaitlistModal isOpen={openModal} onClose={closeModal} />)}
     </section>
   );
 };

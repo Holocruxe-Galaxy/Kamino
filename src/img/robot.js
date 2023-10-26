@@ -3,6 +3,7 @@ import rob02 from './rob02.png';
 import rob03 from './rob03.png';
 import rob04 from './rob04.png';
 import rob05 from './rob05.png';
+import cohete from './cohete.png'
 
 const robot = {
     rob01,
@@ -10,6 +11,7 @@ const robot = {
     rob03,
     rob04,
     rob05,
+    cohete
 }
 
 export default robot;
