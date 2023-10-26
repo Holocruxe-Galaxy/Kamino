@@ -2,6 +2,8 @@ import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './waitlist.module.css';
 import vector from '../../img/vector';
+import WaitlistModal from './Modal';
+
 
 const Waitlist = () => {
   const [name, setName] = useState('');
@@ -46,20 +48,31 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <section id="waitlist" className={styles.waitlist}>
       <div className={styles.ligths}>
-        <img src={vector.vector18} alt="" />
-        <img src={vector.vector09} alt="" />
-        <img src={vector.vector12} alt="" />
-        <img src={vector.vector14} alt="" />
-        <img src={vector.vector16} alt="" />
-        <img src={vector.vector20} alt="" />
-        <img src={vector.vector19} alt="" />
+        <img src={vector.vector18} alt="bg" />
+        <img src={vector.vector09} alt="bg" />
+        <img src={vector.vector12} alt="bg" />
+        <img src={vector.vector14} alt="bg" />
+        <img src={vector.vector16} alt="bg" />
+        <img src={vector.vector20} alt="bg" />
+        <img src={vector.vector19} alt="bg" />
       </div>
       <div className={styles.text_section}>
         <div className={styles.title}>
           <h2>WAITLIST</h2>
+          {/* <WaitlistModal isOpen={openModal} onClose={closeModal} /> */}
         </div>
       </div>
       <div className={styles.form_and_model}>
@@ -88,14 +101,11 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">SUSCRIBE</button>
+          <button type="submit" >SUSCRIBE</button>
         </form>
       </div>
       {isRegistered && (
-        <p style={{ color: 'green' }}>
-          CONGRATULATIONS! YOU ARE ALREADY ON BOARD!
-        </p>
-      )}
+        <WaitlistModal isOpen={openModal} onClose={closeModal} />)}
     </section>
   );
 };
