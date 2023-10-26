@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './waitlist.module.css';
 import ReCAPTCHA from 'react-google-recaptcha';
+import WaitlistModal from './Modal';
 
 const Waitlist = () => {
   const [name, setName] = useState('');
@@ -22,11 +23,14 @@ const Waitlist = () => {
       return;
     }
 
-    const response = await fetch(`${import.meta.env.VITE_BACK_CONECTION}/users`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, captchaValue }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACK_CONECTION}/users`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, captchaValue }),
+      }
+    );
     if (response.ok) {
       setIsRegistered(true);
     } else {
@@ -45,6 +49,16 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <section id="waitlist" className={styles.waitlist}>
       <form className={styles.join_waitlist} onSubmit={handleSubmit}>
@@ -53,6 +67,7 @@ const Waitlist = () => {
           Join us on this exciting journey as we transform the way we capture
           and celebrate the beauty of life.
         </p>
+        {/* <WaitlistModal isOpen={openModal} onClose={closeModal} /> */}
         <input
           type="text"
           id="name"
@@ -73,12 +88,14 @@ const Waitlist = () => {
         />
         {showCaptcha && (
           <ReCAPTCHA
-            sitekey= {`${import.meta.env.VITE_CAPTCHA_KEY}`}
+            sitekey={`${import.meta.env.VITE_CAPTCHA_KEY}`}
             onChange={onChange}
           />
         )}
         <button type="submit">SUSCRIBE</button>
-        {isRegistered && <p>CONGRATULATIONS! YOU ARE ALREADY ON BOARD!</p>}
+        {isRegistered && (
+          <WaitlistModal isOpen={openModal} onClose={closeModal} />
+        )}
       </form>
     </section>
   );
