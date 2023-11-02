@@ -72,7 +72,6 @@ const Waitlist = () => {
       <div className={styles.text_section}>
         <div className={styles.title}>
           <h2>WAITLIST</h2>
-          {/* <WaitlistModal isOpen={openModal} onClose={closeModal} /> */}
         </div>
       </div>
       <div className={styles.form_and_model}>

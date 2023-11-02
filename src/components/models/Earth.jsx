@@ -59,7 +59,7 @@ const EarthCanvas = () => {
           style={{
             position: 'absolute',
             bottom: '350px',
-            right: '100px',
+            right: '70px',
             userSelect: 'none',
             color: 'white',
             textAlign: 'center',
