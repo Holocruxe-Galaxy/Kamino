@@ -1,7 +1,7 @@
 <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Ellipse 3" filter="url(#filter0_d_1118_210)">
 <circle cx="35.5" cy="31.5" r="31.5" fill="#D9D9D9" fill-opacity="0.1" shape-rendering="crispEdges"/>
-<circle cx="35.5" cy="31.5" r="30.5" stroke="#7A6CB5" stroke-width="2" shape-rendering="crispEdges"/>
+<circle cx="35.5" cy="31.5" r="30.5" stroke="#349aef" stroke-width="2" shape-rendering="crispEdges"/>
 </g>
 <defs>
 <filter id="filter0_d_1118_210" x="0" y="0" width="71" height="71" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

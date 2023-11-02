@@ -14,6 +14,7 @@ import Hero from '../../components/Hero/Hero';
 import Hero2 from '../../components/Hero/Hero2';
 import Hero3 from '../../components/Hero/Hero3';
 import Hero4 from '../../components/Hero/Hero4';
+import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 
 const Landing = () => {
 
@@ -56,6 +57,7 @@ const Landing = () => {
       <Hero3 />
       <Hero4 />
       <Container ref={waitlistRef} />
+      <ScrollToTop/>
     </main>
   );
 };

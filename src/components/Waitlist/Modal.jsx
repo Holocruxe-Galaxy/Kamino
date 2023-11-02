@@ -18,7 +18,9 @@ const WaitlistModal = ({ isOpen, onClose }) => {
         <p className={styles.small}>
           Thank you for signing up!
         </p>
-        {/* <button onClick={onClose}>Close</button> */}
+        <div className={styles.btn}>
+          <button onClick={onClose}>Close</button>
+        </div>
       </div>
     </Modal>
   );
