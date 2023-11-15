@@ -77,10 +77,10 @@
 
 @media screen and (max-width: 910px) {
   .heroBottom {
-    flex-direction: column;
-    align-items: flex-start;
-    background-image: none;
-    padding-left: 2rem;
+    flex-direction: row;
+    align-items: end;
+    padding-left: 2.5rem;
+    margin-left: -2.5rem;
   }
 
   .heroText {
@@ -103,6 +103,7 @@
 
   .hero_imgBottom {
     width: 60%;
+
   }
 
   .hero_img img {
@@ -113,8 +114,9 @@
   .hero_img .imgAcostado {
     width: 100%;
     margin-top: 8rem;
-    margin-left: 60%;
-    margin-bottom: -3rem;
+    margin-left: -10%;
+    margin-bottom: 0;
+    margin:0;
   }
 
   .hero h2 {
@@ -141,6 +143,19 @@
 }
 
 @media screen and (max-width: 520px) {
+  .heroBottom {
+    flex-direction: row;
+    align-items: end;
+    padding-left: 2.5rem;
+    margin-left: -2.5rem;
+    margin-bottom: 5rem;
+  }
+  .heroBottom p{
+    margin: 0
+  }
+  .heroPBottom p{
+    margin:0 ;
+  }
   .hero p {
     font-size: 1rem;
     line-height: 2.25rem;
@@ -154,15 +169,20 @@
   .hero .heroPBottom {
     margin-left: 1rem;
     line-height: 1.5;
-
   }
 
+  .hero .heroPBottom {
+    margin:0;
+  }
   .hero_img .imgParado {
     margin-top: 16rem;
   }
 
   .heroText {
     width: 100%;
+  }
+  .heroText p{
+    margin:0;
   }
 
   .hero .heroP h2 {
