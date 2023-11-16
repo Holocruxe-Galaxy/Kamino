@@ -15,7 +15,6 @@
   margin-bottom: 20px;
   width: 90%;
 }
-
 .text_section {
   margin: 5rem 0;
   width: 100%;
@@ -100,7 +99,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-animation: appearL 2s ease;
-  animation: appearL 2s ease;
+  animation: appearL 2s ease;;
 }
 
 
@@ -141,24 +140,24 @@
 }
 
 .text {
-  width: 90%;
+  font-size: 1.5rem;
   margin: 0 auto;
   text-align: left;
-  margin-bottom: 3rem;
   line-height: 3rem;
   font-family: var(--font-main);
-  font-weight: 700;
   -webkit-animation: appearR 2s ease;
   animation: appearR 2s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 85%;
+  padding-bottom: 10rem;
 }
 
 .text p {
   width: 60%;
-  margin: 0 auto;
+  margin: 0;
+  width: fit-content;
+  text-align: left;
 }
 
 @-webkit-keyframes appearR {
@@ -267,18 +266,18 @@
     top: 70%;
     width: 20%;
   }
-  
-  .text{
-  margin-bottom: 2rem;
-  }
 
   .text p {
     width: 95%;
+    line-height: 3rem;
+  }
+  .text{
+    padding-bottom: 0rem;
   }
   .sizeMobil{
     font-size: 1.5rem;
   }
-  
+
   .rigthText{
     text-align: right;
     line-height: 2rem;
@@ -323,11 +322,17 @@
 
     .text p {
       width: 100%;
+      font-size: 1rem;
+      line-height: 2rem;
     }
+    .sizeMobil{
+    font-size: 1rem;
+  }
 
     .values {
       margin: 0;
       margin-bottom: 3rem;
+      padding: 0 2rem;
     }
 
     .values .title {
