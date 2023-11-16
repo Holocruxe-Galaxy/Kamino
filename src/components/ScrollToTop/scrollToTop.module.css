@@ -13,7 +13,7 @@ left: 85%;
 
 .arrow{
   position: absolute;
-  left: 86.25%;
+  left: 86.5%;
   top: 40%;
   transform: translateY(-50%);
   height: 2.5rem;
@@ -33,7 +33,10 @@ left: 85%;
 }
 @media screen and (max-width: 460px) {
   .arrow{
-    left: 89%;
+    left: 84%;
+  }
+  .circle{
+    left:80%;
   }
   
 }
