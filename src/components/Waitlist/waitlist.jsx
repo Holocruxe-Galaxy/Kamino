@@ -60,10 +60,6 @@ const Waitlist = () => {
 
   return (
     <section id="waitlist" className={styles.waitlist}>
-      <WaitlistModal
-          isOpen={modalIsOpen}
-          onClose={closeModal}
-      />
       <div className={styles.ligths}>
         <img src={vector.vector18} alt="bg" />
         <img src={vector.vector09} alt="bg" />
