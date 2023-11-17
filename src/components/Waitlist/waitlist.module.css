@@ -184,4 +184,7 @@
   .join_waitlist {
     width: 20rem;
   }
+  .text_section{
+    width: 95vw;
+  }
 }
