@@ -48,11 +48,11 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+  // const openModal = () => {
+  //   setModalIsOpen(true);
+  // };
 
   const closeModal = () => {
     setModalIsOpen(false);
@@ -60,6 +60,10 @@ const Waitlist = () => {
 
   return (
     <section id="waitlist" className={styles.waitlist}>
+      <WaitlistModal
+          isOpen={modalIsOpen}
+          onClose={closeModal}
+      />
       <div className={styles.ligths}>
         <img src={vector.vector18} alt="bg" />
         <img src={vector.vector09} alt="bg" />
@@ -96,15 +100,16 @@ const Waitlist = () => {
           />
           {showCaptcha && (
             <ReCAPTCHA
-              sitekey= {`${import.meta.env.VITE_CAPTCHA_KEY}`}
+              sitekey={`${import.meta.env.VITE_CAPTCHA_KEY}`}
               onChange={onChange}
             />
           )}
-          <button type="submit" >SUSCRIBE</button>
+          <button type="submit">SUSCRIBE</button>
         </form>
       </div>
       {isRegistered && (
-        <WaitlistModal isOpen={openModal} onClose={closeModal} />)}
+        <WaitlistModal isOpen={openModal} onClose={closeModal} />
+      )}
     </section>
   );
 };
