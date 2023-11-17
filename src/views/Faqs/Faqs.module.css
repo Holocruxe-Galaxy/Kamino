@@ -72,10 +72,6 @@
   background-clip: text;
 }
 
-.panel_label:focus {
-  outline: none;
-}
-
 .panel_label:after,
 .panel_label:before {
   content: "";
@@ -87,10 +83,17 @@
   margin-top: -2px;
   background-color: var(--color-border);
 }
+.panel_label:hover{
+  color:var(--white);
+  text-shadow: -2px 3px 6px rgba(0,0,0,0.88);
+  border: none;
+  outline: none;
+}
 
 .panel_label[aria-expanded="false"]:before {
   transform: rotate(-90deg);
   transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  
 }
 
 .panel[aria-expanded="true"] .panel_content {
