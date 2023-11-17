@@ -17,17 +17,16 @@ export default function Mobile() {
     <div className={styles.mobilContainer}>
       <div className={styles.mobileHeader}>
         <img src={menu.logo} alt="logo" />
-      <nav className={styles.mobile} onClick={toggleMenu}>
-        {menuOpen ? (
-          <>
-          <img className={styles.hamburger} src={menu.hamb} />
-          <Mobile />
-          </>
-        ) : (
-          <img className={styles.hamburger} src={menu.x} />
-        )}
-
-      </nav>
+        <nav className={styles.mobile} onClick={toggleMenu}>
+          {menuOpen ? (
+            <>
+              <img className={styles.hamburger} src={menu.hamb} alt="" />
+              <Mobile />
+            </>
+          ) : (
+            <img className={styles.hamburger} src={menu.x} alt="" />
+          )}
+        </nav>
       </div>
       <nav className={styles.navMobile}>
         <NavLink to="/" className={styles.linkM}>
@@ -73,7 +72,6 @@ export default function Mobile() {
         </NavLink>
       </nav>
       <div className={styles.ligths}>
-
         <svg
           width="237"
           height="32"
