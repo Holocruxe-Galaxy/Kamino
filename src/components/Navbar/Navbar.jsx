@@ -45,7 +45,7 @@ const Navbar = () => {
     <header className={styles.container}>
       <div
         className={`${styles.logoContainer} ${
-          !hasVisited && location.pathname === '/' && styles.logoContainerAnim
+          !hasVisited && location.pathname === "/" && styles.logoContainerAnim
         }`}
       >
         <NavLink to="/">
@@ -57,7 +57,7 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             className={`${styles.svgLogo} ${
-              !hasVisited && location.pathname === '/' && styles.svgLogoAnim
+              !hasVisited && location.pathname === "/" && styles.svgLogoAnim
             }`}
           >
             <motion.path
@@ -175,13 +175,13 @@ const Navbar = () => {
       </div>
       <nav
         className={`${styles.navbar} ${
-          !hasVisited && location.pathname === '/' && styles.navbarAnim
+          !hasVisited && location.pathname === "/" && styles.navbarAnim
         }`}
       >
         <NavLink
           to="/"
           className={`${styles.link} ${
-            location.pathname === '/' && styles.activeLink
+            location.pathname === "/" && styles.activeLink
           }`}
         >
           Home
@@ -190,7 +190,7 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={`${styles.link} ${
-            location.pathname === '/about' ? styles.activeLink : null
+            location.pathname === "/about" ? styles.activeLink : null
           }`}
         >
           About Us
@@ -199,7 +199,7 @@ const Navbar = () => {
         <NavLink
           to="waitlist"
           className={`${styles.link} ${
-            location.pathname === '/waitlist' ? styles.activeLink : null
+            location.pathname === "/waitlist" ? styles.activeLink : null
           }`}
           spy={true}
           smooth={true}
@@ -211,7 +211,7 @@ const Navbar = () => {
         <NavLink
           to="https://login.holocruxe.com"
           className={`${styles.link} ${
-            location.pathname === 'login.holocruxe.com' && styles.activeLink
+            location.pathname === "login.holocruxe.com" && styles.activeLink
           }`}
         >
           Login
@@ -222,13 +222,12 @@ const Navbar = () => {
       <nav className={styles.mobile} onClick={toggleMenu}>
         {menuOpen ? (
           <>
-          <img className={styles.hamburger} src={menu.x} />
-          <Mobile />
+            <img className={styles.hamburger} src={menu.x} alt="" />
+            <Mobile />
           </>
         ) : (
-          <img className={styles.hamburger} src={menu.hamb} />
+          <img className={styles.hamburger} src={menu.hamb} alt="" />
         )}
-
       </nav>
     </header>
   );
