@@ -5,11 +5,11 @@
   -webkit-animation: hideContent 2s forwards;
   animation: hideContent 2s forwards;
 }
-
 .vector_container{
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .vector01 {
@@ -86,4 +86,36 @@
 
 .disable-touch {
   pointer-events: none;
+}
+@media screen and (max-width: 920px) {
+
+  .vector_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+.vector01 {
+  margin-right: 35vw; 
+  width: 40%;
+  height: max-content;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .vector_container{
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  margin-top: 0;
+}
+.vector01 {
+  margin-right: 60vw; 
+  width: 60%;
+  margin-top: -10%;
+  margin-bottom: -10%;
+}
+
 }

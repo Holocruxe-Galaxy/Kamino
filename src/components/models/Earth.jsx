@@ -3,6 +3,10 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { useFrame, Canvas } from '@react-three/fiber';
 import CanvasLoader from './Loader';
 import './earth.css';
+import Hand from '../../icons/Hand.svg'
+import React, { useState, useEffect } from "react";
+
+
 
 import CircleSvg from '../../icons/Ellipse 3.svg';
 import IconSvg from '../../icons/mouse.svg';
@@ -29,9 +33,23 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   return (
-    <div style={{ position: 'relative' }}>
-      <Canvas className="earth-canvas" style={{ height: '800px',marginTop: '5rem'}}>
+    <div style={{ position: "relative" }}>
+      {/* <TouchWorld /> */}
+      <Canvas
+        className="earth-canvas"
+        style={{ height: "800px", marginTop: "5rem" }}
+      >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -40,34 +58,55 @@ const EarthCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Earth />
-          <Stars/>
+          <Stars />
           <Preload all />
         </Suspense>
       </Canvas>
+
       <div className="svg-click">
-        <img
-          src={CircleSvg}
-          alt="circle"
-          style={{ position: 'absolute', bottom: '400px', right: '100px' }}
-        />
-        <img
-          src={IconSvg}
-          alt="icon"
-          style={{ position: 'absolute', bottom: '420px', right: '115px' }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '350px',
-            right: '70px',
-            userSelect: 'none',
-            color: 'white',
-            textAlign: 'center',
-          }}
-        >
-          <p>Click in</p>
-          <p>the world</p>
-        </div>
+        {windowWidth > 920 ? (
+          <>
+            <div className="circleMouse">
+              <img
+                className="circle"
+                src={CircleSvg}
+                alt="circle"
+              />
+              <div className="mouse">
+                <img
+                  src={IconSvg}
+                  alt="icon"
+
+                />
+              </div>
+              <div className="text">
+                <p>Click in </p>
+                <p>the world</p>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="circleMouse">
+                <img
+                  className="circle"
+                  src={CircleSvg}
+                  alt="circle"
+                />
+                <div className="mouse">
+                  <img
+                    src={Hand}
+                    alt="icon"
+                    style={{ width: "100%",}}
+                  />
+              </div>
+              <div className="text">
+                <p>Click in </p>
+                <p>the world</p>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
