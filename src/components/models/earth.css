@@ -3,13 +3,99 @@
   padding: 0;
 }
 
+.svg-click {
+  position: relative;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -25rem;
+  margin-right: 8%;
+}
+
+.circleMouse {
+  position: relative;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mouse {
+  position: absolute;
+  right: 22%;
+  top: 15%;
+}
+.text {
+  position: absolute;
+  top: 100%;
+  width: 10rem;
+}
+
 @media screen and (max-width: 920px) {
   .earth-canvas {
     height: 50vh !important;
   }
+
   .svg-click {
-    display: none;
+    position: relative;
+    margin-right: 10%;
+    width: 90%;
+    margin-top: -20rem;
+  }
+
+  .circleMouse {
+    position: relative;
+    height: auto;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+  }
+  .mouse {
+    position: absolute;
+    width: 75%;
+    top: 8%;
+    right: 17%;
+  }
+
+  .text {
+    position: absolute;
+    top: 100%;
+    font-size: x-small;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .circleMouse {
+      width: 2rem;
+    }
   }
 }
 
+@media screen and (max-width: 440px) {
+  .earth-canvas {
+    height: 40vh !important;
+  }
 
+  .svg-click {
+    width: 90%;
+    margin-top: -15rem;
+  }
+}

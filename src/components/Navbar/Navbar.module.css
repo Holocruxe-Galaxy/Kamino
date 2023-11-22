@@ -32,7 +32,6 @@
   justify-content: flex-end;
   align-items: center;
   flex: 1;
-
   font-size: 1rem;
   opacity: 0;
   -webkit-animation: entranceNavbar 1.5s forwards ease;
@@ -275,7 +274,7 @@ nav button:hover {
 .hamburger {
   width: 1.5rem;
   right: 2rem;
-  top: 2rem;
+  top: 2.5rem;
   position: absolute;
 }
 
@@ -293,6 +292,9 @@ nav button:hover {
     display: flex;
     flex: 1;
   }
+  .hamburger {
+  top: 2.5rem;
+}
 
   @-webkit-keyframes entranceLogo {
     0% {
@@ -353,4 +355,9 @@ nav button:hover {
       transform: translate(0, -50%) scale(1);
     }
   }
+}
+@media screen and (max-width: 510px){
+  .hamburger {
+    top: 1.8rem;
+}
 }

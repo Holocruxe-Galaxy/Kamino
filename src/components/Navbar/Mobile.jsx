@@ -1,13 +1,12 @@
 // dependencias
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 // imagenes
-import menu from '../../img/menu';
+import menu from "../../img/menu";
 //estilos
-import styles from './navBarMobile.module.css';
+import styles from "./navBarMobile.module.css";
 
 export default function Mobile() {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -17,17 +16,16 @@ export default function Mobile() {
     <div className={styles.mobilContainer}>
       <div className={styles.mobileHeader}>
         <img src={menu.logo} alt="logo" />
-      <nav className={styles.mobile} onClick={toggleMenu}>
-        {menuOpen ? (
-          <>
-          <img className={styles.hamburger} src={menu.hamb} />
-          <Mobile />
-          </>
-        ) : (
-          <img className={styles.hamburger} src={menu.x} />
-        )}
-
-      </nav>
+        <nav className={styles.mobile} onClick={toggleMenu}>
+          {menuOpen ? (
+            <>
+              <img className={styles.hamburger} src={menu.hamb} alt="" />
+              <Mobile />
+            </>
+          ) : (
+            <img className={styles.hamburger} src={menu.x} alt="" />
+          )}
+        </nav>
       </div>
       <nav className={styles.navMobile}>
         <NavLink to="/" className={styles.linkM}>
@@ -73,10 +71,9 @@ export default function Mobile() {
         </NavLink>
       </nav>
       <div className={styles.ligths}>
-
         <svg
-          width="237"
-          height="32"
+
+          width="100%"
           viewBox="0 0 237 32"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

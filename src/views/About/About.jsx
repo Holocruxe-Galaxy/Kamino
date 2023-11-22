@@ -33,7 +33,7 @@ const About = () => {
           and preserve their memories. The platform uses artificial intelligence
           to create a virtual diary that captures the essence of a person's
           life. This allows users to relive their memories in a richer and
-          deeper way.`
+          deeper way.
         </p>
       </article>
       <div className={styles.text_section}>
@@ -55,7 +55,7 @@ const About = () => {
         <div className={styles.value}>
           <h3 className={styles.title}>Connection</h3>
           <p>
-            Promote human connection by enabling users to share theirmemories
+            Promote human connection by enabling users to share their memories
             with friends , family and loved ones, and provide toold to
             strengthen bonds and relationships.
           </p>

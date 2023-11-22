@@ -48,11 +48,11 @@ const Waitlist = () => {
     setCaptchaValue(value);
   };
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+  // const openModal = () => {
+  //   setModalIsOpen(true);
+  // };
 
   const closeModal = () => {
     setModalIsOpen(false);
@@ -82,6 +82,7 @@ const Waitlist = () => {
             name="name"
             placeholder="Name"
             required
+            autoComplete="off"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -96,15 +97,16 @@ const Waitlist = () => {
           />
           {showCaptcha && (
             <ReCAPTCHA
-              sitekey= {`${import.meta.env.VITE_CAPTCHA_KEY}`}
+              sitekey={`${import.meta.env.VITE_CAPTCHA_KEY}`}
               onChange={onChange}
             />
           )}
-          <button type="submit" >SUSCRIBE</button>
+          <button type="submit">SUSCRIBE</button>
         </form>
       </div>
       {isRegistered && (
-        <WaitlistModal isOpen={openModal} onClose={closeModal} />)}
+        <WaitlistModal isOpen={openModal} onClose={closeModal} />
+      )}
     </section>
   );
 };

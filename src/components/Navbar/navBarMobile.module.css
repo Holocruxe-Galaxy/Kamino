@@ -1,5 +1,9 @@
 .mobilContainer {
-  background: radial-gradient(63.88% 50.88% at 52.81% 35%, #647481 0%, #093F68 100%);
+  background: radial-gradient(
+    63.88% 50.88% at 52.81% 35%,
+    #647481 0%,
+    #093f68 100%
+  );
   background-color: var(--color-bg);
   width: 100%;
   /* height: 100%; */
@@ -11,7 +15,7 @@
   left: 0;
 }
 
-.mobileHeader{
+.mobileHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +35,7 @@
 
 .linkM {
   font-size: 2.125rem;
-  font-family: var(--font-main);
+  font-family: var(--font-main); 
   background: var(--color-title);
   background-size: 200% 100%;
   color: transparent;
@@ -40,12 +44,26 @@
 }
 
 .ligths {
-  align-self: flex-end;
   position: relative;
-  bottom: 0;
-  margin: 8rem 4rem 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 54.5%;
+  width: 100%;
 }
 
-.ligths svg{
-  height: 14rem;
+.ligths svg {
+  width: 90%;
+  position: absolute;
+}
+
+@media screen and (max-width: 430px) {
+  .ligths {
+    height: 33%;
+  }
+}
+@media screen and (max-width: 395px) {
+  .ligths {
+    height: 26%;
+  }
 }

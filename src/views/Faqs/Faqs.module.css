@@ -19,6 +19,7 @@
 .heroImg{
   position: relative;
   top: 5rem ;
+  left:10rem;
 }
 
 .heroLine{
@@ -71,10 +72,6 @@
   background-clip: text;
 }
 
-.panel_label:focus {
-  outline: none;
-}
-
 .panel_label:after,
 .panel_label:before {
   content: "";
@@ -85,6 +82,12 @@
   height: 2px;
   margin-top: -2px;
   background-color: var(--color-border);
+}
+.panel_label:hover{
+  color:var(--white);
+  text-shadow: -2px 3px 6px rgba(0,0,0,0.88);
+  border: none;
+  outline: none;
 }
 
 .panel_label[aria-expanded="false"]:before {
@@ -126,14 +129,14 @@
 
 @media screen and (max-width: 910px) {
   .hero{
-    margin: 2rem 0 5rem -5rem;
+    margin: 0rem 0 5rem -5rem;
   }
 
   .heroImg{
-    top: 0;
-    left: 4rem;
-    width: 11rem;
-  }
+  position: relative;
+  left:6rem;
+  width: 20rem;
+}
   
   .heroLine{
     right: 0;
@@ -157,5 +160,15 @@
 
   .panel_label{
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  .heroImg{
+  position: relative;
+  left:6rem;
+  width: 10rem;
+  }
+   .hero{
+    margin: 0rem 0 5rem -5rem;
   }
 }

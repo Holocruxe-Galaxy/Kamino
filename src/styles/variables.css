@@ -9,7 +9,7 @@
 
   /* todo modificar nombre y colores */
   --color-bg: #20435E;
-  --color-title: linear-gradient(92deg, #1E88E5 -1.02%, #86AFEC 36.25%);
+  --color-title: linear-gradient(92deg, #1E88E5 -1.02%, #d5deec 36.25%);
   --color-font: #fff;
   --color-input: radial-gradient(2920% 60.13% at 50% 53.89%, #1E88E5 0%, #0C0C0C 110%);
   --color-bgBtn: linear-gradient(90deg, #061927 0%, #4A9ADF 100%);
