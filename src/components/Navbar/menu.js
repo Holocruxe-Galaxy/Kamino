@@ -2,23 +2,23 @@ const menu = [
   {
     title: 'Home',
     url: '/',
-    id: 1
+    id: 1,
   },
   {
     title: 'About Us',
     url: '/about',
-    id: 2
+    id: 2,
   },
   {
     title: 'Waitlist',
     url: '/waitlist',
-    id: 3
+    id: 3,
   },
   {
     title: 'Login',
-    url: 'login.holocruxe.com',
-    id: 4
-  }
+    url: 'https://web.holocruxe.com',
+    id: 4,
+  },
 ];
 
 export default menu;
