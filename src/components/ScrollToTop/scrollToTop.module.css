@@ -18,7 +18,11 @@ left: 85%;;
   transform: translateY(-50%);
   height: 2.5rem;
 }
-
+@media screen and (max-width: 1920px) {
+  .arrow{
+    left: 85.9%
+  }
+}
 @media screen and (max-width: 1445px) {
   .arrow{
     left: 86.2%;
