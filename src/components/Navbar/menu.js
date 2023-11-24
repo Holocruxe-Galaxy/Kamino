@@ -16,7 +16,7 @@ const menu = [
   },
   {
     title: 'Login',
-    url: 'https://web.holocruxe.com',
+    url: import.meta.env.VITE_WEBURL,
     id: 4,
   },
 ];
