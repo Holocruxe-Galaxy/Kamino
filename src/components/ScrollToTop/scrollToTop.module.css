@@ -8,26 +8,30 @@
 
 .circle{
 position: absolute;
-left: 85%;
+left: 85%;;
 }
 
 .arrow{
   position: absolute;
-  left: 86.5%;
+  left: 86.7%;
   top: 40%;
   transform: translateY(-50%);
   height: 2.5rem;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1445px) {
+  .arrow{
+    left: 86.2%;
+  }
+}
+@media screen and (max-width: 1020px) {
   .arrow{
     left: 87%;
   }
-  
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
   .arrow{
-    left: 88%;
+    left: 87.2%;
   }
   
 }
@@ -38,5 +42,10 @@ left: 85%;
   .circle{
     left:80%;
   }
-  
+}
+@media screen and (max-width: 340px) {
+  .arrow{
+    left: 85%;
+  }
+
 }
