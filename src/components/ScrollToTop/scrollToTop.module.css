@@ -43,9 +43,9 @@ left: 85%;;
     left:80%;
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 370px) {
   .arrow{
-    left: 85%;
+    left: 84.5%;
   }
 
 }
