@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import styles from './waitlist.module.css';
-import vector from '../../img/vector';
-import WaitlistModal from './Modal';
-
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import styles from "./waitlist.module.css";
+import vector from "../../img/vector";
+import WaitlistModal from "./Modal";
 
 const Waitlist = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [isRegistered, setIsRegistered] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false); //poner en true para probar
+  const [captchaValue, setCaptchaValue] = useState("");
   const [showCaptcha, setShowCaptcha] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -20,28 +19,32 @@ const Waitlist = () => {
       return;
     }
 
-    if (captchaValue === '') {
-      console.error('Please verify the captcha');
+    if (captchaValue === "") {
+      console.error("Please verify the captcha");
       return;
     }
 
-    const response = await fetch(`${import.meta.env.VITE_BACK_CONECTION}/users`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, captchaValue }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACK_CONECTION}/users`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, captchaValue }),
+      }
+    );
     if (response.ok) {
       setIsRegistered(true);
+      openModal(); //Agregamos funcion de openModal para que al registrarse, abra el modal
     } else {
-      console.error('Registration failed');
+      console.error("Registration failed"); //Hay que hacer pagina de error 404
     }
 
     const data = await response.json();
     console.log(data);
 
-    setName('');
-    setEmail('');
-    setCaptchaValue('');
+    setName("");
+    setEmail("");
+    setCaptchaValue("");
   };
 
   const onChange = (value) => {
@@ -49,10 +52,11 @@ const Waitlist = () => {
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(true);
+  console.log(modalIsOpen);
 
-  // const openModal = () => {
-  //   setModalIsOpen(true);
-  // };
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
 
   const closeModal = () => {
     setModalIsOpen(false);
@@ -104,9 +108,10 @@ const Waitlist = () => {
           <button type="submit">SUSCRIBE</button>
         </form>
       </div>
-      {isRegistered && (
-        <WaitlistModal isOpen={openModal} onClose={closeModal} />
-      )}
+      {isRegistered &&
+        modalIsOpen && ( //El modal se muestra bajo dos condiciones: una cuando el usuario esta registrado y la otra le manda al modal abrirse o cerrarse
+          <WaitlistModal isOpen={openModal} onClose={closeModal} />
+        )}
     </section>
   );
 };
