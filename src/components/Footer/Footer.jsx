@@ -23,11 +23,7 @@ const Footer = () => {
               Home
             </NavLink>
 
-            <NavLink
-              to="/faqs"
-              className={styles.navlink}
-              onClick={() => window.scrollTo(0, 0)}
-            >
+            <NavLink to="/faqs" className={styles.navlink} onClick={() => window.scrollTo(0, 0)}>
               FAQ
             </NavLink>
           </p>
