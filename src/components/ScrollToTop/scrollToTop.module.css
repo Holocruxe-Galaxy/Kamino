@@ -1,42 +1,18 @@
 .container {
-  /* border:1px solid red; */
   width: 95%;
   margin: 0 auto;
   position: relative;
   height: 5rem;
 }
-
-.circle{
+.arrowcircle{
 position: absolute;
-left: 85%;
+right: 0rem;
+width: 4rem;
+bottom: 1rem;
 }
 
-.arrow{
-  position: absolute;
-  left: 86.5%;
-  top: 40%;
-  transform: translateY(-50%);
-  height: 2.5rem;
-}
-
-@media screen and (max-width: 970px) {
-  .arrow{
-    left: 87%;
+@media screen and (max-width: 475px) {
+  .arrowcircle{
+    width: 3rem;
   }
-  
-}
-@media screen and (max-width: 640px) {
-  .arrow{
-    left: 88%;
-  }
-  
-}
-@media screen and (max-width: 460px) {
-  .arrow{
-    left: 84%;
-  }
-  .circle{
-    left:80%;
-  }
-  
 }

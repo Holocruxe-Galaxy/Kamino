@@ -25,16 +25,17 @@
 }
 
 .navMobile {
-  margin: 4rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:center;
+  gap:1rem;
   align-items: center;
-  height: 25rem;
+
 }
 
 .linkM {
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   font-family: var(--font-main); 
   background: var(--color-title);
   background-size: 200% 100%;
@@ -46,24 +47,21 @@
 .ligths {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
-  height: 54.5%;
   width: 100%;
+  height: 14rem;
 }
 
-.ligths svg {
-  width: 90%;
-  position: absolute;
-}
-
-@media screen and (max-width: 430px) {
+@media screen and ( min-width: 768px) {
   .ligths {
-    height: 33%;
+  height: 20vh;
   }
-}
-@media screen and (max-width: 395px) {
-  .ligths {
-    height: 26%;
+  .navMobile{
+    height: 56vh;
+    gap:2rem;
+  }
+  .linkM{
+    font-size: 2rem;
+    
   }
 }

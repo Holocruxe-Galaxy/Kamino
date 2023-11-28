@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './scrollToTop.module.css';
 
-import Circle from '../../icons/Ellipse 3.svg';
-import arrow from '../../icons/Arrow.svg';
+import ArrowCircle from '../../icons/arrow-circle.svg'
 
 const ScrollToTop = () => {
   const [display, setDisplay] = useState(false);
@@ -18,10 +17,8 @@ const ScrollToTop = () => {
       {display && (
         <div className={styles.container}>
           <a href="#" className={styles.top}>
-            <img src={Circle} alt="circle" className={styles.circle} />
-            <img src={arrow} alt="arrow up" className={styles.arrow} />
+          <img src={ArrowCircle} alt="arrow circle" className={styles.arrowcircle} />
           </a>
-          <p></p>
         </div>
       )}
     </>

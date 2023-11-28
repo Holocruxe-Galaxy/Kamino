@@ -5,8 +5,8 @@ import styles from './modal.module.css';
 const WaitlistModal = ({ isOpen, onClose }) => {
   return (
     <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
+      isOpen={isOpen}   //Muestra contenido con un booleano
+      onRequestClose={onClose}     //evento para cerrar en este caso el modal, deja de mostrarlo
       contentLabel="Congratulations Modal"
       className={styles.container}
     >

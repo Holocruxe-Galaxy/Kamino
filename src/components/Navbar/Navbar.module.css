@@ -360,4 +360,9 @@ nav button:hover {
   .hamburger {
     top: 1.8rem;
 }
+@media screen and (max-width: 360px){
+  .hamburger {
+    top: 1.5rem; 
+}
+}
 }
