@@ -5,10 +5,8 @@
     #093f68 100%
   );
   background-color: var(--color-bg);
-  width: 100%;
-  /* height: 100%; */
-  /* height: calc( 1vh * 100); */
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   z-index: 22;
   position: fixed;
   top: 0;
@@ -31,12 +29,13 @@
   justify-content:center;
   gap:1rem;
   align-items: center;
+  height: 50%;
 
 }
 
 .linkM {
   font-size: 1.5rem;
-  font-family: var(--font-main); 
+  font-family: var(--font-main);
   background: var(--color-title);
   background-size: 200% 100%;
   color: transparent;
@@ -45,23 +44,17 @@
 }
 
 .ligths {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  height: 14rem;
+    height: 24%;
+    display: flex;
+    align-items: end;
+    width: 100vw;
 }
 
 @media screen and ( min-width: 768px) {
   .ligths {
-  height: 20vh;
-  }
-  .navMobile{
-    height: 56vh;
-    gap:2rem;
+  width: 100vw;
   }
   .linkM{
     font-size: 2rem;
-    
   }
 }
