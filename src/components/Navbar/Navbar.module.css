@@ -272,10 +272,11 @@ nav button:hover {
 }
 
 .hamburger {
-  width: 1.5rem;
+  /* width: 1.5rem;
   right: 2rem;
   top: 2.5rem;
-  position: absolute;
+  position: absolute; */
+  
 }
 
 
@@ -291,6 +292,9 @@ nav button:hover {
   .mobile {
     display: flex;
     flex: 1;
+    justify-content: flex-end;
+    height: 60%;
+    align-self: center;
   }
   .hamburger {
   top: 2.5rem;
@@ -356,13 +360,10 @@ nav button:hover {
     }
   }
 }
-@media screen and (max-width: 510px){
-  .hamburger {
-    top: 1.8rem;
+
+@media screen and (max-width: 425px){
+  .mobile{
+    height: 50%;
+  }
 }
-@media screen and (max-width: 360px){
-  .hamburger {
-    top: 1.5rem; 
-}
-}
-}
+
