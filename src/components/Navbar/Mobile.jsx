@@ -1,6 +1,6 @@
 // dependencias
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // imagenes
 import menu from "../../img/menu";
 //estilos
@@ -11,6 +11,7 @@ export default function Mobile() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
 
   return (
     <div className={styles.mobilContainer}>
@@ -72,10 +73,9 @@ export default function Mobile() {
       </nav>
       <div className={styles.ligths}>
         <svg
-
-          width="100%"
+          //width="100%"
           viewBox="0 0 237 32"
-          fill="none"
+          //fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
