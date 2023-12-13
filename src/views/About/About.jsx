@@ -3,9 +3,11 @@ import styles from './About.module.css';
 import vector from '../../img/vector';
 import robot from '../../img/robot';
 
-const About = () => {
-  const hasVisited = sessionStorage.getItem('visited');
+import { useTranslation } from "react-i18next";
 
+const About = () => {
+  const hasVisited  = sessionStorage.getItem('visited');
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     if (!hasVisited) {
       sessionStorage.setItem('visited', 'true');
@@ -14,63 +16,43 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      
       <div className={styles.text_section}>
         <div className={styles.text_title}>
-          <h2>WHO WE ARE?</h2>
+          <h2>{t("about.title-1")}</h2>
         </div>
         {/* <img src={vector.vector33} alt="" className={styles.vector1}/> */}
       </div>
       <article className={styles.text}>
         <p className={styles.sizeMobil}>
-          <span className={styles.titleSmall}>At Holocruxe </span>
-          we are a passionate team that believes in the power of
-          memories and experiences.
-        </p> 
-        <pre><br /></pre>
-        <p className={styles.rigthText}>
-          Holocruxe is a company that creates a platform to help people capture
-          and preserve their memories. The platform uses artificial intelligence
-          to create a virtual diary that captures the essence of a person's
-          life. This allows users to relive their memories in a richer and
-          deeper way.
+          <span className={styles.titleSmall}>{t("about.holocruxe")}</span>
+          {t("about.holocruxeP-1")}
         </p>
+        <pre>
+          <br />
+        </pre>
+        <p className={styles.rigthText}>{t("about.holocruxeP-2")}</p>
       </article>
       <div className={styles.text_section}>
         <div className={styles.text_title}>
-          <h2>OUR VALUES</h2>
+          <h2>{t("about.title-2")}</h2>
         </div>
       </div>
-            
+
       <div className={styles.values}>
-        
         <div className={styles.value}>
-          <h3 className={styles.title} >Authenticity</h3>
-          <p>
-            Promote honesty and authenticity by capturing and sharing memories,
-            ecouraging users to be themselves and share their experiences as
-            they lived them.
-          </p>
+          <h3 className={styles.title}>{t("about.authenticity")}</h3>
+          <p>{t("about.authenticityP")}</p>
         </div>
         <div className={styles.value}>
-          <h3 className={styles.title}>Connection</h3>
-          <p>
-            Promote human connection by enabling users to share their memories
-            with friends , family and loved ones, and provide toold to
-            strengthen bonds and relationships.
-          </p>
+          <h3 className={styles.title}>{t("about.connection")}</h3>
+          <p>{t("about.connectionP")}</p>
         </div>
         <div className={styles.value}>
-          <h3 className={styles.title}>Privacy</h3>
-          <p>
-            Respecting users' privacy and providing them with clear and
-            transparent choices about how their personal data is used and
-            shared. Ensure robust security measures to protect sensitive
-            information.
-          </p>
+          <h3 className={styles.title}>{t("about.privacy")}</h3>
+          <p>{t("about.privacyP")}</p>
         </div>
       </div>
-      <img src={robot.rob04} alt="robot apoyado"  className={styles.robot}/>
+      <img src={robot.rob04} alt="robot apoyado" className={styles.robot} />
     </div>
   );
 };

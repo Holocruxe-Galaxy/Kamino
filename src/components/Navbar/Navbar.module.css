@@ -5,12 +5,18 @@
   display: flex;
 }
 
+.button{
+  margin: 0.5rem;
+}
+
 .logoContainer {
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  justify-content: flex-end;
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    flex-direction: column-reverse;
 }
 
 .logoContainerAnim {
@@ -95,7 +101,7 @@
 
 .link:hover::before,
 .link:hover::after {
-  transform: scale(1);
+  transform: scale(1); 
 }
 
 .activeLink::before,
@@ -271,19 +277,20 @@ nav button:hover {
   display: none;
 }
 
-.hamburger {
-  /* width: 1.5rem;
-  right: 2rem;
-  top: 2.5rem;
-  position: absolute; */
-  
-}
-
-
 @media screen and (max-width: 920px) {
   .svgLogo {
     width: 10rem;
   }
+  .buttons{
+    display: flex;
+    flex: row;
+    width: 40%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+  .button{
+  margin: 0.2rem;
+}
 
   .navbar {
     display: none;
@@ -365,5 +372,14 @@ nav button:hover {
   .mobile{
     height: 50%;
   }
+  .buttons{
+    width: 70%;
+  }
 }
 
+@media screen and (max-width: 320px){
+.buttons{
+  width: 50%;
+}
+
+}

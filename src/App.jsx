@@ -8,6 +8,9 @@ import Faqs from './views/Faqs/Faqs';
 // dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
 
+
+
+
 function App() {
   const location = useLocation();
   const hasVisited = sessionStorage.getItem('visited');
@@ -15,7 +18,7 @@ function App() {
   return (
     <div
       className={`${
-        !hasVisited && location.pathname === '/' ? 'appContainer' : null
+        !hasVisited && location.pathname === "/" ? "appContainer" : null
       }`}
     >
       <Navbar />

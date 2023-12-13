@@ -4,12 +4,15 @@ import styles from "./waitlist.module.css";
 import vector from "../../img/vector";
 import WaitlistModal from "./Modal";
 
+import { useTranslation } from "react-i18next";
+
 const Waitlist = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isRegistered, setIsRegistered] = useState(false); //poner en true para probar
   const [captchaValue, setCaptchaValue] = useState("");
   const [showCaptcha, setShowCaptcha] = useState(false);
+  const { t,i18n } = useTranslation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -75,13 +78,13 @@ const Waitlist = () => {
       </div>
       <div className={styles.text_section}>
         <div className={styles.title}>
-          <h2>WAITLIST</h2>
+          <h2>{t("waitlist.h2")}</h2>
         </div>
       </div>
       <div className={styles.form_and_model}>
         <form className={styles.join_waitlist} onSubmit={handleSubmit}>
           <input
-            type="text"
+            type="text "
             id="name"
             name="name"
             placeholder="Name"
@@ -95,6 +98,7 @@ const Waitlist = () => {
             id="email"
             name="email"
             placeholder="Email"
+            autoComplete="off"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -105,7 +109,7 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">SUSCRIBE</button>
+          <button type="submit">{t("waitlist.btn")}</button>
         </form>
       </div>
       {isRegistered &&

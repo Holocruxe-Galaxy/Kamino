@@ -1,16 +1,25 @@
 import robot from '../../img/robot';
 import styles from "./hero.module.css";
+import { useTranslation } from 'react-i18next';
+
 
 const Hero = () => {
+    const {t, i18n} = useTranslation();
+
   return (
     <section className={`${styles.hero_container} ${styles.heroTop}`}>
       <div className={styles.hero_img}>
         <img src={robot.rob01} alt="Robot asomandose" />
       </div>
       <div className={styles.hero}>
-        <h2>A trip to<span className={styles.title}> your experience</span></h2>
+        <h2>
+         {t("landing.hero")}
+          <span className={styles.title}>
+            {t("landing.hero-a")}
+          </span>
+        </h2>
         <p>
-        Holocruxe is a revolutionary platform powered by artificial intelligence that allows you to preserve your most precious memories in a secure and organized way. Can you imagine having instant access to all your data in one place? With Holocruxe, it's possible.
+          {t("landing.hero-b")}
         </p>
       </div>
     </section>
