@@ -1,18 +1,12 @@
-//dependencias
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
-// imagenes
 import menu from "../../img/menu";
-// estilos
 import styles from "./Navbar.module.css";
-// componentes
 import Mobile from "./Mobile";
-//Traduccion
 import { useTranslation } from "react-i18next";
-import LanguageMenu from './LanguageMenu/LanguageMenu'
 
-const Navbar = () => {
+export const Navbar = () => {
   const location = useLocation();
 
   const hasVisited = sessionStorage.getItem("visited");
@@ -60,6 +54,21 @@ const Navbar = () => {
           !hasVisited && location.pathname === "/" && styles.logoContainerAnim
         }`}
       >
+        <div className={styles.buttons}>
+          <button
+            className={styles.button}
+            onClick={() => changeLanguage("en")}
+          >
+            ES
+            {/* <img src={esFlag}> */}
+          </button>
+          <button
+            className={styles.button}
+            onClick={() => changeLanguage("es")}
+          >
+            ES
+          </button>
+        </div>
         <NavLink to="/">
           <motion.svg
             viewBox="0 0 695 117"
@@ -229,7 +238,6 @@ const Navbar = () => {
           {t("navbar.login")}
         </NavLink>
         <NavLink></NavLink>
-          <LanguageMenu/>
 
         <div className={styles.indicator}></div>
       </nav>
@@ -246,5 +254,3 @@ const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;

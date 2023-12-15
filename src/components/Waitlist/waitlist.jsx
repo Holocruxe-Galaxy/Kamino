@@ -12,7 +12,7 @@ const Waitlist = () => {
   const [isRegistered, setIsRegistered] = useState(false); //poner en true para probar
   const [captchaValue, setCaptchaValue] = useState("");
   const [showCaptcha, setShowCaptcha] = useState(false);
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -84,7 +84,7 @@ const Waitlist = () => {
       <div className={styles.form_and_model}>
         <form className={styles.join_waitlist} onSubmit={handleSubmit}>
           <input
-            type="text "
+            type="text"
             id="name"
             name="name"
             placeholder="Name"

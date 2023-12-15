@@ -4,19 +4,36 @@
   height: 10vh;
   display: flex;
 }
-
-.button{
+.allLang{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1rem;
+  gap: 0.5rem;
+}
+.button {
   margin: 0.5rem;
+}
+
+button.langButton {
+  all: unset;
+}
+button.langButton:hover {
+  all: unset;
+
+}
+button.langButton:hover{
+  cursor: pointer;
 }
 
 .logoContainer {
   justify-content: flex-end;
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    height: 100%;
-    flex-direction: column-reverse;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  flex-direction: column-reverse;
 }
 
 .logoContainerAnim {
@@ -49,8 +66,8 @@
   animation-delay: 6.5s;
 }
 
-.navbar>*,
-.navbarAnim>* {
+.navbar > *,
+.navbarAnim > * {
   font-family: var(--main-font);
   color: #349aef;
 }
@@ -72,7 +89,7 @@
 
 .link:before,
 .link:after {
-  content: '';
+  content: "";
   position: absolute;
 
   background-color: var(--aqua);
@@ -101,12 +118,12 @@
 
 .link:hover::before,
 .link:hover::after {
-  transform: scale(1); 
+  transform: scale(1);
 }
 
 .activeLink::before,
 .activeLink::after {
-  content: '';
+  content: "";
   position: absolute;
   transform: scale(1);
   background-color: var(--aqua);
@@ -134,7 +151,7 @@
   background-color: var(--aqua);
 }
 
-.navbar>button {
+.navbar > button {
   padding: 10px 20px;
   background-color: transparent;
   border: solid 1px var(--white);
@@ -143,7 +160,7 @@
   transition: all 0.3s ease;
 }
 
-.navbar>button:nth-of-type(1) {
+.navbar > button:nth-of-type(1) {
   margin: 0 1rem;
 }
 
@@ -281,16 +298,16 @@ nav button:hover {
   .svgLogo {
     width: 10rem;
   }
-  .buttons{
+  .buttons {
     display: flex;
     flex: row;
     width: 40%;
     height: auto;
     font-size: 0.8rem;
   }
-  .button{
-  margin: 0.2rem;
-}
+  .button {
+    margin: 0.2rem;
+  }
 
   .navbar {
     display: none;
@@ -304,8 +321,8 @@ nav button:hover {
     align-self: center;
   }
   .hamburger {
-  top: 2.5rem;
-}
+    top: 2.5rem;
+  }
 
   @-webkit-keyframes entranceLogo {
     0% {
@@ -368,18 +385,17 @@ nav button:hover {
   }
 }
 
-@media screen and (max-width: 425px){
-  .mobile{
+@media screen and (max-width: 425px) {
+  .mobile {
     height: 50%;
   }
-  .buttons{
+  .buttons {
     width: 70%;
   }
 }
 
-@media screen and (max-width: 320px){
-.buttons{
-  width: 50%;
-}
-
+@media screen and (max-width: 320px) {
+  .buttons {
+    width: 50%;
+  }
 }
