@@ -10,7 +10,7 @@ import styles from "./Navbar.module.css";
 import Mobile from "./Mobile";
 //Traduccion
 import { useTranslation } from "react-i18next";
-import LanguageMenu from './LanguageMenu/LanguageMenu'
+import LanguageMenu from "./LanguageMenu/LanguageMenu";
 
 const Navbar = () => {
   const location = useLocation();
@@ -229,20 +229,23 @@ const Navbar = () => {
           {t("navbar.login")}
         </NavLink>
         <NavLink></NavLink>
-          <LanguageMenu/>
 
         <div className={styles.indicator}></div>
       </nav>
-      <nav className={styles.mobile} onClick={toggleMenu}>
-        {menuOpen ? (
-          <>
-            <img className={styles.hamburger} src={menu.x} alt="" />
-            <Mobile />
-          </>
-        ) : (
-          <img className={styles.hamburger} src={menu.hamb} alt="" />
-        )}
-      </nav>
+      <div className={styles.navBarContainer}>
+        <nav className={styles.mobile} onClick={toggleMenu}>
+          {menuOpen ? (
+            <>
+              <img className={styles.hamburger} src={menu.x} alt="" />
+              <Mobile />
+            </>
+          ) : (
+            <img className={styles.hamburger} src={menu.hamb} alt="" />
+          )}
+        </nav>
+
+        <LanguageMenu />
+      </div>
     </header>
   );
 };

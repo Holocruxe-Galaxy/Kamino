@@ -4,43 +4,50 @@
   overflow: hidden;
   -webkit-animation: hideContent 2s forwards;
   animation: hideContent 2s forwards;
+  width: 95%;
+  height: 100%;
 }
-.vector_container{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
+
+.vector_container {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  bottom: 8rem;
+  left: 2rem;
 }
 
 .vector01 {
-  margin-right: 20vw;
+  margin-left: -0.5rem;
+  width: 40vw;
 }
 
-.vector03{
+.vector03 {
   width: 60%;
   margin: -1rem 15rem 0 0;
 }
 
-.vector05{
+.vector05 {
   width: 70%;
   margin: 8rem 0 -2rem 0;
 }
 
-.vector07{
+.vector07 {
   margin-top: -5rem;
 }
 
-.vector08{
+.vector08 {
   height: 70%;
   margin-left: 36rem;
-  margin-top: -10rem ;
+  margin-top: -10rem;
 }
 
 .containerAnim {
   -webkit-animation-delay: 3.75s;
   animation-delay: 3.75s;
 }
-
+.disable-touch {
+  pointer-events: none;
+}
 @-webkit-keyframes hideContent {
   0% {
     opacity: 0;
@@ -72,50 +79,37 @@
 .svgIndex {
   margin-left: 10rem;
   position: absolute;
+  border: red dotted;
   top: 10%;
   left: 0;
   height: 85%;
   width: auto;
 }
 
-@media screen and (max-width: 1460px) {
-  .svgIndex {
-    display: none;
+@media screen and (min-width: 425px) {
+  .vector01 {
+    margin-left: 3rem;
   }
 }
-
-.disable-touch {
-  pointer-events: none;
+@media screen and (min-width: 768px) {
+  .vector01 {
+    position: relative;
+    margin-left: 2rem;
+    width: 40vw;
+    bottom: 3rem;
+  }
 }
-@media screen and (max-width: 920px) {
-
-  .vector_container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
+@media screen and (min-width: 1024px) {
+  .vector_container {
+    bottom: 5rem;
+  }
+  .vector01 {
+    width: 45vw;
+  }
 }
-.vector01 {
-  margin-right: 35vw; 
-  width: 40%;
-  height: max-content;
-}
-
-}
-
-@media screen and (max-width: 450px) {
-
-  .vector_container{
-  width: 100%;
-  display: flex;
-  justify-content: center; 
-  margin-top: 0;
-}
-.vector01 {
-  margin-right: 60vw; 
-  width: 60%;
-  margin-top: -10%;
-  margin-bottom: -10%;
-}
-
+@media screen and (min-width: 1440px) {
+  .vector_container {
+    bottom: 6rem;
+    margin-left: 3rem;
+  }
 }

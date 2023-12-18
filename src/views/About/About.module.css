@@ -270,11 +270,25 @@
     left: 13rem;
     width: 30%;
   }
+  .title{
+    font-size: 1.2rem;
+  }
+  .text_section{
+    height: 2.5rem;
+  }
+  .value p{
+    font-size: 1rem;
+  }
+  .text_title h2{
+    font-size: 1.15rem;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .text_title {
-    height: 2rem;
-    font-size: 1rem;
+   .text_title h2{
+    font-size: 1.5rem;
+  }
+   .text_section{
+    height: 3rem;
   }
   .title {
     font-size: 1.3rem;
@@ -297,7 +311,25 @@
 }
 @media screen and (min-width: 1440px) {
   .robot {
-    top: 8.3rem;
+    top: 8rem;
     left: 22rem;
+  }
+   .text_title h2{
+    font-size: 2rem;
+    padding-top: 0.3rem;
+  }
+   .text_section{
+    height: 4rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+  .text {
+    font-size: 1.5rem;
+
+  }
+  .value p {
+    font-size: 1.5rem;
+
   }
 }

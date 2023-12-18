@@ -68,13 +68,13 @@ const Waitlist = () => {
   return (
     <section id="waitlist" className={styles.waitlist}>
       <div className={styles.ligths}>
-        <img src={vector.vector18} alt="bg" />
-        <img src={vector.vector09} alt="bg" />
-        <img src={vector.vector12} alt="bg" />
-        <img src={vector.vector14} alt="bg" />
-        <img src={vector.vector16} alt="bg" />
-        <img src={vector.vector20} alt="bg" />
-        <img src={vector.vector19} alt="bg" />
+        <img className={styles.image} src={vector.vector09} alt="bg" />
+        <img className={styles.image} src={vector.vector18} alt="bg" />
+        <img className={styles.image} src={vector.vector12} alt="bg" />
+        <img className={styles.image} src={vector.vector16} alt="bg" />
+        <img className={styles.image} src={vector.vector19} alt="bg" />
+        <img className={styles.image} src={vector.vector20} alt="bg" />
+        <img className={styles.image} src={vector.vector14} alt="bg" />
       </div>
       <div className={styles.text_section}>
         <div className={styles.title}>
