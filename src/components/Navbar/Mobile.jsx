@@ -5,13 +5,15 @@ import { useState, useEffect } from "react";
 import menu from "../../img/menu";
 //estilos
 import styles from "./navBarMobile.module.css";
+//Traduccion
+import { Trans } from "react-i18next";
+import LanguageMenu from "./LanguageMenu/LanguageMenu";
 
 export default function Mobile() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
 
   return (
     <div className={styles.mobilContainer}>
@@ -30,7 +32,7 @@ export default function Mobile() {
       </div>
       <nav className={styles.navMobile}>
         <NavLink to="/" className={styles.linkM}>
-          Home
+          <Trans i18nKey={"navbar.home"}>Home </Trans>
         </NavLink>
         <svg
           width="8"
@@ -43,7 +45,7 @@ export default function Mobile() {
         </svg>
 
         <NavLink to="/about" className={styles.linkM}>
-          About Us
+          <Trans i18nKey={"navbar.about"}>About US </Trans>
         </NavLink>
         <svg
           width="8"
@@ -56,7 +58,7 @@ export default function Mobile() {
         </svg>
 
         <NavLink to="waitlist" className={styles.linkM}>
-          Waitlist
+          <Trans i18nKey={"navbar.waitlist"}>Waitlist </Trans>
         </NavLink>
         <svg
           width="8"
@@ -68,7 +70,7 @@ export default function Mobile() {
           <circle cx="4" cy="4" r="4" fill="#1E88E5" />
         </svg>
         <NavLink to="https://login.holocruxe.com" className={styles.linkM}>
-          Login
+          <Trans i18nKey={"navbar.login"}>Log In </Trans>
         </NavLink>
       </nav>
       <div className={styles.ligths}>

@@ -3,13 +3,13 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { useFrame, Canvas } from '@react-three/fiber';
 import CanvasLoader from './Loader';
 import './earth.css';
-import Hand from '../../icons/Hand.svg'
+import HandSolo from '../../icons/Hand.svg'
 import React, { useState, useEffect } from "react";
-
+import Hand from "../../icons/Hand.svg";
 
 
 import CircleSvg from '../../icons/Ellipse 3.svg';
-import IconSvg from '../../icons/mouse.svg';
+import Mouse from '../../icons/mouse.svg';
 import Stars from '../Stars/stars';
 
 const Earth = () => {
@@ -66,43 +66,23 @@ const EarthCanvas = () => {
       <div className="svg-click">
         {windowWidth > 920 ? (
           <>
-            <div className="circleMouse">
-              <img
-                className="circle"
-                src={CircleSvg}
-                alt="circle"
-              />
+            <div className="iconText">
               <div className="mouse">
-                <img
-                  src={IconSvg}
-                  alt="icon"
-
-                />
+                <img src={Mouse} alt="icon" />
               </div>
               <div className="text">
-                <p>Click in </p>
-                <p>the world</p>
+                <p>Click in the world</p>
               </div>
             </div>
           </>
         ) : (
           <>
-            <div className="circleMouse">
-                <img
-                  className="circle"
-                  src={CircleSvg}
-                  alt="circle"
-                />
-                <div className="mouse">
-                  <img
-                    src={Hand}
-                    alt="icon"
-                    style={{ width: "100%",}}
-                  />
+            <div className="iconText">
+              <div className="mouse">
+                <img src={Hand} alt="icon" style={{ width: "100%" }} />
               </div>
               <div className="text">
-                <p>Click in </p>
-                <p>the world</p>
+                <p>Click in the world</p>
               </div>
             </div>
           </>

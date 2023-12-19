@@ -3,42 +3,74 @@
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  margin: 3rem 0;
 }
-
+.hero {
+  width: 90%;
+}
 .heroTop {
-  /* background-image: url('../../img/Vector\ 2.svg'); */
-  /* background-image: url('../../../public/vectores/Vector\ 2.svg');
-  background-repeat: no-repeat;
-  background-position: center; */
+  margin-top: -12rem;
+}
+.heroTop h2 {
+  width: 65vw;
+  padding-top: 4rem;
+}
+.heroTop p {
+  width: 100%;
+  position: relative;
+  left: -6rem;
+}
+.imgAsomado {
+  width: 6rem;
+  position: relative;
+  top: 4rem;
 }
 
 .heroMiddle {
-  /* background-image: url('../../../public/vectores/Vector\ 4.svg');
-  background-repeat: no-repeat;
-  background-position: center; */
-  padding-left: 7rem;
+  margin-left: 1rem;
+  margin-top: -3rem;
+  width: 50%;
+}
+.heroMiddle h2 {
+  width: 60vw;
+}
+.heroMiddle p {
+  padding-right: 7rem;
+}
+
+.imgParado {
+  width: 8rem;
+  position: relative;
+  top: 7rem;
 }
 
 .heroBottom {
-  margin-bottom: 7rem;
-  /* background-image: url('../../../public/vectores/Vector\ 6.svg');
-  background-repeat: no-repeat;
-  background-position: center; */
+  margin-bottom: 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: -5rem;
+  margin-left: 1rem;
+}
+.Hero_imgBottom {
+  height: 0rem;
+}
+.heroBottom p {
+  position: relative;
+  padding-left: -5rem;
+}
+.imgAcostado {
+  width: 11rem;
+  position: relative;
+  top: -2rem;
 }
 
-.heroText {
-  width: 85%;
-  margin: 0 auto;
-  margin-bottom: 5rem;
-  justify-content: center;
+.heroP {
   text-align: center;
 }
-
 .hero h2 {
-  margin: 5rem 0 2rem 1rem;
+  margin: 4rem 0 0rem 0rem;
+  font-size: 1rem;
   font-family: var(--font-main);
-  font-size: 2.875rem;
-  font-weight: 700;
   color: transparent;
   background: var(--color-title);
   background-clip: text;
@@ -56,145 +88,164 @@
 
 .hero p {
   color: var(--color-font);
-  margin-left: 1.25rem;
-  width: 80%;
-  font-size: 1.5rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  line-height: 3rem;
   letter-spacing: 0.0375rem;
+  line-height: 1.5;
   text-align: left;
+  width: 85vw;
 }
 
-.hero .heroP {
-  width: 100%;
-  text-align: center;
-  font-size: 1.875rem;
-}
-.heroText p{
+.heroText p {
   text-align: center;
   margin: 0 auto;
+  margin-top: 1rem;
+  width: 80vw;
+}
+.heroText {
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-top: -5rem;
 }
 
-@media screen and (max-width: 910px) {
-  .heroBottom {
-    flex-direction: row;
-    align-items: end;
-    padding-left: 2.5rem;
-    margin-left: -2.5rem;
+@media screen and (min-width: 375px) {
+  .heroTop p {
+    left: -5.5rem;
+    padding-top: 1rem;
   }
-
-  .heroText {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: none;
-    width: 100%;
+}
+@media screen and (min-width: 425px) {
+  .imgParado {
+    width: 8rem;
+    position: relative;
+    top: 7rem;
+    left: 3rem;
   }
-
-  .hero {
-    width: 60%;
-  }
-
-  .hero_img {
-    width: 40%;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-
-  .hero_imgBottom {
-    width: 60%;
-
-  }
-
-  .hero_img img {
-    width: 100%;
-    margin-top: 5rem;
-  }
-
-  .hero_img .imgAcostado {
-    width: 100%;
-    margin-top: 8rem;
-    margin-left: -10%;
-    margin-bottom: 0;
-    margin:0;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
+}
+@media screen and (min-width: 768px) {
   .hero p {
-    margin-top: 1.125rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    left: 0rem;
+    width: 70vw;
+  }
+  .hero h2 {
+    font-size: 1.3rem;
+    padding: 0rem;
+  }
+  .imgAsomado {
+    width: 10rem;
+  }
+  .imgParado {
+    width: 10rem;
+  }
+  .imgAcostado {
+    width: 10rem;
+  }
+  .heroMiddle p {
+    width: 80vw;
+  }
+  .imgParado {
+    left: 10rem;
+    width: 12rem;
+    top: 3rem;
   }
 
-  .hero .heroPMiddle,
-  .hero .heroPBottom {
-    line-height: 2.25rem;
-    width: 100%;
-    z-index: 3;
-    margin-top: 1.125rem;
+  .heroBottom p {
+    width: 90vw;
+    padding-left: 17rem;
   }
-
-    .heroMiddle {
-  padding-left: 2rem;
-}
-
-}
-
-@media screen and (max-width: 520px) {
   .heroBottom {
-    flex-direction: row;
-    align-items: end;
-    padding-left: 2.5rem;
-    margin-left: -2.5rem;
+    padding-bottom: 2rem;
+  }
+  .heroBottom h2 {
+    padding-top: 0rem;
+    margin-top: 0;
+    padding-left: 17rem;
+  }
+  .imgAcostado {
+    height: 10rem;
+    width: auto;
+    margin-top: 2rem;
+  }
+  .heroP{
+    width: 95%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .imgAsomado {
+    width: 15rem;
+  }
+  .imgAcostado {
+    height: 15rem;
+    margin-top: 4rem;
+  }
+  .imgParado {
+    width: 17rem;
+    left: -7rem;
+    top: 1rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    left: 0rem;
+    width: 65vw;
+  }
+  .heroMiddle {
+    padding-top: 3rem;
+    margin-left: 4rem;
+    width: 80vw;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .heroTop p h2 {
+    padding-left: 5rem;
+  }
+  .heroBottom p {
+    width: 75vw;
+    left: 8.5rem;
+    padding-bottom: 1rem;
+  }
+  .heroBottom h2 {
+    padding-top: 3rem;
+    padding-left: 25rem;
+  }
+  .heroP{
     margin-bottom: 5rem;
   }
-  .heroBottom p{
-    margin: 0
-  }
-  .heroPBottom p{
-    margin:0 ;
-  }
-  .hero p {
-    font-size: 1rem;
-    line-height: 2.25rem;
-    width: 110%;
-    z-index: 3;
-    margin-left: -2rem;
-    line-height: 1.5;
-  }
-
-  .hero .heroPMiddle,
-  .hero .heroPBottom {
-    margin-left: 1rem;
-    line-height: 1.5;
-  }
-
-  .hero .heroPBottom {
-    margin:0;
-  }
-  .hero_img .imgParado {
-    margin-top: 16rem;
-  }
-
-  .heroText {
-    width: 100%;
-  }
-  .heroText p{
-    margin:0;
-  }
-
-  .hero .heroP h2 {
-    font-size: 1.4rem;
-  }
-
-  .hero .heroP p {
-    font-size: 1rem;
-  }
-
-  .heroMiddle {
-  padding-left: 2rem;
+  
 }
 
+@media screen and (min-width: 1440px) {
+  .imgAsomado {
+    width: 25rem;
+  }
+  .imgAcostado {
+    height: 25rem;
+    margin-top: 4rem;
+  }
+  .imgParado {
+    width: 25rem;
+    left: -7rem;
+    top: 1rem;
+  }
+  .hero p {
+    font-size: 1.8rem;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    padding-top:2rem;
+  }
+ .heroBottom h2 {
+  padding-left:43rem;
+ }
+ .heroBottom p{
+  padding-left:35rem;
+  width: 80vw;
+    padding-bottom: 5rem;
+ }
+ 
 }

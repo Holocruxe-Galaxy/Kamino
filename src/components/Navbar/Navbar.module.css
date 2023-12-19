@@ -1,16 +1,47 @@
-.container {
-  padding: 1rem 2rem;
+header.container {
+  padding: 1rem 1rem;
   width: 100%;
   height: 10vh;
   display: flex;
-}
 
+}
+.allLang {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1.5rem;
+  gap: 0.5rem;
+  z-index: 3;
+
+}
+.button {
+  margin: 0.5rem;
+}
+.langButton img{
+  width: 1.5rem;
+}
+button.langButton {
+  all: unset;
+}
+button.langButton:hover {
+  cursor: pointer;
+  all: unset;
+}
+  .buttons {
+    display: flex;
+    flex: row;
+    width: 40%;
+    height: auto;
+    font-size: 0.8rem;
+  }
 .logoContainer {
+  justify-content: flex-end;
   position: relative;
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
+  flex-direction: column-reverse;
 }
 
 .logoContainerAnim {
@@ -23,16 +54,12 @@
   animation: entranceLogo 7.5s 1 ease;
 }
 
-.svgLogo {
-  width: 15rem;
-}
-
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; 
   align-items: center;
   flex: 1;
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0;
   -webkit-animation: entranceNavbar 1.5s forwards ease;
   animation: entranceNavbar 1.5s forwards ease;
@@ -43,8 +70,8 @@
   animation-delay: 6.5s;
 }
 
-.navbar>*,
-.navbarAnim>* {
+.navbar > *,
+.navbarAnim > * {
   font-family: var(--main-font);
   color: #349aef;
 }
@@ -53,11 +80,11 @@
   position: relative;
   margin: 0 1rem;
   text-decoration: none;
-
   transition: 0.3s ease transform;
   color: var(--color-font);
   font-family: var(--font-menu);
   font-weight: 400;
+  white-space: nowrap
 }
 
 .link:hover {
@@ -66,7 +93,7 @@
 
 .link:before,
 .link:after {
-  content: '';
+  content: "";
   position: absolute;
 
   background-color: var(--aqua);
@@ -100,7 +127,7 @@
 
 .activeLink::before,
 .activeLink::after {
-  content: '';
+  content: "";
   position: absolute;
   transform: scale(1);
   background-color: var(--aqua);
@@ -127,8 +154,11 @@
 .activeLink:hover::after {
   background-color: var(--aqua);
 }
+ .navbar {
+    display: none;
+  }
 
-.navbar>button {
+.navbar > button {
   padding: 10px 20px;
   background-color: transparent;
   border: solid 1px var(--white);
@@ -137,13 +167,29 @@
   transition: all 0.3s ease;
 }
 
-.navbar>button:nth-of-type(1) {
+.navbar > button:nth-of-type(1) {
   margin: 0 1rem;
 }
 
 nav button:hover {
   background-color: var(--color-font);
   color: var(--dark);
+}
+.mobile {
+    display: flex;
+    height: 80%;
+
+  }
+.svgLogo {
+  width: 9rem;
+}
+div.navBarContainer {
+ display: flex;
+ align-items: center;
+ flex-direction: row-reverse;
+ gap:0.5rem;
+padding-left: 5.5rem;
+
 }
 
 @-webkit-keyframes entranceContainer {
@@ -266,39 +312,6 @@ nav button:hover {
   }
 }
 
-/* NAVBAR mobile */
-.mobile {
-  display: none;
-}
-
-.hamburger {
-  /* width: 1.5rem;
-  right: 2rem;
-  top: 2.5rem;
-  position: absolute; */
-  
-}
-
-
-@media screen and (max-width: 920px) {
-  .svgLogo {
-    width: 10rem;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .mobile {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    height: 60%;
-    align-self: center;
-  }
-  .hamburger {
-  top: 2.5rem;
-}
 
   @-webkit-keyframes entranceLogo {
     0% {
@@ -359,11 +372,55 @@ nav button:hover {
       transform: translate(0, -50%) scale(1);
     }
   }
-}
-
-@media screen and (max-width: 425px){
-  .mobile{
-    height: 50%;
+@media screen and (min-width: 375px){
+div.navBarContainer{
+    padding-left: 8.5rem;
   }
 }
+@media screen and (min-width: 425px){
+div.navBarContainer{
+    padding-left: 11.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+     font-size: 1rem;
+  }
+  div.navBarContainer{
+    padding: 0;
+  }
+  .svgLogo {
+  width: 11rem;
+}
+
+}
+ @media screen and (min-width: 1024px){
+ .navbar {
+
+     font-size: 1.3rem;
+  }
+  .langButton img{
+  width: 2rem;
+}
+.svgLogo {
+  width: 15rem;
+}
+ }
+
+ @media screen and (min-width: 1440px){
+ .navbar {
+
+     font-size: 1.5rem;
+  }
+    .langButton img{
+  width: 2.5rem;
+}
+.svgLogo {
+  width: 20rem;
+}
+ }
 

@@ -4,12 +4,15 @@ import styles from "./waitlist.module.css";
 import vector from "../../img/vector";
 import WaitlistModal from "./Modal";
 
+import { useTranslation } from "react-i18next";
+
 const Waitlist = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isRegistered, setIsRegistered] = useState(false); //poner en true para probar
   const [captchaValue, setCaptchaValue] = useState("");
   const [showCaptcha, setShowCaptcha] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -65,17 +68,17 @@ const Waitlist = () => {
   return (
     <section id="waitlist" className={styles.waitlist}>
       <div className={styles.ligths}>
-        <img src={vector.vector18} alt="bg" />
-        <img src={vector.vector09} alt="bg" />
-        <img src={vector.vector12} alt="bg" />
-        <img src={vector.vector14} alt="bg" />
-        <img src={vector.vector16} alt="bg" />
-        <img src={vector.vector20} alt="bg" />
-        <img src={vector.vector19} alt="bg" />
+        <img className={styles.image} src={vector.vector09} alt="bg" />
+        <img className={styles.image} src={vector.vector18} alt="bg" />
+        <img className={styles.image} src={vector.vector12} alt="bg" />
+        <img className={styles.image} src={vector.vector16} alt="bg" />
+        <img className={styles.image} src={vector.vector19} alt="bg" />
+        <img className={styles.image} src={vector.vector20} alt="bg" />
+        <img className={styles.image} src={vector.vector14} alt="bg" />
       </div>
       <div className={styles.text_section}>
         <div className={styles.title}>
-          <h2>WAITLIST</h2>
+          <h2>{t("waitlist.h2")}</h2>
         </div>
       </div>
       <div className={styles.form_and_model}>
@@ -95,6 +98,7 @@ const Waitlist = () => {
             id="email"
             name="email"
             placeholder="Email"
+            autoComplete="off"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -105,7 +109,7 @@ const Waitlist = () => {
               onChange={onChange}
             />
           )}
-          <button type="submit">SUSCRIBE</button>
+          <button type="submit">{t("waitlist.btn")}</button>
         </form>
       </div>
       {isRegistered &&

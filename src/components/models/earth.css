@@ -2,100 +2,74 @@
   z-index: 1;
   padding: 0;
 }
-
+div.null {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
 .svg-click {
   position: relative;
-  height: 15rem;
+  left: 50%;
+  width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-end;
-  justify-content: center;
-  margin-top: -25rem;
-  margin-right: 8%;
+  bottom: 1rem;
+  left: 8rem;
 }
 
-.circleMouse {
+div.iconText {
   position: relative;
-  height: auto;
-  width: auto;
+  bottom: 6rem;
+  left: 3rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-}
-.circle {
-  position: relative;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-.mouse {
-  position: absolute;
-  right: 22%;
-  top: 15%;
 }
 .text {
-  position: absolute;
-  top: 100%;
-  width: 10rem;
+  font-size: 0.5rem;
+}
+.earth-canvas {
+  height: 50vh !important;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (min-width: 768px) {
   .earth-canvas {
-    height: 50vh !important;
+    height: 80vh !important;
   }
-
-  .svg-click {
-    position: relative;
-    margin-right: 10%;
-    width: 90%;
-    margin-top: -20rem;
-  }
-
-  .circleMouse {
-    position: relative;
-    height: auto;
-    width: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .circle {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: inherit;
+  div.iconText {
+    left: 12rem;
   }
   .mouse {
-    position: absolute;
-    width: 75%;
-    top: 8%;
-    right: 17%;
+    left: 15rem;
+    width: 5rem;
   }
-
   .text {
-    position: absolute;
-    top: 100%;
-    font-size: x-small;
-  }
-
-  @media screen and (max-width: 600px) {
-
-    .circleMouse {
-      width: 2rem;
-    }
+    font-size: 0.8rem;
+    margin-top: -1rem;
   }
 }
-
-@media screen and (max-width: 440px) {
+@media screen and (min-width: 1024px) {
   .earth-canvas {
-    height: 40vh !important;
+    height: 100vh !important;
   }
-
-  .svg-click {
-    width: 90%;
-    margin-top: -15rem;
+  div.iconText {
+    left: 18rem;
+    bottom: 10rem;
+  }
+  .mouse {
+    padding-bottom: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .text {
+    font-size: 1.5rem;
   }
 }

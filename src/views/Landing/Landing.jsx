@@ -16,6 +16,7 @@ import Hero3 from '../../components/Hero/Hero3';
 import Hero4 from '../../components/Hero/Hero4';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 
+
 const Landing = () => {
 
   const hasVisited = sessionStorage.getItem('visited');
@@ -31,23 +32,21 @@ const Landing = () => {
   return (
     <main
       className={`${styles.container} ${
-        !hasVisited && location.pathname === '/' && styles.containerAnim
+        !hasVisited && location.pathname === "/" && styles.containerAnim
       }`}
     >
       <Canvas
         style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          zIndex: '-1',
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          zIndex: "-1",
         }}
       >
         <Stars />
       </Canvas>
 
-      
       <EarthCanvas />
-
 
       <div className={styles.vector_container}>
         <img className={styles.vector01} src={vector.vector01} alt="" />
@@ -57,7 +56,7 @@ const Landing = () => {
       <Hero3 />
       <Hero4 />
       <Container ref={waitlistRef} />
-      <ScrollToTop/>
+      <ScrollToTop />
     </main>
   );
 };
