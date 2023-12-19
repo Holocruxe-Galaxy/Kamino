@@ -1,18 +1,21 @@
 //dependencias
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { NavLink, useLocation } from "react-router-dom";
 // imagenes
-import menu from '../../img/menu';
+import menu from "../../img/menu";
 // estilos
-import styles from './Navbar.module.css';
+import styles from "./Navbar.module.css";
 // componentes
-import Mobile from './Mobile';
+import Mobile from "./Mobile";
+//Traduccion
+import { useTranslation } from "react-i18next";
+import LanguageMenu from "./LanguageMenu/LanguageMenu";
 
 const Navbar = () => {
   const location = useLocation();
 
-  const hasVisited = sessionStorage.getItem('visited');
+  const hasVisited = sessionStorage.getItem("visited");
 
   const svgVariants = {
     hidden: { opacity: 0 },
@@ -20,7 +23,7 @@ const Navbar = () => {
       opacity: 1,
       transition: {
         duration: 3,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
@@ -31,7 +34,7 @@ const Navbar = () => {
       pathLength: 1,
       transition: {
         duration: 3,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
@@ -39,11 +42,15 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-     if (!menuOpen) {
-       document.body.style.overflow = "hidden";
-     } else {
-       document.body.style.overflow = "auto";
-     }
+    if (!menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -189,7 +196,7 @@ const Navbar = () => {
             location.pathname === "/" && styles.activeLink
           }`}
         >
-          Home
+          {t("navbar.home")}
         </NavLink>
 
         <NavLink
@@ -198,7 +205,7 @@ const Navbar = () => {
             location.pathname === "/about" ? styles.activeLink : null
           }`}
         >
-          About Us
+          {t("navbar.about")}
         </NavLink>
 
         <NavLink
@@ -211,7 +218,7 @@ const Navbar = () => {
           offset={-70}
           duration={500}
         >
-          Waitlist
+          {t("navbar.waitlist")}
         </NavLink>
         <NavLink
           to="https://login.holocruxe.com"
@@ -219,21 +226,26 @@ const Navbar = () => {
             location.pathname === "login.holocruxe.com" && styles.activeLink
           }`}
         >
-          Login
+          {t("navbar.login")}
         </NavLink>
+        <NavLink></NavLink>
 
         <div className={styles.indicator}></div>
       </nav>
-      <nav className={styles.mobile} onClick={toggleMenu}>
-        {menuOpen ? (
-          <>
-            <img className={styles.hamburger} src={menu.x} alt="" />
-            <Mobile />
-          </>
-        ) : (
-          <img className={styles.hamburger} src={menu.hamb} alt="" />
-        )}
-      </nav>
+      <div className={styles.navBarContainer}>
+        <nav className={styles.mobile} onClick={toggleMenu}>
+          {menuOpen ? (
+            <>
+              <img className={styles.hamburger} src={menu.x} alt="" />
+              <Mobile />
+            </>
+          ) : (
+            <img className={styles.hamburger} src={menu.hamb} alt="" />
+          )}
+        </nav>
+
+        <LanguageMenu />
+      </div>
     </header>
   );
 };

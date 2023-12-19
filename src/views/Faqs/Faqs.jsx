@@ -5,6 +5,8 @@ import AnimationBg from '../../components/AnimationBg/AnimationBg';
 // imagenes
 import robot from '../../img/robot';
 import vector from '../../img/vector';
+import { useTranslation } from "react-i18next";
+
 
 const Panel = ({ question, answer, activeTab, index, activateTab }) => {
   const hasVisited = sessionStorage.getItem('visited');
@@ -25,7 +27,7 @@ const Panel = ({ question, answer, activeTab, index, activateTab }) => {
 
   const isActive = activeTab === index;
   const innerStyle = { height: `${isActive ? height : 0}px` };
-
+ const { t, i18n } = useTranslation();
   return (
     <div className={styles.panel} role="tabpanel" ref={panelRef}>
       <button
@@ -34,7 +36,7 @@ const Panel = ({ question, answer, activeTab, index, activateTab }) => {
         onClick={activateTab}
         aria-expanded={isActive}
       >
-        {question}
+        {t(`faqs.${index}.question`)}
       </button>
       <div
         id="panel_inner"
@@ -42,7 +44,7 @@ const Panel = ({ question, answer, activeTab, index, activateTab }) => {
         style={innerStyle}
         aria-hidden={!isActive}
       >
-        <p className={styles.panel_content}>{answer}</p>
+        <p className={styles.panel_content}>{t(`faqs.${index}.answer`)}</p>
       </div>
     </div>
   );
@@ -78,7 +80,9 @@ const Faqs = () => {
               key={index}
               activeTab={activeTab}
               index={index}
-              {...panel}
+              question={panels.question}
+              answer={panels.answer}
+              //{...panel}
               activateTab={() => activateTab(index)}
             />
           ))}
@@ -88,6 +92,7 @@ const Faqs = () => {
     </>
   );
 };
+export default Faqs;
 
 export const panels = [
   {
@@ -155,4 +160,3 @@ export const panels = [
       'You can import your social media memories by simply connecting your social media account in the app settings. Once connected, the app will automatically sync your content, such as posts, photos and videos, and add them to your digital diary.',
   },
 ];
-export default Faqs;
