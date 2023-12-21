@@ -232,7 +232,7 @@ const Navbar = () => {
 
         <div className={styles.indicator}></div>
       </nav>
-      <div className={styles.navBarContainer}>
+      <div div className={styles.navBarContainer}>
         <nav className={styles.mobile} onClick={toggleMenu}>
           {menuOpen ? (
             <>
@@ -240,7 +240,9 @@ const Navbar = () => {
               <Mobile />
             </>
           ) : (
-            <img className={styles.hamburger} src={menu.hamb} alt="" />
+            <div>
+              <img className={styles.hamburger} src={menu.hamb} alt="" />
+            </div>
           )}
         </nav>
 

@@ -19,6 +19,7 @@
 .vector01 {
   margin-left: -0.5rem;
   width: 40vw;
+  display: none;
 }
 
 .vector03 {
@@ -86,30 +87,3 @@
   width: auto;
 }
 
-@media screen and (min-width: 425px) {
-  .vector01 {
-    margin-left: 3rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .vector01 {
-    position: relative;
-    margin-left: 2rem;
-    width: 40vw;
-    bottom: 3rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .vector_container {
-    bottom: 5rem;
-  }
-  .vector01 {
-    width: 45vw;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .vector_container {
-    bottom: 6rem;
-    margin-left: 3rem;
-  }
-}

@@ -12,7 +12,7 @@
   margin-top: -12rem;
 }
 .heroTop h2 {
-  width: 65vw;
+  width: 50vw;
   padding-top: 4rem;
 }
 .heroTop p {
@@ -28,7 +28,7 @@
 
 .heroMiddle {
   margin-left: 1rem;
-  margin-top: -3rem;
+  margin-top: -5rem;
   width: 50%;
 }
 .heroMiddle h2 {
@@ -42,6 +42,7 @@
   width: 8rem;
   position: relative;
   top: 7rem;
+  right: -1rem;
 }
 
 .heroBottom {
@@ -66,6 +67,7 @@
 
 .heroP {
   text-align: center;
+  ;
 }
 .hero h2 {
   margin: 4rem 0 0rem 0rem;
@@ -100,7 +102,6 @@
 
 .heroText p {
   text-align: center;
-  margin: 0 auto;
   margin-top: 1rem;
   width: 80vw;
 }
@@ -115,14 +116,18 @@
   .heroTop p {
     left: -5.5rem;
     padding-top: 1rem;
+    width: 80vw;
   }
 }
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 412px) {
   .imgParado {
     width: 8rem;
     position: relative;
     top: 7rem;
     left: 3rem;
+  }
+  .heroTop h2 {
+    width: 90%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -170,9 +175,12 @@
     width: auto;
     margin-top: 2rem;
   }
-  .heroP{
+  .heroP {
     width: 95%;
-    }
+  }
+ .heroP p{
+  width: 100%;
+ }
 }
 
 @media screen and (min-width: 1024px) {
@@ -191,7 +199,7 @@
   .hero p {
     font-size: 1.3rem;
     left: 0rem;
-    width: 65vw;
+    width: 65vw; 
   }
   .heroMiddle {
     padding-top: 3rem;
@@ -213,39 +221,56 @@
     padding-top: 3rem;
     padding-left: 25rem;
   }
-  .heroP{
-    margin-bottom: 5rem;
+  .heroP p{
+    width: 100%;
   }
   
+}
+@media screen and (min-width: 1280px){
+  .hero p {
+    font-size: 1.3rem;
+  }
+  .hero h2 {
+    font-size: 2.1rem;
+    padding-top: 2rem;
+  }
+  .heroTop p{
+    width: 70vw;
+  }
+  .heroP p{
+    margin-bottom: 5rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .imgAsomado {
-    width: 25rem;
+    width: 15rem;
   }
   .imgAcostado {
-    height: 25rem;
+    height: 18rem;
     margin-top: 4rem;
   }
   .imgParado {
-    width: 25rem;
-    left: -7rem;
-    top: 1rem;
+    width: 18rem;
+    left: -5rem;
+    top: 2rem;
   }
   .hero p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .hero h2 {
-    font-size: 2.5rem;
-    padding-top:2rem;
+    font-size: 2rem;
+    padding-top: 2rem;
   }
- .heroBottom h2 {
-  padding-left:43rem;
- }
- .heroBottom p{
-  padding-left:35rem;
-  width: 80vw;
+  .heroMiddle p{
+    width: 75vw;
+  }
+  .heroBottom h2 {
+    margin-left: 8rem;
+  }
+  .heroBottom p {
+    padding-left: 25rem;
+    width: 80vw;
     padding-bottom: 5rem;
- }
- 
+  }
 }
