@@ -245,14 +245,14 @@
 .robot {
   margin-top: -3rem;
   position: relative;
-  top: 4rem;
+  top: 4.2rem;
   left: 6rem;
   width: 50%;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 412px) {
   .robot {
-    top: 4.4rem;
+    top: 4.6rem;
   }
 }
 @media screen and (min-width: 425px) {
@@ -307,6 +307,12 @@
     top: 6rem;
     left: 15rem;
     width: 30%;
+  }
+}
+@media screen and (min-width: 1024px){
+  .robot{
+    top:7.2rem;
+    left: 18rem;
   }
 }
 @media screen and (min-width: 1440px) {

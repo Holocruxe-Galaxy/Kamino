@@ -1,9 +1,12 @@
 header.container {
   padding: 1rem 1rem;
   width: 100%;
-  height: 10vh;
+  height: 5.5vh;
   display: flex;
-
+  align-items: center;
+}
+.allLang {
+  all: unset;
 }
 .allLang {
   display: flex;
@@ -12,36 +15,33 @@ header.container {
   top: 1.5rem;
   gap: 0.5rem;
   z-index: 3;
-
 }
 .button {
   margin: 0.5rem;
 }
-.langButton img{
-  width: 1.5rem;
+.langButton img {
+  width: 1.2rem;
 }
 button.langButton {
   all: unset;
+  -webkit-animation: entranceNavbar 1.5s forwards ease;
+  animation: entranceNavbar 1.5s forwards ease;
 }
 button.langButton:hover {
   cursor: pointer;
   all: unset;
 }
-  .buttons {
-    display: flex;
-    flex: row;
-    width: 40%;
-    height: auto;
-    font-size: 0.8rem;
-  }
-.logoContainer {
-  justify-content: flex-end;
-  position: relative;
-  flex: 1;
+.buttons {
   display: flex;
-  align-items: flex-start;
-  height: 100%;
-  flex-direction: column-reverse;
+  flex: row;
+  width: 40%;
+  height: auto;
+  font-size: 0.8rem;
+}
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 .logoContainerAnim {
@@ -54,17 +54,20 @@ button.langButton:hover {
   animation: entranceLogo 7.5s 1 ease;
 }
 
-.navbar {
+div.navBarContainer {
   display: flex;
-  justify-content: flex-end; 
-  align-items: center;
-  flex: 1;
-  font-size: 1.2rem;
-  opacity: 0;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.mobile img {
+  height: 1.3rem;
+}
+
+.mobile {
   -webkit-animation: entranceNavbar 1.5s forwards ease;
   animation: entranceNavbar 1.5s forwards ease;
 }
-
 .navbarAnim {
   -webkit-animation-delay: 6.5s;
   animation-delay: 6.5s;
@@ -84,7 +87,7 @@ button.langButton:hover {
   color: var(--color-font);
   font-family: var(--font-menu);
   font-weight: 400;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -154,9 +157,9 @@ button.langButton:hover {
 .activeLink:hover::after {
   background-color: var(--aqua);
 }
- .navbar {
-    display: none;
-  }
+.navbar {
+  display: none;
+}
 
 .navbar > button {
   padding: 10px 20px;
@@ -175,21 +178,9 @@ nav button:hover {
   background-color: var(--color-font);
   color: var(--dark);
 }
-.mobile {
-    display: flex;
-    height: 80%;
 
-  }
 .svgLogo {
   width: 9rem;
-}
-div.navBarContainer {
- display: flex;
- align-items: center;
- flex-direction: row-reverse;
- gap:0.5rem;
-padding-left: 5.5rem;
-
 }
 
 @-webkit-keyframes entranceContainer {
@@ -312,115 +303,121 @@ padding-left: 5.5rem;
   }
 }
 
-
-  @-webkit-keyframes entranceLogo {
-    0% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    50% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    75% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%) scale(1);
-    }
+@-webkit-keyframes entranceLogo {
+  0% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
   }
 
-  @keyframes entranceLogo {
-    0% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    50% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    75% {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%) scale(1);
-    }
+  50% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
   }
-@media screen and (min-width: 375px){
-div.navBarContainer{
-    padding-left: 8.5rem;
+
+  75% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%) scale(1);
   }
 }
-@media screen and (min-width: 425px){
-div.navBarContainer{
-    padding-left: 11.5rem;
+
+@keyframes entranceLogo {
+  0% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  75% {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%) scale(1);
   }
 }
+
 @media screen and (min-width: 768px) {
+  div.navBarContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .navbar {
+    margin-top: 0.5rem;
+    display: flex;
+    font-size: 0.8rem;
+    opacity: 0;
+    -webkit-animation: entranceNavbar 1.5s forwards ease;
+    animation: entranceNavbar 1.5s forwards ease;
+  }
+
   .mobile {
     display: none;
   }
-  .navbar {
-    display: flex;
-     font-size: 1rem;
+
+  .svgLogo {
+    width: 11rem;
   }
-  div.navBarContainer{
-    padding: 0;
+  .langButton img {
+    width: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar {
+    font-size: 1.1rem;
+  }
+  .langButton img {
+    width: 1.8rem;
   }
   .svgLogo {
-  width: 11rem;
-}
-
-}
- @media screen and (min-width: 1024px){
- .navbar {
-
-     font-size: 1.3rem;
+    width: 12rem;
+    margin-left: 1rem;
   }
-  .langButton img{
-  width: 2rem;
 }
-.svgLogo {
-  width: 15rem;
-}
- }
 
- @media screen and (min-width: 1440px){
- .navbar {
-
-     font-size: 1.5rem;
+@media screen and (min-width: 1280px) {
+  header.container {
+    margin: 0.5rem;
   }
-    .langButton img{
-  width: 2.5rem;
+  .navbar {
+    font-size: 1.2rem;
+  }
+  .langButton img {
+    width: 2.3rem;
+  }
+  .svgLogo {
+    width: 15rem;
+  }
+  .langButton img {
+    width: 1.8rem;
+  }
 }
-.svgLogo {
-  width: 20rem;
-}
- }
-

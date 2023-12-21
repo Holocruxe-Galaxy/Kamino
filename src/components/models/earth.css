@@ -1,6 +1,7 @@
 .earth-canvas {
   z-index: 1;
   padding: 0;
+  height: 35vh !important;
 }
 div.null {
   display: flex;
@@ -22,24 +23,35 @@ div.null {
 div.iconText {
   position: relative;
   bottom: 6rem;
-  left: 3rem;
-  width: 6rem;
-  height: 6rem;
+  left: 2rem;
+  width: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .text {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
-.earth-canvas {
-  height: 50vh !important;
+.mouse {
+  width: 2.8rem;
+}
+@media screen and (min-width: 412px) {
+  div.iconText {
+    left: 3rem;
+  }
+  .mouse {
+    width: 3.5rem;
+  }
+  .text {
+    font-size: 0.6rem;
+    margin-top: -1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .earth-canvas {
-    height: 80vh !important;
+    height: 40vh !important;
   }
   div.iconText {
     left: 12rem;
@@ -55,7 +67,7 @@ div.iconText {
 }
 @media screen and (min-width: 1024px) {
   .earth-canvas {
-    height: 100vh !important;
+    height: 40vh !important;
   }
   div.iconText {
     left: 18rem;
@@ -68,8 +80,24 @@ div.iconText {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .text {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  div.iconText {
+    width: 4rem;
+    left: 70%;
+  }
+  .earth-canvas {
+    padding-top: 3rem;
+    height: 70vh !important;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .earth-canvas {
+    height: 90vh !important;
+  }
+   div.iconText {
+    bottom: 15rem;
   }
 }
