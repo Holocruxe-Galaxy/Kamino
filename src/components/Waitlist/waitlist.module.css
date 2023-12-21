@@ -27,10 +27,6 @@ img.image {
   display: flex;
   justify-content: center;
 }
-.text_section {
-  width: 70vw;
-  height: 7vh;
-}
 
 .text_section {
   margin-bottom: 100px;
@@ -40,6 +36,8 @@ img.image {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90%;
+  height: 7vh;
 }
 
 .waitlist h2 {
@@ -68,6 +66,9 @@ img.image {
   background: var(--color-input);
   border-radius: 5.625rem;
   border: 1px solid var(--color-border);
+  width: 50vw;
+  height: 3rem;
+  align-self: center;
 }
 
 .join_waitlist input::-webkit-input-placeholder {
@@ -96,6 +97,7 @@ img.image {
 
 .join_waitlist button {
   border: none;
+  height: 3rem;
   width: 50vw;
   margin: 2rem auto;
   color: var(--color-font);
@@ -103,8 +105,8 @@ img.image {
   border-radius: 2.5rem;
   outline: none;
   cursor: pointer;
-  padding: 0.5rem;
-  font-size: 0.75rem;
+  padding: 0.6rem;
+  font-size: 0.6rem;
   font-weight: 600;
 }
 
@@ -119,15 +121,14 @@ img.image {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 50vw;
+  width: 70vw;
 }
 
 .title::before,
 .title::after {
   content: "";
-  position: absolute;
-  top: 75%;
-  width: 30%;
+  top: 50%;
+  width: 25%;
   height: 1px;
   background: linear-gradient(to left, #1e88e5 -38.76%, #989ea4 110.08%);
   background-size: 200% 100%;
@@ -148,53 +149,78 @@ img.image {
   margin-top: -175px;
   width: 50vw;
 }
-
+@media screen and (min-width: 360px) {
+  .waitlist {
+    margin-top: -3rem;
+  }
+}
 @media screen and (min-width: 768px) {
   img.image {
     width: 80%;
     margin-bottom: 0rem;
     height: 6rem;
   }
-  .join_waitlist input{
-    font-size: 1rem;
+  .title::before,
+  .title::after {
+    width: 50%;
   }
-  .join_waitlist button{
+  .join_waitlist input {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  .join_waitlist button {
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
     height: 3rem;
+    width: 55%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  
-  .join_waitlist input{
+  .join_waitlist input {
     font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 1.2rem;
+    height: 4rem;
   }
-  .join_waitlist button{
+  .join_waitlist button {
     font-size: 1rem;
     letter-spacing: 0.15rem;
+    height: 4rem;
   }
-  
-  .waitlist h2{
+
+  .waitlist h2 {
     font-size: 1.5rem;
   }
-  .text_section{
+  .text_section {
     height: 4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .join_waitlist input {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 2rem;
+    width: 90%;
+  }
+  .join_waitlist button {
+    width: 25vw;
+  }
+}
 @media screen and (min-width: 1440px) {
-  
-  .join_waitlist input{
-    font-size: 1.7rem;
+  .join_waitlist input {
+    font-size: 1.3rem;
+    height: 5rem;
   }
-  .join_waitlist button{
-    font-size: 1.5rem;
+  .join_waitlist button {
+    font-size: 1.2rem;
+    height: 5rem;
   }
-  
-  .waitlist h2{
+
+  .waitlist h2 {
     font-size: 1.8rem;
   }
-  .text_section{
+  .text_section {
     height: 4rem;
   }
 }
