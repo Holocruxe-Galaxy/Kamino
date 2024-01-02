@@ -1,7 +1,7 @@
 .waitlist {
   position: relative;
   z-index: 0;
-  height: 70vh;
+  height: 80vh;
   scroll-snap-align: start;
   text-align: center;
   display: flex;
@@ -14,6 +14,7 @@
 .waitlistView {
   display: flex;
   justify-content: center;
+  margin-top: 10%;
 }
 
 img.image {
