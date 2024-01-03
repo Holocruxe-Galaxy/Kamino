@@ -50,7 +50,6 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: -5rem;
-  margin-left: 1rem;
 }
 .Hero_imgBottom {
   height: 0rem;
@@ -111,6 +110,9 @@
   margin-left: 1rem;
   margin-top: -5rem;
 }
+.heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 25%, #d5deec 36.25%);
+}
 
 @media screen and (min-width: 375px) {
   .heroTop p {
@@ -129,6 +131,9 @@
   .heroTop h2 {
     width: 90%;
   }
+  .heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 30%, #d5deec 50%);
+}
 }
 @media screen and (min-width: 768px) {
   .hero p {
@@ -181,6 +186,12 @@
  .heroP p{
   width: 100%;
  }
+  .heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
+}
+.heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 43%, #d5deec 50%);
+}
 }
 
 @media screen and (min-width: 1024px) {
@@ -224,7 +235,9 @@
   .heroP p{
     width: 100%;
   }
-  
+  .heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 70%);
+}
 }
 @media screen and (min-width: 1280px){
   .hero p {
@@ -240,6 +253,9 @@
   .heroP p{
     margin-bottom: 5rem;
   }
+   .heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
+}
 }
 
 @media screen and (min-width: 1440px) {
