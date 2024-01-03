@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
+  height: 50%;
 }
 
 .waitlistView {
@@ -150,11 +151,7 @@ img.image {
   margin-top: -175px;
   width: 50vw;
 }
-@media screen and (min-width: 360px) {
-  .waitlist {
-    margin-top: -3rem;
-  }
-}
+
 @media screen and (min-width: 768px) {
   img.image {
     width: 80%;
@@ -175,6 +172,9 @@ img.image {
     height: 3rem;
     width: 55%;
   }
+  .waitlist{
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -182,7 +182,7 @@ img.image {
     font-size: 1.3rem;
     font-weight: 700;
     padding-left: 1.2rem;
-    height: 4rem;
+    height: 3rem;
   }
   .join_waitlist button {
     font-size: 1rem;
@@ -192,6 +192,9 @@ img.image {
 
   .waitlist h2 {
     font-size: 1.5rem;
+  }
+  .waitlist{
+    margin-top: 2rem;
   }
   .text_section {
     height: 4rem;
@@ -205,17 +208,17 @@ img.image {
     width: 90%;
   }
   .join_waitlist button {
-    width: 25vw;
+    height: 3rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .join_waitlist input {
     font-size: 1.3rem;
-    height: 5rem;
+    height: 3rem;
   }
   .join_waitlist button {
     font-size: 1.2rem;
-    height: 5rem;
+    height: 3rem;
   }
 
   .waitlist h2 {

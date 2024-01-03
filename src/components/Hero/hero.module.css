@@ -50,6 +50,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: -5rem;
+  margin-left: 1rem;
 }
 .Hero_imgBottom {
   height: 0rem;
@@ -70,7 +71,7 @@
 }
 .hero h2 {
   margin: 4rem 0 0rem 0rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: var(--font-main);
   color: transparent;
   background: var(--color-title);
@@ -227,6 +228,9 @@
     width: 75vw;
     left: 8.5rem;
     padding-bottom: 1rem;
+  }
+  .heroBottom{
+    margin-top: -2rem;
   }
   .heroBottom h2 {
     padding-top: 3rem;
