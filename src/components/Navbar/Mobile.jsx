@@ -7,7 +7,7 @@ import menu from "../../img/menu";
 import styles from "./navBarMobile.module.css";
 //Traduccion
 import { Trans } from "react-i18next";
-import LanguageMenu from "./LanguageMenu/LanguageMenu";
+
 
 export default function Mobile({ menuOpen, toggleMenu }) {
   const containerClass = menuOpen
