@@ -231,8 +231,8 @@ const Navbar = () => {
             alt={menuOpen ? "Close menu" : "Open menu"}
           />
         </nav>
-        <Mobile menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <LanguageMenu />
+        <Mobile menuOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
     </header>
   );
