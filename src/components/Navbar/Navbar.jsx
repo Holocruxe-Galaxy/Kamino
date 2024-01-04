@@ -11,12 +11,9 @@ import Mobile from "./Mobile";
 //Traduccion
 import { useTranslation } from "react-i18next";
 import LanguageMenu from "./LanguageMenu/LanguageMenu";
-
 const Navbar = () => {
   const location = useLocation();
-
   const hasVisited = sessionStorage.getItem("visited");
-
   const svgVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,7 +24,6 @@ const Navbar = () => {
       },
     },
   };
-
   const pathVariants = {
     hidden: { pathLength: 0 },
     visible: {
@@ -38,7 +34,6 @@ const Navbar = () => {
       },
     },
   };
-
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -52,7 +47,6 @@ const Navbar = () => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
-
   return (
     <header className={styles.container}>
       <div
@@ -198,7 +192,6 @@ const Navbar = () => {
         >
           {t("navbar.home")}
         </NavLink>
-
         <NavLink
           to="/about"
           className={`${styles.link} ${
@@ -207,7 +200,6 @@ const Navbar = () => {
         >
           {t("navbar.about")}
         </NavLink>
-
         <NavLink
           to="waitlist"
           className={`${styles.link} ${
@@ -229,27 +221,20 @@ const Navbar = () => {
           {t("navbar.login")}
         </NavLink>
         <NavLink></NavLink>
-
         <div className={styles.indicator}></div>
       </nav>
-      <div div className={styles.navBarContainer}>
+      <div className={styles.navBarContainer}>
         <nav className={styles.mobile} onClick={toggleMenu}>
-          {menuOpen ? (
-            <>
-              <img className={styles.hamburger} src={menu.x} alt="" />
-              <Mobile />
-            </>
-          ) : (
-            <div>
-              <img className={styles.hamburger} src={menu.hamb} alt="" />
-            </div>
-          )}
+          <img
+            className={styles.hamburger}
+            src={menuOpen ? menu.x : menu.hamb}
+            alt={menuOpen ? "Close menu" : "Open menu"}
+          />
         </nav>
-
+        <Mobile menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <LanguageMenu />
       </div>
     </header>
   );
 };
-
 export default Navbar;
