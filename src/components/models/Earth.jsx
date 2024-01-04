@@ -3,12 +3,12 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { useFrame, Canvas } from '@react-three/fiber';
 import CanvasLoader from './Loader';
 import './earth.css';
-import HandSolo from '../../icons/Hand.svg'
+
 import React, { useState, useEffect } from "react";
 import Hand from "../../icons/Hand.svg";
+import { useTranslation } from "react-i18next";
 
 
-import CircleSvg from '../../icons/Ellipse 3.svg';
 import Mouse from '../../icons/mouse.svg';
 import Stars from '../Stars/stars';
 
@@ -42,6 +42,7 @@ const EarthCanvas = () => {
     };
   }, []);
 
+  const { t} = useTranslation();
 
   return (
     <div style={{ position: "relative" }}>
@@ -71,7 +72,7 @@ const EarthCanvas = () => {
                 <img src={Mouse} alt="icon" />
               </div>
               <div className="text">
-                <p>Click in the world</p>
+                <p>{t("earth.click")}</p>
               </div>
             </div>
           </>
@@ -81,9 +82,7 @@ const EarthCanvas = () => {
               <div className="mouse">
                 <img src={Hand} alt="icon" style={{ width: "100%" }} />
               </div>
-              <div className="text">
-                <p>Click in the world</p>
-              </div>
+              <div className="text"><p>{t("earth.touch")}</p></div>
             </div>
           </>
         )}
