@@ -7,31 +7,34 @@ import menu from "../../img/menu";
 import styles from "./navBarMobile.module.css";
 //Traduccion
 import { Trans } from "react-i18next";
-import LanguageMenu from "./LanguageMenu/LanguageMenu";
 
-export default function Mobile() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+
+export default function Mobile({ menuOpen, toggleMenu }) {
+  const containerClass = menuOpen
+    ? `${styles.mobilContainer} ${styles.navMobileVisible}`
+    : styles.mobilContainer;
+  const handleLinkClick = () => {
+    toggleMenu(false);
   };
 
   return (
-    <div className={styles.mobilContainer}>
+    <div className={containerClass}>
       <div className={styles.mobileHeader}>
         <img src={menu.logo} alt="logo" />
         <nav className={styles.mobile} onClick={toggleMenu}>
-          {menuOpen ? (
-            <>
-              <img className={styles.hamburger} src={menu.hamb} alt="" />
-              <Mobile />
-            </>
-          ) : (
-            <img className={styles.hamburger} src={menu.x} alt="" />
-          )}
+          <img
+            className={styles.hamburger}
+            src={menuOpen ? menu.x : menu.hamb}
+            alt={menuOpen ? "Close Menu" : "Open Menu"}
+          />
         </nav>
       </div>
-      <nav className={styles.navMobile}>
-        <NavLink to="/" className={styles.linkM}>
+      <nav
+        className={`${styles.navMobile} ${
+          menuOpen ? styles.navMobileVisible : ""
+        }`}
+      >
+        <NavLink to="/" className={styles.linkM} onClick={handleLinkClick}>
           <Trans i18nKey={"navbar.home"}>Home </Trans>
         </NavLink>
         <svg
@@ -44,7 +47,7 @@ export default function Mobile() {
           <circle cx="4" cy="4" r="4" fill="#1E88E5" />
         </svg>
 
-        <NavLink to="/about" className={styles.linkM}>
+        <NavLink to="/about" className={styles.linkM} onClick={handleLinkClick}>
           <Trans i18nKey={"navbar.about"}>About US </Trans>
         </NavLink>
         <svg
@@ -57,7 +60,11 @@ export default function Mobile() {
           <circle cx="4" cy="4" r="4" fill="#1E88E5" />
         </svg>
 
-        <NavLink to="waitlist" className={styles.linkM}>
+        <NavLink
+          to="waitlist"
+          className={styles.linkM}
+          onClick={handleLinkClick}
+        >
           <Trans i18nKey={"navbar.waitlist"}>Waitlist </Trans>
         </NavLink>
         <svg
@@ -69,7 +76,11 @@ export default function Mobile() {
         >
           <circle cx="4" cy="4" r="4" fill="#1E88E5" />
         </svg>
-        <NavLink to="https://login.holocruxe.com" className={styles.linkM}>
+        <NavLink
+          to="https://login.holocruxe.com"
+          className={styles.linkM}
+          onClick={handleLinkClick}
+        >
           <Trans i18nKey={"navbar.login"}>Log In </Trans>
         </NavLink>
       </nav>

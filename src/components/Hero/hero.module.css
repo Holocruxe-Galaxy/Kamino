@@ -71,7 +71,7 @@
 }
 .hero h2 {
   margin: 4rem 0 0rem 0rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: var(--font-main);
   color: transparent;
   background: var(--color-title);
@@ -111,6 +111,9 @@
   margin-left: 1rem;
   margin-top: -5rem;
 }
+.heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 25%, #d5deec 36.25%);
+}
 
 @media screen and (min-width: 375px) {
   .heroTop p {
@@ -129,6 +132,9 @@
   .heroTop h2 {
     width: 90%;
   }
+  .heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 30%, #d5deec 50%);
+}
 }
 @media screen and (min-width: 768px) {
   .hero p {
@@ -181,6 +187,12 @@
  .heroP p{
   width: 100%;
  }
+  .heroP h2{
+ --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
+}
+.heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 43%, #d5deec 50%);
+}
 }
 
 @media screen and (min-width: 1024px) {
@@ -217,6 +229,9 @@
     left: 8.5rem;
     padding-bottom: 1rem;
   }
+  .heroBottom{
+    margin-top: -2rem;
+  }
   .heroBottom h2 {
     padding-top: 3rem;
     padding-left: 25rem;
@@ -224,7 +239,9 @@
   .heroP p{
     width: 100%;
   }
-  
+  .heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 70%);
+}
 }
 @media screen and (min-width: 1280px){
   .hero p {
@@ -240,6 +257,9 @@
   .heroP p{
     margin-bottom: 5rem;
   }
+   .heroBottom h2{
+   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
+}
 }
 
 @media screen and (min-width: 1440px) {

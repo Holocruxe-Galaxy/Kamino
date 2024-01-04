@@ -221,61 +221,23 @@ nav button:hover {
 
 @-webkit-keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -305,61 +267,23 @@ nav button:hover {
 
 @-webkit-keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
