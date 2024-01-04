@@ -11,6 +11,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: visibility 0s 0.3s, opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobileHeader {
@@ -30,6 +34,8 @@
   gap:1rem;
   align-items: center;
   height: 50%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 
 }
 
@@ -49,6 +55,15 @@
     align-items: end;
     width: 100vw;
 }
+
+.navMobileVisible {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
 
 @media screen and ( min-width: 768px) {
   .ligths {

@@ -1,12 +1,12 @@
 header.container {
-  padding: 1.5rem 1rem;
-  width: 99%;
+  padding: 1rem 1rem;
+  width: 100%;
   height: 5.5vh;
   display: flex;
   align-items: center;
 }
 .allLang {
-  all: initial;
+  all: unset;
 }
 .allLang {
   display: flex;
@@ -21,15 +21,15 @@ header.container {
 }
 .langButton img {
   width: 1.2rem;
-    -webkit-animation: entranceNavbar 1.5s forwards ease;
-  animation: entranceNavbar 1.5s forwards ease;
 }
 button.langButton {
-  all: initial;
-
+  all: unset;
+  -webkit-animation: entranceNavbar 1.5s forwards ease;
+  animation: entranceNavbar 1.5s forwards ease;
 }
 button.langButton:hover {
-  all: initial;
+  cursor: pointer;
+  all: unset;
 }
 .buttons {
   display: flex;
@@ -59,7 +59,6 @@ div.navBarContainer {
   flex-direction: row-reverse;
   align-items: flex-start;
   gap: 1rem;
-
 }
 .mobile img {
   height: 1.3rem;
@@ -86,8 +85,8 @@ div.navBarContainer {
   text-decoration: none;
   transition: 0.3s ease transform;
   color: var(--color-font);
-  font-family: var(--font-main);
-  font-weight: 500;
+  font-family: var(--font-menu);
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -182,7 +181,6 @@ nav button:hover {
 
 .svgLogo {
   width: 9rem;
-
 }
 
 @-webkit-keyframes entranceContainer {
@@ -223,61 +221,23 @@ nav button:hover {
 
 @-webkit-keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -307,61 +267,23 @@ nav button:hover {
 
 @-webkit-keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes entranceLogo {
   0% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transform: translateX(-20px);
   }
-
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  75% {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   100% {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -381,10 +303,7 @@ nav button:hover {
     -webkit-animation: entranceNavbar 1.5s forwards ease;
     animation: entranceNavbar 1.5s forwards ease;
   }
-header.container{
-  padding-top: 2rem;
-  padding-right: 2rem;
-}
+
   .mobile {
     display: none;
   }
