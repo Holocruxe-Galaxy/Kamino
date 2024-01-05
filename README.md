@@ -12,6 +12,7 @@ Desarrollo:
 
 - [Fernando Cazon](https://github.com/FerCazon)
 - [Gianni Pasquinelli](https://github.com/Gianni03)
+- [Aldana Ingrasssia](https://github.com/Altus24)
 
 <hr>
 

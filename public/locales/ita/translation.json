@@ -1,4 +1,8 @@
 {
+  "earth": {
+    "touch": "Tocca il mondo",
+    "click": "Clicca sul mondo"
+  },
   "navbar": {
     "home": "Casa",
     "about": "Informazioni",
@@ -31,12 +35,12 @@
     "holocruxeP-1": "siamo un team appassionato che crede nel potere dei ricordi e delle esperienze. ",
     "holocruxeP-2": "Holocruxe è un'azienda che crea una piattaforma per aiutare le persone a catturare e preservare i propri ricordi. La piattaforma utilizza l'intelligenza artificiale per creare un diario virtuale che cattura l'essenza della vita di una persona. Ciò consente agli utenti di rivivere i propri ricordi in modo più ricco e profondo.",
     "title-2": "I NOSTRI VALORI",
-    "authenticity":"Autenticità",
-    "authenticityP":"Promuovi l'onestà e l'autenticità catturando e condividendo ricordi, incoraggiando gli utenti a essere se stessi e a condividere le proprie esperienze così come sono state vissute.",
+    "authenticity": "Autenticità",
+    "authenticityP": "Promuovi l'onestà e l'autenticità catturando e condividendo ricordi, incoraggiando gli utenti a essere se stessi e a condividere le proprie esperienze così come sono state vissute.",
     "connection": "Connessione",
-    "connectionP":"Promuovi la connessione umana consentendo agli utenti di condividere i propri ricordi con amici, familiari e persone care e fornendo strumenti per rafforzare legami e relazioni.",
+    "connectionP": "Promuovi la connessione umana consentendo agli utenti di condividere i propri ricordi con amici, familiari e persone care e fornendo strumenti per rafforzare legami e relazioni.",
     "privacy": "Privacy",
-    "privacyP":"Rispetta la privacy degli utenti e fornisci loro scelte chiare e trasparenti su come i loro dati personali vengono utilizzati e condivisi. Garantisci forti misure di sicurezza per proteggere le informazioni sensibili."
+    "privacyP": "Rispetta la privacy degli utenti e fornisci loro scelte chiare e trasparenti su come i loro dati personali vengono utilizzati e condivisi. Garantisci forti misure di sicurezza per proteggere le informazioni sensibili."
   },
   "waitlist": {
     "h2": "LISTA D'ATTESA ",
