@@ -143,7 +143,6 @@
 .text {
   font-size: 1rem;
   margin: 0 auto;
-  text-align: left;
   line-height: 1.3rem;
   font-family: var(--font-secondary);
   -webkit-animation: appearR 2s ease;
@@ -158,7 +157,8 @@
   width: 60%;
   margin: 0;
   width: fit-content;
-  text-align: left;
+  text-align: left; 
+  text-align: justify; 
 }
 
 @-webkit-keyframes appearR {
@@ -236,7 +236,7 @@
 
 .value p {
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.3rem;
   width: 85%;
