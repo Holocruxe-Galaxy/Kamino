@@ -42,7 +42,7 @@
   width: 8rem;
   position: relative;
   top: 7rem;
-  right: -1rem;
+  right: -2rem;
 }
 
 .heroBottom {
@@ -67,7 +67,6 @@
 
 .heroP {
   text-align: center;
-  ;
 }
 .hero h2 {
   margin: 4rem 0 0rem 0rem;
@@ -94,9 +93,8 @@
   margin-top: 1rem;
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.0375rem;
   line-height: 1.5;
-  text-align: left;
+  text-align: justify;
   width: 85vw;
 }
 
@@ -111,30 +109,62 @@
   margin-left: 1rem;
   margin-top: -5rem;
 }
-.heroP h2{
- --color-title: linear-gradient(92deg, #1E88E5 25%, #d5deec 36.25%);
+.heroP h2 {
+  --color-title: linear-gradient(92deg, #1e88e5 25%, #d5deec 36.25%);
 }
 
-@media screen and (min-width: 375px) {
-  .heroTop p {
-    left: -5.5rem;
-    padding-top: 1rem;
-    width: 80vw;
-  }
-}
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 420px) {
   .imgParado {
     width: 8rem;
     position: relative;
     top: 7rem;
-    left: 3rem;
+    left: 4rem;
   }
   .heroTop h2 {
     width: 90%;
   }
-  .heroP h2{
- --color-title: linear-gradient(92deg, #1E88E5 30%, #d5deec 50%);
+  .heroP h2 {
+    --color-title: linear-gradient(92deg, #1e88e5 30%, #d5deec 50%);
+  }
 }
+@media screen and (min-width: 384px) {
+  .imgParado {
+    left: 3rem;
+  }
+}
+@media screen and (min-width: 418px) {
+  .imgParado {
+    top: 6rem;
+    left: 4rem;
+  }
+}
+@media screen and (min-width: 472px) {
+  .imgParado {
+    left: 5rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .imgParado {
+    top: 5rem;
+    left: 7rem;
+  }
+}
+@media screen and (min-width: 570px) {
+  .imgParado {
+    top: 4rem;
+    left: 9rem;
+  }
+}
+@media screen and (min-width: 650px) {
+  .imgParado {
+    top: 4rem;
+    left: 11rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  .imgParado {
+    left: 13rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero p {
@@ -150,7 +180,7 @@
     width: 10rem;
   }
   .imgParado {
-    width: 10rem;
+    margin-left: 2rem;
   }
   .imgAcostado {
     width: 10rem;
@@ -184,17 +214,27 @@
   .heroP {
     width: 95%;
   }
- .heroP p{
-  width: 100%;
- }
-  .heroP h2{
- --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
+  .heroP p {
+    width: 100%;
+  }
+  .heroP h2 {
+    --color-title: linear-gradient(92deg, #1e88e5 40%, #d5deec 50%);
+  }
+  .heroBottom h2 {
+    --color-title: linear-gradient(92deg, #1e88e5 43%, #d5deec 50%);
+  }
 }
-.heroBottom h2{
-   --color-title: linear-gradient(92deg, #1E88E5 43%, #d5deec 50%);
+@media screen and (min-width: 880px) {
+  .imgParado {
+    left: 13rem;
+    top: 2rem;
+  }
 }
+@media screen and (min-width: 1000px) {
+  .imgParado {
+    left: 16rem;
+  }
 }
-
 @media screen and (min-width: 1024px) {
   .imgAsomado {
     width: 15rem;
@@ -211,7 +251,7 @@
   .hero p {
     font-size: 1.3rem;
     left: 0rem;
-    width: 65vw; 
+    width: 65vw;
   }
   .heroMiddle {
     padding-top: 3rem;
@@ -229,21 +269,21 @@
     left: 8.5rem;
     padding-bottom: 1rem;
   }
-  .heroBottom{
+  .heroBottom {
     margin-top: -2rem;
   }
   .heroBottom h2 {
     padding-top: 3rem;
     padding-left: 25rem;
   }
-  .heroP p{
+  .heroP p {
     width: 100%;
   }
-  .heroBottom h2{
-   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 70%);
+  .heroBottom h2 {
+    --color-title: linear-gradient(92deg, #1e88e5 40%, #d5deec 70%);
+  }
 }
-}
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
   .hero p {
     font-size: 1.3rem;
   }
@@ -251,15 +291,15 @@
     font-size: 2.1rem;
     padding-top: 2rem;
   }
-  .heroTop p{
+  .heroTop p {
     width: 70vw;
   }
-  .heroP p{
+  .heroP p {
     margin-bottom: 5rem;
   }
-   .heroBottom h2{
-   --color-title: linear-gradient(92deg, #1E88E5 40%, #d5deec 50%);
-}
+  .heroBottom h2 {
+    --color-title: linear-gradient(92deg, #1e88e5 40%, #d5deec 50%);
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -282,7 +322,7 @@
     font-size: 2rem;
     padding-top: 2rem;
   }
-  .heroMiddle p{
+  .heroMiddle p {
     width: 75vw;
   }
   .heroBottom h2 {

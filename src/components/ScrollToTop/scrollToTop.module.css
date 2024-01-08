@@ -1,8 +1,12 @@
+html {
+ scroll-behavior: smooth;
+}
 .container {
   width: 95%;
   margin: 0 auto;
   position: relative;
   height: 5rem;
+  
 }
 .arrowcircle{
 position: absolute;

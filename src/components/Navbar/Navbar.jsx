@@ -49,7 +49,7 @@ const Navbar = () => {
   };
   return (
     <header className={styles.container}>
-      <div
+      <div id="logo"
         className={`${styles.logoContainer} ${
           !hasVisited && location.pathname === "/" && styles.logoContainerAnim
         }`}

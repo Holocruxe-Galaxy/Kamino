@@ -16,7 +16,7 @@ const ScrollToTop = () => {
     <>
       {display && (
         <div className={styles.container}>
-          <a href="#" className={styles.top}>
+          <a href="#logo" className={styles.top}>
           <img src={ArrowCircle} alt="arrow circle" className={styles.arrowcircle} />
           </a>
         </div>
