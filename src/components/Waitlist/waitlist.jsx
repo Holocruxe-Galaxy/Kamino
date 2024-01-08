@@ -42,7 +42,7 @@ const Waitlist = () => {
       console.error("Registration failed"); //Hay que hacer pagina de error 404
     }
 
-    const data = await response.json();
+    const data = await response.jsvalueon();
     console.log(data);
 
     setName("");
@@ -106,7 +106,7 @@ const Waitlist = () => {
           {showCaptcha && (
             <ReCAPTCHA
               sitekey={`${import.meta.env.VITE_CAPTCHA_KEY}`}
-              onChange={onChange}
+              onChange={onChange} className={styles.captcha}
             />
           )}
           <button type="submit">{t("waitlist.btn")}</button>

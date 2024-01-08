@@ -151,7 +151,9 @@ img.image {
   margin-top: -175px;
   width: 50vw;
 }
-
+.captcha{
+  align-self: center;
+}
 @media screen and (min-width: 768px) {
   img.image {
     width: 80%;
