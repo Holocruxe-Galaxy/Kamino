@@ -5,7 +5,8 @@ import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
 import itaFlag from "../../../icons/italy.svg";
 
-const LanguageButton = ({ language, changeLanguage }) => (
+const LanguageButton = ({ language, changeLanguage, selectedLanguage }) => (
+  language !== selectedLanguage && (
   <button
     className={styles.langButton}
     onClick={() => changeLanguage(language)}
@@ -15,6 +16,7 @@ const LanguageButton = ({ language, changeLanguage }) => (
       alt={language}
     />
   </button>
+  )
 );
 
 const LanguageMenu = () => {
@@ -30,7 +32,7 @@ const LanguageMenu = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("es");
 
   return (
-    <div>
+    <div className={styles.langContainer}>
       <button className={styles.langButton} onClick={toggleMenu}>
         <img
           src={
@@ -45,9 +47,21 @@ const LanguageMenu = () => {
       </button>
       {isOpen && (
         <div className={styles.allLang}>
-          <LanguageButton language="es" changeLanguage={changeLanguage} />
-          <LanguageButton language="en" changeLanguage={changeLanguage} />
-          <LanguageButton language="ita" changeLanguage={changeLanguage} />
+          <LanguageButton
+            language="es"
+            changeLanguage={changeLanguage}
+            selectedLanguage={selectedLanguage}
+          />
+          <LanguageButton
+            language="en"
+            changeLanguage={changeLanguage}
+            selectedLanguage={selectedLanguage}
+          />
+          <LanguageButton
+            language="ita"
+            changeLanguage={changeLanguage}
+            selectedLanguage={selectedLanguage}
+          />
         </div>
       )}
     </div>

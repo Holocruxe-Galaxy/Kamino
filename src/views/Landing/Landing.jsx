@@ -43,7 +43,7 @@ const Landing = () => {
           zIndex: "-1",
         }}
       >
-        <Stars />
+        {/* <Stars /> */}
       </Canvas>
 
       <EarthCanvas />
