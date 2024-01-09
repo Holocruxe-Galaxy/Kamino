@@ -46,7 +46,6 @@ const EarthCanvas = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      {/* <TouchWorld /> */}
       <Canvas
         className="earth-canvas"
         style={{ height: "800px", marginTop: "5rem" }}

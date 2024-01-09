@@ -49,7 +49,8 @@ const Navbar = () => {
   };
   return (
     <header className={styles.container}>
-      <div id="logo"
+      <div
+        id="logo"
         className={`${styles.logoContainer} ${
           !hasVisited && location.pathname === "/" && styles.logoContainerAnim
         }`}
@@ -213,9 +214,9 @@ const Navbar = () => {
           {t("navbar.waitlist")}
         </NavLink>
         <NavLink
-          to="https://login.holocruxe.com"
+          to={`${import.meta.env.VITE_WEBURL}`}
           className={`${styles.link} ${
-            location.pathname === "login.holocruxe.com" && styles.activeLink
+            location.pathname === `${import.meta.env.VITE_WEBURL}` && styles.activeLink
           }`}
         >
           {t("navbar.login")}
