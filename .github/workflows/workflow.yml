@@ -8,6 +8,7 @@ on:
 env: 
   VITE_CAPTCHA_KEY: ${{ secrets.VITE_CAPTCHA_KEY }}
   VITE_BACK_CONECTION: ${{ secrets.VITE_BACK_CONECTION}}
+  VITE_WEBURL: ${{ secrets.VITE_WEBURL}}
 
 jobs: 
   build:
