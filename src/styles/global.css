@@ -3,6 +3,7 @@
 
 html {
   background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 @-webkit-keyframes hide {
