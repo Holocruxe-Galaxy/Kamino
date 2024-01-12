@@ -34,7 +34,7 @@ const Landing = () => {
         !hasVisited && location.pathname === "/" && styles.containerAnim
       }`}
     >
-      <Canvas
+      {/* <Canvas
         style={{
           position: "absolute",
           width: "100%",
@@ -42,8 +42,8 @@ const Landing = () => {
           zIndex: "-1",
         }}
       >
-        {/* <Stars /> */}
-      </Canvas>
+        <Stars />
+      </Canvas> */}
 
       <EarthCanvas />
 
