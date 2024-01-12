@@ -43,7 +43,6 @@ const Waitlist = () => {
     }
 
     const data = await response.jsvalueon();
-    console.log(data);
 
     setName("");
     setEmail("");
@@ -55,7 +54,6 @@ const Waitlist = () => {
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(true);
-  console.log(modalIsOpen);
 
   const openModal = () => {
     setModalIsOpen(true);

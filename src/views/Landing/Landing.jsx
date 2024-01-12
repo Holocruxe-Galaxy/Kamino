@@ -23,7 +23,6 @@ const Landing = () => {
   const waitlistRef = useRef(null);
 
   useEffect(() => {
-    console.log(hasVisited);
     if (!hasVisited) {
       sessionStorage.setItem('visited', 'true');
     }
