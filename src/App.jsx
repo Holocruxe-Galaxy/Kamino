@@ -5,6 +5,8 @@ import About from './views/About/About';
 import Footer from './components/Footer/Footer';
 import WaitlistView from './views/Waitlist/WaitlistView';
 import Faqs from './views/Faqs/Faqs';
+import ChatBotIcon from './components/Chat-Icon/Chat-Icon';
+import Chat from './components/ChatComponent/ChatComponent';
 // dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
 
@@ -21,6 +23,8 @@ function App() {
         !hasVisited && location.pathname === "/" ? "appContainer" : null
       }`}
     >
+      <ChatBotIcon />
+      <Chat />
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
