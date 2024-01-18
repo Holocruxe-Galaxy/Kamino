@@ -213,9 +213,9 @@ const Navbar = () => {
           {t("navbar.waitlist")}
         </NavLink>
         <NavLink
-          to="https://login.holocruxe.com"
+          to="https://web.holocruxe.com"
           className={`${styles.link} ${
-            location.pathname === "login.holocruxe.com" && styles.activeLink
+            location.pathname === "web.holocruxe.com" && styles.activeLink
           }`}
         >
           {t("navbar.login")}
