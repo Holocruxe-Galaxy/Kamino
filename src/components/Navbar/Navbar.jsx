@@ -213,9 +213,9 @@ const Navbar = () => {
           {t("navbar.waitlist")}
         </NavLink>
         <NavLink
-          to="https://web.holocruxe.com"
+          to={`https://${import.meta.env.VITE_WEBURL}`}
           className={`${styles.link} ${
-            location.pathname === "web.holocruxe.com" && styles.activeLink
+            location.pathname === import.meta.env.VITE_WEBURL && styles.activeLink
           }`}
         >
           {t("navbar.login")}

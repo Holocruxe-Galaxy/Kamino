@@ -77,7 +77,7 @@ export default function Mobile({ menuOpen, toggleMenu }) {
           <circle cx="4" cy="4" r="4" fill="#1E88E5" />
         </svg>
         <NavLink
-          to="https://web.holocruxe.com"
+          to={`https://${import.meta.env.VITE_WEBURL}`}
           className={styles.linkM}
           onClick={handleLinkClick}
         >
