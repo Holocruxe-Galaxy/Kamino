@@ -5,8 +5,9 @@ import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
 import itaFlag from "../../../icons/italy.svg";
 
-const LanguageButton = ({ language, changeLanguage, selectedLanguage }) => (
-  language !== selectedLanguage && (
+const languages = ['es', 'en', 'ita'];
+
+const LanguageButton = ({ language, changeLanguage }) => (
   <button
     className={styles.langButton}
     onClick={() => changeLanguage(language)}
@@ -16,14 +17,13 @@ const LanguageButton = ({ language, changeLanguage, selectedLanguage }) => (
       alt={language}
     />
   </button>
-  )
 );
 
 const LanguageMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setSelectedLanguage(language);
@@ -46,22 +46,24 @@ const LanguageMenu = () => {
         />
       </button>
       {isOpen && (
-        <div className={styles.allLang}>
+        <div
+          className={styles.allLang}
+          onMouseLeave={() => setIsOpen(false)}
+        >
           <LanguageButton
-            language="es"
+            language={selectedLanguage}
             changeLanguage={changeLanguage}
             selectedLanguage={selectedLanguage}
           />
-          <LanguageButton
-            language="en"
-            changeLanguage={changeLanguage}
-            selectedLanguage={selectedLanguage}
-          />
-          <LanguageButton
-            language="ita"
-            changeLanguage={changeLanguage}
-            selectedLanguage={selectedLanguage}
-          />
+          {
+            languages.filter((lang) => lang !== selectedLanguage).map((lang) => (
+              <LanguageButton
+                language={lang}
+                changeLanguage={changeLanguage}
+                selectedLanguage={selectedLanguage}
+              />
+            ))
+          }
         </div>
       )}
     </div>
