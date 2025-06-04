@@ -200,7 +200,7 @@ const Navbar = () => {
         >
           {t("navbar.about")}
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="waitlist"
           className={`${styles.link} ${
             location.pathname === "/waitlist" ? styles.activeLink : null
@@ -211,15 +211,15 @@ const Navbar = () => {
           duration={500}
         >
           {t("navbar.waitlist")}
-        </NavLink>
-        <NavLink
+        </NavLink> */}
+        {/* <NavLink
           to={`https://${import.meta.env.VITE_WEBURL}`}
           className={`${styles.link} ${
             location.pathname === import.meta.env.VITE_WEBURL && styles.activeLink
           }`}
         >
           {t("navbar.login")}
-        </NavLink>
+        </NavLink> */}
         <NavLink></NavLink>
         <div className={styles.indicator}></div>
       </nav>
