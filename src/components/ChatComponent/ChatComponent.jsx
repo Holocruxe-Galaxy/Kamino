@@ -4,11 +4,10 @@ import React, {useState} from "react";
 import styles from "./Chat.module.css";
 import {IoCloseCircleOutline} from "react-icons/io5";
 import logo from "../../img/Logo.png";
+
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  const [repeat, setRepeat] = useState(0);
-  const [token, setToken] = useState("");
 
   const handleKeyDownEnter = (e) => {
     if (e.key === "Enter") {
@@ -24,8 +23,8 @@ const Chat = () => {
         {text: "...", sender: "loading"},
       ]);
       let data = {
-        repeated: repeat,
-        token: token,
+        chat_context: messages,
+        prompt: newMessage,
       };
       let options = {
         method: "POST",
@@ -35,7 +34,7 @@ const Chat = () => {
         body: JSON.stringify(data),
       };
       let response = await fetch(
-        "https://cruxy.holocruxe.com/questions?question=" + newMessage,
+        import.meta.env.VITE_CRUXY_CHAT,
         options
       );
 
@@ -43,9 +42,7 @@ const Chat = () => {
         setMessages((prevMessages) =>
           prevMessages.filter((message) => message.sender !== "loading")
         );
-        let data = await response.json();
-        setRepeat(data.repeated);
-        setToken(data.token);
+        let data = await response.json();;
         setMessages((prevMessages) => [
           ...prevMessages,
           {text: data.response, sender: "chatbot"},

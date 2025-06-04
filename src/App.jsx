@@ -30,7 +30,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
-        <Route path="/waitlist" element={<WaitlistView />} />
+        {/* <Route path="/waitlist" element={<WaitlistView />} /> */}
       </Routes>
       <Footer />
     </div>

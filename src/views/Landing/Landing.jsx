@@ -34,7 +34,7 @@ const Landing = () => {
         !hasVisited && location.pathname === "/" && styles.containerAnim
       }`}
     >
-      {/* <Canvas
+      <Canvas
         style={{
           position: "absolute",
           width: "100%",
@@ -43,7 +43,7 @@ const Landing = () => {
         }}
       >
         <Stars />
-      </Canvas> */}
+      </Canvas>
 
       <EarthCanvas />
 
@@ -53,9 +53,9 @@ const Landing = () => {
       <Hero />
       <Hero2 />
       <Hero3 />
-      <Hero4 />
-      <Container ref={waitlistRef} />
-      <ScrollToTop />
+      {/* <Hero4 />
+      <Container ref={waitlistRef} /> */}
+      <ScrollToTop /> 
     </main>
   );
 };
