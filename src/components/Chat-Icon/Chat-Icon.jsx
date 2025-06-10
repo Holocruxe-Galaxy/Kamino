@@ -1,5 +1,5 @@
 import styles from "./Chat-Icon.module.css";
-import {TbRobot} from "react-icons/tb";
+
 const ChatBotIcon = () => {
   return (
     <div
@@ -14,9 +14,11 @@ const ChatBotIcon = () => {
       id='chat-bot-icon'
       className={styles.chatBotIcon}
     >
-      <div style={{width: "100%"}} role='img' aria-label='ChatBot Icon'>
-        <TbRobot className={`${styles.tbRobot}`} color='#59c1bd' />
-      </div>
+      <img
+        src="/images/chatbot-icon.webp"
+        alt="ChatBot Icon"
+        className={styles.chatBotImage}
+      />
     </div>
   );
 };
