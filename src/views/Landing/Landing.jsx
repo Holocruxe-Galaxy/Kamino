@@ -1,8 +1,4 @@
 import React, { useEffect } from 'react';
-import EarthCanvas from '../../components/models/Earth';
-import ChatBotIcon from '../../components/Chat-Icon/Chat-Icon';
-import mouseIcon from "../../icons/mouse.svg"
-import vector from '../../img/vector';
 import styles from './Landing.module.css';
 import Hero from '../../components/Hero/Hero';
 import Hero2 from '../../components/Hero/Hero2';
