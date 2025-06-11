@@ -29,6 +29,17 @@
     "bottomTitle": "LA TUA AZIENDA SI EVOLVE. IL TUO LASCITO RIMANE.",
     "cta": "Voglio costruire il mio lascito ➜"
   },
+  "hero4": {
+    "title": "PARLIAMO DELLA TUA EREDITÀ DIGITALE",
+    "subtitle": "Prenota la tua demo personalizzata",
+    "form": {
+      "name": "Nome e Cognome:",
+      "email": "Email:",
+      "phone": "Telefono:",
+      "message": "Messaggio:",
+      "submit": "Invia messaggio ➜"
+    }
+  },
   "heroT": {
     "h2": "¿Vuoi ",
     "span": "ne sai di più",

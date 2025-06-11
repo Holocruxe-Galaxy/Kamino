@@ -35,9 +35,13 @@ const Hero = () => {
           ));
         })()}
 
-        <button className={styles.ctaButton}>
+        <button
+          className={styles.ctaButton}
+          onClick={() => window.open("https://cruxie.holocruxe.com/", "_blank")}
+        >
           {t("landing.hero-b")}
         </button>
+
       </div>
 
       <div className={styles.earthWrapper}>

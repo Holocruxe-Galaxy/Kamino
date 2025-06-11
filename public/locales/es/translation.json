@@ -29,6 +29,17 @@
     "bottomTitle": "TU EMPRESA EVOLUCIONA. TU LEGADO PERMANECE.",
     "cta": "Quiero construir mi legado ➜"
   },
+  "hero4": {
+    "title": "HABLEMOS DE TU LEGADO DIGITAL",
+    "subtitle": "Agendá tu demo personalizada",
+    "form": {
+      "name": "Nombre y Apellido:",
+      "email": "Email:",
+      "phone": "Teléfono:",
+      "message": "Mensaje:",
+      "submit": "Enviar mensaje ➜"
+    }
+  },
   "heroT": {
     "h2": "¿Quieres ",
     "span": "saber más?",

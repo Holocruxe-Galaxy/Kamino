@@ -39,9 +39,13 @@ const Hero3 = () => {
 
 
         {/* Botón CTA */}
-        <button className={styles.ctaButton}>
+        <button
+          className={styles.ctaButton}
+          onClick={() => window.open("https://cruxie.holocruxe.com/", "_blank", "noopener,noreferrer")}
+        >
           {t("hero3.cta")}
         </button>
+
       </div>
     </section>
   );

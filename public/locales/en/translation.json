@@ -29,6 +29,17 @@
     "bottomTitle": "YOUR COMPANY EVOLVES. YOUR LEGACY REMAINS.",
     "cta": "I want to build my legacy ➜"
   },
+  "hero4": {
+    "title": "LET'S TALK ABOUT YOUR DIGITAL LEGACY",
+    "subtitle": "Book your personalized demo",
+    "form": {
+      "name": "Full Name:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "message": "Message:",
+      "submit": "Send Message ➜"
+    }
+  },
   "heroT": {
     "h2": "Do you want ",
     "span": "to know more?",
