@@ -38,18 +38,19 @@
     padding: 1rem 1.5rem;
     border-radius: 12px;
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    font-family: 'Balbek Pro', sans-serif;
+    font-family: sans-serif;
     /* ✅ agregado */
 }
 
 .mainTitle {
+    max-width: 50%;
     margin-top: 100px;
-    font-size: 2.8rem;
-    font-weight: 800;
+    font-size: 2.5em;
+    font-weight: 800px;
     text-transform: uppercase;
     font-family: 'Balbek Pro', sans-serif;
     margin-bottom: 1.5rem;
@@ -67,7 +68,7 @@
     padding: 0.8rem 1.6rem;
     /* mantené sin cambiar en hover */
     border-radius: 9999px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     font-family: 'Balbek Pro', sans-serif;
