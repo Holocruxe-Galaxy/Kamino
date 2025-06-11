@@ -12,6 +12,8 @@
   z-index: 0;
 }
 
+
+
 /* Luz difusa invertida abajo a la izquierda */
 .hero4Section::before {
   content: "";
@@ -111,7 +113,7 @@
   font-size: 0.95rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: 'Balbek Pro', sans-serif;
+  font-family: sans-serif;
   background-color: rgba(11, 1, 32, 0.6);
   color: white;
   backdrop-filter: blur(4px);
@@ -136,6 +138,8 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
+
 .ctaButton:hover {
   background-color: #3297e0;
   transform: scale(1.03);
@@ -144,7 +148,7 @@
 /* ✅ Mobile adjustments */
 @media (max-width: 768px) {
   .title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .ctaButton {
