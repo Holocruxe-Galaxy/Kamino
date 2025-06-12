@@ -2,7 +2,9 @@
   z-index: 1;
   padding: 0;
   height: 35vh !important;
+
 }
+
 
 div.null {
   display: flex;
@@ -40,6 +42,16 @@ div.iconText {
 .mouse {
   width: 2.8rem;
 }
+
+@media screen and (width: 1280px) {
+  .earth-canvas {
+    width: 400px !important;
+    margin-top: -150px !important;
+    margin-bottom: 50px;
+  }
+}
+
+
 
 @media screen and (min-width: 412px) {
   div.iconText {
