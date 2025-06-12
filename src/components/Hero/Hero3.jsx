@@ -4,23 +4,16 @@ import { useTranslation } from "react-i18next";
 const Hero3 = () => {
   const { t } = useTranslation();
 
-  // Desglosamos el título superior
-  const topTitleWords = t("hero3.top")?.trim().split(" ") || [];
   const bottomTitleWords = t("hero3.bottomTitle")?.trim().split(" ") || [];
 
   return (
     <section className={`${styles.heroSection} ${styles.hero3Section}`}>
       <div className={styles.textContent}>
-        {/* Título superior en dos líneas */}
-        <h2 className={styles.topTitle}>
-          <span>
-            {topTitleWords.slice(0, topTitleWords.length - 3).join(" ")}
-          </span>
-          <br />
-          <span>
-            {topTitleWords.slice(-3).join(" ")}
-          </span>
-        </h2>
+        {/* Título superior completo sin spans */}
+        <h2 className={styles.topTitle}>{t("hero3.top")}</h2>
+
+        {/* Título intermedio */}
+        <h3 className={styles.mainTitle2}>{t("hero3.title")}</h3>
 
         {/* Caja de descripción */}
         <p className={styles.descriptionBox}>
@@ -37,7 +30,6 @@ const Hero3 = () => {
           </span>
         </h1>
 
-
         {/* Botón CTA */}
         <button
           className={styles.ctaButton}
@@ -45,7 +37,6 @@ const Hero3 = () => {
         >
           {t("hero3.cta")}
         </button>
-
       </div>
     </section>
   );

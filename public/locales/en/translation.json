@@ -11,21 +11,25 @@
   },
   "landing": {
     "hero": "We are good at creating legacy",
-    "hero-a": "Bear claw lemon drops cupcake Bear claw lemon drops cupcake",
-    "hero-b": "I want to build my legacy →"
+    "hero-a": "We create digital legacy for SMEs through artificial intelligence. Your team may change. Your legacy won't.",
+    "hero-b": "I want to build my legacy →",
+    "hero-scroll-alt": "Scroll icon",
+    "hero-scroll-text": "Click the world"
   },
   "hero2": {
-    "h2": "Where does your company's knowledge live today?",
-    "span": "Bear claw lemon drops cupcake EBear claw lemon drops cupcake Bear claw lemon drops cupcake",
-    "p": "Bear claw lemon drops cupcake halvah cotton candy danish danish. Liquorice cake croissant candy canes cotton candy candy canes che",
-    "assistantTitle": "BEAR CLAW LEMON DROPS CUPCAKE HALVAH COTTON?",
-    "assistantText": "Candy jujubes dessert cheesecake icing macaroon. Halvah jelly tiramisu cotton candy oat cake apple pie topping. Chupa chups wafer donut chocolate bar soufflé. Candy caramels",
-    "assistantItem1": "Bear claw lemon drops cupcake",
-    "assistantItem2": "EBear claw lemon drops cupcake"
+    "h2": "Introduction to the problem",
+    "p": "We create AI agents trained with your company's knowledge to act as your best collaborator… always available. Automate tasks, answer questions, and protect the know-how that makes your business unique.",
+    "assistantTitle": "Problem Presentation",
+    "assistantText": "Imagine this:",
+    "assistantItem1": "Your star engineer leaves… taking years of product know-how with them.",
+    "assistantItem2": "Your sales manager changes direction… and takes insights from key negotiations.",
+    "assistantItem3": "You review 18 emails and 3 chats just to find out WHY a key decision was made 6 months ago…",
+    "p2": "This knowledge drain slows growth… and while your team loses time on repetitive tasks, AI could be handling them."
   },
   "hero3": {
-    "top": "SOUFFLÉ TIRAMISU CHEESECAKE CAKE DESSERT. CAKE MUFFIN",
-    "box": "Jujubes. Chocolate apple pie candy canes caramels gummies croissant. Croissant dragée ice cream macaroon tart cotton candy. Biscuit cheesecake sweet roll biscuit macaroon. Jujubes.",
+    "top": "Solution Presentation",
+    "title": "Imagine an employee who never gets sick, never quits, and multiplies your team’s knowledge",
+    "box": "With Cruxie, each employee and business area has an 'intelligent agent' trained with the real knowledge of your business. This way, you automate repetitive tasks and unify your company's knowledge for the entire team… 24/7.",
     "bottomTitle": "YOUR COMPANY EVOLVES. YOUR LEGACY REMAINS.",
     "cta": "I want to build my legacy ➜"
   },
@@ -39,6 +43,14 @@
       "message": "Message:",
       "submit": "Send Message ➜"
     }
+  },
+  "hero5": {
+    "title": "Benefits Presentation",
+    "subtitle": "Companies that have transformed their operations with digital legacy:",
+    "benefit1": "Halved the time lost searching for key information.",
+    "benefit2": "Automated critical tasks that previously consumed valuable hours.",
+    "benefit3": "Preserved the unique know-how of each area.",
+    "benefit4": "Scaled their business without fear of staff turnover, because their digital legacy is always available."
   },
   "heroT": {
     "h2": "Do you want ",

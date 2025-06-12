@@ -34,29 +34,48 @@
 }
 
 .descriptionBox {
+    position: relative;
     background: rgba(255, 255, 255, 0.08);
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 12px;
-    color: #ffffff;
-    font-size: 1rem;
+    font-family: var(--font-main);
     line-height: 1.6;
     margin-bottom: 2.5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    font-family: sans-serif;
-    /* ✅ agregado */
+    text-align: center;
+    border-left: 4px solid #5d66ff;
+    
 }
+
+.mainTitle2 {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1rem 1.5rem 1rem 2rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.329);
+    text-align: center;
+    line-height: 1.5;
+    border-left: 4px solid #5d66ff;
+    /* 💜 línea vertical destacada */
+}
+
 
 .mainTitle {
     max-width: 50%;
-    margin-top: 100px;
+    margin-top: 90px;
     font-size: 2.5em;
     font-weight: 800px;
     text-transform: uppercase;
     font-family: 'Balbek Pro', sans-serif;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4.5rem;
     color: white;
     word-spacing: 1rem;
-    /* ✅ ajustá el valor según lo que necesites */
 }
 
 .ctaButton {
@@ -72,10 +91,8 @@
     border: none;
     cursor: pointer;
     font-family: 'Balbek Pro', sans-serif;
-    margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-sizing: border-box;
-    /* ✅ evita expansión por padding */
 }
 
 .ctaButton:hover {
@@ -89,7 +106,7 @@
 .heroSection::before {
     content: "";
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 100%;
     width: 80vw;
     height: 120vh;

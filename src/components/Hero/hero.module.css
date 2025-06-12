@@ -1,15 +1,15 @@
-/* Estilos necesarios exclusivamente para el componente Hero */
-
 .heroSection {
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1300px;
   flex-wrap: wrap;
   padding: 2rem 0;
+  margin-top: 50px;
+  overflow: visible;
 }
 
 .textContent {
@@ -49,16 +49,18 @@
 }
 
 .subtitle {
-  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   line-height: 1.4;
   margin: 0 0 0.5rem 0;
   text-align: left;
-  color: #e0e0e0;
-  font-weight: 400;
+  color: white;
+  font-weight: 800;
+  font-family: var(--font-main);
+  line-height: 1.6;
 }
 
 .ctaButton {
+  font-family: var(--font-main);
   width: 100%;
   max-width: 320px;
   height: 3rem;
@@ -66,9 +68,6 @@
   align-items: center;
   justify-content: center;
   background-color: #359aee;
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
@@ -87,18 +86,43 @@
 .earthWrapper {
   flex: 1;
   min-width: 300px;
-  height: 100%;
-  margin-top: -10%;
+  height: auto;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+  margin-top: 0;
 }
 
+.earthWrapper canvas {
+  width: 100% !important;
+  height: 60vh !important;
+  max-height: 90vh;
+  object-fit: contain;
+  overflow: visible;
+}
+.earthCanvasWrapper {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.earthCanvasWrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  overflow: visible;
+}
+
+
+/* Scroll icon */
 .scrollIcon {
   position: absolute;
   bottom: 1rem;
-  right: 37%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,69 +131,85 @@
   animation: pulse 2s infinite;
 }
 
+
+
 .scrollIcon img {
   width: 2.5rem;
   margin-bottom: 0.3rem;
 }
 
 @keyframes pulse {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
-
-/* Responsive */
+/* Mobile */
 @media screen and (max-width: 768px) {
   .heroSection {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 2rem 1rem;
     gap: 2rem;
-    padding: 1.2rem 0;
+    margin-top: 0;
+    overflow: visible;
   }
 
   .textContent {
     align-items: center;
     text-align: center;
-    max-width: 100vw;
+    max-width: 100%;
+    padding: 0 1rem;
   }
 
   .mainTitle {
     font-size: 2rem;
-    text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
   }
 
   .subtitle {
     font-size: 1rem;
-    text-align: center;
     margin-bottom: 1rem;
   }
 
   .ctaButton {
-    width: 100%;
     height: 3.2rem;
     font-size: 1rem;
     align-self: center;
-    margin-bottom: 1rem;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
   }
 
   .earthWrapper {
-    margin-top: -50px;
+    margin-top: 0;
     padding: 0;
-    max-width: 350px;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1/1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .earthWrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
   }
 
   .scrollIcon {
     margin-top: 1rem;
     position: relative;
-    width: 100vw;
-    padding-bottom: 20px;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    transform: translateX(8%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: none;
     font-size: 0.75rem;
   }
 
@@ -178,3 +218,20 @@
     margin-bottom: 0.2rem;
   }
 }
+
+/* Mobile reducido */
+@media screen and (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .earthWrapper {
+    margin-top: 0.5rem;
+    max-width: 320px;
+  }
+
+  .earthWrapper canvas {
+    height: auto !important;
+  }
+}
+

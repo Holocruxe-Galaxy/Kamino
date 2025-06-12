@@ -59,7 +59,7 @@
   max-width: 1000px;
   flex-wrap: wrap;
   z-index: 2;
-  font-family: sans-serif;
+  font-family: var(--font-main);
 }
 
 .leftColumn {
@@ -97,7 +97,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: var(--font-main);
 }
 
 .form label {
@@ -113,7 +113,7 @@
   font-size: 0.95rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: sans-serif;
+  font-family: var(--font-main);
   background-color: rgba(11, 1, 32, 0.6);
   color: white;
   backdrop-filter: blur(4px);
@@ -134,7 +134,7 @@
   border: none;
   border-radius: 9999px;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: var(--font-main);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 

@@ -4,10 +4,10 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import CanvasLoader from './Loader';
 import './earth.css';
 
+
 const Earth = () => {
   const earthRef = useRef();
   const earth = useGLTF('./planet/scene.gltf');
-
   useFrame(() => {
     if (earthRef.current) {
       earthRef.current.rotation.y += 0.007;
@@ -18,8 +18,8 @@ const Earth = () => {
     <primitive
       ref={earthRef}
       object={earth.scene}
-      scale={2.9}
-      position={[0, 0.5, 0]}
+      scale={ 3.1 }
+      position={[0, 0, 0]}
     />
   );
 };
@@ -29,7 +29,7 @@ const EarthCanvas = () => {
     <div className="earth-container">
       <Canvas
         className="earth-canvas"
-        style={{ marginTop: '5rem' }}
+        style={{ marginTop: '-5rem' }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls

@@ -23,9 +23,10 @@ const Hero = () => {
             {heroWords[heroWords.length - 1]} {/* LEGACY */}
           </span>
         </h1>
+
         {(() => {
           const fullText = t("landing.hero-a").trim();
-          const middle = Math.floor(fullText.length / 2);
+          const middle = Math.floor(fullText.length / 1);
           const firstHalf = fullText.slice(0, middle).trim();
           const secondHalf = fullText.slice(middle).trim();
           return [firstHalf, secondHalf].map((line, index) => (
@@ -41,16 +42,19 @@ const Hero = () => {
         >
           {t("landing.hero-b")}
         </button>
-
       </div>
 
       <div className={styles.earthWrapper}>
-        <EarthCanvas />
-        <div className={styles.scrollIcon}>
-          <img src={mouseIcon} alt={t("landing.hero-scroll-alt")} />
-          <p>{t("click world")}</p>
+        <div className={styles.earthCanvasWrapper}>
+          <EarthCanvas />
         </div>
+
       </div>
+      <div className={styles.scrollIcon}>
+        <img src={mouseIcon} alt={t("landing.hero-scroll-alt")} />
+        <p>{t("landing.hero-scroll-text")}</p>
+      </div>
+
     </section>
   );
 };
