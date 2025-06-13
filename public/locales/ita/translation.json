@@ -12,7 +12,7 @@
   "landing": {
     "hero": "Siamo bravi a creare eredità",
     "hero-a": "Creiamo eredità digitali per le PMI attraverso l’intelligenza artificiale. Il team della tua azienda può cambiare. La tua eredità, no.",
-    "hero-b": "Voglio costruire la mia eredità →",
+    "hero-b": "Voglio costruire la mia eredità ",
     "hero-scroll-alt": "Icona di scorrimento",
     "hero-scroll-text": "Clicca sul mondo"
   },
@@ -31,11 +31,11 @@
     "title": "Immagina un dipendente che non si ammala mai, non si dimette mai e moltiplica la conoscenza del tuo team",
     "box": "Con Cruxie, ogni dipendente e area aziendale ha un 'agente intelligente' addestrato con la conoscenza reale della tua azienda. In questo modo, automatizzi le attività ripetitive e unifichi la conoscenza della tua impresa per tutto il team… 24/7.",
     "bottomTitle": "LA TUA AZIENDA EVOLVE. IL TUO LASCITO RIMANE.",
-    "cta": "Voglio costruire il mio lascito ➜"
+    "cta": "Voglio costruire il mio lascito"
   },
   "hero4": {
     "title": "PARLIAMO DELLA TUA EREDITÀ DIGITALE",
-    "subtitle": "Prenota la tua demo personalizzata",
+    "subtitle": "Richiedi un incontro personalizzato gratuito con il nostro team.",
     "form": {
       "name": "Nome e Cognome:",
       "email": "Email:",

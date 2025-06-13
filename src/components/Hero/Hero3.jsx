@@ -1,5 +1,6 @@
 import styles from "./hero3.module.css";
 import { useTranslation } from "react-i18next";
+import { HiArrowNarrowRight } from "react-icons/hi"; // o el que uses
 
 const Hero3 = () => {
   const { t } = useTranslation();
