@@ -4,25 +4,40 @@ header.container {
   height: 5.5vh;
   display: flex;
   align-items: center;
+  gap: 30px;
+  position: relative; 
+  z-index: 999; 
 }
-.allLang {
-  all: unset;
-}
+
 .allLang {
   display: flex;
   flex-direction: column;
-  top: 1.5rem;
-  position: absolute;
-  top: 0;
-  z-index: 3;
+  position: absolute; 
+  top: calc(100% + 5px); 
+  right: 0; 
+  background-color: var(--color-bg-dark); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+  padding: 8px; 
+  gap: 8px; 
+  z-index: 102; 
+  min-width: fit-content; 
+  white-space: nowrap; 
 }
+
+.allLang .langButton img {
+  width: 1.5rem; 
+}
+
 .button {
   margin: 0.5rem;
 }
 .langButton img {
-  width: 1.2rem;
+  width: 1.8rem;
+  height: auto;
   cursor: pointer;
-  padding-top: 0.3rem;
+  border-radius: 3px;
 }
 div.langButton {
   height: auto;
@@ -32,11 +47,21 @@ div.langButton {
   border: none !important;
 }
 button.langButton {
-  all: unset;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 button.langButton:hover {
-  all: unset;
+  background-color: transparent;
+  box-shadow: 0 0 15px 5px rgba(89, 193, 189, 0.4);
+  transform: scale(1.05); 
 }
+
 .buttons {
   display: flex;
   flex: row;
@@ -51,6 +76,10 @@ button.langButton:hover {
 }
 .langContainer {
   position: relative;
+  height: fit-content; 
+  display: flex; 
+  align-items: center; 
+  z-index: 101;
 }
 
 .navBarContainer {
@@ -99,7 +128,7 @@ button.langButton:hover {
   content: "";
   position: absolute;
 
-  background-color: var(--aqua);
+  background-color: #349aef;
   transform: scale(0);
 }
 
@@ -133,7 +162,7 @@ button.langButton:hover {
   content: "";
   position: absolute;
   transform: scale(1);
-  background-color: var(--aqua);
+  background-color: #349aef;
   transition: 0.5s ease all;
 }
 
@@ -155,7 +184,7 @@ button.langButton:hover {
 
 .activeLink:hover::before,
 .activeLink:hover::after {
-  background-color: var(--aqua);
+  background-color: #349aef;
 }
 .navbar {
   display: none;
@@ -306,6 +335,10 @@ nav button:hover {
   header.container {
     padding-top: 2rem;
     padding-right: 2rem;
+    z-index: 999; 
+  }
+  .langContainer {
+    z-index: 101;
   }
   .mobile {
     display: none;
@@ -329,11 +362,21 @@ nav button:hover {
     width: 12rem;
     margin-left: 1rem;
   }
+  header.container {
+    z-index: 999; 
+  }
+  .langContainer {
+    z-index: 101;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   header.container {
-    margin: 0.5rem;
+    margin: 0.5rem; 
+    z-index: 999; 
+  }
+  .langContainer {
+    z-index: 101;
   }
   .navbar {
     font-size: 1.2rem;
