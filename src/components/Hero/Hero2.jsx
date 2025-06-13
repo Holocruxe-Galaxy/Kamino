@@ -16,8 +16,8 @@ const Hero2 = () => {
       <section className={styles.infoSection}>
         {/* <h2 className={styles.sectionTitle}>{t("hero2.h2")}</h2> */}
 
-        <div className={styles.botDescriptionBox}>
-          <div className={styles.descriptionBox}>
+        <div className={styles.containerHero2}>
+          <div className={styles.containerHero2}>
             <p>{t("hero2.p")}</p>
           </div>
         </div>
@@ -36,10 +36,9 @@ const Hero2 = () => {
         </div>
 
         <div className={styles.botContent}>
-          {/* <h2 className={styles.botTitle}>{t("hero2.assistantTitle")}</h2> */}
+          <h2 className={styles.botTitle}>{t("hero2.assistantTitle")}</h2>
 
           <div className={styles.botDescriptionBox}>
-            <p className={styles.botDescription}>{t("hero2.assistantText")}</p>
             <div className={styles.botListBox}>
               {assistantItems.map((item, index) => (
                 <span key={index}>

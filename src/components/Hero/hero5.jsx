@@ -15,10 +15,6 @@ const Hero5 = () => {
     <section className={styles.hero5Section}>
       <div className={styles.textContent}>
         <h2 className={styles.topTitle}>{t("hero5.title")}</h2>
-        {/* <div className={styles.descriptionBox}>
-          <p>{t("hero5.subtitle")}</p>
-        </div> */}
-
         <div className={styles.descriptionBox}>
           <ul>
             {benefits.map((benefit, index) => (
