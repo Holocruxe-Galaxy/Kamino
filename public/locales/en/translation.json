@@ -8,7 +8,7 @@
     "about": "About Us",
     "faq": "FAQ",
     "blog": "Blog",
-    "cruxieButton" : "Test Cruxie "
+    "cruxieButton": "Test Cruxie "
   },
   "landing": {
     "hero": "We are good at creating legacy",
@@ -20,18 +20,16 @@
   "hero2": {
     "h2": "Introduction to the problem",
     "p": "We create AI agents trained with your company's knowledge to act as your best collaborator… always available. Automate tasks, answer questions, and protect the know-how that makes your business unique.",
-    "assistantTitle": "Problem Presentation",
-    "assistantText": "Imagine this:",
+    "assistantTitle": "Imagine this:",
     "assistantItem1": "Your star engineer leaves… taking years of product know-how with them.",
     "assistantItem2": "Your sales manager changes direction… and takes insights from key negotiations.",
     "assistantItem3": "You review 18 emails and 3 chats just to find out WHY a key decision was made 6 months ago…",
     "p2": "This knowledge drain slows growth… and while your team loses time on repetitive tasks, AI could be handling them."
   },
   "hero3": {
-    "top": "Solution Presentation",
-    "title": "Imagine an employee who never gets sick, never quits, and multiplies your team’s knowledge",
+    "title": "Imagine the expertise of your best employee, available 24/7.",
     "box": "With Cruxie, each employee and business area has an 'intelligent agent' trained with the real knowledge of your business. This way, you automate repetitive tasks and unify your company's knowledge for the entire team… 24/7.",
-    "bottomTitle": "YOUR COMPANY EVOLVES. YOUR LEGACY REMAINS.",
+    "bottomTitle": "YOUR COMPANY EVOLVES.\n YOUR LEGACY REMAINS.",
     "cta": "I want to build my legacy ➜"
   },
   "hero4": {
@@ -46,8 +44,7 @@
     }
   },
   "hero5": {
-    "title": "Benefits Presentation",
-    "subtitle": "Companies that have transformed their operations with digital legacy:",
+    "title": "Those who have already created their digital legacy",
     "benefit1": "Halved the time lost searching for key information.",
     "benefit2": "Automated critical tasks that previously consumed valuable hours.",
     "benefit3": "Preserved the unique know-how of each area.",
@@ -80,26 +77,26 @@
     "register2": "Thank you for signing up!",
     "closeButton": "Close"
   },
-    "common": {
-      "faq_line1": "Frequently",
-      "faq_line2": "Asked Questions"
-    }, 
-"faqs": {
-  "0": {
-    "question": "What is Holocruxe? ",
-    "answer": "Holocruxe is an AI-powered platform that lets you create your own 'Cruxies'—intelligent agents designed to centralize your company's knowledge and expertise into a living digital legacy. They preserve your know-how and automate repetitive tasks so your team can focus on strategic initiatives."
+  "common": {
+    "faq_line1": "Frequently",
+    "faq_line2": "Asked Questions"
   },
-  "1": {
-    "question": "How does Cruxie work?",
-    "answer": "Cruxie learns from the information you provide: documents, manuals, databases, historical files, and more. From there, it builds a personalized knowledge model that allows it to answer questions, automate workflows, and assist your team with precision and efficiency."
-  },
-  "2": {
-    "question": "How private is my data?",
-    "answer": "Security and privacy are our top priorities. We guarantee the confidentiality and integrity of your information. All conversations with Cruxie are private by default, and only you decide what to share, with whom, and when. You can keep your Cruxie for internal use or enable other teams to access its knowledge. You have full control over your company’s digital legacy."
-  },
-  "3": {
-    "question": "How do I start using Cruxie in my organization?",
-    "answer": "Simply go to our homepage and sign up. You can create a personal account to explore the platform, or click on 'Create a company account,' fill out the form, and our team will contact you to guide you through the onboarding process."
+  "faqs": {
+    "0": {
+      "question": "What is Holocruxe? ",
+      "answer": "Holocruxe is an AI-powered platform that lets you create your own 'Cruxies'—intelligent agents designed to centralize your company's knowledge and expertise into a living digital legacy. They preserve your know-how and automate repetitive tasks so your team can focus on strategic initiatives."
+    },
+    "1": {
+      "question": "How does Cruxie work?",
+      "answer": "Cruxie learns from the information you provide: documents, manuals, databases, historical files, and more. From there, it builds a personalized knowledge model that allows it to answer questions, automate workflows, and assist your team with precision and efficiency."
+    },
+    "2": {
+      "question": "How private is my data?",
+      "answer": "Security and privacy are our top priorities. We guarantee the confidentiality and integrity of your information. All conversations with Cruxie are private by default, and only you decide what to share, with whom, and when. You can keep your Cruxie for internal use or enable other teams to access its knowledge. You have full control over your company’s digital legacy."
+    },
+    "3": {
+      "question": "How do I start using Cruxie in my organization?",
+      "answer": "Simply go to our homepage and sign up. You can create a personal account to explore the platform, or click on 'Create a company account,' fill out the form, and our team will contact you to guide you through the onboarding process."
+    }
   }
-}
 }

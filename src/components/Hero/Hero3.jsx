@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 const Hero3 = () => {
   const {t} = useTranslation();
 
-  const bottomTitleWords = t("hero3.bottomTitle")?.trim().split(" ") || [];
+  const bottomTitleWords = t("hero3.bottomTitle")?.trim().split("\n") || [];
 
   return (
     <section className={`${styles.heroSection} ${styles.hero3Section}`}>
@@ -22,7 +22,8 @@ const Hero3 = () => {
         <h1 className={styles.mainTitle}>
           <span className={styles.white}>
             {bottomTitleWords.slice(0, -1).join(" ")}
-          </span>{" "}
+          </span>
+          <br />
           <span className={styles.gradientWord}>
             {bottomTitleWords.slice(-1)}
           </span>
