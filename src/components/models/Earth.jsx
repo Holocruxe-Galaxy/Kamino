@@ -1,24 +1,47 @@
-import { Suspense, useRef } from 'react';
+// src/components/models/EarthCanvas.tsx
+import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { useFrame, Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import CanvasLoader from './Loader';
+import useTablet from '../../hooks/useTablet'; // Asegurate que el alias esté definido
 import './earth.css';
-
-import React, { useState, useEffect } from "react";
-import Hand from "../../icons/Hand.svg";
-import { useTranslation } from "react-i18next";
-
-
-import Mouse from '../../icons/mouse.svg';
-import Stars from '../Stars/stars';
 
 const Earth = () => {
   const earthRef = useRef();
   const earth = useGLTF('./planet/scene.gltf');
+  const tabletType = useTablet();
+
+  // Estados para escalar y posicionar correctamente el modelo
+  const [scale, setScale] = useState(3.1);
+  const [yPos, setYPos] = useState(0);
+
+  useEffect(() => {
+    switch (tabletType) {
+      case 'horizontalCut':
+        setScale(2.3);
+        setYPos(0);
+        break;
+      case 'standard':
+        setScale(2.5);
+        setYPos(0);
+        break;
+      case 'wideTablet':
+        setScale(2.8);
+        setYPos(0);
+        break;
+      case 'needsMarginFix':
+        setScale(3.1);
+        setYPos(-0.4);
+        break;
+      default:
+        setScale(3.1);
+        setYPos(0);
+    }
+  }, [tabletType]);
 
   useFrame(() => {
     if (earthRef.current) {
-      earthRef.current.rotation.y += 0.007; // velocidad de rotacion
+      earthRef.current.rotation.y += 0.007;
     }
   });
 
@@ -26,31 +49,16 @@ const Earth = () => {
     <primitive
       ref={earthRef}
       object={earth.scene}
-      scale={2.9}
-      position={[0, 0.5, 0]} //la posicion!
+      scale={[scale, scale, scale]} // ✅ CORRECTO: debe ser array
+      position={[0, yPos, 0]}       // ✅ CORRECTO: también array
     />
   );
 };
 
 const EarthCanvas = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const { t} = useTranslation();
-
   return (
-    <div style={{ position: "relative" }}>
-      {/* <TouchWorld /> */}
-      <Canvas
-        className="earth-canvas"
-        style={{ height: "800px", marginTop: "5rem" }}
-      >
+    <div className="earth-container">
+      <Canvas className="earth-canvas" style={{ marginTop: '-4.5rem' }}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
@@ -59,34 +67,9 @@ const EarthCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Earth />
-          {/* <Stars /> */}
           <Preload all />
         </Suspense>
       </Canvas>
-
-      <div className="svg-click">
-        {windowWidth > 920 ? (
-          <>
-            <div className="iconText">
-              <div className="mouse">
-                <img src={Mouse} alt="icon" />
-              </div>
-              <div className="text">
-                <p>{t("earth.click")}</p>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="iconText">
-              <div className="mouse">
-                <img src={Hand} alt="icon" style={{ width: "100%" }} />
-              </div>
-              <div className="text"><p>{t("earth.touch")}</p></div>
-            </div>
-          </>
-        )}
-      </div>
     </div>
   );
 };

@@ -8,10 +8,18 @@
   padding: 9px;
   border-radius: 50%;
   cursor: pointer;
+  background-color: #359aee; /* <- nuevo color de fondo */
   transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease; /* Transición suave para el color de fondo, la escala y la sombra */
-  animation: aurora 5s infinite alternate; /* Animación para simular el movimiento */
-  box-shadow: 0 4px 8px rgba(251, 254, 255, 0.2); /* Sombra con color que combina con el fondo hover */
+    box-shadow 0.3s ease;
+  animation: aurora 5s infinite alternate;
+  box-shadow: 0 4px 8px rgba(251, 254, 255, 0.2);
+}
+
+.chatBotImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
 }
 
 .chatBotIcon:hover {
