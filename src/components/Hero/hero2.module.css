@@ -21,13 +21,11 @@
   line-height: 1.6;
   font-family: var(--font-main);
   text-align: left;
-
 }
-
 
 /* 🔹 Título de la sección */
 .sectionTitle {
-  font-family: 'Balbek Pro', sans-serif;
+  font-family: "Balbek Pro", sans-serif;
   font-size: 2.5rem;
   font-weight: normal;
   width: 100%;
@@ -57,6 +55,19 @@
 .listBox li {
   margin-bottom: 0.75rem;
   font-weight: bold;
+}
+
+.containerHero2 {
+  padding: 1.25rem 1.75rem;
+  max-width: 900px;
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 800;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /* 🔹 Descripción */
@@ -94,7 +105,6 @@
   color: white;
 }
 
-
 /* 🔹 Sección asistente virtual */
 .assistantSection {
   position: relative;
@@ -126,16 +136,11 @@
   pointer-events: none;
 }
 
-
-
-
 /* Escalado del contenido */
 .assistantSection .botImageWrapper,
 .assistantSection .botContent {
   transform: scale(1.25);
 }
-
-
 
 /* Imagen del bot */
 .botImageWrapper {
@@ -167,11 +172,10 @@
   font-family: var(--font-main);
   line-height: 1.6;
   z-index: 2;
-
 }
 
 .botTitle {
-  font-family: 'Balbek Pro', sans-serif;
+  font-family: "Balbek Pro", sans-serif;
   color: #3ab7ff;
   font-size: 2rem;
   line-height: 1.2;
@@ -191,14 +195,12 @@
   /* ✅ eliminá cualquier margin por defecto */
   padding: 0;
   /* ✅ asegurate que no tenga padding */
-  
 }
 
 /* Lista del bot */
 .botListBox {
   padding: 0.8rem;
   border-radius: 12px;
-  
 }
 
 .botListBox ul {
@@ -221,7 +223,6 @@
   padding-left: 1.2rem;
 }
 
-
 .botListBox span::before {
   content: "•";
   color: #3ab7ff;
@@ -230,7 +231,6 @@
   left: 0;
   top: -0.25rem;
 }
-
 
 @media screen and (max-width: 768px) {
   .assistantSection {
@@ -253,7 +253,6 @@
     /* Asegura que la imagen escale para cubrir */
   }
 
-
   .botImageWrapper {
     order: -1;
     /* ✅ aparece primero */
@@ -273,9 +272,7 @@
     margin: 0 auto;
     /* ✅ asegura el centrado */
     margin-bottom: 70px;
-
   }
-
 
   .botContent {
     max-width: 100%;
@@ -340,5 +337,4 @@
     left: 0;
     top: 0rem;
   }
-
 }
