@@ -3,6 +3,7 @@ import styles from "./hero4.module.css";
 import {useTranslation} from "react-i18next";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { validateFormFields } from "../../helpers/validateForm"; // ajustá la ruta según sea necesario
 
 const MySwal = withReactContent(Swal);
 
@@ -20,17 +21,30 @@ const Hero4 = () => {
       message: formData.get("message"),
     };
 
+    const errors = validateFormFields(data);
+
+    if (errors.length > 0) {
+      MySwal.fire({
+        title: "❌ Formulario inválido",
+        html: errors.map((e) => `<p>${e}</p>`).join(""),
+        icon: "error",
+        confirmButtonText: "Cerrar",
+        customClass: {
+          popup: "swal2-custom-popup",
+          confirmButton: "swal2-confirm-button",
+        },
+      });
+      return;
+    }
+
     try {
-      const response = await fetch(
-        "https://5a3n19yn44.execute-api.us-east-1.amazonaws.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch("https://5a3n19yn44.execute-api.us-east-1.amazonaws.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       if (response.ok) {
         MySwal.fire({
@@ -39,8 +53,8 @@ const Hero4 = () => {
           icon: "success",
           confirmButtonText: "Aceptar",
           customClass: {
-            popup: "swal2-custom-popup",
-            confirmButton: "swal2-confirm-button",
+            popup: 'swal2-custom-popup',
+            confirmButton: 'swal2-confirm-button',
           },
         });
         e.target.reset();
@@ -51,8 +65,8 @@ const Hero4 = () => {
           icon: "error",
           confirmButtonText: "Cerrar",
           customClass: {
-            popup: "swal2-custom-popup",
-            confirmButton: "swal2-confirm-button",
+            popup: 'swal2-custom-popup',
+            confirmButton: 'swal2-confirm-button',
           },
         });
       }
@@ -64,8 +78,8 @@ const Hero4 = () => {
         icon: "warning",
         confirmButtonText: "Cerrar",
         customClass: {
-          popup: "swal2-custom-popup",
-          confirmButton: "swal2-confirm-button",
+          popup: 'swal2-custom-popup',
+          confirmButton: 'swal2-confirm-button',
         },
       });
     }
@@ -82,8 +96,8 @@ const Hero4 = () => {
         {/* Imagen hardcodeada + subtítulo */}
         <div className={styles.leftColumn}>
           <img
-            src='/images/STICKER-INDIVIDUAL.png'
-            alt='Asistente virtual'
+            src="/images/STICKER-INDIVIDUAL.png"
+            alt="Asistente virtual"
             className={styles.botImage}
           />
           <p className={styles.subtitle}>{subtitle}</p>
@@ -92,19 +106,19 @@ const Hero4 = () => {
         {/* Formulario traducido */}
         <div className={styles.rightColumn}>
           <form className={styles.form} onSubmit={handleSubmit}>
-            <label htmlFor='name'>{t("hero4.form.name")}</label>
-            <input type='text' id='name' name='name' required />
+            <label htmlFor="name">{t("hero4.form.name")}</label>
+            <input type="text" id="name" name="name" required />
 
-            <label htmlFor='email'>{t("hero4.form.email")}</label>
-            <input type='email' id='email' name='email' required />
+            <label htmlFor="email">{t("hero4.form.email")}</label>
+            <input type="email" id="email" name="email" required />
 
-            <label htmlFor='phone'>{t("hero4.form.phone")}</label>
-            <input type='tel' id='phone' name='phone' required />
+            <label htmlFor="phone">{t("hero4.form.phone")}</label>
+            <input type="tel" id="phone" name="phone" required />
 
-            <label htmlFor='message'>{t("hero4.form.message")}</label>
-            <textarea id='message' name='message' rows='4' required />
+            <label htmlFor="message">{t("hero4.form.message")}</label>
+            <textarea id="message" name="message" rows="4" required />
 
-            <button type='submit' className={styles.ctaButton}>
+            <button type="submit" className={styles.ctaButton}>
               {t("hero4.form.submit")}
             </button>
           </form>
