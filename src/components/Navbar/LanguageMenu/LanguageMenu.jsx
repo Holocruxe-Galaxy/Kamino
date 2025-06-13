@@ -1,69 +1,60 @@
-import React, { useState } from "react";
-import styles from "../Navbar.module.css";
+import React, { useState, useEffect } from "react"; 
+import styles from "../Navbar.module.css"; 
 import { useTranslation } from "react-i18next";
 import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
 import itaFlag from "../../../icons/italy.svg";
 
+const flagMap = {
+  es: esFlag,
+  en: enFlag,
+  ita: itaFlag,
+};
+
 const languages = ['es', 'en', 'ita'];
 
-const LanguageButton = ({ language, changeLanguage }) => (
+const LanguageButton = ({ language, changeLanguage, isSelected }) => (
   <button
-    className={styles.langButton}
+    className={`${styles.langButton} ${isSelected ? styles.selectedLangButton : ''}`}
     onClick={() => changeLanguage(language)}
   >
-    <img
-      src={language === "es" ? esFlag : language === "en" ? enFlag : itaFlag}
-      alt={language}
-    />
+    <img src={flagMap[language]} alt={language} />
   </button>
 );
 
 const LanguageMenu = () => {
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    setSelectedLanguage(i18n.language);
+  }, [i18n.language]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const { i18n } = useTranslation();
-  const changeLanguage = (language) => {
+  const changeLanguageAndClose = (language) => {
     i18n.changeLanguage(language);
-    setSelectedLanguage(language);
     setIsOpen(false);
   };
-  const [selectedLanguage, setSelectedLanguage] = useState("es");
 
   return (
-    <div className={styles.langContainer}>
-      <button className={styles.langButton} onClick={toggleMenu}>
-        <img
-          src={
-            selectedLanguage === "es"
-              ? esFlag
-              : selectedLanguage === "en"
-              ? enFlag
-              : itaFlag
-          }
-          alt={selectedLanguage}
-        />
+    <div className={styles.langContainer} onClick={toggleMenu}>
+      <button className={styles.langButton}>
+        <img src={flagMap[selectedLanguage]} alt={selectedLanguage} />
       </button>
       {isOpen && (
         <div
           className={styles.allLang}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <LanguageButton
-            language={selectedLanguage}
-            changeLanguage={changeLanguage}
-            selectedLanguage={selectedLanguage}
-          />
-          {
-            languages.filter((lang) => lang !== selectedLanguage).map((lang) => (
-              <LanguageButton
-                language={lang}
-                changeLanguage={changeLanguage}
-                selectedLanguage={selectedLanguage}
-              />
-            ))
-          }
+          {languages.filter((lang) => lang !== selectedLanguage).map((lang) => (
+            <LanguageButton
+              key={lang} 
+              language={lang}
+              changeLanguage={changeLanguageAndClose} 
+            />
+          ))}
         </div>
       )}
     </div>

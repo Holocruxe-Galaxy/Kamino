@@ -1,54 +1,44 @@
 import styles from "./Footer.module.css";
-import { NavLink } from "react-router-dom";
-import redes from "../../img/redes.js";
+import {IoMailOutline} from "react-icons/io5";
+import {FaInstagram} from "react-icons/fa";
+import {TbBrandLinkedin} from "react-icons/tb";
 
 const Footer = () => {
   return (
     <>
-      <div className={styles.separator}></div>
       <footer className={styles.footerDistributed}>
         <div className={styles.footerLeft}>
-          <img src="./holocruxe.png" alt="logo" />
+          <img src='./holocruxe.png' alt='logo' />
         </div>
 
         <div className={styles.footerCenter}>
-          <p className={styles.footerLinks}>
-            <NavLink
-              to="/"
-              className={`${styles.link1} ${styles.navlink} ${
-                location.pathname === "/" && styles.activeLink
-              }`}
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              Home
-            </NavLink>
-
-            <NavLink to="/faqs" className={styles.navlink} onClick={() => window.scrollTo(0, 0)}>
-              FAQ
-            </NavLink>
-          </p>
-          <p className={styles.copy}>Holocruxe &copy; 2023</p>
+          <p>Holocruxe &copy; 2025</p>
         </div>
 
         <div className={styles.footerRight}>
-          <a
-            href="https://www.instagram.com/holocruxe/"
+          {/* <a
+            href="mailto:contacto@holocruxe.com" 
             className={styles.navlink}
-            target="_blank"
-            rel="noreferrer"
           >
-            <img src={redes.instagram} alt="instagram" />
+            <IoMailOutline className={styles.socialIcon} />
+          </a> */}
+          <a
+            href='https://www.instagram.com/holocruxe/'
+            className={styles.navlink}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaInstagram className={styles.socialIcon} />
           </a>
           <a
-            href="https://www.linkedin.com/company/holocruxe/"
+            href='https://www.linkedin.com/company/holocruxe/'
             className={styles.navlink}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
-            <img src={redes.linkedin} alt="LinkedIn" />
+            <TbBrandLinkedin className={styles.socialIcon} />
           </a>
         </div>
-        <p className={styles.copyMobile}>Holocruxe &copy; 2023</p>
       </footer>
     </>
   );

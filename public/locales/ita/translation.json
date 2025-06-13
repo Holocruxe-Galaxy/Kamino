@@ -4,10 +4,11 @@
     "click": "Clicca sul mondo"
   },
   "navbar": {
-    "home": "Casa",
+    "home": "Pagina iniziale",
     "about": "Informazioni",
-    "waitlist": "Lista d'attesa",
-    "login": "Registrati"
+    "faq": "Domande Frequenti",
+    "blog": "Blog",
+    "cruxieButton" : "Prova Cruxie"
   },
   "landing": {
     "hero": "Siamo bravi a creare eredità",
@@ -58,17 +59,19 @@
     "p": "Iscriviti alla nostra lista d'attesa e sii una delle prime persone a provare questa esperienza unica!"
   },
   "about": {
-    "title-1": "CHI SIAMO ",
-    "holocruxe": "In Holocruxe ",
-    "holocruxeP-1": "siamo un team appassionato che crede nel potere dei ricordi e delle esperienze. ",
-    "holocruxeP-2": "Holocruxe è un'azienda che crea una piattaforma per aiutare le persone a catturare e preservare i propri ricordi. La piattaforma utilizza l'intelligenza artificiale per creare un diario virtuale che cattura l'essenza della vita di una persona. Ciò consente agli utenti di rivivere i propri ricordi in modo più ricco e profondo.",
-    "title-2": "I NOSTRI VALORI",
-    "authenticity": "Autenticità",
-    "authenticityP": "Promuovi l'onestà e l'autenticità catturando e condividendo ricordi, incoraggiando gli utenti a essere se stessi e a condividere le proprie esperienze così come sono state vissute.",
-    "connection": "Connessione",
-    "connectionP": "Promuovi la connessione umana consentendo agli utenti di condividere i propri ricordi con amici, familiari e persone care e fornendo strumenti per rafforzare legami e relazioni.",
-    "privacy": "Privacy",
-    "privacyP": "Rispetta la privacy degli utenti e fornisci loro scelte chiare e trasparenti su come i loro dati personali vengono utilizzati e condivisi. Garantisci forti misure di sicurezza per proteggere le informazioni sensibili."
+    "title-1": "CHI SIAMO",
+    "holocruxe": "Siamo specialisti nella creazione di eredità digitali per le PMI.",
+    "holocruxeP-1-line1": "Siamo nati da una visione chiara: che la conoscenza e l’esperienza di ogni azienda non vadano perse nel caos delle informazioni disperse o nella rotazione del personale.",
+    "holocruxeP-1-line2": "Crediamo che ogni impresa abbia un’eredità che merita di essere tramandata. Oggi accompagniamo le aziende che vogliono lasciare il segno, aiutandole a organizzare la loro conoscenza e a liberare il potenziale dei loro team.",
+    "title-2-line1": "I Nostri",
+    "title-2-line2": "Valori",
+    "authenticity": "Eredità Intelligente",
+    "authenticityP": "Trasformiamo la conoscenza in un bene digitale vivo, accessibile e scalabile, che stimola la crescita della tua azienda.",
+    "connection": "Automazione Strategica",
+    "connectionP": "Liberiamo il tuo team da compiti ripetitivi e processi manuali, permettendo loro di concentrarsi su ciò che conta davvero: l’innovazione e la strategia.",
+    "privacy": "Conoscenza Sicura",
+    "privacyP": "Proteggiamo il bene più prezioso della tua azienda: le sue informazioni. Garantiamo la privacy, la riservatezza e l’integrità dei tuoi dati.",
+    "button-legacy": "Voglio costruire la mia eredità"
   },
   "waitlist": {
     "h2": "LISTA D'ATTESA ",
@@ -77,54 +80,26 @@
     "register2": "Grazie per il tuo interesse!",
     "closeButton": "Chiudi"
   },
-  "faqs": [
-    {
-      "question": "Come funziona Holocruxe",
-      "answer": "Holocruxe è uno strumento che ti consente di catturare e archiviare tutti i tuoi ricordi e le tue esperienze in un unico posto. Con la sua funzione di collegamento ai social media, puoi importare contenuti dalle tue piattaforme preferite e creare un diario digitale della tua vita. Tu puoi anche condividere e collaborare con altri, eseguire il backup dei tuoi ricordi sul cloud e accedervi da diversi dispositivi."
+    "common": {
+      "faq_line1": "Domande",
+      "faq_line2": "Frequenti"
     },
-    {
-      "question": "Come è collegato Holocruxe ai miei social network?",
-      "answer": "Holocruxe utilizza l'integrazione intelligente con i tuoi social network per importare automaticamente i tuoi post, foto e video. Collega semplicemente i tuoi social network e l'app si occuperà del resto, aggiungendo i contenuti al tuo diario personale."
-    },
-    {
-      "question": "Cosa fa l'intelligenza artificiale in Holocruxe?",
-      "answer": "L'intelligenza artificiale analizza i tuoi ricordi e le tue esperienze per generare un diario interattivo e personalizzato. Analizza i tuoi ricordi e applica tag pertinenti. Ciò include il riconoscimento facciale per identificare le persone nelle tue foto, nonché l'analisi dei modelli per taggare eventi o attività specifici . Ciò semplifica la ricerca e l'accesso rapido a momenti specifici nel tuo diario."
-    },
-    {
-      "question": "Holocruxe garantisce la privacy dei miei ricordi e dei miei dati personali?",
-      "answer": "La privacy e la sicurezza dei tuoi dati è la nostra priorità. L'app utilizza misure di sicurezza avanzate per proteggere le tue informazioni personali e ti offre opzioni per controllare la privacy dei tuoi ricordi. Puoi scegliere cosa condividere e con chi, mentre Mantieni il pieno controllo sulla tua vita digitale. La protezione dei tuoi dati è la nostra massima priorità."
-    },
-    {
-      "question": "Cosa succede ai miei dati Holocruxe se perdo il telefono?",
-      "answer": "La sicurezza è la nostra massima priorità. Holocruxe archivia e protegge i tuoi ricordi nel cloud. Se perdi il tuo dispositivo, non perderai mai i tuoi ricordi più preziosi."
-    },
-    {
-      "question": "Holocruxe è disponibile su diverse piattaforme e dispositivi?",
-      "answer": "Sì, puoi accedere al tuo diario dei ricordi dal tuo cellulare, tablet o anche tramite il web. Inoltre, l'app si sincronizza automaticamente su tutti i tuoi dispositivi, assicurandoti di non perdere mai un singolo dettaglio della tua vita."
-    },
-    {
-      "question": "Posso condividere i miei ricordi e le mie esperienze con altre persone nell'app?",
-      "answer": "La nostra app ti dà la possibilità di condividere selettivamente i tuoi ricordi e le tue esperienze con altre persone all'interno dell'app. Puoi scegliere a chi mostrare determinati momenti ed eventi, creando un diario condiviso e collaborativo. Inoltre, puoi invitare amici e la tua famiglia a far parte della tua esperienza, permettendoti di visualizzare, commentare e goderti i tuoi ricordi condivisi. Crediamo che i ricordi siano ancora più preziosi quando sono condivisi e la nostra app è progettata per facilitare quella connessione e condivisione di esperienze significative tra le persone ."
-    },
-    {
-      "question": "Holocruxe dispone di funzioni di ricerca avanzate per trovare ricordi specifici?",
-      "answer": "Sì, Holocruxe dispone di funzionalità di ricerca avanzate che ti consentono di trovare rapidamente ricordi specifici. Puoi effettuare ricerche per date, luoghi, persone taggate o persino utilizzare parole chiave per trovare quel momento speciale che desideri rivivere."
-    },
-    {
-      "question": "¿L'app offre opzioni di backup e sincronizzazione nel cloud",
-      "answer": "Sì, l'app offre opzioni di backup e sincronizzazione nel cloud. I tuoi ricordi e il tuo diario sono archiviati in modo sicuro nel cloud, offrendoti tranquillità nel caso in cui perdi o cambi dispositivo. Inoltre, puoi accedere al tuo diario da qualsiasi luogo e su qualsiasi dispositivo dotato di connessione Internet."
-    },
-    {
-      "question": "Esiste un piano di abbonamento o l'app è completamente gratuita?",
-      "answer": "L'app offre un mix di funzionalità gratuite e opzioni premium attraverso piani di abbonamento. Puoi usufruire di molte funzionalità di base gratuitamente, ma offriamo anche vantaggi aggiuntivi e funzionalità avanzate per coloro che optano per un abbonamento premium. "
-    },
-    {
-      "question": "Quanto tempo impiega l'app ad aggiornarsi quando carico una foto o un video sui miei social network?",
-      "answer": "l tempo di aggiornamento può variare. In genere, le app Ricordi ed Esperienze si sincronizzano automaticamente, riflettendo il contenuto in breve tempo. La velocità dipende dalle impostazioni di sincronizzazione, dalla connessione Internet e da altri fattori."
-    },
-    {
-      "question": "Come posso importare i miei ricordi dei social media nell'app?",
-      "answer": "Puoi importare i tuoi ricordi sui social media semplicemente collegando il tuo account social media nelle impostazioni dell'app. Una volta connessa, l'app sincronizzerà automaticamente i tuoi contenuti, come post, foto e video, e li aggiungerà ai tuoi contenuti digitali. diario."
+    "faqs": {
+      "0": {
+        "question": "Cos’è Holocruxe?",
+        "answer": "È una piattaforma di intelligenza artificiale che ti permette di creare i tuoi “Cruxie”: agenti intelligenti progettati per centralizzare le conoscenze e l’esperienza della tua azienda in un’eredità digitale viva. Conservano il sapere e automatizzano le attività ripetitive, affinché il tuo team possa concentrarsi su ciò che è strategico."
+      },
+      "1": {
+        "question": "Come funziona Cruxie?",
+        "answer": "Impara a partire dalle informazioni che gli fornisci: documenti, manuali, database, archivi storici, e altro. A partire da questo, crea un modello di conoscenza personalizzato che gli permette di rispondere a domande, automatizzare processi e assistere il tuo team con precisione ed efficienza."
+      },
+      "2": {
+        "question": "Quanto sono privati i miei dati?",
+        "answer": "La sicurezza e la privacy sono la nostra priorità: garantiamo la riservatezza e l'integrità delle tue informazioni. Tutte le conversazioni con Cruxie sono private per impostazione predefinita, e solo tu decidi cosa condividere, con chi e quando. Puoi mantenere il tuo Cruxie per uso interno oppure permettere ad altri team di accedere alle sue conoscenze. Hai il pieno controllo sull’eredità digitale della tua azienda."
+      },
+      "3": {
+        "question": "Come posso iniziare a usare Cruxie nella mia organizzazione?",
+        "answer": "Accedi dalla pagina principale e registrati. Puoi creare un account personale per esplorare la piattaforma o cliccare su “crea un account aziendale”, compilare un modulo e il nostro team ti contatterà per accompagnarti nel processo."
+      }
     }
-  ]
 }

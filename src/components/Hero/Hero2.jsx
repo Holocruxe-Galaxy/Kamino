@@ -1,8 +1,8 @@
 import styles from "./hero2.module.css";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 const Hero2 = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const assistantItems = [
     t("hero2.assistantItem1"),
@@ -14,7 +14,7 @@ const Hero2 = () => {
     <>
       {/* Sección informativa */}
       <section className={styles.infoSection}>
-        <h2 className={styles.sectionTitle}>{t("hero2.h2")}</h2>
+        {/* <h2 className={styles.sectionTitle}>{t("hero2.h2")}</h2> */}
 
         <div className={styles.botDescriptionBox}>
           <div className={styles.descriptionBox}>
@@ -29,20 +29,22 @@ const Hero2 = () => {
 
         <div className={styles.botImageWrapper}>
           <img
-            src="/images/STICKER-INDIVIDUAL.png"
+            src='/images/STICKER-INDIVIDUAL.png'
             alt={t("hero2.assistantTitle")}
             className={styles.botImage}
           />
         </div>
 
         <div className={styles.botContent}>
-          <h2 className={styles.botTitle}>{t("hero2.assistantTitle")}</h2>
+          {/* <h2 className={styles.botTitle}>{t("hero2.assistantTitle")}</h2> */}
 
           <div className={styles.botDescriptionBox}>
             <p className={styles.botDescription}>{t("hero2.assistantText")}</p>
             <div className={styles.botListBox}>
               {assistantItems.map((item, index) => (
-                <span key={index}><strong>{item}</strong></span>
+                <span key={index}>
+                  <strong>{item}</strong>
+                </span>
               ))}
             </div>
 

@@ -1,9 +1,8 @@
 import styles from "./hero3.module.css";
-import { useTranslation } from "react-i18next";
-import { HiArrowNarrowRight } from "react-icons/hi"; // o el que uses
+import {useTranslation} from "react-i18next";
 
 const Hero3 = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const bottomTitleWords = t("hero3.bottomTitle")?.trim().split(" ") || [];
 
@@ -11,15 +10,13 @@ const Hero3 = () => {
     <section className={`${styles.heroSection} ${styles.hero3Section}`}>
       <div className={styles.textContent}>
         {/* Título superior completo sin spans */}
-        <h2 className={styles.topTitle}>{t("hero3.top")}</h2>
+        <h2 className={styles.topTitle}>{t("hero3.title")}</h2>
 
         {/* Título intermedio */}
-        <h3 className={styles.mainTitle2}>{t("hero3.title")}</h3>
+        {/* <h3 className={styles.mainTitle2}>{t("hero3.title")}</h3> */}
 
         {/* Caja de descripción */}
-        <p className={styles.descriptionBox}>
-          {t("hero3.box")}
-        </p>
+        <p className={styles.descriptionBox}>{t("hero3.box")}</p>
 
         {/* Título principal inferior dividido */}
         <h1 className={styles.mainTitle}>
@@ -34,7 +31,13 @@ const Hero3 = () => {
         {/* Botón CTA */}
         <button
           className={styles.ctaButton}
-          onClick={() => window.open("https://cruxie.holocruxe.com/", "_blank", "noopener,noreferrer")}
+          onClick={() =>
+            window.open(
+              "https://cruxie.holocruxe.com/",
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
         >
           {t("hero3.cta")}
         </button>

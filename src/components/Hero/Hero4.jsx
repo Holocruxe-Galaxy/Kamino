@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./hero4.module.css";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { validateFormFields } from "../../helpers/validateForm"; // ajustá la ruta según sea necesario
@@ -8,7 +8,7 @@ import { validateFormFields } from "../../helpers/validateForm"; // ajustá la r
 const MySwal = withReactContent(Swal);
 
 const Hero4 = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,15 +30,15 @@ const Hero4 = () => {
         icon: "error",
         confirmButtonText: "Cerrar",
         customClass: {
-          popup: 'swal2-custom-popup',
-          confirmButton: 'swal2-confirm-button',
+          popup: "swal2-custom-popup",
+          confirmButton: "swal2-confirm-button",
         },
       });
       return;
     }
 
     try {
-      const response = await fetch("https://tt9e2hunr1.execute-api.us-east-1.amazonaws.com/contact", {
+      const response = await fetch("https://5a3n19yn44.execute-api.us-east-1.amazonaws.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
