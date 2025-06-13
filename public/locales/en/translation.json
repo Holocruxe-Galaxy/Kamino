@@ -6,23 +6,52 @@
   "navbar": {
     "home": "Home",
     "about": "About Us",
-    "waitlist": "Waitlist",
-    "login": "Log In"
+    "faq": "FAQ",
+    "blog": "Blog",
+    "cruxieButton" : "Test Cruxie "
   },
   "landing": {
-    "hero": "A trip to ",
-    "hero-a": "your experience",
-    "hero-b": "Holocruxe is a revolutionary platform powered by artificial intelligence that allows you to preserve your most precious memories in a secure and organized way. Can you imagine having instant access to all your data in one place? With Holocruxe, it's possible."
+    "hero": "We are good at creating legacy",
+    "hero-a": "We create digital legacy for SMEs through artificial intelligence. Your team may change. Your legacy won't.",
+    "hero-b": "I want to build my legacy →",
+    "hero-scroll-alt": "Scroll icon",
+    "hero-scroll-text": "Click the world"
   },
   "hero2": {
-    "h2": "Our ",
-    "span": "mission is",
-    "p": " To transform the way people manage their personal information. With Holocruxe, you can create your own digital identity and take full control of your data in an increasingly complex virtual world. You no longer have to worry about losing information or searching for it on disparate platforms."
+    "h2": "Introduction to the problem",
+    "p": "We create AI agents trained with your company's knowledge to act as your best collaborator… always available. Automate tasks, answer questions, and protect the know-how that makes your business unique.",
+    "assistantTitle": "Problem Presentation",
+    "assistantText": "Imagine this:",
+    "assistantItem1": "Your star engineer leaves… taking years of product know-how with them.",
+    "assistantItem2": "Your sales manager changes direction… and takes insights from key negotiations.",
+    "assistantItem3": "You review 18 emails and 3 chats just to find out WHY a key decision was made 6 months ago…",
+    "p2": "This knowledge drain slows growth… and while your team loses time on repetitive tasks, AI could be handling them."
   },
   "hero3": {
-    "h2": "All in ",
-    "span": "one place",
-    "p": "Imagine never again losing an important memory or wasting time searching for information scattered across different platforms. Our Holocruxe manages your data efficiently and securely, allowing you to relive moments and access crucial information with ease."
+    "top": "Solution Presentation",
+    "title": "Imagine an employee who never gets sick, never quits, and multiplies your team’s knowledge",
+    "box": "With Cruxie, each employee and business area has an 'intelligent agent' trained with the real knowledge of your business. This way, you automate repetitive tasks and unify your company's knowledge for the entire team… 24/7.",
+    "bottomTitle": "YOUR COMPANY EVOLVES. YOUR LEGACY REMAINS.",
+    "cta": "I want to build my legacy ➜"
+  },
+  "hero4": {
+    "title": "LET'S TALK ABOUT YOUR DIGITAL LEGACY",
+    "subtitle": "Book your personalized demo",
+    "form": {
+      "name": "Full Name:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "message": "Message:",
+      "submit": "Send Message ➜"
+    }
+  },
+  "hero5": {
+    "title": "Benefits Presentation",
+    "subtitle": "Companies that have transformed their operations with digital legacy:",
+    "benefit1": "Halved the time lost searching for key information.",
+    "benefit2": "Automated critical tasks that previously consumed valuable hours.",
+    "benefit3": "Preserved the unique know-how of each area.",
+    "benefit4": "Scaled their business without fear of staff turnover, because their digital legacy is always available."
   },
   "heroT": {
     "h2": "Do you want ",
@@ -30,17 +59,19 @@
     "p": "Join our waiting list and be one of the first people to try this unique experience."
   },
   "about": {
-    "title-1": "WHO WE ARE?",
-    "holocruxe": "At Holocruxe ",
-    "holocruxeP-1": "we are a passionate team that believes in the power of memories and experiences.",
-    "holocruxeP-2": "Holocruxe is a company that creates a platform to help people capture and preserve their memories. The platform uses artificial intelligence to create a virtual diary that captures the essence of a person's life. This allows users to relive their memories in a richer and deeper way.",
-    "title-2": "OUR VALUES",
-    "authenticity": "Authenticity",
-    "authenticityP": " Promote honesty and authenticity by capturing and sharing memories, ecouraging users to be themselves and share their experiences as they lived them.",
-    "connection": "Connection",
-    "connectionP": "Promote human connection by enabling users to share theirmemories with friends , family and loved ones, and provide toold to strengthen bonds and relationships.",
-    "privacy": "Privacy",
-    "privacyP": "Respecting users' privacy and providing them with clear and transparent choices about how their personal data is used and shared. Ensure robust security measures to protect sensitive information."
+    "title-1": "ABOUT US",
+    "holocruxe": "We specialize in creating digital legacies for small and medium-sized businesses.",
+    "holocruxeP-1-line1": "We were born from a clear vision: to ensure that the knowledge and experience of each company are not lost in scattered information or employee turnover. We believe every business has a legacy worth preserving.",
+    "holocruxeP-1-line2": "Today, we partner with companies that want to make a lasting impact—helping them organize their knowledge and unlock the full potential of their teams.",
+    "title-2-line1": "Our",
+    "title-2-line2": "Values",
+    "authenticity": "Smart Legacy",
+    "authenticityP": "We turn knowledge into a living, digital asset—accessible, scalable, and designed to drive your company’s growth.",
+    "connection": "Strategic Automation",
+    "connectionP": "We free your team from repetitive tasks and manual processes, allowing them to focus on what truly matters: innovation and strategy.",
+    "privacy": "Secure Knowledge",
+    "privacyP": "We protect your company’s most valuable asset—its information. We ensure the privacy, confidentiality, and integrity of your data.",
+    "button-legacy": "I want to build my legacy"
   },
   "waitlist": {
     "h2": "WAITLIST",
@@ -49,54 +80,26 @@
     "register2": "Thank you for signing up!",
     "closeButton": "Close"
   },
-  "faqs": [
-    {
-      "question": "How does Holocruxe work? ",
-      "answer": "'Holocruxe is a tool that allows you to capture and store all your memories and experiences in one place. With its social media linking feature, you can import content from your favourite platforms and create a digital diary of your life. You can also share and collaborate with others, back up your memories in the cloud and access them from different devices.'"
-    },
-    {
-      "question": "'How does Holocruxe link to my social networks?' ",
-      "answer": "'Holocruxe uses smart integration with your social networks to automatically import your posts, photos and videos. You just need to connect your social networks and the app will do the rest, adding that content to your personal diary.'"
-    },
-    {
-      "question": "'What does the artificial intelligence in Holocruxe do?' ",
-      "answer": "'Artificial intelligence analyses your memories and experiences to generate an interactive and personalised diary. It analyses your memories and applies relevant tags. This includes facial recognition to identify people in your photos, as well as pattern analysis to tag specific events or activities. This makes it easy to search and quickly access specific moments in your diary.'"
-    },
-    {
-      "question": "'Does Holocruxe guarantee the privacy of my memories and personal data?' ",
-      "answer": "'The privacy and security of your data is our priority. The app uses advanced security measures to protect your personal information and gives you options to control the privacy of your memories. You can choose what to share and with whom, while maintaining full control over your digital life. Protecting your data is our top priority.'"
-    },
-    {
-      "question": "'What happens to my Holocruxe data if I lose my phone?' ",
-      "answer": " 'Security is our top priority. Holocruxe stores and secures your memories in the cloud. If you lose your device, you will never lose your valuable memories.'"
-    },
-    {
-      "question": "'Is Holocruxe available on different platforms and devices?' ",
-      "answer": "'Yes, you can access your memory journal from your mobile phone, tablet or even the web. In addition, the app automatically syncs across all your devices, making sure you never miss a single detail of your life.'"
-    },
-    {
-      "question": "'Can I share my memories and experiences with other people on the app?' ",
-      "answer": " 'Our app gives you the possibility to selectively share your memories and experiences with other people within the app. You can choose who to show certain moments and events to, creating a shared and collaborative diary. In addition, you can invite friends and family to be part of your experience, allowing you to view, comment and enjoy your shared memories. We believe that memories are even more valuable when they are shared, and our app is designed to facilitate that connection and the sharing of meaningful experiences between people.'"
-    },
-    {
-      "question": "'Does Holocruxe have advanced search functions to find specific memories?' ",
-      "answer": "'Yes, Holocruxe has advanced search features that allow you to quickly find specific memories. You can search by dates, locations, tagged people or even use keywords to find that special moment you want to relive.'"
-    },
-    {
-      "question": "'Does the app offer cloud backup and sync options?' ",
-      "answer": "'Yes, the app offers cloud backup and sync options. Your memories and journal are stored securely in the cloud, giving you peace of mind in case you lose or change your device. Plus, you can access your journal from anywhere and on any device with an internet connection.'"
-    },
-    {
-      "question": "'Are there any subscription plans or is the app completely free?' ",
-      "answer": "'The app offers a combination of free features and premium options through subscription plans. You can enjoy many basic features for free, but we also offer additional benefits and advanced features for those who opt for a premium subscription.'"
-    },
-    {
-      "question": "'How long does it take for the app to update when I upload a photo or video to my social networks?' ",
-      "answer": "'The update time may vary. Generally, the memories and experiences apps sync automatically, reflecting the content in a short time. Speed depends on sync settings, internet connection and other factors.' "
-    },
-    {
-      "question": "'How can I import my social media memories into the app?' ",
-      "answer": "'You can import your social media memories by simply connecting your social media account in the app settings. Once connected, the app will automatically sync your content, such as posts, photos and videos, and add them to your digital diary.'"
-    }
-  ]
+    "common": {
+      "faq_line1": "Frequently",
+      "faq_line2": "Asked Questions"
+    }, 
+"faqs": {
+  "0": {
+    "question": "What is Holocruxe? ",
+    "answer": "Holocruxe is an AI-powered platform that lets you create your own 'Cruxies'—intelligent agents designed to centralize your company's knowledge and expertise into a living digital legacy. They preserve your know-how and automate repetitive tasks so your team can focus on strategic initiatives."
+  },
+  "1": {
+    "question": "How does Cruxie work?",
+    "answer": "Cruxie learns from the information you provide: documents, manuals, databases, historical files, and more. From there, it builds a personalized knowledge model that allows it to answer questions, automate workflows, and assist your team with precision and efficiency."
+  },
+  "2": {
+    "question": "How private is my data?",
+    "answer": "Security and privacy are our top priorities. We guarantee the confidentiality and integrity of your information. All conversations with Cruxie are private by default, and only you decide what to share, with whom, and when. You can keep your Cruxie for internal use or enable other teams to access its knowledge. You have full control over your company’s digital legacy."
+  },
+  "3": {
+    "question": "How do I start using Cruxie in my organization?",
+    "answer": "Simply go to our homepage and sign up. You can create a personal account to explore the platform, or click on 'Create a company account,' fill out the form, and our team will contact you to guide you through the onboarding process."
+  }
+}
 }

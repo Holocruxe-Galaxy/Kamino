@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
-import menu from "../../img/menu";
-import styles from "./Navbar.module.css";
-import Mobile from "./Mobile";
+import menu from "../../img/menu"; 
+import styles from "./NavbarHome.module.css"; 
+import Mobile from "./Mobile"; 
 import { useTranslation } from "react-i18next";
-import LanguageMenu from "./LanguageMenu/LanguageMenu";
+import LanguageMenu from "./LanguageMenu/LanguageMenu"; 
 
-const Navbar = () => {
+const NavbarHome = () => {
   const location = useLocation();
   const hasVisited = sessionStorage.getItem("visited");
 
@@ -42,10 +42,7 @@ const Navbar = () => {
     }
   };
 
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const { t } = useTranslation();
 
   return (
     <header className={styles.container}>
@@ -80,7 +77,7 @@ const Navbar = () => {
               variants={pathVariants}
             />
             <motion.path
-              d="M621.657 29.565C620.19 27.77 620.455 25.125 622.25 23.6574C624.045 22.1897 626.69 22.4552 628.158 24.2502C629.626 26.0453 629.36 28.6902 627.565 30.1579C625.77 31.6255 623.125 31.3601 621.657 29.565Z"
+              d="M621.657 29.565C620.19 27.77 620.455 25.125 622.25 23.6574C624.045 22.1897 626.69 22.4552 628.158 24.2502C629.626 26.0453 629.360 28.6902 627.565 30.1579C625.770 31.6255 623.125 31.3601 621.657 29.565Z"
               fill="#349aef"
               variants={pathVariants}
             />
@@ -130,7 +127,7 @@ const Navbar = () => {
               fill="#349aef"
             />
             <motion.path
-              d="M402.657 88.565C401.19 86.77 401.455 84.125 403.25 82.6574C405.045 81.1898 407.69 81.4552 409.158 83.2502C410.626 85.0453 410.36 87.6902 408.565 89.1579C406.77 90.6255 404.125 90.3601 402.657 88.565Z"
+              d="M402.657 88.565C401.19 86.77 401.455 84.125 403.25 82.6574C405.045 81.1898 407.69 81.4552 409.158 83.2502C410.626 85.0453 410.360 87.6902 408.565 89.1579C406.770 90.6255 404.125 90.3601 402.657 88.565Z"
               fill="#349aef"
               variants={pathVariants}
             />
@@ -180,46 +177,36 @@ const Navbar = () => {
           </motion.svg>
         </NavLink>
       </div>
-      <nav
-        className={`${styles.navbar} ${
-          !hasVisited && location.pathname === "/" && styles.navbarAnim
-        }`}
-      >
-        <NavLink
-          to="/"
-          className={`${styles.link} ${
-            location.pathname === "/" && styles.activeLink
-          }`}
-        >
-          {t("navbar.home")}
-        </NavLink>
+      <nav className={styles.navbar}>
+
         <NavLink
           to="/about"
           className={`${styles.link} ${
-            location.pathname === "/about" ? styles.activeLink : null
+            location.pathname === "/about" ? styles.activeLink : ""
           }`}
         >
           {t("navbar.about")}
         </NavLink>
         <NavLink
-          to="/faqs" 
+          to="/faqs"
           className={`${styles.link} ${
-            location.pathname === "/faqs" ? styles.activeLink : null
+            location.pathname === "/faqs" ? styles.activeLink : ""
           }`}
         >
-          {t("navbar.faq")} 
+          {t("navbar.faq")}
         </NavLink>
         <NavLink
-          to="/blog" 
+          to="/blog"
           className={`${styles.link} ${
-            location.pathname === "/blog" ? styles.activeLink : null
+            location.pathname === "/blog" ? styles.activeLink : ""
           }`}
         >
-          {t("navbar.blog")} 
+          {t("navbar.blog")}
         </NavLink>
         <div className={styles.indicator}></div>
       </nav>
-      <div className={styles.navBarContainer}>
+      <div className={styles.rightNavControls}>
+        <LanguageMenu />
         <nav className={styles.mobile} onClick={toggleMenu}>
           <img
             className={styles.hamburger}
@@ -227,10 +214,19 @@ const Navbar = () => {
             alt={menuOpen ? "Close menu" : "Open menu"}
           />
         </nav>
-        <LanguageMenu />
-        <Mobile menuOpen={menuOpen} toggleMenu={toggleMenu} />
+        <a
+        href="https://cruxie.holocruxe.com/" 
+        target="_blank"
+        rel="noopener noreferrer" 
+        className={styles.probaCruxieLink} 
+    >
+    <span>{t("navbar.cruxieButton")}</span>
+    <span className={styles.plusSign}>+</span>
+  </a>
       </div>
+      <Mobile menuOpen={menuOpen} toggleMenu={toggleMenu} />
     </header>
   );
 };
-export default Navbar;
+
+export default NavbarHome;
