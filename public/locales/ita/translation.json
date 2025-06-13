@@ -13,7 +13,7 @@
   "landing": {
     "hero": "Siamo bravi a creare eredità",
     "hero-a": "Creiamo eredità digitali per le PMI attraverso l’intelligenza artificiale. Il team della tua azienda può cambiare. La tua eredità, no.",
-    "hero-b": "Voglio costruire la mia eredità →",
+    "hero-b": "Voglio costruire la mia eredità ",
     "hero-scroll-alt": "Icona di scorrimento",
     "hero-scroll-text": "Clicca sul mondo"
   },
@@ -34,7 +34,7 @@
   },
   "hero4": {
     "title": "PARLIAMO DELLA TUA EREDITÀ DIGITALE",
-    "subtitle": "Prenota la tua demo personalizzata",
+    "subtitle": "Richiedi un incontro personalizzato gratuito con il nostro team.",
     "form": {
       "name": "Nome e Cognome:",
       "email": "Email:",
