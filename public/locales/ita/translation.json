@@ -10,19 +10,47 @@
     "login": "Registrati"
   },
   "landing": {
-    "hero": "Un viaggio ",
-    "hero-a": "attraverso il tempo",
-    "hero-b": "Holocruxe è una piattaforma rivoluzionaria alimentata dall'intelligenza artificiale che ti consente di conservare i tuoi ricordi più preziosi in modo sicuro e organizzato. Riesci a immaginare di avere accesso immediato a tutti i tuoi dati in un unico posto? Con Holocruxe, questo è possibile."
+    "hero": "Siamo bravi a creare eredità",
+    "hero-a": "Creiamo eredità digitali per le PMI attraverso l’intelligenza artificiale. Il team della tua azienda può cambiare. La tua eredità, no.",
+    "hero-b": "Voglio costruire la mia eredità →",
+    "hero-scroll-alt": "Icona di scorrimento",
+    "hero-scroll-text": "Clicca sul mondo"
   },
   "hero2": {
-    "h2": "Nostro ",
-    "span": "missione ",
-    "p": "Si tratta di trasformare il modo in cui le persone gestiscono le proprie informazioni personali. Con Holocruxe puoi creare la tua identità digitale e assumere il pieno controllo dei tuoi dati in un mondo virtuale sempre più complesso. Non dovrai più preoccuparti di perdere informazioni o cercarle su piattaforme sparse."
+    "h2": "Introduzione al problema",
+    "p": "Creiamo agenti di IA addestrati con la conoscenza della tua azienda per agire come il tuo miglior collaboratore… sempre disponibili. Automatizza le attività, rispondi alle domande e proteggi il know-how che rende unica la tua impresa.",
+    "assistantTitle": "Presentazione del problema",
+    "assistantText": "Immagina questo:",
+    "assistantItem1": "Il tuo ingegnere migliore se ne va… e con lui anni di conoscenze sul prodotto.",
+    "assistantItem2": "Il tuo responsabile commerciale cambia strada… portandosi via informazioni chiave sulle trattative.",
+    "assistantItem3": "Controlli 18 email e 3 chat solo per capire PERCHÉ è stata presa una decisione importante 6 mesi fa…",
+    "p2": "Questa perdita di conoscenze frena la crescita… e mentre il tuo team perde tempo con compiti ripetitivi, l’IA potrebbe gestirli."
   },
   "hero3": {
-    "h2": "Tutto dentro ",
-    "span": "un unico luogo",
-    "p": "Immagina di non perdere mai più un ricordo importante o di perdere tempo alla ricerca di informazioni sparse su diverse piattaforme. Il nostro Holocruxe gestisce i tuoi dati in modo efficiente e sicuro, permettendoti di rivivere momenti e accedere a informazioni cruciali con facilità."
+    "top": "Presentazione della soluzione",
+    "title": "Immagina un dipendente che non si ammala mai, non si dimette mai e moltiplica la conoscenza del tuo team",
+    "box": "Con Cruxie, ogni dipendente e area aziendale ha un 'agente intelligente' addestrato con la conoscenza reale della tua azienda. In questo modo, automatizzi le attività ripetitive e unifichi la conoscenza della tua impresa per tutto il team… 24/7.",
+    "bottomTitle": "LA TUA AZIENDA EVOLVE. IL TUO LASCITO RIMANE.",
+    "cta": "Voglio costruire il mio lascito ➜"
+  },
+  "hero4": {
+    "title": "PARLIAMO DELLA TUA EREDITÀ DIGITALE",
+    "subtitle": "Prenota la tua demo personalizzata",
+    "form": {
+      "name": "Nome e Cognome:",
+      "email": "Email:",
+      "phone": "Telefono:",
+      "message": "Messaggio:",
+      "submit": "Invia messaggio ➜"
+    }
+  },
+  "hero5": {
+    "title": "Presentazione dei Benefici",
+    "subtitle": "Aziende che hanno trasformato la loro operatività con il lascito digitale:",
+    "benefit1": "Hanno dimezzato il tempo perso nella ricerca di informazioni chiave.",
+    "benefit2": "Hanno automatizzato attività critiche che prima richiedevano ore preziose.",
+    "benefit3": "Hanno preservato il know-how unico di ogni area.",
+    "benefit4": "Hanno scalato il business senza paura del turnover, perché il loro lascito digitale è sempre disponibile."
   },
   "heroT": {
     "h2": "¿Vuoi ",

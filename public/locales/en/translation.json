@@ -10,19 +10,47 @@
     "login": "Log In"
   },
   "landing": {
-    "hero": "A trip to ",
-    "hero-a": "your experience",
-    "hero-b": "Holocruxe is a revolutionary platform powered by artificial intelligence that allows you to preserve your most precious memories in a secure and organized way. Can you imagine having instant access to all your data in one place? With Holocruxe, it's possible."
+    "hero": "We are good at creating legacy",
+    "hero-a": "We create digital legacy for SMEs through artificial intelligence. Your team may change. Your legacy won't.",
+    "hero-b": "I want to build my legacy →",
+    "hero-scroll-alt": "Scroll icon",
+    "hero-scroll-text": "Click the world"
   },
   "hero2": {
-    "h2": "Our ",
-    "span": "mission is",
-    "p": " To transform the way people manage their personal information. With Holocruxe, you can create your own digital identity and take full control of your data in an increasingly complex virtual world. You no longer have to worry about losing information or searching for it on disparate platforms."
+    "h2": "Introduction to the problem",
+    "p": "We create AI agents trained with your company's knowledge to act as your best collaborator… always available. Automate tasks, answer questions, and protect the know-how that makes your business unique.",
+    "assistantTitle": "Problem Presentation",
+    "assistantText": "Imagine this:",
+    "assistantItem1": "Your star engineer leaves… taking years of product know-how with them.",
+    "assistantItem2": "Your sales manager changes direction… and takes insights from key negotiations.",
+    "assistantItem3": "You review 18 emails and 3 chats just to find out WHY a key decision was made 6 months ago…",
+    "p2": "This knowledge drain slows growth… and while your team loses time on repetitive tasks, AI could be handling them."
   },
   "hero3": {
-    "h2": "All in ",
-    "span": "one place",
-    "p": "Imagine never again losing an important memory or wasting time searching for information scattered across different platforms. Our Holocruxe manages your data efficiently and securely, allowing you to relive moments and access crucial information with ease."
+    "top": "Solution Presentation",
+    "title": "Imagine an employee who never gets sick, never quits, and multiplies your team’s knowledge",
+    "box": "With Cruxie, each employee and business area has an 'intelligent agent' trained with the real knowledge of your business. This way, you automate repetitive tasks and unify your company's knowledge for the entire team… 24/7.",
+    "bottomTitle": "YOUR COMPANY EVOLVES. YOUR LEGACY REMAINS.",
+    "cta": "I want to build my legacy ➜"
+  },
+  "hero4": {
+    "title": "LET'S TALK ABOUT YOUR DIGITAL LEGACY",
+    "subtitle": "Book your personalized demo",
+    "form": {
+      "name": "Full Name:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "message": "Message:",
+      "submit": "Send Message ➜"
+    }
+  },
+  "hero5": {
+    "title": "Benefits Presentation",
+    "subtitle": "Companies that have transformed their operations with digital legacy:",
+    "benefit1": "Halved the time lost searching for key information.",
+    "benefit2": "Automated critical tasks that previously consumed valuable hours.",
+    "benefit3": "Preserved the unique know-how of each area.",
+    "benefit4": "Scaled their business without fear of staff turnover, because their digital legacy is always available."
   },
   "heroT": {
     "h2": "Do you want ",
