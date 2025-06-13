@@ -46,7 +46,7 @@
     }
   },
   "hero5": {
-    "title": "PRESENTACIÓN DE BENEFICIOS",
+    "title": "Empresas que han transformado su operación con legado digital",
     "subtitle": "Empresas que han transformado su operación con legado digital:",
     "benefit1": "Redujeron a la mitad el tiempo perdido en buscar información clave.",
     "benefit2": "Automatizaron tareas críticas que antes consumían horas valiosas.",
@@ -85,26 +85,26 @@
     "title-line2": "está en construcción",
     "btn-back-home": "Volver al HOME"
   },
-    "common": {
-      "faq_line1": "Preguntas",
-      "faq_line2": "Frecuentes"
-    },
+  "common": {
+    "faq_line1": "Preguntas",
+    "faq_line2": "Frecuentes"
+  },
   "faqs": {
-  "0": {
-    "question": "¿Qué es Holocruxe?",
-    "answer": "Es una plataforma de inteligencia artificial que te permite crear tus propios “Cruxies”: agentes inteligentes diseñados para centralizar el conocimiento y la experiencia de tu empresa en un legado digital vivo. Preservan el saber y automatizan tareas repetitivas, para que tu equipo se enfoque en lo estratégico."
-  },
-  "1": {
-    "question": "¿Cómo funciona CRUXIE?",
-    "answer": "Este aprende a partir de la información que le proporcionás: documentos, manuales, bases de datos, archivos históricos, entre otros. A partir de ahí, crea un modelo de conocimiento personalizado que le permite responder preguntas, automatizar procesos y asistir a tu equipo con precisión y eficiencia. "
-  },
-  "2": {
-    "question": "¿Qué tan privado son mis datos?",
-    "answer": "La seguridad y la privacidad son nuestra prioridad y garantizamos la confidencialidad e integridad de tu información. Todas las conversaciones con Cruxie son privadas por defecto, y solo vos decidís qué compartir, con quién y cuándo. Podés mantener tu Cruxie para uso interno o habilitarlos para que otros equipos accedan a su conocimiento. Vos tenés el control total sobre el legado digital de tu empresa."
-  },
-  "3": {
-    "question": "¿Cómo empiezo a usar Cruxie en mi organización?",
-    "answer": "Accedé desde la página principal y registrate. Podés crear una cuenta personal para explorar la plataforma o hacer clic en “crear una cuenta de empresa”, completar un formulario y nuestro equipo se pondrá en contacto para acompañarte en el proceso."
+    "0": {
+      "question": "¿Qué es Holocruxe?",
+      "answer": "Es una plataforma de inteligencia artificial que te permite crear tus propios “Cruxies”: agentes inteligentes diseñados para centralizar el conocimiento y la experiencia de tu empresa en un legado digital vivo. Preservan el saber y automatizan tareas repetitivas, para que tu equipo se enfoque en lo estratégico."
+    },
+    "1": {
+      "question": "¿Cómo funciona CRUXIE?",
+      "answer": "Este aprende a partir de la información que le proporcionás: documentos, manuales, bases de datos, archivos históricos, entre otros. A partir de ahí, crea un modelo de conocimiento personalizado que le permite responder preguntas, automatizar procesos y asistir a tu equipo con precisión y eficiencia. "
+    },
+    "2": {
+      "question": "¿Qué tan privado son mis datos?",
+      "answer": "La seguridad y la privacidad son nuestra prioridad y garantizamos la confidencialidad e integridad de tu información. Todas las conversaciones con Cruxie son privadas por defecto, y solo vos decidís qué compartir, con quién y cuándo. Podés mantener tu Cruxie para uso interno o habilitarlos para que otros equipos accedan a su conocimiento. Vos tenés el control total sobre el legado digital de tu empresa."
+    },
+    "3": {
+      "question": "¿Cómo empiezo a usar Cruxie en mi organización?",
+      "answer": "Accedé desde la página principal y registrate. Podés crear una cuenta personal para explorar la plataforma o hacer clic en “crear una cuenta de empresa”, completar un formulario y nuestro equipo se pondrá en contacto para acompañarte en el proceso."
+    }
   }
-}
 }

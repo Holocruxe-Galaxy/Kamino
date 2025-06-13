@@ -1,8 +1,8 @@
 import styles from "./hero5.module.css";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 const Hero5 = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const benefits = [
     t("hero5.benefit1"),
@@ -15,9 +15,9 @@ const Hero5 = () => {
     <section className={styles.hero5Section}>
       <div className={styles.textContent}>
         <h2 className={styles.topTitle}>{t("hero5.title")}</h2>
-        <div className={styles.descriptionBox}>
+        {/* <div className={styles.descriptionBox}>
           <p>{t("hero5.subtitle")}</p>
-        </div>
+        </div> */}
 
         <div className={styles.descriptionBox}>
           <ul>
