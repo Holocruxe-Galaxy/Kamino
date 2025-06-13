@@ -2,6 +2,7 @@ import styles from "./hero.module.css";
 import EarthCanvas from "../../components/models/Earth";
 import mouseIcon from "../../icons/mouse.svg";
 import { useTranslation } from "react-i18next";
+import { HiArrowNarrowRight } from "react-icons/hi"; // o el que uses
 
 const Hero = () => {
   const { t } = useTranslation();

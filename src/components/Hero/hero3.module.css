@@ -11,6 +11,13 @@
   background-color: #0b0120;
 }
 
+
+.ctaArrow {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    transform: translateY(1px); /* opcional, mejora alineación */
+  }
+  
 .textContent {
   display: flex;
   flex-direction: column;
@@ -76,20 +83,19 @@
 }
 
 .ctaButton {
-  width: 50%;
-  height: 45px;
-  /* ✅ altura fija evita movimiento vertical */
-  background-color: #3ba9fc;
-  color: white;
-  padding: 0.8rem 1.6rem;
-  /* mantené sin cambiar en hover */
-  border-radius: 9999px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  font-family: "Balbek Pro", sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-sizing: border-box;
+    width: 50%;
+    height: 45px;
+    /* ✅ altura fija evita movimiento vertical */
+    background-color: #3ba9fc;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    /* mantené sin cambiar en hover */
+    border-radius: 9999px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
 }
 
 .ctaButton:hover {
