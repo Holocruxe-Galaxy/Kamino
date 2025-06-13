@@ -20,7 +20,7 @@
   }
   
   .navbar {
-    display: flex; /* Por defecto, visible para escritorio */
+    display: flex; 
     gap: 3rem;
     align-items: center;
     font-family: "Montserrat", sans-serif;
@@ -108,8 +108,7 @@
   .activeLink:hover::after {
     background-color: #349aef;
   }
-  
-  /* Controles de la derecha en la navbar (LanguageMenu y botón Cruxie) */
+
   .rightNavControls {
     display: flex;
     align-items: center;
@@ -153,9 +152,8 @@
     margin-left: 5px;
   }
   
-  /* Clase para el botón de hamburguesa en mobile (se mostrará solo en mobile) */
   .mobile {
-    display: none; /* Por defecto, oculto en desktop */
+    display: none; 
     cursor: pointer;
     z-index: 1000;
   }
@@ -165,25 +163,22 @@
     height: 25px;
   }
   
-  /* Media Query para pantallas pequeñas (móvil) */
   @media screen and (max-width: 768px) {
     .navbar {
-      display: none; /* Oculta la navegación principal (links) en móvil */
+      display: none; 
     }
   
     .rightNavControls {
-      /* En móvil, queremos que LanguageMenu y el botón de hamburguesa sean visibles */
-      /* El botón Proba Cruxie de la navbar principal lo queremos ocultar aquí */
-      display: flex; /* Asegura que los controles de la derecha sean visibles en mobile */
-      gap: 1rem; /* Ajusta el espacio si es necesario */
+      display: flex;
+      gap: 1rem; 
     }
   
     .probaCruxieLink {
-      display: none; /* <--- Oculta el botón "Proba Cruxie" de la navbar principal en móvil */
+      display: none; 
     }
   
     .mobile {
-      display: block; /* Muestra el botón de hamburguesa en móvil */
+      display: block; 
     }
   
     .logoContainer {
@@ -197,7 +192,7 @@
       justify-content: flex-end;
     }
     .svgLogo {
-      height: 1.8rem; /* <-- Reduce el tamaño del logo aquí */
+      height: 1.8rem; 
       width: auto;
     }
     .hamburger {
@@ -210,15 +205,12 @@
     }
   }
   
-  /* Media Query para pantallas medianas (tabletas, si aplica) */
   @media screen and (max-width: 1024px) {
     .navbar {
       gap: 1.5rem;
       font-size: 1rem;
       margin-right: 20px;
     }
-    /* La clase .probaCruxieButton no existe en tu HTML, usas .probaCruxieLink */
-    /* Reemplazando .probaCruxieButton por .probaCruxieLink */
     .probaCruxieLink {
       font-size: 0.9rem;
       padding: 7px 15px;
@@ -228,12 +220,11 @@
     }
   }
   
-  /* Añadido para desktop, si quieres redefinir estilos de .probaCruxieLink */
   @media screen and (min-width: 769px) {
     .probaCruxieLink {
-      display: flex; /* Asegura que el botón Cruxie se muestre en desktop */
+      display: flex; 
     }
     .mobile {
-      display: none; /* Asegura que el botón de hamburguesa se oculte en desktop */
+      display: none; 
     }
   }
