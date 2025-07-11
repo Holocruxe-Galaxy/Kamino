@@ -43,9 +43,7 @@ div.iconText {
 
 @media screen and (width: 1280px) {
   .earth-canvas {
-    width: 400px !important;
-    margin-top: -150px !important;
-    margin-bottom: 50px;
+    width: 100% !important;
   }
 }
 
@@ -114,16 +112,16 @@ div.iconText {
   }
 
   .earth-canvas {
-    padding-top: 3rem;
-    height: 70vh !important;
+    margin-top: -100px !important;
+    height: 74vh !important;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .earth-canvas {
-    height: 90vh !important;
+    margin-top: -60px !important;
+    height: 74.5vh !important;
   }
-
   div.iconText {
     bottom: 15rem;
   }
@@ -132,5 +130,19 @@ div.iconText {
 @media screen and (max-width: 857px) {
   .earth-canvas {
     margin-top: 5rem !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .earth-canvas {
+    margin-top: -60px !important;
+    height: 80vh !important;
+  }
+}
+
+@media screen and (min-width: 2540px) {
+  .earth-canvas {
+    margin-top: -100px !important;
+    height: 50vh !important;
   }
 }

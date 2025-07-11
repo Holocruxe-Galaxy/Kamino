@@ -12,7 +12,7 @@ const Earth = () => {
   const tabletType = useTablet();
 
   // Estados para escalar y posicionar correctamente el modelo
-  const [scale, setScale] = useState(3.1);
+  const [scale, setScale] = useState(3.5);
   const [yPos, setYPos] = useState(0);
 
   useEffect(() => {
