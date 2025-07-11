@@ -234,3 +234,45 @@
     height: auto !important;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .earthWrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .earthWrapper canvas {
+    width: 100% !important;
+    height: 50vh !important;
+    max-height: 600px;
+  }
+  .earth-container {
+    margin-bottom: -500px !important;
+  }
+  .scrollIcon {
+    bottom: 20rem !important;
+  }
+  .scrollIcon {
+    bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .earthWrapper {
+    width: 100%;
+
+  }
+
+  .earthWrapper canvas {
+    width: 100% !important;
+    height: 50vh !important;
+    max-height: 600px;
+  }
+  .scrollIcon {
+    bottom: 20rem !important;
+  }
+  .scrollIcon {
+    bottom: 3rem;
+  }
+}
+
