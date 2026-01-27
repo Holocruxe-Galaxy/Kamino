@@ -8,6 +8,8 @@ import ChatBotIcon from './components/Chat-Icon/Chat-Icon';
 import Chat from './components/ChatComponent/ChatComponent';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Blog from './views/Blog/Blog';
+import TermsOfUse from './views/TermsOfUse/TermsOfUse';
+import PrivacyView from './views/Legal/PrivacyView';
 
 function App() {
   const location = useLocation();
@@ -27,6 +29,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/holocruxe/TermsOfUse" element={<TermsOfUse />} />
+        <Route path="/holocruxe/PrivacyView" element={<PrivacyView />} />
       </Routes>
       <Footer />
     </div>
