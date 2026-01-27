@@ -49,5 +49,5 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       
       - name: Copy to S3
-        run: aws s3 sync ./dist/. s3://kaminoweb
+        run: aws s3 sync ./dist/. s3://kamino-web
       
