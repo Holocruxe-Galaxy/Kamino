@@ -30,8 +30,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/privacy" element={<PrivacyView />} />
         <Route path="/holocruxe/TermsOfUse" element={<TermsOfUse />} />
-        <Route path="/holocruxe/PrivacyView" element={<PrivacyView />} /> 
+        <Route path="/holocruxe/PrivacyView" element={<PrivacyView />} />
         <Route path="/vinado/delete-account" element={<VinadoDeleteAccount />} />      
       </Routes>
       <Footer />
