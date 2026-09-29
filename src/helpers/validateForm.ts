@@ -22,17 +22,21 @@ type FormDataFields = {
       errors.push("El correo electrónico no es válido.");
     }
   
-    // Validar teléfono
+    // Validar teléfono (opcional)
     const phoneRegex = /^\+?[0-9\s()-]{6,20}$/;
-    if (!data.phone || typeof data.phone !== "string" || !phoneRegex.test(data.phone)) {
-      errors.push("El teléfono no es válido.");
+    if (data.phone && typeof data.phone === "string" && data.phone.trim() !== "") {
+      if (!phoneRegex.test(data.phone.trim())) {
+        errors.push("El teléfono no es válido.");
+      }
     }
-  
+
     // Validar mensaje
-    if (!data.message || typeof data.message !== "string" || data.message.trim().length > 200) {
-      errors.push("El mensaje debe tener como máximo 200 caracteres.");
+    if (!data.message || typeof data.message !== "string" || data.message.trim() === "") {
+      errors.push("El mensaje es obligatorio.");
+    } else if (data.message.trim().length > 1000) {
+      errors.push("El mensaje debe tener como máximo 1000 caracteres.");
     }
-  
+
     return errors;
   };
   

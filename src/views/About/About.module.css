@@ -1,379 +1,549 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@import '../../fonts/fonts.css';
+/* =========================================
+   ABOUT US VIEW STYLES (Mock aligned)
+   ========================================= */
 
 .container {
-  width: 100%; 
-  max-width: none; 
-  margin: 0 auto; 
-  padding: 60px 40px;
-  position: relative;
-  background-color: #0a092a;
-  min-height: 100vh;
-  overflow: hidden;
-  padding-bottom: 150px;
-  z-index: 0;
-}
-
-.text_section {
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 2;
-}
-
-.valuesHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 60px;
-  flex-wrap: nowrap;
-}
-
-.text_title2 {
-  text-align: left;
-}
-
-.text_title2 h2 {
-  font-size: 2rem;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.text_title2 h2 { 
-  font-family: "Balbek Pro", sans-serif;
-  color: white;
-  font-size: 3.6rem;
-  font-weight: 800;
-  margin: 0;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.text_title {
-  text-align: center;
-}
-
-.text_title h2 {
-  font-family: "Balbek Pro", sans-serif;
-  color: white;
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin: 0;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.text {
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 2;
-}
-
-.sizeMobil {
-  font-family: "Montserrat", sans-serif;
-  color: #a0a0a0;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  text-align: center;
-  max-width: none;
-}
-
-.titleSmall {
-  font-family: "Montserrat", sans-serif;
-  background: white;
-  color: #0d0c2b;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 2px 20px;
-  border-radius: 20px;
-  display: inline-block;
-  margin: 0 auto 20px auto;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.textBox {
-  font-family: "Montserrat", sans-serif;
-  background: rgba(44, 54, 66, 0.2);
-  color: white;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 25px 35px;
-  border-radius: 15px;
-  margin: 0 auto ;
-  text-align: center;
-  line-height: 1.6;
-  max-width: 800px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 130px;
-  margin-top: 30px; 
-}
-
-.rigthText {
-  font-family: "Montserrat", sans-serif;
-  color: #a0a0a0;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin: 30px 0;
-  text-align: left;
-}
-
-.wavesBackground {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../../img/waves-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  z-index: -1;
-  pointer-events: none;
-  filter: brightness(0.8);
   width: 100%;
-  pointer-events: none;
+  background: var(--color-bg);
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.robot {
-  bottom: 40px;
-  left: 10px;
-  width: 250px;
-  height: auto;
-  z-index: 1;
-  opacity: 0.8;
-  margin-right: 40px;
-}
-
-.values,
-.values .value,
-.values .value p, .btnCeleste, .btnCeleste:hover, .text_section, .text_title, .textBox, .text_title2{
-  position: relative;
-  z-index: 1;
-}
-
-.values {
-  margin-top: 80px; 
-  display: flex;
-  justify-content: center;
-  gap: 40px; 
-  flex-wrap: wrap;
-  margin-bottom: 150px;
-}
-
-.value {
-  flex: 1 1 250px; 
-  max-width: 300px; 
-  margin-bottom: 40px;
-  text-align: center; 
-  position: relative;
-  z-index: 1;
-}
-
-.value .title {
-  font-family: "Montserrat", sans-serif;
-  background: #349aef;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 10px;
-  display: inline-block;
-  margin: 0 auto 15px auto;
-  box-shadow: none;
-  text-align: left;
-  width: fit-content;
-}
-
-.value p {
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 280px;
+.wrap {
+  max-width: 1160px;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
-.text pre {
+/* =========================================
+   1. EDITORIAL HERO & NARRATIVE (2 COLUMNS)
+   ========================================= */
+
+.aboutHero {
+  padding: 110px 0 72px;
+  background: var(--color-bg);
+  box-sizing: border-box;
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.narrative {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  max-width: 24ch;
+}
+
+.intro {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #a5b4cf;
+  margin: 0 0 32px 0;
+  max-width: 48ch;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.storyText p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a5b4cf;
   margin: 0;
 }
 
-.btnCeleste {
-  background-color: #349aef;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem; 
-  font-weight: 600;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(52, 154, 239, 0.4);
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-align: center;
-  user-select: none;
-  width: fit-content;
-  position: relative; 
+.timelineCol {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
 }
 
-.btnCeleste:hover {
-  background-color: #349aef;
-  color: white;
-  transform: translateY(-4px);
-  box-shadow:
-    0 8px 20px rgba(52, 154, 239, 0.5),
-    0 -4px 6px rgba(52, 154, 239, 0.3);
+/* Timeline */
+.timeline {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  border-left: 2px solid rgba(52, 154, 239, 0.35);
+  padding-left: 28px;
+  margin: 0;
 }
 
-.valuesHeader {
+.timelineItem {
+  position: relative;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 0.35em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #349aef;
+  box-shadow: 0 0 10px rgba(52, 154, 239, 0.7);
+}
+
+.timelineDate {
+  display: block;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.timelineDesc {
+  display: block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #8c9bb3;
+}
+
+/* =========================================
+   3. VALORES ("Lo que nos importa.")
+   ========================================= */
+
+.valuesSection {
+  background: var(--color-bg);
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+  padding: 80px 0 88px;
+}
+
+.sectionTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.valueCard {
+  border-top: 2px solid #349aef;
+  padding-top: 22px;
+}
+
+.valueTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.valueDesc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a5b4cf;
+  margin: 0;
+}
+
+/* =========================================
+   4. EL EQUIPO
+   ========================================= */
+
+.teamSection {
+  background: var(--color-bg);
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+  padding: 80px 0 100px;
+}
+
+.carouselContainer {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 24px; 
+  gap: 16px;
+  margin-top: 44px;
+  width: 100%;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  flex: 1;
+  width: 100%;
+  padding: 12px 0;
+  margin: -12px 0;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: transform;
+  width: 100%;
+}
+
+.carouselSlide {
+  flex: 0 0 25%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.carouselArrow {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  margin-top: 80px;
+  background: transparent;
+  border: none;
+  color: #349aef;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 6px;
+  transition: color 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+  z-index: 2;
+  box-shadow: none;
+  outline: none;
 }
 
-.semicircle {
+.carouselArrow:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 10px rgba(52, 154, 239, 0.9));
+}
+
+.prevArrow:hover {
+  transform: translateX(-4px) scale(1.1);
+}
+
+.nextArrow:hover {
+  transform: translateX(4px) scale(1.1);
+}
+
+.carouselArrow:active {
+  transform: scale(0.92);
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.dot:hover {
+  background: rgba(52, 154, 239, 0.6);
+}
+
+.activeDot {
+  width: 24px;
+  background: #349aef;
+  box-shadow: 0 0 10px rgba(52, 154, 239, 0.6);
+}
+
+/* =========================================
+   3D FLIP CARD & AVATAR REVEAL
+   ========================================= */
+
+.memberCard {
+  position: relative;
+  perspective: 1100px;
+  cursor: pointer;
+  height: 100%;
+  outline: none;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.34, 1.35, 0.64, 1);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+/* Al hover o click (en mobile), gira 180° e ilumina */
+.memberCard:hover .cardInner,
+.cardInner.cardFlipped {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  width: 100%;
+  min-height: 290px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* CARA FRONTAL */
+.cardFront {
+  background: rgba(8, 7, 66, 0.7);
+  background: color-mix(in srgb, #080742 80%, transparent);
+  border: 1px solid rgba(52, 154, 239, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: rotateY(0deg);
+}
+
+.memberCard:hover .cardFront {
+  border-color: #349aef;
+  box-shadow: 0 0 25px rgba(52, 154, 239, 0.45);
+}
+
+.avatarPlaceholder {
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  background: rgba(14, 12, 85, 0.85);
+  border: 1px solid rgba(52, 154, 239, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #8c9bb3;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.memberCard:hover .avatarPlaceholder {
+  border-color: #349aef;
+  color: #349aef;
+  box-shadow: 0 0 15px rgba(52, 154, 239, 0.4);
+}
+
+.avatarIcon {
+  color: #349aef;
+  opacity: 0.85;
+}
+
+.avatarLabel {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: #8c9bb3;
+}
+
+.memberName {
+  display: block;
+  margin-top: 14px;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.memberRole {
+  display: block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #8c9bb3;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.flipBadge {
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #349aef;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.memberCard:hover .flipBadge {
+  opacity: 1;
+}
+
+/* CARA TRASERA (AVATAR) */
+.cardBack {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 290px; 
-  height: 700px;
-  background-image: url("../../img/gradient.png"); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
+  inset: 0;
+  transform: rotateY(180deg);
+  background: linear-gradient(155deg, #0e1259 0%, #030427 100%);
+  border: 1.5px solid #349aef;
+  box-shadow: 0 0 35px rgba(0, 97, 233, 0.55), inset 0 0 25px rgba(52, 154, 239, 0.2);
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 40px 20px;
+.avatarBackFrame {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(0, 97, 233, 0.15);
+  border: 2px solid #349aef;
+  box-shadow: 0 0 20px rgba(52, 154, 239, 0.5), inset 0 0 15px rgba(52, 154, 239, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.avatarBackGlow {
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(52, 154, 239, 0.4) 0%, transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.avatarBackIcon {
+  color: #ffffff;
+  filter: drop-shadow(0 0 6px rgba(52, 154, 239, 0.8));
+  position: relative;
+  z-index: 1;
+}
+
+.avatarBackBadge {
+  position: absolute;
+  bottom: 4px;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #0061e9;
+  color: #ffffff;
+  padding: 1px 6px;
+  border-radius: 999px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.memberNameBack {
+  display: block;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 4px;
+  text-shadow: 0 0 10px rgba(52, 154, 239, 0.5);
+}
+
+.memberRoleBack {
+  display: block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #a5b4cf;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.teamTag {
+  margin-top: 14px;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #349aef;
+  border: 1px solid rgba(52, 154, 239, 0.4);
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(52, 154, 239, 0.1);
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 10px rgba(52, 154, 239, 0.25);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .carouselSlide {
+    flex: 0 0 33.3333%;
+  }
+}
+
+@media (max-width: 900px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 
-  .text_title h2 {
-    font-size: 2.2rem;
+  .aboutHero {
+    padding: 96px 0 52px;
   }
 
-  .titleSmall {
-    font-size: 1rem;
-    padding: 15px 30px;
-  }
-
-  .textBox {
-    font-size: 0.9rem;
-    padding: 20px 25px;
-    max-width: 90%;
-  }
-
-  .robot {
-    width: 80px;
+  .timelineCol {
     height: auto;
-    margin-bottom: 0;
-    margin-right: 0;
-    z-index: 1;
-  }
-  
-  .valuesHeader {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
+    padding-top: 0;
   }
 
-  .text_title2 {
-    text-align: left;
+  .timeline {
+    height: auto;
+    gap: 28px;
+    justify-content: flex-start;
+    margin-top: 36px;
   }
 
-  .text_title2 h2 {
-    font-size: 2.2rem;
-    margin: 0;
-  }
-
-  .sizeMobil,
-  .rigthText,
-  .value .title,
-  .value p {
-    font-size: 0.9rem;
-  }
-  
-  .values {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    padding: 0 10px;
-  }
-
-  .value {
-    flex: 1 1 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .btnCeleste {
-    font-size: 1rem; 
-    padding: 8px 16px;
-    border-radius: 12px; 
-    min-width: unset; 
-    width: auto;
-  }
-  .container > div:last-of-type {
-    margin-bottom: 50px; 
-    margin-top: 40px; 
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
-@media (max-width: 480px) {
-  .values {
-    padding: 0 5px;
+@media (max-width: 820px) {
+  .carouselSlide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutHero {
+    padding: 88px 0 36px;
+  }
+}
+
+@media (max-width: 540px) {
+  .carouselSlide {
+    flex: 0 0 100%;
+    padding: 0 6px;
   }
 
-  .btnCeleste {
-    font-size: 1.3rem; 
-    padding: 6px 12px; 
-    border-radius: 10px; 
-    width: auto; 
-  }
-  .container > div:last-of-type {
-    margin-bottom: 40px; 
-    margin-top: 30px; 
-  }
-
-  .container {
-    padding: 30px 15px;
-  }
-
-  .text_title h2 {
-    font-size: 1.9rem;
-  }
-
-  .titleSmall {
-    font-size: 1rem;
-    padding: 2px 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .textBox {
-    font-size: 0.85rem;
-    padding: 20px 20px;
-  }
-
-  .robot {
-    width: 50px;
-  }
-
-  .sizeMobil,
-  .rigthText,
-  .value .title,
-  .value p {
-    font-size: 0.85rem;
+  .carouselContainer {
+    gap: 4px;
   }
 }

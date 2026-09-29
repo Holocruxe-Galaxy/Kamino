@@ -1,0 +1,70 @@
+/* =========================================
+   VALUES SECTION (Dark Elevation)
+   ========================================= */
+
+.valuesSection {
+  padding: 96px 0;
+  width: 100%;
+  background: linear-gradient(180deg, #050638 0%, #02012a 100%);
+  border-top: 1px solid rgba(52, 154, 239, 0.18);
+  border-bottom: 1px solid rgba(52, 154, 239, 0.18);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.valuesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 48px;
+  list-style: none;
+  padding: 0;
+}
+
+.valueItem {
+  border-top: 3px solid #349aef;
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.valueItem h3 {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.valueItem p {
+  margin-top: 10px;
+  color: #b9bbe0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .valuesList {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

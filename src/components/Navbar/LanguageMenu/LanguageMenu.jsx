@@ -8,11 +8,10 @@ import itaFlag from "../../../icons/italy.svg";
 const flagMap = {
   es: esFlag,
   en: enFlag,
-  ita: itaFlag,
 };
 
-const languages = ['es', 'en', 'ita'];
-
+const languages = ['es', 'en'];
+``
 const LanguageButton = ({ language, changeLanguage, isSelected }) => (
   <button
     className={`${styles.langButton} ${isSelected ? styles.selectedLangButton : ''}`}

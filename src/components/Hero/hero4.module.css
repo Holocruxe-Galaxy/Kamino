@@ -1,10 +1,10 @@
 .hero4Section {
   position: relative;
   width: 100%;
-  padding: 12rem 1.5rem;
-  background-color: #0b0120;
+  padding: 84px 1.5rem 96px;
+  background-color: var(--color-bg, #010032);
   color: white;
-  font-family: 'Balbek Pro', sans-serif;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,33 +14,7 @@
 
 
 
-/* Luz difusa invertida abajo a la izquierda */
-.hero4Section::before {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: -400px;
-  width: 50vw;
-  height: 100vh;
-  background-image: url("/images/luz.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left bottom;
-  border-radius: 40%;
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 1;
-  transform: scaleY(-1) scaleX(1.2);
 
-  -webkit-mask-image: radial-gradient(circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 60%,
-    rgba(0, 0, 0, 0) 100%);
-  mask-image: radial-gradient(circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 60%,
-    rgba(0, 0, 0, 0) 100%);
-}
 
 .title {
   font-size: 3.5rem;

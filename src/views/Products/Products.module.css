@@ -1,0 +1,353 @@
+/* =========================================
+   PRODUCTS VIEW STYLES (Mock aligned)
+   ========================================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg, #010032);
+  color: #ffffff;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Page Hero */
+.pageHero {
+  padding: 24px 0 48px;
+}
+
+.pageHero h1 {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5.4vw, 4.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.intro {
+  margin-top: 18px;
+  color: #b9bbe0;
+  max-width: 60ch;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Product Detail Cards */
+.productsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 72px 0;
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+}
+
+.reverseShot .shot {
+  order: -1;
+}
+
+.plogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Quicksand', system-ui, sans-serif;
+  color: #ffffff;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cKira {
+  background: #0061e9;
+}
+
+.cVinado {
+  background: #7a1f3d;
+}
+
+.cCruxie {
+  background: #5b4bdb;
+}
+
+.cWa {
+  background: #1f9d74;
+}
+
+.productTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 18px 0 0 0;
+}
+
+.lead {
+  margin-top: 16px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #b9bbe0;
+}
+
+.featuresList {
+  margin-top: 24px;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+}
+
+.featureItem {
+  padding-left: 24px;
+  position: relative;
+  color: #b9bbe0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.featureItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #349aef;
+}
+
+.forLabel {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.forDesc {
+  color: #b9bbe0;
+  font-weight: 500;
+}
+
+.actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  background: #0061e9;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 97, 233, 0.4);
+}
+
+.btnPrimary:hover {
+  background: #1a72f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 97, 233, 0.5);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnGhost:hover {
+  border-color: #349aef;
+  color: #349aef;
+  background: rgba(52, 154, 239, 0.1);
+  transform: translateY(-2px);
+}
+
+/* UI Preview Mockup */
+.shot {
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  background: #10125e;
+  border: 1px solid rgba(52, 154, 239, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.shot:hover {
+  border-color: rgba(52, 154, 239, 0.55);
+  transform: translateY(-4px);
+}
+
+.browserHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.windowDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.bar {
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.panel {
+  flex: 1;
+  border-radius: 12px;
+  background: rgba(52, 154, 239, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #b9bbe0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: 1px dashed rgba(52, 154, 239, 0.3);
+  text-align: center;
+  padding: 20px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(52, 154, 239, 0.2);
+  color: #349aef;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* CTA Band */
+.ctaBand {
+  background: var(--color-bg);
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+  border-bottom: 1px solid rgba(52, 154, 239, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 48px;
+}
+
+.ctaWrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.ctaTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .pdetail {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .reverseShot .shot {
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .btnPrimary,
+  .btnGhost {
+    width: 100%;
+    text-align: center;
+  }
+}

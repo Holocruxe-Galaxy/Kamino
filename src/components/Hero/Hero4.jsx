@@ -89,7 +89,7 @@ const Hero4 = () => {
   const subtitle = t("hero4.subtitle")?.trim();
 
   return (
-    <section className={styles.hero4Section}>
+    <section id="contacto" className={styles.hero4Section}>
       <h2 className={styles.title}>{title}</h2>
 
       <div className={styles.contentWrapper}>

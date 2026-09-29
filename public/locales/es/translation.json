@@ -5,10 +5,166 @@
   },
   "navbar": {
     "home": "Inicio",
-    "about": "Conócenos",
-    "faq": "Preguntas Frecuentes",
-    "blog": "Blog",
-    "cruxieButton": "Prueba Cruxie"
+    "about": "Nosotros",
+    "products": "Productos",
+    "projects": "Proyectos",
+    "factory": "Factory",
+    "let's-talk": "Hablemos"
+  },
+  "footer": {
+    "tagline": "Software con IA y productos propios. Desde Córdoba, 100% remotos.",
+    "company": "Empresa",
+    "about": "Nosotros",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "products": "Productos",
+    "factory": "Factory",
+    "factoryProject": "Tu proyecto en una semana",
+    "legal": "© {{year}} Holocruxe",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "homeHero": {
+    "title": "Construimos software con IA que las empresas usan de verdad.",
+    "intro": "Somos Holocruxe: una software factory con productos propios en producción. Nacimos en Córdoba y trabajamos con empresas de Argentina, Chile y México.",
+    "talkBtn": "Hablemos de tu proyecto",
+    "projectsBtn": "Ver proyectos"
+  },
+  "facts": {
+    "year": "2023",
+    "yearLabel": "Nacimos en Córdoba",
+    "countries": "3 países",
+    "countriesLabel": "Argentina, Chile y México",
+    "products": "4 productos",
+    "productsLabel": "Propios y en producción",
+    "remote": "100% remoto",
+    "remoteLabel": "Un equipo de 10 personas"
+  },
+  "offer": {
+    "title": "Tres formas de trabajar con nosotros.",
+    "factoryTitle": "Tu prueba de concepto, funcionando en una semana.",
+    "factoryDesc": "Acotamos juntos el alcance y en una semana tenés algo real para probar. Después decidís si pasar a MVP, escalar o frenar.",
+    "factoryBtn": "Conocer la Factory",
+    "customTitle": "Desarrollo a medida",
+    "customDesc": "Backend, integraciones, plataformas y agentes de IA para tu operación.",
+    "customBtn": "Ver proyectos",
+    "dedicatedTitle": "Equipo dedicado",
+    "dedicatedDesc": "Sumamos desarrolladores e IA a tu producto, trabajando con tu equipo.",
+    "dedicatedBtn": "Consultar"
+  },
+  "homeProducts": {
+    "title": "Nuestros productos.",
+    "intro": "Los construimos, los operamos y los usamos para probar lo que después hacemos para clientes.",
+    "kiraDesc": "Toma notas, traduce en tiempo real y arma la minuta de tus reuniones.",
+    "kiraBtn": "Visitar Kira",
+    "vinadoDesc": "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos.",
+    "vinadoBtn": "Visitar Vinado",
+    "cruxieDesc": "Asistentes de IA entrenados con el conocimiento de tu organización.",
+    "cruxieBtn": "Visitar Cruxie",
+    "waDesc": "Un agente de IA que atiende a tus clientes por WhatsApp.",
+    "waBtn": "Conocer Cruxie WhatsApp",
+    "allBtn": "Ver todos los productos"
+  },
+  "cases": {
+    "title": "Proyectos para empresas en distintas industrias.",
+    "industries": [
+      "Banca",
+      "Energía renovable",
+      "Sector público",
+      "Logística",
+      "Seguridad y transporte",
+      "Fintech",
+      "Agro"
+    ],
+    "case1Where": "Banca · México",
+    "case1Title": "Arquitectura con IA para un banco",
+    "case1Desc": "Diseñamos la arquitectura con IA para modernizar el core de un banco.",
+    "case1Model": "Proyecto a medida",
+    "case2Where": "Energía renovable · México",
+    "case2Title": "Dos agentes de IA en producción",
+    "case2Desc": "Un agente revisa contratos legales y otro calcula consumos de energía, dentro de un equipo dedicado.",
+    "case2Model": "Equipo dedicado + IA",
+    "case3Where": "Sector público · Argentina",
+    "case3Title": "Desarrollo para un municipio",
+    "case3Desc": "Optimizamos la atención ciudadana y trámites vecinales integrando agentes de IA.",
+    "case3Model": "Proyecto a medida",
+    "moreLink": "Ver todos los proyectos"
+  },
+  "values": {
+    "title": "Cómo trabajamos?",
+    "v1Title": "Autenticidad",
+    "v1Desc": "Te decimos qué se puede hacer y qué no, antes de empezar.",
+    "v2Title": "Conexión",
+    "v2Desc": "Tecnología que acerca a las personas, no que las reemplaza.",
+    "v3Title": "Privacidad",
+    "v3Desc": "Cuidamos tus datos desde el diseño, no como agregado."
+  },
+  "ctaBand": {
+    "title": "¿Tenés una idea o un problema para resolver?",
+    "talkBtn": "Hablemos",
+    "waBtn": "WhatsApp"
+  },
+  "productsPage": {
+    "title": "Productos propios,\nen producción.",
+    "titlePart1": "Productos propios,",
+    "titlePart2": "en producción.",
+    "intro": "Cuatro productos que diseñamos, construimos y operamos. Cada uno tiene su sitio, acá te contamos qué hace.",
+    "for": "Para:",
+    "factoryCta": "¿Querés algo así para tu empresa?",
+    "factoryBtn": "Conocer la Factory",
+    "kira": {
+      "name": "Kira",
+      "h2": "Salí de cada reunión con la minuta y los accionables listos.",
+      "lead": "Toma notas, traduce en tiempo real y arma la minuta de tus reuniones.",
+      "features": [
+        "Toma notas de la reunión por vos",
+        "Traduce en tiempo real",
+        "Arma la minuta con los accionables de cada persona"
+      ],
+      "forDesc": "Equipos con muchas reuniones, también en otros idiomas",
+      "visitBtn": "Visitar Kira",
+      "demoBtn": "Solicitar demo"
+    },
+    "vinado": {
+      "name": "Vinado",
+      "h2": "Tu historia con el vino, en una app.",
+      "lead": "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos.",
+      "features": [
+        "Registrá y puntuá cada vino que probás",
+        "Sumá puntos a medida que puntuás",
+        "Canjealos por descuentos en los Vinado Points",
+        "Para bodegas y vinotecas: sumate como Vinado Point"
+      ],
+      "forDesc": "Quienes disfrutan el vino, y bodegas o vinotecas que quieren llegar a ellos",
+      "visitBtn": "Visitar Vinado",
+      "partnerBtn": "Soy bodega o vinoteca"
+    },
+    "cruxie": {
+      "name": "Cruxie",
+      "h2": "El conocimiento de tu empresa, disponible para todo tu equipo.",
+      "lead": "Asistentes de IA entrenados con el conocimiento de tu organización.",
+      "features": [
+        "Creá asistentes y entrenalos con la información de tu organización",
+        "Definí quién accede a cada asistente",
+        "Conectalo con las herramientas que ya usan"
+      ],
+      "forDesc": "Empresas con conocimiento repartido entre personas y documentos",
+      "visitBtn": "Visitar Cruxie",
+      "demoBtn": "Solicitar demo"
+    },
+    "cruxieWa": {
+      "name": "Cruxie WhatsApp",
+      "h2": "Tus clientes preguntan por WhatsApp. Cruxie responde, a cualquier hora.",
+      "lead": "Un agente de IA que atiende a tus clientes por WhatsApp.",
+      "features": [
+        "Responde consultas de clientes en WhatsApp",
+        "Funciona sobre la API oficial de WhatsApp Business",
+        "Se entrena con la información de tu negocio"
+      ],
+      "forDesc": "Negocios con muchas consultas repetidas",
+      "visitBtn": "Conocer Cruxie WhatsApp",
+      "demoBtn": "Solicitar demo"
+    }
   },
   "landing": {
     "hero": "Somos buenos creando legado",
@@ -101,6 +257,128 @@
     "3": {
       "question": "¿Cómo empiezo a usar Cruxie en mi organización?",
       "answer": "Accedé desde la página principal y registrate. Podés crear una cuenta personal para explorar la plataforma o hacer clic en “crear una cuenta de empresa”, completar un formulario y nuestro equipo se pondrá en contacto para acompañarte en el proceso."
+    }
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Proyectos para empresas de Argentina, Chile y México.",
+      "intro": "Banca, energía, sector público, logística, seguridad, fintech y agro. Por confidencialidad no nombramos a nuestros clientes: te contamos qué problema resolvimos."
+    },
+    "cases": {
+      "case1": {
+        "where": "Banca · México",
+        "title": "Arquitectura con IA para un banco",
+        "desc": "Diseñamos la arquitectura con IA para modernizar el core de un banco.",
+        "model": "Proyecto a medida"
+      },
+      "case2": {
+        "where": "Energía renovable · México",
+        "title": "Dos agentes de IA en producción",
+        "desc": "Un agente revisa contratos legales y otro calcula consumos de energía, dentro de un equipo dedicado.",
+        "model": "Equipo dedicado + IA"
+      },
+      "case3": {
+        "where": "Sector público · Argentina",
+        "title": "Desarrollo para un municipio",
+        "desc": "Optimizamos la atención ciudadana y trámites vecinales integrando agentes de IA.",
+        "model": "Proyecto a medida"
+      },
+      "case4": {
+        "where": "Seguridad y transporte · Chile",
+        "title": "Plataforma de flota con GPS",
+        "desc": "Construimos la plataforma de seguimiento de flota por GPS y el portal para sus clientes.",
+        "model": "Proyecto a medida"
+      },
+      "case5": {
+        "where": "Logística · Chile",
+        "title": "Modernización de backend y APIs",
+        "desc": "Rediseñamos y modernizamos el backend y las APIs de una empresa de logística.",
+        "model": "Proyecto a medida"
+      },
+      "case6": {
+        "where": "Logística · México",
+        "title": "Integraciones con marketplaces y couriers",
+        "desc": "Integramos la operación con Mercado Libre y con empresas de courier.",
+        "model": "Proyecto a medida"
+      },
+      "case7": {
+        "where": "Fintech · México",
+        "title": "Equipo de desarrollo dedicado",
+        "desc": "Sumamos un equipo de desarrollo al producto de una fintech.",
+        "model": "Equipo dedicado"
+      },
+      "case8": {
+        "where": "Agro · Argentina",
+        "title": "MVP para una cooperativa",
+        "desc": "Construimos un MVP para una cooperativa agropecuaria del sur de Córdoba.",
+        "model": "MVP"
+      }
+    },
+    "models": {
+      "title": "Tres modelos, según lo que necesites.",
+      "poc": {
+        "title": "Prueba de concepto",
+        "desc": "Una semana para validar una idea con algo que funciona."
+      },
+      "custom": {
+        "title": "Proyecto a medida",
+        "desc": "Diseñamos y construimos la solución completa, del alcance a producción."
+      },
+      "team": {
+        "title": "Equipo dedicado",
+        "desc": "Desarrolladores e IA integrados a tu equipo y a tu producto."
+      }
+    },
+    "actions": {
+      "contact": "Contanos tu proyecto",
+      "factory": "Ver la Factory"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Un equipo chico que construye en serio.",
+      "intro": "Nacimos en Córdoba en abril de 2023. Hoy somos un equipo de 10 personas, 100% remoto, que trabaja para empresas de tres países."
+    },
+    "story": {
+      "p1": "Holocruxe empezó con una idea simple: la inteligencia artificial sirve cuando resuelve un problema concreto de una empresa, no cuando es una demo.",
+      "p2": "Por eso hacemos dos cosas. Construimos software e IA para otras empresas, y construimos nuestros propios productos. Lo que aprendemos en uno lo aplicamos en el otro.",
+      "p3": "No tenemos oficinas. Trabajamos de forma remota, con clientes en Argentina, Chile y México."
+    },
+    "timeline": {
+      "item1": {
+        "date": "Abril 2023",
+        "desc": "Nace Holocruxe en Córdoba."
+      },
+      "item2": {
+        "date": "Primeros clientes",
+        "desc": "Proyectos de logística y seguridad en Chile y México."
+      },
+      "item3": {
+        "date": "Productos propios",
+        "desc": "Lanzamos Kira, Vinado, Cruxie y Cruxie WhatsApp."
+      },
+      "item4": {
+        "date": "Hoy",
+        "desc": "10 personas, 3 países, 4 productos en producción."
+      }
+    },
+    "values": {
+      "title": "Lo que nos importa.",
+      "authenticity": {
+        "title": "Autenticidad",
+        "desc": "Te decimos qué se puede hacer y qué no, antes de empezar."
+      },
+      "connection": {
+        "title": "Conexión",
+        "desc": "Tecnología que acerca a las personas, no que las reemplaza."
+      },
+      "privacy": {
+        "title": "Privacidad",
+        "desc": "Cuidamos tus datos desde el diseño, no como agregado."
+      }
+    },
+    "team": {
+      "title": "El equipo que lo hace posible."
     }
   }
 }

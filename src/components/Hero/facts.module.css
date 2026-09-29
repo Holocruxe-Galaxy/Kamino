@@ -1,0 +1,79 @@
+/* =========================================
+   FACTS / STATS BAR STYLES
+   ========================================= */
+
+.factsSection {
+  width: 100%;
+  background-color: var(--color-bg, #010032);
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+  border-bottom: 1px solid rgba(52, 154, 239, 0.25);
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+}
+
+.factItem {
+  padding: 28px 24px 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.factItem + .factItem {
+  padding-left: 24px;
+  border-left: 1px solid rgba(52, 154, 239, 0.25);
+}
+
+.facts strong {
+  display: block;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.4rem, 2.3vw, 1.9rem);
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.facts span {
+  color: #b9bbe0;
+  font-size: 0.97rem;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .factItem:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .factItem:nth-child(n + 3) {
+    border-top: 1px solid rgba(52, 154, 239, 0.25);
+  }
+}
+
+@media (max-width: 540px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .factItem,
+  .factItem + .factItem {
+    padding: 20px 0;
+    border-left: 0;
+  }
+  .factItem + .factItem {
+    border-top: 1px solid rgba(52, 154, 239, 0.25);
+  }
+}

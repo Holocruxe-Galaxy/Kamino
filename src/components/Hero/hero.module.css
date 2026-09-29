@@ -1,237 +1,370 @@
-.heroSection {
+/* =========================================
+   HERO HOME STYLES (Living AI Network & Dark Elevation)
+   ========================================= */
+
+.hero {
+  padding: 24px 0 64px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--color-bg, #010032);
+  box-sizing: border-box;
+}
+
+/* Resplandor ambiental de profundidad detrás del hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 97, 233, 0.22) 0%,
+    rgba(52, 154, 239, 0.06) 50%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1300px;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  margin-top: 50px;
-  overflow: visible;
 }
 
-
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
 
 .textContent {
-  flex: 1;
-  min-width: 300px;
-  max-width: 420px;
-  padding: 1rem;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-.mainTitle {
-  font-family: "Balbek Pro", sans-serif;
-  font-size: 3rem;
+.title {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  margin: 0 0 1.2rem 0;
-  color: white;
-  word-spacing: 0.5rem;
+  font-size: clamp(2.3rem, 5vw, 4.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+  max-width: 16ch;
 }
 
-.white {
-  color: white;
-}
-
-.gradientWord {
-  background: linear-gradient(90deg, #9f6eff 0%, #5d66ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  line-height: 1.4;
-  margin: 0 0 0.5rem 0;
-  text-align: left;
-  color: white;
-  font-weight: 800;
-  font-family: var(--font-main);
+.intro {
+  margin-top: 20px;
+  color: #b9bbe0;
+  max-width: 52ch;
+  font-size: 1.18rem;
   line-height: 1.6;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
 }
 
-.ctaButton {
-  font-family: var(--font-main);
-  color: white;
-  width: 100%;
-  max-width: 320px;
-  height: 3rem;
+.actions {
+  margin-top: 36px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #359aee;
-  border: none;
-  border-radius: 9999px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 0;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  padding: 0 1.5rem;
-  gap: 0.5rem;
-  align-self: flex-start;
-  margin-top: 1.5rem;
+  background: #0061e9;
+  color: #ffffff;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 16px rgba(0, 97, 233, 0.35);
 }
 
-.ctaButton:hover {
-  background-color: #227cd1;
-  transform: scale(1.02);
+.btnPrimary:hover {
+  background: #1a72f0;
+  box-shadow: 0 6px 20px rgba(0, 97, 233, 0.5);
+  transform: translateY(-2px);
 }
 
-.earthWrapper {
-  flex: 1;
-  min-width: 300px;
-  height: auto;
-  padding: 1rem;
-  display: flex;
+.btnGhost {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
-  margin-top: 0;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.2s ease;
 }
 
-.earthWrapper canvas {
-  width: 100% !important;
-  height: 60vh !important;
-  max-height: 90vh;
-  object-fit: contain;
-  overflow: visible;
-}
-.earthCanvasWrapper {
-  width: 100%;
-  /* max-width: 360px; */
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
-  overflow: visible;
+.btnGhost:hover {
+  border-color: #349aef;
+  color: #349aef;
+  background: rgba(52, 154, 239, 0.08);
+  transform: translateY(-2px);
 }
 
-.earthCanvasWrapper canvas {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain;
-  overflow: visible;
-}
+/* =========================================
+   LIVING AI NETWORK (SVG DIAGRAM)
+   ========================================= */
 
-/* Scroll icon */
-.scrollIcon {
-  position: absolute;
-  bottom: 1rem;
-  right: 0%;
+.nodesWrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: #5d66ff;
-  font-size: 0.85rem;
-  animation: pulse 2s infinite;
+  width: 100%;
 }
 
-.scrollIcon img {
-  width: 2.5rem;
-  margin-bottom: 0.3rem;
+.nodes {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: translateY(0);
+/* Líneas base tenues */
+.edgeBase {
+  stroke: rgba(52, 154, 239, 0.18);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.edgeBaseMain {
+  stroke: rgba(0, 97, 233, 0.3);
+  stroke-width: 2;
+}
+
+/* Flujo continuo de paquetes de datos */
+.edgePulse {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 24 160;
+  animation: flowPulse 2.8s linear infinite;
+}
+
+.pulseFactory {
+  stroke-width: 2.6;
+  stroke: url(#grad-factory-app);
+  animation-duration: 2.2s;
+}
+
+.pulseCruxie {
+  stroke-width: 2.2;
+  stroke: url(#grad-cruxie-app);
+  animation-duration: 2.5s;
+  animation-delay: -0.4s;
+}
+
+.pulseWa {
+  stroke-width: 2.2;
+  stroke: url(#grad-wa-app);
+  animation-duration: 2.9s;
+  animation-delay: -0.9s;
+}
+
+.pulseKira {
+  stroke-width: 2.2;
+  stroke: url(#grad-kira-app);
+  animation-duration: 3.2s;
+  animation-delay: -1.4s;
+}
+
+.pulseVinado {
+  stroke-width: 2.2;
+  stroke: url(#grad-vinado-app);
+  animation-duration: 2.7s;
+  animation-delay: -0.7s;
+}
+
+@keyframes flowPulse {
+  from {
+    stroke-dashoffset: 184;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Núcleo Central: Halo suave y breathing sutil */
+.coreGlow {
+  transform-origin: 260px 220px;
+  animation: coreBreath 4s ease-in-out infinite;
+}
+
+@keyframes coreBreath {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.15;
   }
   50% {
-    transform: translateY(6px);
-  }
-}
-/* Mobile */
-@media screen and (max-width: 768px) {
-  .heroSection {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    gap: 2rem;
-    margin-top: 0;
-    overflow: visible;
-  }
-
-  .textContent {
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .mainTitle {
-    font-size: 2rem;
-    line-height: 1.2;
-    word-break: break-word;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .ctaButton {
-    height: 3.2rem;
-    font-size: 1rem;
-    align-self: center;
-    margin-top: 1rem;
-  }
-
-  .earthWrapper {
-    margin-top: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .earthWrapper canvas {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain;
-  }
-
-  .scrollIcon {
-    margin-top: 1rem;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: none;
-    font-size: 0.75rem;
-  }
-
-  .scrollIcon img {
-    width: 2.2rem;
-    margin-bottom: 0.2rem;
+    transform: scale(1.08);
+    opacity: 0.35;
   }
 }
 
-/* Mobile reducido */
-@media screen and (max-width: 480px) {
-  .mainTitle {
-    font-size: 1.8rem;
-  }
+.coreMain {
+  filter: drop-shadow(0 0 10px rgba(52, 154, 239, 0.35));
+}
 
-  .earthWrapper {
-    margin-top: 0.5rem;
-    max-width: 320px;
-  }
+/* Nodos Periféricos interactivos */
+.node {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  text-decoration: none;
+}
 
-  .earthWrapper canvas {
-    height: auto !important;
+.node:hover {
+  transform: translateY(-3px);
+}
+
+.nodeText {
+  fill: #ffffff;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: fill 0.2s ease, filter 0.2s ease;
+}
+
+.nodeSub {
+  fill: #b9bbe0;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 12.5px;
+}
+
+.node:hover .nodeText {
+  filter: drop-shadow(0 0 8px rgba(52, 154, 239, 0.8));
+}
+
+/* =========================================
+   PULSOS CON BLUR SUAVE (IGUAL AL NÚCLEO CENTRAL H)
+   ========================================= */
+
+.nodeGlow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeBlurPulse 3.4s ease-in-out infinite;
+}
+
+@keyframes nodeBlurPulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+.glowFactory {
+  animation-duration: 3.2s;
+}
+
+.glowCruxie {
+  animation-duration: 3.6s;
+  animation-delay: -0.8s;
+}
+
+.glowWa {
+  animation-duration: 3.4s;
+  animation-delay: -1.6s;
+}
+
+.glowKira {
+  animation-duration: 3.8s;
+  animation-delay: -2.4s;
+}
+
+.glowVinado {
+  animation-duration: 3.5s;
+  animation-delay: -1.2s;
+}
+
+.node:hover .nodeGlow {
+  transform: scale(1.28);
+  opacity: 1;
+}
+
+.nodeImage {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.node:hover .nodeImage {
+  filter: drop-shadow(0 4px 14px rgba(52, 154, 239, 0.65));
+}
+
+/* Colores de marca por producto */
+.dotFactory {
+  fill: #0061e9;
+}
+
+.dotCruxie {
+  fill: #38bdf8;
+}
+
+.dotWa {
+  fill: #25d366;
+}
+
+.dotKira {
+  fill: #a855f7;
+}
+
+.dotVinado {
+  fill: #5B252C;
+}
+
+/* Respeto a accesibilidad para reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .edgePulse,
+  .coreGlow,
+  .nodeGlow {
+    animation: none !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero {
+    padding-top: 16px;
+  }
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .nodes {
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
