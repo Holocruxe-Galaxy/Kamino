@@ -2,7 +2,7 @@ import styles from "./CarouselDots.module.css";
 
 export const CarouselDots = ({ count, activeIndex, onSelect }) => {
   return (
-    <div className={styles.carouselDots} aria-hidden="true">
+    <div className={styles.carouselDots}>
       {Array.from({ length: count }).map((_, idx) => (
         <button
           key={idx}
@@ -12,6 +12,7 @@ export const CarouselDots = ({ count, activeIndex, onSelect }) => {
           }`}
           onClick={() => onSelect(idx)}
           aria-label={`Ir a grupo de miembros ${idx + 1}`}
+          aria-current={activeIndex === idx ? "true" : undefined}
         />
       ))}
     </div>

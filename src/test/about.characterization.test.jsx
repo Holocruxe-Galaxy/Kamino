@@ -176,4 +176,23 @@ describe('Pruebas de caracterización de About (código actual)', () => {
     const valueCards = valuesSection.querySelectorAll('ul li');
     expect(valueCards).toHaveLength(3);
   });
+
+  it('7. Accesibilidad en paginación: contenedor sin aria-hidden y punto activo con aria-current', () => {
+    const { container } = render(<About />);
+
+    const dotsContainer = container.querySelector('div[class*="carouselDots"]');
+    expect(dotsContainer).not.toHaveAttribute('aria-hidden');
+
+    const dots = screen.getAllByRole('button', { name: /Ir a grupo de miembros/i });
+    expect(dots).toHaveLength(10);
+    expect(dots[0]).toHaveAttribute('aria-current', 'true');
+    expect(dots[1]).not.toHaveAttribute('aria-current');
+
+    // Click al siguiente botón
+    const nextBtn = screen.getByRole('button', { name: /Ver siguientes miembros/i });
+    fireEvent.click(nextBtn);
+    expect(dots[0]).not.toHaveAttribute('aria-current');
+    expect(dots[1]).toHaveAttribute('aria-current', 'true');
+  });
 });
+
