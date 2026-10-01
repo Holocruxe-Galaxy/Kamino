@@ -8,6 +8,9 @@ import {
   CAROUSEL_AUTOPLAY_INTERVAL_MS,
   CAROUSEL_SWIPE_THRESHOLD_PX,
 } from "../../features/about/constants/carousel.constants";
+import { TEAM_MEMBERS } from "../../features/about/data/teamMembers";
+import { TIMELINE_ITEMS } from "../../features/about/data/timelineData";
+import { VALUES_ITEMS } from "../../features/about/data/valuesData";
 
 const About = () => {
   const { t } = useTranslation();
@@ -15,74 +18,6 @@ const About = () => {
   useEffect(() => {
     forceScrollTop();
   }, []);
-
-  const timelineItems = [
-    {
-      date: t("aboutPage.timeline.item1.date", "Abril 2023"),
-      desc: t("aboutPage.timeline.item1.desc", "Nace Holocruxe en Córdoba."),
-    },
-    {
-      date: t("aboutPage.timeline.item2.date", "Primeros clientes"),
-      desc: t(
-        "aboutPage.timeline.item2.desc",
-        "Proyectos de logística y seguridad en Chile y México."
-      ),
-    },
-    {
-      date: t("aboutPage.timeline.item3.date", "Productos propios"),
-      desc: t(
-        "aboutPage.timeline.item3.desc",
-        "Lanzamos Kira, Vinado, Cruxie y Cruxie WhatsApp."
-      ),
-    },
-    {
-      date: t("aboutPage.timeline.item4.date", "Hoy"),
-      desc: t(
-        "aboutPage.timeline.item4.desc",
-        "10 personas, 3 países, 4 productos en producción."
-      ),
-    },
-  ];
-
-  const valuesItems = [
-    {
-      title: t("aboutPage.values.authenticity.title", "Autenticidad"),
-      desc: t(
-        "aboutPage.values.authenticity.desc",
-        "Te decimos qué se puede hacer y qué no, antes de empezar."
-      ),
-    },
-    {
-      title: t("aboutPage.values.connection.title", "Conexión"),
-      desc: t(
-        "aboutPage.values.connection.desc",
-        "Tecnología que acerca a las personas, no que las reemplaza."
-      ),
-    },
-    {
-      title: t("aboutPage.values.privacy.title", "Privacidad"),
-      desc: t(
-        "aboutPage.values.privacy.desc",
-        "Cuidamos tus datos desde el diseño, no como agregado."
-      ),
-    },
-  ];
-
-  const teamMembers = [
-    { name: "Andy", role: "CEO & Founder", image: "/images/Andy.webp" },
-    { name: "Fabro", role: "CPO & Founder", image: "/images/Fabro.webp" },
-    { name: "Alex", role: "Backend Developer", image: "/images/Alex.webp" },
-    { name: "Jalu", role: "Software Architect", image: "/images/Jalu.webp" },
-    { name: "Facu", role: "AI Developer", image: "/images/Facu.webp" },
-    { name: "Ro", role: "Frontend Developer", image: "/images/Ro.webp" },
-    { name: "Chris", role: "Backend Developer", image: "/images/Chris.webp" },
-    { name: "Ceci", role: "Product & Graphic Designer", image: "/images/Ceci.webp" },
-    { name: "Bruno", role: "AI Automation Developer", image: "/images/Bruno.webp" },
-    { name: "Daf", role: "Growth Marketing Manager", image: "/images/Daff.webp" },
-    { name: "Gera", role: "Sales Manager", image: "/images/Gera.webp" },
-    { name: "Gabi", role: "Product & UX/UI Designer", image: "/images/Gabi.webp" },
-    { name: "Gianni", role: "Frontend Developer", image: "/images/Gianni.webp" },
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
@@ -107,7 +42,7 @@ const About = () => {
     return () => window.removeEventListener("resize", updateVisibleCount);
   }, []);
 
-  const maxIndex = Math.max(0, teamMembers.length - visibleCount);
+  const maxIndex = Math.max(0, TEAM_MEMBERS.length - visibleCount);
 
   useEffect(() => {
     if (currentIndex > maxIndex) {
@@ -188,10 +123,14 @@ const About = () => {
             {/* Columna Derecha: Timeline / Hitos */}
             <div className={styles.timelineCol}>
               <ol className={styles.timeline}>
-                {timelineItems.map((item, index) => (
-                  <li key={index} className={styles.timelineItem}>
-                    <strong className={styles.timelineDate}>{item.date}</strong>
-                    <span className={styles.timelineDesc}>{item.desc}</span>
+                {TIMELINE_ITEMS.map((item) => (
+                  <li key={item.id} className={styles.timelineItem}>
+                    <strong className={styles.timelineDate}>
+                      {t(item.dateKey, item.dateFallback)}
+                    </strong>
+                    <span className={styles.timelineDesc}>
+                      {t(item.descKey, item.descFallback)}
+                    </span>
                   </li>
                 ))}
               </ol>
@@ -208,10 +147,14 @@ const About = () => {
           </h2>
 
           <ul className={styles.valuesGrid}>
-            {valuesItems.map((val, idx) => (
-              <li key={idx} className={styles.valueCard}>
-                <h3 className={styles.valueTitle}>{val.title}</h3>
-                <p className={styles.valueDesc}>{val.desc}</p>
+            {VALUES_ITEMS.map((val) => (
+              <li key={val.id} className={styles.valueCard}>
+                <h3 className={styles.valueTitle}>
+                  {t(val.titleKey, val.titleFallback)}
+                </h3>
+                <p className={styles.valueDesc}>
+                  {t(val.descKey, val.descFallback)}
+                </p>
               </li>
             ))}
           </ul>
@@ -261,7 +204,7 @@ const About = () => {
                   transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
                 }}
               >
-                {teamMembers.map((member, i) => (
+                {TEAM_MEMBERS.map((member, i) => (
                   <div key={i} className={styles.carouselSlide}>
                     <div
                       className={styles.memberCard}

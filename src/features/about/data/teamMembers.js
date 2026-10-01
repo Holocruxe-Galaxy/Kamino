@@ -1,0 +1,15 @@
+export const TEAM_MEMBERS = [
+  { name: "Andy", role: "CEO & Founder", image: "/images/Andy.webp" },
+  { name: "Fabro", role: "CPO & Founder", image: "/images/Fabro.webp" },
+  { name: "Alex", role: "Backend Developer", image: "/images/Alex.webp" },
+  { name: "Jalu", role: "Software Architect", image: "/images/Jalu.webp" },
+  { name: "Facu", role: "AI Developer", image: "/images/Facu.webp" },
+  { name: "Ro", role: "Frontend Developer", image: "/images/Ro.webp" },
+  { name: "Chris", role: "Backend Developer", image: "/images/Chris.webp" },
+  { name: "Ceci", role: "Product & Graphic Designer", image: "/images/Ceci.webp" },
+  { name: "Bruno", role: "AI Automation Developer", image: "/images/Bruno.webp" },
+  { name: "Daf", role: "Growth Marketing Manager", image: "/images/Daff.webp" },
+  { name: "Gera", role: "Sales Manager", image: "/images/Gera.webp" },
+  { name: "Gabi", role: "Product & UX/UI Designer", image: "/images/Gabi.webp" },
+  { name: "Gianni", role: "Frontend Developer", image: "/images/Gianni.webp" },
+];
