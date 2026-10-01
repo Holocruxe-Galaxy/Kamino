@@ -1,0 +1,86 @@
+.aboutHero {
+  padding: 24px 0 72px;
+  background: var(--color-bg);
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.narrative {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  max-width: 24ch;
+}
+
+.intro {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #a5b4cf;
+  margin: 0 0 32px 0;
+  max-width: 48ch;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.storyText p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a5b4cf;
+  margin: 0;
+}
+
+.timelineCol {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .aboutHero {
+    padding: 24px 0 52px;
+  }
+
+  .timelineCol {
+    height: auto;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutHero {
+    padding: 20px 0 36px;
+  }
+}

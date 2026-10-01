@@ -1,0 +1,32 @@
+.carouselArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #349aef;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 6px;
+  transition: color 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+  z-index: 2;
+  box-shadow: none;
+  outline: none;
+}
+
+.carouselArrow:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 10px rgba(52, 154, 239, 0.9));
+}
+
+.prevArrow:hover {
+  transform: translateX(-4px) scale(1.1);
+}
+
+.nextArrow:hover {
+  transform: translateX(4px) scale(1.1);
+}
+
+.carouselArrow:active {
+  transform: scale(0.92);
+}
