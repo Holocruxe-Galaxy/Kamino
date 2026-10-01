@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './Faqs.module.css';
 import AnimationBg from '../../components/AnimationBg/AnimationBg';
 import robotImage from "../../img/cruxieRobot.png"; 
@@ -16,11 +15,18 @@ const Panel = ({ activeTab, index, activateTab }) => {
       sessionStorage.setItem('visited', 'true');
     }
 
-    setTimeout(() => {
-      const el = ReactDOM.findDOMNode(panelRef.current);
-      const height = el.querySelector('#panel_inner').scrollHeight;
-      setHeight(height);
+    const timer = setTimeout(() => {
+      if (panelRef.current) {
+        const inner = panelRef.current.querySelector('#panel_inner');
+        if (inner) {
+          setHeight(inner.scrollHeight);
+        }
+      }
     }, 333);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   const isActive = activeTab === index;
