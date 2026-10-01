@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Landing from './views/Landing/Landing';
 import About from './views/About/About';

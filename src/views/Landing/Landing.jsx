@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './Landing.module.css';
 import Hero from '../../components/Hero/Hero';
 import Facts from '../../components/Hero/Facts';

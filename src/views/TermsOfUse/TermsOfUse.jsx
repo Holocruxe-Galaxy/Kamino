@@ -28,7 +28,7 @@ const TermsOfUse = () => {
 
         <p><strong>3. Uso Permitido y Restricciones:</strong> El usuario se compromete a utilizar la app de manera legal. Queda estrictamente prohibido intentar realizar ingeniería inversa, extraer el código, distribuir versiones modificadas o utilizar la plataforma para cualquier actividad que vulnere derechos de terceros o leyes vigentes.</p>
 
-        <p><strong>4. Limitación de Responsabilidad:</strong> CRUXIE se proporciona "tal cual" y según disponibilidad. No garantizamos que el servicio sea ininterrumpido o libre de errores. HOLOCRUXE no será responsable de daños directos, indirectos o incidentales que resulten del uso o la imposibilidad de uso de la herramienta.</p>
+        <p><strong>4. Limitación de Responsabilidad:</strong> CRUXIE se proporciona &quot;tal cual&quot; y según disponibilidad. No garantizamos que el servicio sea ininterrumpido o libre de errores. HOLOCRUXE no será responsable de daños directos, indirectos o incidentales que resulten del uso o la imposibilidad de uso de la herramienta.</p>
 
         <p><strong>5. Suspensión de Servicio y Actualizaciones:</strong> Nos reservamos el derecho de modificar, suspender o retirar cualquier función de la aplicación en cualquier momento y sin previo aviso. Asimismo, estos términos pueden actualizarse para reflejar cambios legales o técnicos; el uso continuado de la app tras dichos cambios implica la aceptación de los nuevos términos.</p>
 

@@ -27,7 +27,7 @@ const PrivacyView = () => {
         <ol style={{ paddingLeft: '20px', margin: '15px 0' }}>
           <li><strong>Datos automáticos:</strong> Podemos recopilar información técnica como el modelo del dispositivo y la versión del sistema operativo.</li>
           <li><strong>Uso de la Información:</strong> Los datos se utilizan exclusivamente para mejorar la experiencia del usuario y el funcionamiento técnico de la app.</li>
-          <li><strong>Terceros:</strong> (Si usan Google Analytics o AdMob, deben ponerlo aquí). "Esta app utiliza servicios de terceros que pueden recopilar información identificativa".</li>
+          <li><strong>Terceros:</strong> (Si usan Google Analytics o AdMob, deben ponerlo aquí). &quot;Esta app utiliza servicios de terceros que pueden recopilar información identificativa&quot;.</li>
           <li><strong>Seguridad:</strong> Implementamos medidas para proteger sus datos personales, pero recordamos que ningún método de transmisión por internet es 100% seguro.</li>
           <li><strong>Enlaces a otros sitios:</strong> Nuestra app puede contener enlaces a sitios externos no operados por nosotros.</li>
           <li><strong>Menores de edad:</strong> No recopilamos conscientemente información de niños menores de 13 años.</li>

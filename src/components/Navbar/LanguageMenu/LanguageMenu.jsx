@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"; 
+import { useState, useEffect } from "react"; 
 import styles from "../Navbar.module.css"; 
 import { useTranslation } from "react-i18next";
 import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
-import itaFlag from "../../../icons/italy.svg";
 
 const flagMap = {
   es: esFlag,
@@ -11,7 +10,7 @@ const flagMap = {
 };
 
 const languages = ['es', 'en'];
-``
+
 const LanguageButton = ({ language, changeLanguage, isSelected }) => (
   <button
     className={`${styles.langButton} ${isSelected ? styles.selectedLangButton : ''}`}
