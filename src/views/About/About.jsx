@@ -2,6 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./About.module.css";
 import { forceScrollTop } from "../../utils/scroll";
+import {
+  CAROUSEL_BREAKPOINTS,
+  CAROUSEL_VISIBLE_COUNTS,
+  CAROUSEL_AUTOPLAY_INTERVAL_MS,
+  CAROUSEL_SWIPE_THRESHOLD_PX,
+} from "../../features/about/constants/carousel.constants";
 
 const About = () => {
   const { t } = useTranslation();
@@ -86,14 +92,14 @@ const About = () => {
   useEffect(() => {
     const updateVisibleCount = () => {
       const w = window.innerWidth;
-      if (w <= 540) {
-        setVisibleCount(1);
-      } else if (w <= 820) {
-        setVisibleCount(2);
-      } else if (w <= 1100) {
-        setVisibleCount(3);
+      if (w <= CAROUSEL_BREAKPOINTS.MOBILE) {
+        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.MOBILE);
+      } else if (w <= CAROUSEL_BREAKPOINTS.TABLET) {
+        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.TABLET);
+      } else if (w <= CAROUSEL_BREAKPOINTS.LAPTOP) {
+        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.LAPTOP);
       } else {
-        setVisibleCount(4);
+        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.DESKTOP);
       }
     };
     updateVisibleCount();
@@ -113,7 +119,7 @@ const About = () => {
     if (isPaused || maxIndex <= 0) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 3200);
+    }, CAROUSEL_AUTOPLAY_INTERVAL_MS);
     return () => clearInterval(interval);
   }, [isPaused, maxIndex]);
 
@@ -133,7 +139,7 @@ const About = () => {
     if (touchStartX.current === null) return;
     const touchEndX = e.changedTouches[0].clientX;
     const diff = touchStartX.current - touchEndX;
-    if (Math.abs(diff) > 40) {
+    if (Math.abs(diff) > CAROUSEL_SWIPE_THRESHOLD_PX) {
       if (diff > 0) {
         handleNext();
       } else {
@@ -157,7 +163,6 @@ const About = () => {
               <p className={styles.intro}>
                 {t(
                   "aboutPage.hero.intro",
-                  "Nacimos en Córdoba en abril de 2023. Hoy somos un equipo de 10 personas, 100% remoto, que trabaja para empresas de tres países."
                 )}
               </p>
 
@@ -165,19 +170,16 @@ const About = () => {
                 <p>
                   {t(
                     "aboutPage.story.p1",
-                    "Holocruxe empezó con una idea simple: la inteligencia artificial sirve cuando resuelve un problema concreto de una empresa, no cuando es una demo."
                   )}
                 </p>
                 <p>
                   {t(
                     "aboutPage.story.p2",
-                    "Por eso hacemos dos cosas. Construimos software e IA para otras empresas, y construimos nuestros propios productos. Lo que aprendemos en uno lo aplicamos en el otro."
                   )}
                 </p>
                 <p>
                   {t(
                     "aboutPage.story.p3",
-                    "No tenemos oficinas. Trabajamos de forma remota, con clientes en Argentina, Chile y México."
                   )}
                 </p>
               </div>
