@@ -93,6 +93,7 @@ const AnimationBg = () => {
       geometry.dispose();
       starStuff.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
 
       if (renderer.domElement && renderer.domElement.parentNode) {
         renderer.domElement.parentNode.removeChild(renderer.domElement);

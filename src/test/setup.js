@@ -41,6 +41,7 @@ vi.mock('three', async (importOriginal) => {
       setClearColor: vi.fn(),
       render: vi.fn(),
       dispose: vi.fn(),
+      forceContextLoss: vi.fn(),
       autoClear: false,
       domElement: document.createElement('canvas'),
     })),
