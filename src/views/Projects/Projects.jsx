@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Projects.module.css";
+import { forceScrollTop } from "../../utils/scroll";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    forceScrollTop();
   }, []);
 
   const handleContactClick = (e) => {

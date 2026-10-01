@@ -17,7 +17,7 @@ const HomeProducts = () => {
         "Toma notas, traduce en tiempo real y arma la minuta de tus reuniones."
       ),
       linkText: t("homeProducts.kiraBtn", "Visitar Kira"),
-      url: "https://www.kira.holocruxe.com",
+      url: "https://kira.holocruxe.com",
     },
     {
       name: "Cruxie WhatsApp",
@@ -28,8 +28,8 @@ const HomeProducts = () => {
         "homeProducts.waDesc",
         "Un agente de IA que atiende a tus clientes por WhatsApp."
       ),
-      linkText: t("homeProducts.waBtn", "Conocer Cruxie WhatsApp"),
-      url: "https://www.cruxie.holocruxe.com",
+      linkText: t("homeProducts.waBtn", "Pedir demo"),
+      url: "/products#cruxie_wa",
     },
     {
       name: "Vinado",
@@ -40,8 +40,8 @@ const HomeProducts = () => {
         "homeProducts.vinadoDesc",
         "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos."
       ),
-      linkText: t("homeProducts.vinadoBtn", "Visitar Vinado"),
-      url: "https://www.vinado-app.com",
+      linkText: t("homeProducts.vinadoBtn", "Descargar Vinado"),
+      url: "https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR",
     },
     {
       name: "Cruxie",
@@ -53,7 +53,7 @@ const HomeProducts = () => {
         "Asistentes de IA entrenados con el conocimiento de tu organización."
       ),
       linkText: t("homeProducts.cruxieBtn", "Visitar Cruxie"),
-      url: "https://www.cruxie.holocruxe.com",
+      url: "https://cruxie.holocruxe.com",
     },
   ];
 
@@ -92,9 +92,16 @@ const HomeProducts = () => {
                 href={prod.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.prodLink}
+                className={styles.visitLink}
               >
-                {prod.linkText} →
+                {prod.name === "Vinado" && (
+                  <img
+                    src="/images/google-play.svg"
+                    alt="Google Play"
+                    className={styles.playIcon}
+                  />
+                )}
+                <span>{prod.linkText}</span> →
               </a>
             </article>
           ))}

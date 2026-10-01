@@ -2,10 +2,13 @@
    NAVBAR & HEADER STYLES (Mock aligned)
    ========================================= */
 
+.container,
 header.container {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   width: 100%;
   padding-top: env(safe-area-inset-top, 0px);
   background: var(--color-bg);
@@ -14,6 +17,12 @@ header.container {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   box-sizing: border-box;
+}
+
+.navbarSpacer {
+  width: 100%;
+  height: calc(74px + env(safe-area-inset-top, 0px));
+  flex-shrink: 0;
 }
 
 .navWrap {

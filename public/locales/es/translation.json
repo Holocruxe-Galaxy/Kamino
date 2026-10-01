@@ -58,11 +58,11 @@
     "kiraDesc": "Toma notas, traduce en tiempo real y arma la minuta de tus reuniones.",
     "kiraBtn": "Visitar Kira",
     "vinadoDesc": "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos.",
-    "vinadoBtn": "Visitar Vinado",
+    "vinadoBtn": "Descargar Vinado",
     "cruxieDesc": "Asistentes de IA entrenados con el conocimiento de tu organización.",
     "cruxieBtn": "Visitar Cruxie",
     "waDesc": "Un agente de IA que atiende a tus clientes por WhatsApp.",
-    "waBtn": "Conocer Cruxie WhatsApp",
+    "waBtn": "Pedir demo",
     "allBtn": "Ver todos los productos"
   },
   "cases": {
@@ -136,7 +136,7 @@
         "Para bodegas y vinotecas: sumate como Vinado Point"
       ],
       "forDesc": "Quienes disfrutan el vino, y bodegas o vinotecas que quieren llegar a ellos",
-      "visitBtn": "Visitar Vinado",
+      "visitBtn": "Descargar Vinado",
       "partnerBtn": "Soy bodega o vinoteca"
     },
     "cruxie": {

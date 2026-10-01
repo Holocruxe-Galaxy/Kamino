@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import menu from "../../img/menu";
 import styles from "./navBarMobile.module.css";
+import { forceScrollTop } from "../../utils/scroll";
 
 export default function Mobile({ menuOpen, toggleMenu, onTalkClick }) {
   const { t } = useTranslation();
 
   const handleLinkClick = () => {
     toggleMenu(false);
+    forceScrollTop();
+    requestAnimationFrame(forceScrollTop);
   };
 
   const handleTalk = (e) => {

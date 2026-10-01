@@ -80,25 +80,7 @@ const Footer = () => {
             <ul>
               <li>
                 <a
-                  href="https://www.cruxie.holocruxe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cruxie
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.cruxie.holocruxe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cruxie WhatsApp
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.kira.holocruxe.com"
+                  href="https://kira.holocruxe.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -106,12 +88,26 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/products#cruxie_wa">
+                  Cruxie WhatsApp
+                </a>
+              </li>
+              <li>
                 <a
-                  href="https://www.vinado-app.com"
+                  href="https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Vinado
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://cruxie.holocruxe.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cruxie
                 </a>
               </li>
             </ul>

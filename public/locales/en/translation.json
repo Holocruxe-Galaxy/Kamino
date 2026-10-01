@@ -58,11 +58,11 @@
     "kiraDesc": "Takes notes, translates in real-time, and creates meeting minutes.",
     "kiraBtn": "Visit Kira",
     "vinadoDesc": "Log and rate wines you drink, earn points, and get exclusive discounts.",
-    "vinadoBtn": "Visit Vinado",
+    "vinadoBtn": "Download Vinado",
     "cruxieDesc": "AI assistants trained with your organization's proprietary knowledge.",
     "cruxieBtn": "Visit Cruxie",
     "waDesc": "An AI agent that handles your customer service on WhatsApp.",
-    "waBtn": "Discover Cruxie WhatsApp",
+    "waBtn": "Request demo",
     "allBtn": "View all products"
   },
   "cases": {
@@ -136,7 +136,7 @@
         "For wineries and wine bars: join as a Vinado Point"
       ],
       "forDesc": "Wine lovers, as well as wineries and wine bars seeking to reach them",
-      "visitBtn": "Visit Vinado",
+      "visitBtn": "Download Vinado",
       "partnerBtn": "I'm a winery or wine bar"
     },
     "cruxie": {

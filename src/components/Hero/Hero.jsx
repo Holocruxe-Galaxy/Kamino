@@ -198,7 +198,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.kira.holocruxe.com"
+                href="https://kira.holocruxe.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}
@@ -234,9 +234,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.cruxie.holocruxe.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products#cruxie_wa"
                 className={styles.node}
               >
                 <circle
@@ -270,7 +268,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.cruxie.holocruxe.com"
+                href="https://cruxie.holocruxe.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}
@@ -307,7 +305,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.vinado-app.com"
+                href="https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}

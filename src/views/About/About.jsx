@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./About.module.css";
+import { forceScrollTop } from "../../utils/scroll";
 
 const About = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    forceScrollTop();
   }, []);
 
   const timelineItems = [
@@ -62,30 +63,25 @@ const About = () => {
   ];
 
   const teamMembers = [
-    { name: "Nombre Apellido", role: "Co-founder & CEO" },
-    { name: "Nombre Apellido", role: "Co-founder & CTO" },
-    { name: "Nombre Apellido", role: "Head of AI" },
-    { name: "Nombre Apellido", role: "Fullstack Developer" },
-    { name: "Nombre Apellido", role: "Backend Developer" },
-    { name: "Nombre Apellido", role: "Frontend Developer" },
-    { name: "Nombre Apellido", role: "AI Specialist" },
-    { name: "Nombre Apellido", role: "Product Designer" },
-    { name: "Nombre Apellido", role: "DevOps & Cloud" },
-    { name: "Nombre Apellido", role: "Operations & Growth" },
+    { name: "Andy", role: "CEO & Founder", image: "/images/Andy.webp" },
+    { name: "Fabro", role: "CPO & Founder", image: "/images/Fabro.webp" },
+    { name: "Alex", role: "Backend Developer", image: "/images/Alex.webp" },
+    { name: "Jalu", role: "Software Architect", image: "/images/Jalu.webp" },
+    { name: "Facu", role: "AI Developer", image: "/images/Facu.webp" },
+    { name: "Ro", role: "Frontend Developer", image: "/images/Ro.webp" },
+    { name: "Chris", role: "Backend Developer", image: "/images/Chris.webp" },
+    { name: "Ceci", role: "Product & Graphic Designer", image: "/images/Ceci.webp" },
+    { name: "Bruno", role: "AI Automation Developer", image: "/images/Bruno.webp" },
+    { name: "Daf", role: "Growth Marketing Manager", image: "/images/Daff.webp" },
+    { name: "Gera", role: "Sales Manager", image: "/images/Gera.webp" },
+    { name: "Gabi", role: "Product & UX/UI Designer", image: "/images/Gabi.webp" },
+    { name: "Gianni", role: "Frontend Developer", image: "/images/Gianni.webp" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
   const [isPaused, setIsPaused] = useState(false);
-  const [flippedCards, setFlippedCards] = useState({});
   const touchStartX = useRef(null);
-
-  const toggleCardFlip = (index) => {
-    setFlippedCards((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -267,74 +263,20 @@ const About = () => {
                   <div key={i} className={styles.carouselSlide}>
                     <div
                       className={styles.memberCard}
-                      onClick={() => toggleCardFlip(i)}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault();
-                          toggleCardFlip(i);
-                        }
-                      }}
-                      aria-label={`${member.name}, ${member.role}. Ver avatar`}
+                      aria-label={`${member.name}, equipo de Holocruxe`}
                     >
-                      <div
-                        className={`${styles.cardInner} ${
-                          flippedCards[i] ? styles.cardFlipped : ""
-                        }`}
-                      >
-                        {/* Frente: Foto / Datos del miembro */}
-                        <div className={styles.cardFront}>
-                          <div className={styles.avatarPlaceholder} aria-hidden="true">
-                            <svg
-                              width="42"
-                              height="42"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className={styles.avatarIcon}
-                            >
-                              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                              <circle cx="12" cy="7" r="4" />
-                            </svg>
-                            <span className={styles.avatarLabel}>Foto</span>
-                          </div>
-                          <strong className={styles.memberName}>{member.name}</strong>
-                          <span className={styles.memberRole}>{member.role}</span>
-                          <span className={styles.flipBadge}>Hover para avatar ↻</span>
-                        </div>
-
-                        {/* Dorso: Espacio para Avatar ilustrado/3D */}
-                        <div className={styles.cardBack}>
-                          <div className={styles.avatarBackFrame} aria-hidden="true">
-                            <div className={styles.avatarBackGlow} />
-                            <svg
-                              width="46"
-                              height="46"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className={styles.avatarBackIcon}
-                            >
-                              <circle cx="12" cy="8" r="4" />
-                              <path d="M6 21v-2a6 6 0 0 1 12 0v2" />
-                              <path d="M12 2v2" />
-                              <path d="M4.93 4.93l1.41 1.41" />
-                              <path d="M19.07 4.93l-1.41 1.41" />
-                            </svg>
-                            <span className={styles.avatarBackBadge}>Avatar</span>
-                          </div>
-                          <strong className={styles.memberNameBack}>{member.name}</strong>
-                          <span className={styles.memberRoleBack}>{member.role}</span>
-                          <span className={styles.teamTag}>Holocruxe Team</span>
-                        </div>
+                      <div className={styles.avatarFrame}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className={styles.avatarImg}
+                          loading="lazy"
+                        />
                       </div>
+                      <strong className={styles.memberName}>{member.name}</strong>
+                      {member.role && (
+                        <span className={styles.memberRole}>{member.role}</span>
+                      )}
                     </div>
                   </div>
                 ))}

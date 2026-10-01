@@ -153,6 +153,13 @@
   transform: translateX(2px);
 }
 
+.playIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .actions {
   margin-top: 48px;
   display: flex;
