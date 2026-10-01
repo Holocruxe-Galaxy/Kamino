@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./About.module.css";
 import { forceScrollTop } from "../../utils/scroll";
@@ -11,6 +11,12 @@ import {
 import { TEAM_MEMBERS } from "../../features/about/data/teamMembers";
 import { TIMELINE_ITEMS } from "../../features/about/data/timelineData";
 import { VALUES_ITEMS } from "../../features/about/data/valuesData";
+import {
+  useVisibleCount,
+  useCarousel,
+  useAutoplay,
+  useSwipe,
+} from "../../hooks";
 
 const About = () => {
   const { t } = useTranslation();
@@ -19,70 +25,33 @@ const About = () => {
     forceScrollTop();
   }, []);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(4);
-  const [isPaused, setIsPaused] = useState(false);
-  const touchStartX = useRef(null);
+  const visibleCount = useVisibleCount(
+    CAROUSEL_BREAKPOINTS,
+    CAROUSEL_VISIBLE_COUNTS
+  );
 
-  useEffect(() => {
-    const updateVisibleCount = () => {
-      const w = window.innerWidth;
-      if (w <= CAROUSEL_BREAKPOINTS.MOBILE) {
-        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.MOBILE);
-      } else if (w <= CAROUSEL_BREAKPOINTS.TABLET) {
-        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.TABLET);
-      } else if (w <= CAROUSEL_BREAKPOINTS.LAPTOP) {
-        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.LAPTOP);
-      } else {
-        setVisibleCount(CAROUSEL_VISIBLE_COUNTS.DESKTOP);
-      }
-    };
-    updateVisibleCount();
-    window.addEventListener("resize", updateVisibleCount);
-    return () => window.removeEventListener("resize", updateVisibleCount);
-  }, []);
+  const {
+    currentIndex,
+    maxIndex,
+    handleNext,
+    handlePrev,
+    goTo,
+  } = useCarousel({
+    totalItems: TEAM_MEMBERS.length,
+    visibleCount,
+  });
 
-  const maxIndex = Math.max(0, TEAM_MEMBERS.length - visibleCount);
+  const { setIsPaused } = useAutoplay({
+    onTick: handleNext,
+    intervalMs: CAROUSEL_AUTOPLAY_INTERVAL_MS,
+    isEnabled: maxIndex > 0,
+  });
 
-  useEffect(() => {
-    if (currentIndex > maxIndex) {
-      setCurrentIndex(maxIndex);
-    }
-  }, [maxIndex, currentIndex]);
-
-  useEffect(() => {
-    if (isPaused || maxIndex <= 0) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, CAROUSEL_AUTOPLAY_INTERVAL_MS);
-    return () => clearInterval(interval);
-  }, [isPaused, maxIndex]);
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX.current - touchEndX;
-    if (Math.abs(diff) > CAROUSEL_SWIPE_THRESHOLD_PX) {
-      if (diff > 0) {
-        handleNext();
-      } else {
-        handlePrev();
-      }
-    }
-    touchStartX.current = null;
-  };
+  const { onTouchStart, onTouchEnd } = useSwipe({
+    onSwipeLeft: handleNext,
+    onSwipeRight: handlePrev,
+    threshold: CAROUSEL_SWIPE_THRESHOLD_PX,
+  });
 
   return (
     <main className={styles.container}>
@@ -172,8 +141,8 @@ const About = () => {
             className={styles.carouselContainer}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
           >
             {/* Flecha Izquierda */}
             <button
@@ -259,7 +228,7 @@ const About = () => {
                 className={`${styles.dot} ${
                   currentIndex === idx ? styles.activeDot : ""
                 }`}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={() => goTo(idx)}
                 aria-label={`Ir a grupo de miembros ${idx + 1}`}
               />
             ))}
