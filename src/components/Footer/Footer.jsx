@@ -1,7 +1,13 @@
+import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandLinkedin } from "react-icons/tb";
+import {
+  SOCIAL_LINKS,
+  FOOTER_NAV_COLUMNS,
+  FOOTER_LEGAL_LINKS,
+} from "./data/footerNavigation";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -34,117 +40,67 @@ const Footer = () => {
               )}
             </p>
             <div className={styles.socialLinks}>
-              <a
-                href="https://www.linkedin.com/company/holocruxe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialBtn}
-                aria-label="LinkedIn de Holocruxe"
-              >
-                <TbBrandLinkedin />
-              </a>
-              <a
-                href="https://www.instagram.com/holocruxe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialBtn}
-                aria-label="Instagram de Holocruxe"
-              >
-                <FaInstagram />
-              </a>
+              {SOCIAL_LINKS.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialBtn}
+                  aria-label={item.label}
+                >
+                  {item.icon === "linkedin" ? <TbBrandLinkedin /> : <FaInstagram />}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Columna 2: Empresa */}
-          <div className={styles.navCol}>
-            <h4>{t("footer.company", "Empresa")}</h4>
-            <ul>
-              <li>
-                <NavLink to="/about">{t("footer.about", "Nosotros")}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/projects">{t("footer.projects", "Proyectos")}</NavLink>
-              </li>
-              <li>
-                <a href="/#contacto" onClick={handleContactClick}>
-                  {t("footer.contact", "Contacto")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Columna 3: Productos */}
-          <div className={styles.navCol}>
-            <h4>{t("footer.products", "Productos")}</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://kira.holocruxe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Kira
-                </a>
-              </li>
-              <li>
-                <a href="/products#cruxie_wa">
-                  Cruxie WhatsApp
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Vinado
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://cruxie.holocruxe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Cruxie
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Columna 4: Factory */}
-          <div className={styles.navCol}>
-            <h4>{t("footer.factory", "Factory")}</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://factory.holocruxe.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("footer.factoryProject", "Tu proyecto en una semana")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5490000000000"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Columnas de navegación */}
+          {FOOTER_NAV_COLUMNS.map((col) => (
+            <div key={col.id} className={styles.navCol}>
+              <h4>{t(col.titleKey, col.titleFallback)}</h4>
+              <ul>
+                {col.links.map((link) => (
+                  <li key={link.id}>
+                    {link.to ? (
+                      <NavLink to={link.to}>
+                        {t(link.labelKey, link.labelFallback)}
+                      </NavLink>
+                    ) : link.isContact ? (
+                      <a href={link.href} onClick={handleContactClick}>
+                        {t(link.labelKey, link.labelFallback)}
+                      </a>
+                    ) : (
+                      <a
+                        href={link.href}
+                        {...(link.isExternal
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
+                        {link.labelKey
+                          ? t(link.labelKey, link.labelFallback)
+                          : link.label}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Fila inferior: Derechos y enlaces legales */}
         <div className={styles.legal}>
           <p>© {currentYear} Holocruxe</p>
           <div className={styles.legalLinks}>
-            <NavLink to="/privacy">{t("footer.privacy", "Privacidad")}</NavLink>
-            <span className={styles.separator}>·</span>
-            <NavLink to="/terms-of-use">{t("footer.terms", "Términos")}</NavLink>
+            {FOOTER_LEGAL_LINKS.map((link, idx) => (
+              <Fragment key={link.id}>
+                {idx > 0 && <span className={styles.separator}>·</span>}
+                <NavLink to={link.to}>
+                  {t(link.labelKey, link.labelFallback)}
+                </NavLink>
+              </Fragment>
+            ))}
           </div>
         </div>
       </div>
