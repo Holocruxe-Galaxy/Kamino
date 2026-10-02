@@ -41,7 +41,7 @@ const HomeProducts = () => {
         "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos."
       ),
       linkText: t("homeProducts.vinadoBtn", "Descargar Vinado"),
-      url: EXTERNAL_LINKS.GOOGLE_PLAY_VINADO,
+      url: EXTERNAL_LINKS.VINADO,
     },
     {
       name: "Cruxie",
@@ -94,13 +94,6 @@ const HomeProducts = () => {
                 rel="noopener noreferrer"
                 className={styles.visitLink}
               >
-                {prod.name === "Vinado" && (
-                  <img
-                    src="/images/google-play.svg"
-                    alt="Google Play"
-                    className={styles.playIcon}
-                  />
-                )}
                 <span>{prod.linkText}</span> →
               </a>
             </article>

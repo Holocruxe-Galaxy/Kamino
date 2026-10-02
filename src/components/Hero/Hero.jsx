@@ -305,7 +305,7 @@ const Hero = () => {
               </a>
 
               <a
-                href={EXTERNAL_LINKS.GOOGLE_PLAY_VINADO}
+                href={EXTERNAL_LINKS.VINADO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}

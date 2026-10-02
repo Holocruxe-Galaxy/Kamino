@@ -62,7 +62,7 @@ export const FOOTER_NAV_COLUMNS = [
       {
         id: "vinado",
         label: "Vinado",
-        href: EXTERNAL_LINKS.GOOGLE_PLAY_VINADO,
+        href: EXTERNAL_LINKS.VINADO,
         isExternal: true,
       },
       {

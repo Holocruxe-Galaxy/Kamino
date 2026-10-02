@@ -121,7 +121,7 @@ const Products = () => {
         "productsPage.vinado.forDesc",
         "Quienes disfrutan el vino, y bodegas o vinotecas que quieren llegar a ellos"
       ),
-      visitUrl: EXTERNAL_LINKS.GOOGLE_PLAY_VINADO,
+      visitUrl: EXTERNAL_LINKS.VINADO,
       visitText: t("productsPage.vinado.visitBtn", "Descargar Vinado"),
       ghostText: t("productsPage.vinado.partnerBtn", "Soy bodega o vinoteca"),
       isEven: false,
@@ -574,13 +574,6 @@ const Products = () => {
                       rel="noopener noreferrer"
                       className={styles.btnPrimary}
                     >
-                      {prod.id === "vinado" && (
-                        <img
-                          src="/images/google-play.svg"
-                          alt="Google Play"
-                          className={styles.playIcon}
-                        />
-                      )}
                       <span>{prod.visitText}</span>
                     </a>
                   )}
