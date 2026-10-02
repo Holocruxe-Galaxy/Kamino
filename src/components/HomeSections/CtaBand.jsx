@@ -77,13 +77,14 @@ const CtaBand = () => {
     const name = formData.get("name")?.toString() || "";
     const email = formData.get("email")?.toString() || "";
     const company = formData.get("company")?.toString() || "";
+    const phone = formData.get("phone")?.toString() || "";
     const interest = selectedInterest || formData.get("interes")?.toString() || "Otro tema";
     const rawMessage = formData.get("message")?.toString() || "";
 
     const validationErrors = validateFormFields({
       name,
       email,
-      phone: null,
+      phone,
       message: rawMessage,
     });
 
@@ -111,6 +112,7 @@ const CtaBand = () => {
         name: name.trim(),
         email: email.trim(),
         company: company.trim(),
+        phone: phone.trim(),
         interest,
         message: rawMessage.trim(),
         isDemo: isProductDemo,
@@ -251,6 +253,7 @@ const CtaBand = () => {
                   onSubmit={handleSubmit}
                   noValidate
                 >
+                  {/* Row 1: Nombre + Email */}
                   <div className={styles.row}>
                     <label className={styles.fieldLabel}>
                       <span>{t("contact.form.name", "Nombre y apellido")} *</span>
@@ -277,7 +280,20 @@ const CtaBand = () => {
                     </label>
                   </div>
 
+                  {/* Row 2: Teléfono + Empresa */}
                   <div className={styles.row}>
+                    <label className={styles.fieldLabel}>
+                      <span>{t("contact.form.phone", "Teléfono")} *</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        autoComplete="tel"
+                        required
+                        placeholder={t("contact.form.phonePlaceholder", "Ej. +54 9 351 000 0000")}
+                        className={styles.input}
+                      />
+                    </label>
+
                     <label className={styles.fieldLabel}>
                       <span>{t("contact.form.company", "Empresa")}</span>
                       <input
@@ -288,35 +304,37 @@ const CtaBand = () => {
                         className={styles.input}
                       />
                     </label>
-
-                    <label className={styles.fieldLabel}>
-                      <span>{t("contact.form.interest", "¿Sobre qué querés hablar?")}</span>
-                      <select
-                        name="interes"
-                        value={selectedInterest}
-                        onChange={(e) => setSelectedInterest(e.target.value)}
-                        className={styles.select}
-                      >
-                        <option value="Un proyecto para la Factory">
-                          {t("contact.interests.factory", "Un proyecto para la Factory")}
-                        </option>
-                        <option value="Desarrollo a medida">
-                          {t("contact.interests.custom", "Desarrollo a medida")}
-                        </option>
-                        <option value="Equipo dedicado">
-                          {t("contact.interests.team", "Equipo dedicado")}
-                        </option>
-                        <option value="Cruxie">Cruxie</option>
-                        <option value="Cruxie WhatsApp">Cruxie WhatsApp</option>
-                        <option value="Kira">Kira</option>
-                        <option value="Vinado">Vinado</option>
-                        <option value="Otro tema">
-                          {t("contact.interests.other", "Otro tema")}
-                        </option>
-                      </select>
-                    </label>
                   </div>
 
+                  {/* Row 3: Sobre qué querés hablar (full width) */}
+                  <label className={styles.fieldLabel}>
+                    <span>{t("contact.form.interest", "¿Sobre qué querés hablar?")}</span>
+                    <select
+                      name="interes"
+                      value={selectedInterest}
+                      onChange={(e) => setSelectedInterest(e.target.value)}
+                      className={styles.select}
+                    >
+                      <option value="Un proyecto para la Factory">
+                        {t("contact.interests.factory", "Un proyecto para la Factory")}
+                      </option>
+                      <option value="Desarrollo a medida">
+                        {t("contact.interests.custom", "Desarrollo a medida")}
+                      </option>
+                      <option value="Equipo dedicado">
+                        {t("contact.interests.team", "Equipo dedicado")}
+                      </option>
+                      <option value="Cruxie">Cruxie</option>
+                      <option value="Cruxie WhatsApp">Cruxie WhatsApp</option>
+                      <option value="Kira">Kira</option>
+                      <option value="Vinado">Vinado</option>
+                      <option value="Otro tema">
+                        {t("contact.interests.other", "Otro tema")}
+                      </option>
+                    </select>
+                  </label>
+
+                  {/* Contanos qué necesitás (full width) */}
                   <label className={styles.fieldLabel}>
                     <span>{t("contact.form.message", "Contanos qué necesitás")} *</span>
                     <textarea
@@ -330,6 +348,7 @@ const CtaBand = () => {
                       className={styles.textarea}
                     />
                   </label>
+
 
                   {/* Honeypot antispam */}
                   <input

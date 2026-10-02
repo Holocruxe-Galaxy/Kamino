@@ -15,12 +15,12 @@ export const validateFormFields = (data = {}) => {
     errors.push("El correo electrónico no es válido.");
   }
 
-  // Validar teléfono (opcional)
+  // Validar teléfono (obligatorio)
   const phoneRegex = /^\+?[0-9\s()-]{6,20}$/;
-  if (data.phone && typeof data.phone === "string" && data.phone.trim() !== "") {
-    if (!phoneRegex.test(data.phone.trim())) {
-      errors.push("El teléfono no es válido.");
-    }
+  if (!data.phone || typeof data.phone !== "string" || data.phone.trim() === "") {
+    errors.push("El teléfono es obligatorio.");
+  } else if (!phoneRegex.test(data.phone.trim())) {
+    errors.push("El teléfono no es válido.");
   }
 
   // Validar mensaje

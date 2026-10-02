@@ -14,6 +14,7 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
     name: "",
     email: "",
     company: "",
+    phone: "",
   });
   const modalRef = useRef(null);
 
@@ -66,6 +67,7 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
     const name = formData.get("name")?.toString() || "";
     const email = formData.get("email")?.toString() || "";
     const company = formData.get("company")?.toString() || "";
+    const phone = formData.get("phone")?.toString() || "";
     const rawMessage = formData.get("message")?.toString() || "";
 
     const finalMessage =
@@ -75,7 +77,7 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
     const validationErrors = validateFormFields({
       name,
       email,
-      phone: null,
+      phone,
       message: finalMessage,
     });
 
@@ -91,6 +93,7 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
         name: name.trim(),
         email: email.trim(),
         company: company.trim(),
+        phone: phone.trim(),
         interest: productName,
         message: finalMessage,
         isDemo: true,
@@ -101,6 +104,7 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
         name: name.trim(),
         email: email.trim(),
         company: company.trim(),
+        phone: phone.trim(),
       });
       setIsSuccess(true);
     } catch (error) {
@@ -250,19 +254,36 @@ const DemoModal = ({ isOpen, onClose, productName = "Kira" }) => {
                 </label>
               </div>
 
-              <label className={styles.fieldLabel}>
-                <span>{t("demoModal.companyLabel", "Empresa u organización")}</span>
-                <input
-                  type="text"
-                  name="company"
-                  autoComplete="organization"
-                  placeholder={t(
-                    "demoModal.companyPlaceholder",
-                    "Nombre de tu empresa o startup"
-                  )}
-                  className={styles.input}
-                />
-              </label>
+              <div className={styles.row}>
+                <label className={styles.fieldLabel}>
+                  <span>{t("demoModal.companyLabel", "Empresa u organización")}</span>
+                  <input
+                    type="text"
+                    name="company"
+                    autoComplete="organization"
+                    placeholder={t(
+                      "demoModal.companyPlaceholder",
+                      "Nombre de tu empresa o startup"
+                    )}
+                    className={styles.input}
+                  />
+                </label>
+
+                <label className={styles.fieldLabel}>
+                  <span>
+                    {t("demoModal.phoneLabel", "Teléfono")}{" "}
+                    <strong className={styles.requiredStar}>*</strong>
+                  </span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    autoComplete="tel"
+                    placeholder={t("demoModal.phonePlaceholder", "Ej. +54 9 351 000 0000")}
+                    className={styles.input}
+                  />
+                </label>
+              </div>
 
               <label className={styles.fieldLabel}>
                 <span>

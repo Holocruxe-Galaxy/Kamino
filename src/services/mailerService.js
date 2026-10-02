@@ -16,6 +16,7 @@ const buildHtmlTemplate = ({
   name,
   email,
   company,
+  phone,
   interest,
   message,
   isDemo,
@@ -114,6 +115,14 @@ const buildHtmlTemplate = ({
                   </td>
                 </tr>
                 <tr>
+                  <td style="padding: 10px 14px; font-size: 13px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
+                    Teléfono
+                  </td>
+                  <td style="padding: 10px 14px; font-size: 15px; color: #e2e8f0; border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
+                    ${phone || "<em>No proporcionado</em>"}
+                  </td>
+                </tr>
+                <tr>
                   <td style="padding: 10px 14px; font-size: 13px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                     ${isDemo ? "Producto" : "Interés"}
                   </td>
@@ -181,6 +190,7 @@ export const sendCustomMail = async ({
   name,
   email,
   company = "",
+  phone = "",
   interest = "General",
   message = "",
   isDemo = false,
@@ -201,6 +211,7 @@ export const sendCustomMail = async ({
     name,
     email,
     company,
+    phone,
     interest,
     message,
     isDemo,
