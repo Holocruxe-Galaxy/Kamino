@@ -4,7 +4,7 @@ import { forceScrollTop } from "../../utils/scroll";
 import {
   AboutHero,
   AboutValues,
-  TeamCarousel,
+  TeamList,
 } from "../../features/about/components";
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
     <main className={styles.container}>
       <AboutHero />
       <AboutValues />
-      <TeamCarousel />
+      <TeamList />
     </main>
   );
 };

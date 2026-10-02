@@ -3,7 +3,7 @@ export { Timeline } from "./Timeline";
 export { TimelineItem } from "./TimelineItem";
 export { AboutValues } from "./AboutValues";
 export { ValueCard } from "./ValueCard";
-export { TeamCarousel } from "./TeamCarousel";
+export { TeamList } from "./TeamList";
 export { MemberCard } from "./MemberCard";
 export { CarouselArrow } from "./CarouselArrow";
 export { CarouselDots } from "./CarouselDots";
