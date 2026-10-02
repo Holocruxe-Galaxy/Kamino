@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
@@ -26,19 +26,19 @@ describe('Pruebas de caracterización de Navbar y Footer (código actual)', () =
       const nav = screen.getByRole('navigation', { name: /Navegación principal/i });
       expect(nav).toBeInTheDocument();
 
-      const homeLink = screen.getByRole('link', { name: /navbar\.home/i });
+      const homeLink = within(nav).getByRole('link', { name: /navbar\.home|inicio/i });
       expect(homeLink).toHaveAttribute('href', '/');
 
-      const productsLink = screen.getByRole('link', { name: /navbar\.products/i });
+      const productsLink = within(nav).getByRole('link', { name: /navbar\.products|productos/i });
       expect(productsLink).toHaveAttribute('href', '/products');
 
-      const projectsLink = screen.getByRole('link', { name: /navbar\.projects/i });
+      const projectsLink = within(nav).getByRole('link', { name: /navbar\.projects|proyectos/i });
       expect(projectsLink).toHaveAttribute('href', '/projects');
 
-      const aboutLink = screen.getByRole('link', { name: /navbar\.about/i });
+      const aboutLink = within(nav).getByRole('link', { name: /navbar\.about|nosotros/i });
       expect(aboutLink).toHaveAttribute('href', '/about');
 
-      const factoryLink = screen.getByRole('link', { name: /navbar\.factory/i });
+      const factoryLink = within(nav).getByRole('link', { name: /navbar\.factory|factory/i });
       expect(factoryLink).toHaveAttribute('href', 'https://factory.holocruxe.com/');
       expect(factoryLink).toHaveAttribute('target', '_blank');
     });

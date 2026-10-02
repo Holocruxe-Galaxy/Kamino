@@ -7,21 +7,18 @@ import Mobile from "./Mobile";
 import LanguageMenu from "./LanguageMenu/LanguageMenu";
 import Logo from "./Logo";
 import { forceScrollTop } from "../../utils/scroll";
+import { useFirstVisit, useLockBodyScroll } from "../../hooks";
+import { NAV_ITEMS } from "./data/navItems";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
 
-  const hasVisited = sessionStorage.getItem("visited");
+  const hasVisited = useFirstVisit();
   const isHomeFirstVisit = !hasVisited && location.pathname === "/";
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [menuOpen]);
+  useLockBodyScroll(menuOpen);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -79,26 +76,29 @@ const Navbar = () => {
             }`}
             aria-label="Navegación principal"
           >
-            <NavLink to="/" className={getNavLinkClass} onClick={handleNavClick} end>
-              {t("navbar.home")}
-            </NavLink>
-            <NavLink to="/products" className={getNavLinkClass} onClick={handleNavClick}>
-              {t("navbar.products")}
-            </NavLink>
-            <NavLink to="/projects" className={getNavLinkClass} onClick={handleNavClick}>
-              {t("navbar.projects")}
-            </NavLink>
-            <NavLink to="/about" className={getNavLinkClass} onClick={handleNavClick}>
-              {t("navbar.about")}
-            </NavLink>
-            <a
-              href="https://factory.holocruxe.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.link} ${styles.extLink}`}
-            >
-              {t("navbar.factory")}
-            </a>
+            {NAV_ITEMS.map((item) =>
+              item.isExternal ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.link} ${styles.extLink}`}
+                >
+                  {t(item.labelKey, item.defaultLabel)}
+                </a>
+              ) : (
+                <NavLink
+                  key={item.id}
+                  to={item.to}
+                  end={item.end}
+                  className={getNavLinkClass}
+                  onClick={handleNavClick}
+                >
+                  {t(item.labelKey, item.defaultLabel)}
+                </NavLink>
+              )
+            )}
           </nav>
 
           <div className={styles.navRight}>

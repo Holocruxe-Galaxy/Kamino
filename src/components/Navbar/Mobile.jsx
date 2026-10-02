@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import menu from "../../img/menu";
 import styles from "./navBarMobile.module.css";
 import { forceScrollTop } from "../../utils/scroll";
+import { NAV_ITEMS } from "./data/navItems";
 
 export default function Mobile({ menuOpen, toggleMenu, onTalkClick }) {
   const { t } = useTranslation();
@@ -50,52 +51,32 @@ export default function Mobile({ menuOpen, toggleMenu, onTalkClick }) {
         </div>
 
         <nav className={styles.mobileNav}>
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            {t("navbar.home")}
-          </NavLink>
-          <NavLink
-            to="/products"
-            className={({ isActive }) =>
-              `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            {t("navbar.products")}
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            {t("navbar.projects")}
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
-            }
-            onClick={handleLinkClick}
-          >
-            {t("navbar.about")}
-          </NavLink>
-          <a
-            href="https://factory.holocruxe.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.linkM} ${styles.extLinkM}`}
-            onClick={handleLinkClick}
-          >
-            {t("navbar.factory")}
-          </a>
+          {NAV_ITEMS.map((item) =>
+            item.isExternal ? (
+              <a
+                key={item.id}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.linkM} ${styles.extLinkM}`}
+                onClick={handleLinkClick}
+              >
+                {t(item.labelKey, item.defaultLabel)}
+              </a>
+            ) : (
+              <NavLink
+                key={item.id}
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
+                }
+                onClick={handleLinkClick}
+              >
+                {t(item.labelKey, item.defaultLabel)}
+              </NavLink>
+            )
+          )}
         </nav>
 
         <div className={styles.sidebarFooter}>
