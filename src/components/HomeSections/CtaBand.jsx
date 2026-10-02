@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { validateFormFields } from "../../helpers/validateForm";
+import { validateFormFields } from "../../utils/validation";
 import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 import styles from "./ctaBand.module.css";
 
