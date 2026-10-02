@@ -7,21 +7,20 @@ import HomeProducts from '../../components/HomeSections/HomeProducts';
 import Cases from '../../components/HomeSections/Cases';
 import Values from '../../components/HomeSections/Values';
 import CtaBand from '../../components/HomeSections/CtaBand';
+import { useFirstVisit } from "../../hooks";
 
 const Landing = () => {
-  const hasVisited = sessionStorage.getItem('visited');
+  const hasVisited = useFirstVisit();
 
   useEffect(() => {
-    if (!hasVisited) {
-      sessionStorage.setItem('visited', 'true');
-    }
     if (window.location.hash === '#contacto') {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const el = document.getElementById('contacto');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 300);
+      return () => clearTimeout(timer);
     }
-  }, [hasVisited]);
+  }, []);
 
   return (
     <main className={`${styles.container} ${!hasVisited ? styles.containerAnim : ''}`}>

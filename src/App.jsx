@@ -1,4 +1,3 @@
-import { useEffect, useLayoutEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Landing from './views/Landing/Landing';
 import About from './views/About/About';
@@ -11,38 +10,13 @@ import Projects from './views/Projects/Projects';
 import TermsOfUse from './views/TermsOfUse/TermsOfUse';
 import PrivacyView from './views/Legal/PrivacyView';
 import VinadoDeleteAccount from './views/VinadoDeleteAccount/VinadoDeleteAccount';
-import { forceScrollTop } from './utils/scroll';
-
 import { ROUTES } from "./constants/routes";
+import { useScrollToTop, useFirstVisit } from "./hooks";
 
 function App() {
   const location = useLocation();
-  const hasVisited = sessionStorage.getItem('visited');
-
-  useEffect(() => {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-  }, []);
-
-  useLayoutEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
-    }
-    forceScrollTop();
-    const rafId = requestAnimationFrame(forceScrollTop);
-    const timer = setTimeout(forceScrollTop, 50);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      clearTimeout(timer);
-    };
-  }, [location.pathname, location.search]);
+  useScrollToTop();
+  const hasVisited = useFirstVisit();
 
   return (
     <div
