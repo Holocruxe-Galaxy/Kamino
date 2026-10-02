@@ -1,402 +1,240 @@
+/* =========================================
+   NAVBAR & HEADER STYLES (Mock aligned)
+   ========================================= */
+
+.container,
 header.container {
-  padding: 1.5rem 1rem;
-  width: 100%;
-  height: 5.5vh;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  position: relative;
-  z-index: 999;
-}
-
-.allLang {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: calc(100% + 5px);
+  position: fixed;
+  top: 0;
+  left: 0;
   right: 0;
-  background-color: var(--color-bg-dark);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  padding: 8px 20px;
-  gap: 8px;
-  z-index: 102;
-  white-space: nowrap;
+  z-index: 1000;
+  width: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-sizing: border-box;
 }
 
-.allLang .langButton img {
-  width: 1.5rem;
+.navbarSpacer {
+  width: 100%;
+  height: calc(74px + env(safe-area-inset-top, 0px));
+  flex-shrink: 0;
 }
 
-.button {
-  margin: 0.5rem;
-}
-.langButton img {
-  width: 1.8rem;
-  height: auto;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-div.langButton {
-  height: auto;
-}
-.hidden {
-  background-color: transparent !important;
-  border: none !important;
-}
-button.langButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+.navWrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 74px;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-}
-button.langButton:hover {
-  border-radius: 50%;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.buttons {
-  display: flex;
-  flex: row;
-  width: 40%;
-  height: auto;
-  font-size: 0.8rem;
-}
+/* =========================================
+   LOGO
+   ========================================= */
+
 .logoContainer {
   display: flex;
-  justify-content: flex-start;
-  flex: 1;
-}
-
-.langContainer {
-  position: relative;
-  height: fit-content;
-  display: flex;
   align-items: center;
-  z-index: 101;
-  border-radius: 5px;
-  padding: 4px 18px;
-  cursor: pointer;
-}
-.langContainer:hover {
-  background-color: transparent;
-  box-shadow: 0 0 15px 5px rgba(89, 193, 189, 0.4);
-  transform: scale(1.05);
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
 }
 
-.navBarContainer {
-  display: flex;
-  flex-direction: row-reverse;
+.logoLink {
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  -webkit-animation: entranceNavbar 1.5s forwards ease;
-  animation: entranceNavbar 1.5s forwards ease;
-}
-.mobile img {
-  height: 1.3rem;
-}
-.mobile {
-  -webkit-animation: entranceNavbar 1.5s forwards ease;
-  animation: entranceNavbar 1.5s forwards ease;
-}
-.navbarAnim {
-  -webkit-animation-delay: 6.5s;
-  animation-delay: 6.5s;
-}
-
-.navbar > *,
-.navbarAnim > * {
-  font-family: var(--main-font);
-  color: #349aef;
-}
-
-.link {
-  position: relative;
-  margin: 0 1rem;
   text-decoration: none;
-  transition: 0.3s ease transform;
-  color: var(--color-font);
-  font-family: var(--font-main);
-  font-weight: 400;
-  white-space: nowrap;
 }
 
-.link:hover {
-  transform: scale(1.2);
+.svgLogo {
+  width: 9.5rem;
+  height: auto;
+  display: block;
 }
 
-.link:before,
-.link:after {
-  content: "";
-  position: absolute;
-
-  background-color: #349aef;
-  transform: scale(0);
+@media screen and (min-width: 768px) {
+  .svgLogo {
+    width: 11rem;
+  }
 }
 
-.link::before {
-  border-radius: 50%;
-  top: -15%;
-  left: -15%;
-  width: 4px;
-  height: 4px;
-
-  transition: 0.5s ease transform;
+@media screen and (min-width: 1024px) {
+  .svgLogo {
+    width: 12.5rem;
+  }
 }
 
-.link:after {
-  bottom: -35%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 1px;
+/* =========================================
+   DESKTOP NAVIGATION
+   ========================================= */
 
-  transition: 0.5s ease transform;
-}
-
-.link:hover::before,
-.link:hover::after {
-  transform: scale(1);
-}
-
-.activeLink::before,
-.activeLink::after {
-  content: "";
-  position: absolute;
-  transform: scale(1);
-  background-color: #349aef;
-  transition: 0.5s ease all;
-}
-
-.activeLink::before {
-  border-radius: 50%;
-  top: -15%;
-  left: -15%;
-  width: 4px;
-  height: 4px;
-}
-
-.activeLink::after {
-  bottom: -35%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 1px;
-}
-
-.activeLink:hover::before,
-.activeLink:hover::after {
-  background-color: #349aef;
-}
 .navbar {
   display: none;
 }
 
-.navbar > button {
-  padding: 10px 20px;
-  background-color: transparent;
-  border: solid 1px var(--white);
-  border-radius: 10px;
-
-  transition: all 0.3s ease;
-}
-
-.navbar > button:nth-of-type(1) {
-  margin: 0 1rem;
-}
-
-nav button:hover {
-  background-color: var(--color-font);
-  color: var(--dark);
-}
-
-.svgLogo {
-  width: 9rem;
-}
-
-@-webkit-keyframes entranceContainer {
-  0% {
-    height: 98vh;
-  }
-
-  50% {
-    height: 98vh;
-  }
-
-  75% {
-    height: 100%;
-  }
-
-  100% {
-    height: 100%;
+@media screen and (min-width: 801px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
-@keyframes entranceContainer {
-  0% {
-    height: 98vh;
-  }
+.link {
+  text-decoration: none;
+  color: #b9bbe0;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.97rem;
+  transition: color 0.2s ease, box-shadow 0.2s ease;
+  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+}
 
-  50% {
-    height: 98vh;
-  }
+.link:hover {
+  color: #ffffff;
+}
 
-  75% {
-    height: 100%;
-  }
+.activeLink {
+  color: #ffffff;
+  box-shadow: 0 2px 0 #349aef;
+  border: none;
+  outline: none;
+}
 
-  100% {
-    height: 100%;
+.extLink::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin-left: 0.35em;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: translateY(-0.15em) rotate(0deg);
+}
+
+/* =========================================
+   RIGHT ACTIONS (Lang, CTA, Hamburger)
+   ========================================= */
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.talkBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: 0.98rem;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  background: #0061e9;
+  color: #ffffff;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 97, 233, 0.3);
+}
+
+.talkBtn:hover {
+  background: #1a72f0;
+  box-shadow: 0 4px 14px rgba(0, 97, 233, 0.45);
+  transform: translateY(-1px);
+}
+
+@media screen and (min-width: 801px) {
+  .talkBtn {
+    display: inline-flex;
   }
 }
 
-@-webkit-keyframes entranceLogo {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
+.menuToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menuToggle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.menuToggle img {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+@media screen and (min-width: 801px) {
+  .menuToggle {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+}
+
+/* Legacy helpers for compatibility */
+.probaCruxieLink {
+  composes: talkBtn;
+}
+
+/* =========================================
+   ANIMATIONS (First Visit)
+   ========================================= */
+
+.logoContainerAnim {
+  animation: entranceLogo 2s forwards ease;
+}
+
+.navbarAnim {
+  animation: entranceNavbar 1.2s forwards ease;
+  animation-delay: 1.5s;
 }
 
 @keyframes entranceLogo {
   0% {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-15px);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes entranceNavbar {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @keyframes entranceNavbar {
   0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-8px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes entranceLogo {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes entranceLogo {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  div.navBarContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  .navbar {
-    margin-top: 0.5rem;
-    display: flex;
-    font-size: 0.8rem;
-    opacity: 0;
-    -webkit-animation: entranceNavbar 1.5s forwards ease;
-    animation: entranceNavbar 1.5s forwards ease;
-  }
-  header.container {
-    padding-top: 2rem;
-    padding-right: 2rem;
-    z-index: 999;
-  }
-  .langContainer {
-    z-index: 101;
-  }
-  .mobile {
-    display: none;
-  }
-
-  .svgLogo {
-    width: 11rem;
-  }
-  .langButton img {
-    width: 1.4rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .navbar {
-    font-size: 1.1rem;
-  }
-  .langButton img {
-    width: 1.8rem;
-  }
-  .svgLogo {
-    width: 12rem;
-    margin-left: 1rem;
-  }
-  header.container {
-    z-index: 999;
-  }
-  .langContainer {
-    z-index: 101;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  header.container {
-    margin: 0.5rem;
-    z-index: 999;
-  }
-  .langContainer {
-    z-index: 101;
-  }
-  .navbar {
-    font-size: 1.2rem;
-  }
-  .langButton img {
-    width: 2.3rem;
-  }
-  .svgLogo {
-    width: 15rem;
-  }
-  .langButton img {
-    width: 1.8rem;
   }
 }

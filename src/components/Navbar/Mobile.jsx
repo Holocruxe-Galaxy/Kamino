@@ -1,60 +1,94 @@
-
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import menu from "../../img/menu";
 import styles from "./navBarMobile.module.css";
-import { Trans } from "react-i18next";
+import { forceScrollTop } from "../../utils/scroll";
+import { NAV_ITEMS } from "./data/navItems";
 
+export default function Mobile({ menuOpen, toggleMenu, onTalkClick }) {
+  const { t } = useTranslation();
 
-export default function Mobile({ menuOpen, toggleMenu }) {
-  const containerClass = menuOpen
-    ? `${styles.mobilContainer} ${styles.navMobileVisible}`
-    : styles.mobilContainer;
   const handleLinkClick = () => {
     toggleMenu(false);
+    forceScrollTop();
+    requestAnimationFrame(forceScrollTop);
+  };
+
+  const handleTalk = (e) => {
+    toggleMenu(false);
+    if (onTalkClick) {
+      onTalkClick(e);
+    }
   };
 
   return (
-    <div className={containerClass}>
-      <div className={styles.mobileHeader}>
-        <nav className={styles.mobile} onClick={toggleMenu}>
+    <>
+      {/* Backdrop overlay */}
+      <div
+        className={`${styles.backdrop} ${menuOpen ? styles.backdropVisible : ""}`}
+        onClick={() => toggleMenu(false)}
+        aria-hidden="true"
+      />
 
-        </nav>
-      </div>
-      <nav
-        className={`${styles.navMobile} ${
-          menuOpen ? styles.navMobileVisible : ""
+      {/* Sidebar drawer */}
+      <aside
+        className={`${styles.sidebarContainer} ${
+          menuOpen ? styles.sidebarVisible : ""
         }`}
+        aria-label="Menú lateral móvil"
+        aria-hidden={!menuOpen}
       >
-        <NavLink to="/" className={styles.linkM} onClick={handleLinkClick}>
-          <Trans i18nKey={"navbar.home"}>Home </Trans>
-        </NavLink>
-        <NavLink to="/about" className={styles.linkM} onClick={handleLinkClick}>
-          <Trans i18nKey={"navbar.about"}></Trans>
-        </NavLink>
-        <NavLink to="/faqs" className={styles.linkM} onClick={handleLinkClick}>
-          <Trans i18nKey={"navbar.faq"}></Trans>
-        </NavLink>
-        <a
-          href="https://blog.holocruxe.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.linkM}
-          onClick={handleLinkClick}
-        >
-          <Trans i18nKey={"navbar.blog"}></Trans>
-        </a>
-        <a
-          href="https://cruxie.holocruxe.com/" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.probaCruxieMobileButton} 
-          onClick={handleLinkClick} 
-        >
-          <Trans i18nKey={"navbar.cruxieButton"}></Trans>
-          <span className={styles.plusSignMobile}>+</span> 
-        </a>
-      </nav>
-    </div>
+        <div className={styles.sidebarHeader}>
+          <span className={styles.sidebarTitle}>Menú</span>
+          <button
+            type="button"
+            className={styles.closeBtn}
+            onClick={() => toggleMenu(false)}
+            aria-label="Cerrar menú"
+          >
+            <img src={menu.x} alt="Cerrar menú" />
+          </button>
+        </div>
+
+        <nav className={styles.mobileNav}>
+          {NAV_ITEMS.map((item) =>
+            item.isExternal ? (
+              <a
+                key={item.id}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.linkM} ${styles.extLinkM}`}
+                onClick={handleLinkClick}
+              >
+                {t(item.labelKey, item.defaultLabel)}
+              </a>
+            ) : (
+              <NavLink
+                key={item.id}
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  `${styles.linkM} ${isActive ? styles.activeLinkM : ""}`
+                }
+                onClick={handleLinkClick}
+              >
+                {t(item.labelKey, item.defaultLabel)}
+              </NavLink>
+            )
+          )}
+        </nav>
+
+        <div className={styles.sidebarFooter}>
+          <button
+            type="button"
+            className={styles.talkMobileBtn}
+            onClick={handleTalk}
+          >
+            {t("navbar.let's-talk")}
+          </button>
+        </div>
+      </aside>
+    </>
   );
 }

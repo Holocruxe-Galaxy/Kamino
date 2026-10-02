@@ -10,16 +10,16 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "es",
+    supportedLngs: ["es", "en"],
+    load: "languageOnly",
     debug: false,
     detection: {
-      order: ["queryString", "cookie"],
-      cache: ["cookie"],
+      order: ["queryString", "cookie", "localStorage", "navigator"],
+      caches: ["localStorage", "cookie"],
     },
     interpolation: {
       escapeValue: false,
     },
-    
-   
   });
 
 export default i18n;

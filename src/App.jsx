@@ -1,20 +1,22 @@
 import Navbar from './components/Navbar/Navbar';
-import NavbarHome from './components/Navbar/NavbarHome';
 import Landing from './views/Landing/Landing';
 import About from './views/About/About';
 import Footer from './components/Footer/Footer';
+import Products from './views/Products/Products';
 import Faqs from './views/Faqs/Faqs';
-import ChatBotIcon from './components/Chat-Icon/Chat-Icon';
-import Chat from './components/ChatComponent/ChatComponent';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Blog from './views/Blog/Blog';
+import Projects from './views/Projects/Projects';
 import TermsOfUse from './views/TermsOfUse/TermsOfUse';
 import PrivacyView from './views/Legal/PrivacyView';
 import VinadoDeleteAccount from './views/VinadoDeleteAccount/VinadoDeleteAccount';
+import { ROUTES } from "./constants/routes";
+import { useScrollToTop, useFirstVisit } from "./hooks";
 
 function App() {
   const location = useLocation();
-  const hasVisited = sessionStorage.getItem('visited');
+  useScrollToTop();
+  const hasVisited = useFirstVisit();
 
   return (
     <div
@@ -22,19 +24,20 @@ function App() {
         !hasVisited && location.pathname === "/" ? "appContainer" : null
       }`}
     >
-      <ChatBotIcon />
-      <Chat />
-      {location.pathname === '/' ? <NavbarHome /> : <Navbar/>}
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/privacy" element={<PrivacyView />} />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/holocruxe/TermsOfUse" element={<TermsOfUse />} />
-        <Route path="/holocruxe/PrivacyView" element={<PrivacyView />} />
-        <Route path="/vinado/delete-account" element={<VinadoDeleteAccount />} />      
+        <Route path={ROUTES.HOME} element={<Landing />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.PRODUCTS} element={<Products />} />
+        <Route path={ROUTES.FAQS} element={<Faqs />} />
+        <Route path={ROUTES.PROJECTS_LEGACY} element={<Projects />} />
+        <Route path={ROUTES.PROJECTS} element={<Projects />} />
+        <Route path={ROUTES.FACTORY} element={<Blog />} />
+        <Route path={ROUTES.PRIVACY} element={<PrivacyView />} />
+        <Route path={ROUTES.TERMS} element={<TermsOfUse />} />
+        <Route path={ROUTES.TERMS_LEGACY} element={<TermsOfUse />} />
+        <Route path={ROUTES.PRIVACY_LEGACY} element={<PrivacyView />} />
+        <Route path={ROUTES.VINADO_DELETE_ACCOUNT} element={<VinadoDeleteAccount />} />      
       </Routes>
       <Footer />
     </div>

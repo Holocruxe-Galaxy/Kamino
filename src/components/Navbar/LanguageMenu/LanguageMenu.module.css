@@ -1,0 +1,53 @@
+.langContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.langContainer:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.langButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.langButton img {
+  width: 1.6rem;
+  height: auto;
+  border-radius: 3px;
+  display: block;
+}
+
+.allLang {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--color-bg);
+  background-color: color-mix(in srgb, var(--color-bg) 95%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 154, 239, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 8px 14px;
+  gap: 10px;
+  z-index: 1002;
+}
+
+.selectedLangButton {
+  opacity: 0.5;
+}

@@ -1,0 +1,28 @@
+/* Columnas de navegación */
+.navCol h4 {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.navCol ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.navCol a {
+  text-decoration: none;
+  color: #b9bbe0;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  width: fit-content;
+}
+
+.navCol a:hover {
+  color: #ffffff;
+}

@@ -6,9 +6,311 @@
   "navbar": {
     "home": "Home",
     "about": "About Us",
-    "faq": "FAQ",
-    "blog": "Blog",
-    "cruxieButton": "Test Cruxie "
+    "products": "Products",
+    "projects": "Projects",
+    "factory": "Factory",
+    "let's-talk": "Let's talk"
+  },
+  "footer": {
+    "tagline": "AI software and proprietary products. From Córdoba, 100% remote.",
+    "company": "Company",
+    "about": "About Us",
+    "projects": "Projects",
+    "contact": "Contact",
+    "products": "Products",
+    "factory": "Factory",
+    "factoryProject": "Your project in a week",
+    "legal": "© {{year}} Holocruxe",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "homeHero": {
+    "title": "We build AI software that businesses actually use.",
+    "intro": "We are Holocruxe: an AI software factory with proprietary products in production. Born in Córdoba, working with companies across Argentina, Chile, and Mexico.",
+    "talkBtn": "Let's talk about your project",
+    "projectsBtn": "View projects"
+  },
+  "facts": {
+    "year": "2023",
+    "yearLabel": "Founded in Córdoba",
+    "countries": "3 countries",
+    "countriesLabel": "Argentina, Chile & Mexico",
+    "products": "4 products",
+    "productsLabel": "Proprietary and in production",
+    "remote": "100% remote",
+    "remoteLabel": "A team of 13 people"
+  },
+  "offer": {
+    "title": "Three ways to work with us.",
+    "factoryTitle": "Your proof of concept, running in a single week.",
+    "factoryDesc": "We narrow down the scope together, and in one week you have something real to test. Then you decide whether to move to MVP, scale up, or stop.",
+    "factoryBtn": "Discover the Factory",
+    "customTitle": "Custom Development",
+    "customDesc": "Backend, integrations, platforms, and AI agents for your operation.",
+    "customBtn": "View projects",
+    "dedicatedTitle": "Dedicated Team",
+    "dedicatedDesc": "We integrate developers and AI engineers into your product team.",
+    "dedicatedBtn": "Inquire"
+  },
+  "homeProducts": {
+    "title": "Our products.",
+    "intro": "We build them, operate them, and use them to test what we later deliver to clients.",
+    "kiraDesc": "Takes notes, translates in real-time, and creates meeting minutes.",
+    "kiraBtn": "Visit Kira",
+    "vinadoDesc": "Log and rate wines you drink, earn points, and get exclusive discounts.",
+    "vinadoBtn": "Visit Vinado",
+    "cruxieDesc": "AI assistants trained with your organization's proprietary knowledge.",
+    "cruxieBtn": "Visit Cruxie",
+    "waDesc": "An AI agent that handles your customer service on WhatsApp.",
+    "waBtn": "Request demo",
+    "allBtn": "View all products"
+  },
+  "cases": {
+    "title": "Projects for enterprises across multiple industries.",
+    "industries": [
+      "Banking",
+      "Renewable Energy",
+      "Public Sector",
+      "Logistics",
+      "Security & Transit",
+      "Fintech",
+      "Agtech"
+    ],
+    "case1Where": "Banking · Mexico",
+    "case1Title": "AI Architecture for a Bank",
+    "case1Desc": "We engineered the AI architecture to modernize the core platform of a bank.",
+    "case1Model": "Custom Project",
+    "case2Where": "Renewable Energy · Mexico",
+    "case2Title": "Two AI Agents in Production",
+    "case2Desc": "One agent reviews legal contracts and another computes power consumption within a dedicated team.",
+    "case2Model": "Dedicated Team + AI",
+    "case3Where": "Public Sector · Argentina",
+    "case3Title": "Digital Transformation for a Municipality",
+    "case3Desc": "We optimized citizen services and municipal procedures by integrating AI agents.",
+    "case3Model": "Custom Project",
+    "moreLink": "View all projects"
+  },
+  "values": {
+    "title": "How we work?",
+    "v1Title": "Authenticity",
+    "v1Desc": "We tell you what is achievable and what is not, before getting started.",
+    "v2Title": "Connection",
+    "v2Desc": "Technology that brings people closer, rather than replacing them.",
+    "v3Title": "Privacy",
+    "v3Desc": "We safeguard your data by design, never as an afterthought."
+  },
+  "ctaBand": {
+    "title": "Do you have an idea or a problem to solve?",
+    "talkBtn": "Let's talk",
+    "waBtn": "WhatsApp"
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "intro": "An idea or a problem is all you need. We'll get back to you to schedule an initial meeting.",
+    "altPrompt": "Prefer to chat directly?",
+    "altWa": "Message us on WhatsApp",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "name@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "phone": "Phone",
+      "phonePlaceholder": "E.g. +54 9 351 000 0000",
+      "interest": "What would you like to discuss?",
+      "message": "Tell us what you need",
+      "messagePlaceholder": "Briefly describe your project, problem, or requirement...",
+      "submitting": "Sending message...",
+      "submit": "Send message"
+    },
+    "interests": {
+      "factory": "A Factory project",
+      "custom": "Custom software development",
+      "team": "Dedicated team",
+      "cruxie": "Cruxie",
+      "cruxieWa": "Cruxie WhatsApp",
+      "kira": "Kira",
+      "vinado": "Vinado",
+      "other": "Other topic"
+    },
+    "alerts": {
+      "incompleteTitle": "❌ Incomplete form",
+      "successTitle": "✅ Message sent",
+      "successText": "Thank you for reaching out. We will get back to you to schedule an initial meeting.",
+      "errorTitle": "❌ Failed to send",
+      "errorText": "There was a problem sending your message. Please try again or reach out via WhatsApp.",
+      "btnReview": "Review",
+      "btnOk": "OK",
+      "btnClose": "Close"
+    }
+  },
+  "demoModal": {
+    "badge": "🚀 Personalized demo",
+    "titlePrefix": "Request a demo of ",
+    "subtitle": "Fill in your details and we will coordinate a live session to show you how it works for your business.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "E.g. John Doe",
+    "emailLabel": "Business email",
+    "emailPlaceholder": "john@company.com",
+    "companyLabel": "Company or organization",
+    "companyPlaceholder": "Your company or startup name",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "E.g. +54 9 351 000 0000",
+    "messageLabel": "What would you like to see in the demo? (Optional)",
+    "messagePlaceholder": "Tell us what challenges your team is facing or how you plan to use this product...",
+    "cancelBtn": "Cancel",
+    "submitBtn": "Request demo",
+    "submittingBtn": "Sending request...",
+    "successBadge": "✓ Request received!",
+    "successGreeting": "Thank you, {{name}}!",
+    "successSubtitle": "We received your demo request for {{product}}. We will reach out to you shortly to coordinate a personalized session.",
+    "successBtn": "Got it",
+    "errorGeneral": "There was a problem processing your request. Please try again or message us directly on WhatsApp."
+  },
+  "productsPage": {
+    "title": "Proprietary products,\nin production.",
+    "titlePart1": "Proprietary products,",
+    "titlePart2": "in production.",
+    "intro": "Four products that we design, build, and operate. Each has its own site; here we tell you what each one does.",
+    "for": "For:",
+    "factoryCta": "Want something like this for your company?",
+    "factoryBtn": "Discover the Factory",
+    "kira": {
+      "name": "Kira",
+      "h2": "Leave every meeting with minutes and action items ready.",
+      "lead": "Takes notes, translates in real-time, and compiles your meeting minutes.",
+      "features": [
+        "Takes meeting notes for you",
+        "Translates in real-time",
+        "Compiles minutes with action items per person"
+      ],
+      "forDesc": "Teams with frequent meetings, including multilingual teams",
+      "visitBtn": "Visit Kira",
+      "demoBtn": "Request demo"
+    },
+    "vinado": {
+      "name": "Vinado",
+      "h2": "Your wine journey, in a single app.",
+      "lead": "Log and rate wines you taste, earn points, and unlock exclusive discounts.",
+      "features": [
+        "Log and rate each wine you taste",
+        "Earn points with every review",
+        "Redeem points for discounts at Vinado Points",
+        "For wineries and wine bars: join as a Vinado Point"
+      ],
+      "forDesc": "Wine lovers, as well as wineries and wine bars seeking to reach them",
+      "visitBtn": "Visit Vinado",
+      "partnerBtn": "I'm a winery or wine bar"
+    },
+    "cruxie": {
+      "name": "Cruxie",
+      "h2": "Your company's knowledge, accessible to your entire team.",
+      "lead": "AI assistants trained on your organization's proprietary knowledge.",
+      "features": [
+        "Create assistants and train them on your organization's data",
+        "Define who has access to each assistant",
+        "Connect with tools your team already uses"
+      ],
+      "forDesc": "Companies with knowledge scattered across teams and documents",
+      "visitBtn": "Visit Cruxie",
+      "demoBtn": "Request demo"
+    },
+    "cruxieWa": {
+      "name": "Cruxie WhatsApp",
+      "h2": "Customers ask on WhatsApp. Cruxie answers 24/7.",
+      "lead": "An AI agent that supports your customers on WhatsApp around the clock.",
+      "features": [
+        "Answers customer inquiries on WhatsApp",
+        "Operates on the official WhatsApp Business API",
+        "Trained directly on your business information"
+      ],
+      "forDesc": "Businesses with high volumes of repetitive inquiries",
+      "visitBtn": "Discover Cruxie WhatsApp",
+      "demoBtn": "Request demo"
+    }
+  },
+  "productsVisuals": {
+    "kira": {
+      "ariaLabel": "Animated scene: Kira translates meetings live and generates summary with action items",
+      "connected": "CONNECTED",
+      "langPair": "ES → EN",
+      "stop": "■ Stop",
+      "time1": "10:42:07 AM · ES → EN",
+      "q1Original": "¿Podés mandar el contrato hoy?",
+      "q1Translated": "Can you send the contract today?",
+      "time2": "10:42:31 AM · ES → EN",
+      "q2Original": "Claro, lo mando esta tarde.",
+      "q2Translated": "Sure, I’ll send it this afternoon.",
+      "live": "LIVE",
+      "q3Original": "Cerremos la propuesta el viernes.",
+      "q3Translated": "Let’s close the proposal on Friday.",
+      "modalTitle": "Meeting summary",
+      "modalDuration": "2 min 42 sec",
+      "savedTitle": "Summary saved",
+      "savedDesc": "You can view, export, or forward this summary by email.",
+      "summaryTitle": "Executive summary",
+      "summaryText": "Agreed to send the contract today and finalize the proposal on Friday.",
+      "actionablesTitle": "Action items",
+      "action1": "Send proposal",
+      "action2": "Review contract",
+      "sendEmail": "Send to email...",
+      "sendBtn": "Send",
+      "copyBtn": "Copy",
+      "doneBtn": "Done"
+    },
+    "cruxieWa": {
+      "ariaLabel": "Animated scene: a customer asks on WhatsApp and Cruxie answers",
+      "businessAvatar": "Y",
+      "businessName": "Your business",
+      "online": "online",
+      "typing": "typing…",
+      "today": "Today",
+      "msgIn": "Hi, do you ship nationwide?",
+      "msgOut": "Hi! Yes, we ship everywhere. Want to see our options?",
+      "poweredBy": "Powered by Cruxie",
+      "inputPlaceholder": "Type a message"
+    },
+    "vinado": {
+      "ariaLabel": "Animated scene: in Vinado, scan the bottle, register the wine legacy, and earn points",
+      "scanTitle": "Scan bottle",
+      "scanHint": "Point at the label",
+      "wineFound": "✓ Reserve Malbec",
+      "newLegacy": "New Legacy",
+      "step1": "1. HOW WAS IT?",
+      "disliked": "Didn't like it",
+      "ok": "It was ok",
+      "loved": "Loved it!",
+      "step2": "2. WHAT WAS THE OCCASION?",
+      "step2Opt": "Optional - Select all that apply",
+      "tagDinner": "Dinner",
+      "tagFriends": "Friends",
+      "tagCouple": "Date",
+      "tagGift": "Gift",
+      "tagTrip": "Travel",
+      "tagHome": "Home",
+      "step3": "3. PERSONAL NOTE",
+      "step3Opt": "Optional - What made it special?",
+      "sampleNote": "E.g. Very fruity, pairs great with steak.",
+      "saveLegacy": "✓ Save Legacy",
+      "savedTitle": "Saved!",
+      "savedDesc": "Your wine legacy has been saved to your cellar memory",
+      "wonBadge": "YOU EARNED",
+      "points": "Points",
+      "backHome": "Back to Home",
+      "share": "Share on socials"
+    },
+    "cruxie": {
+      "ariaLabel": "Animated scene: in Cruxie, someone asks and the assistant replies citing the source",
+      "assistantTitle": "HR Assistant",
+      "assistantSubtitle": "Manages company knowledge",
+      "trainBtn": "Train Cruxie",
+      "question": "How do I request an expense reimbursement?",
+      "answer": "Upload your receipts to the expense portal, per the travel & expense policy.",
+      "source": "Source: Expense Policy",
+      "inputPlaceholder": "Type a message...",
+      "sendBtn": "Send"
+    }
   },
   "landing": {
     "hero": "We are good at creating legacy",
@@ -76,7 +378,13 @@
     "register2": "Thank you for signing up!",
     "closeButton": "Close"
   },
+  "blog": {
+    "title-line1": "Our blog is still",
+    "title-line2": "under construction",
+    "btn-back-home": "Back to HOME"
+  },
   "common": {
+    "close": "Close",
     "faq_line1": "Frequently",
     "faq_line2": "Asked Questions"
   },
@@ -97,5 +405,174 @@
       "question": "How do I start using Cruxie in my organization?",
       "answer": "Simply go to our homepage and sign up. You can create a personal account to explore the platform, or click on 'Create a company account,' fill out the form, and our team will contact you to guide you through the onboarding process."
     }
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Projects for companies across Argentina, Chile, and Mexico.",
+      "intro": "Banking, renewable energy, public sector, logistics, security, fintech, and agriculture. For confidentiality reasons, we don't name our clients: we explain what problem we solved."
+    },
+    "cases": {
+      "case1": {
+        "where": "Banking · Mexico",
+        "title": "AI Architecture for a bank",
+        "desc": "We designed an AI-driven architecture to modernize a bank's core systems.",
+        "model": "Custom project"
+      },
+      "case2": {
+        "where": "Renewable Energy · Mexico",
+        "title": "Two AI agents in production",
+        "desc": "One agent audits legal contracts and another calculates energy consumption, within a dedicated team.",
+        "model": "Dedicated team + AI"
+      },
+      "case3": {
+        "where": "Public Sector · Argentina",
+        "title": "Development for a municipality",
+        "desc": "We optimized citizen services and municipal procedures by integrating custom AI agents.",
+        "model": "Custom project"
+      },
+      "case4": {
+        "where": "Security & Logistics · Chile",
+        "title": "GPS fleet platform",
+        "desc": "We built a GPS fleet tracking platform and a self-service portal for their clients.",
+        "model": "Custom project"
+      },
+      "case5": {
+        "where": "Logistics · Chile",
+        "title": "Backend and API modernization",
+        "desc": "We redesigned and modernized the backend and APIs for a logistics enterprise.",
+        "model": "Custom project"
+      },
+      "case6": {
+        "where": "Logistics · Mexico",
+        "title": "Marketplace and courier integrations",
+        "desc": "We integrated core operations with Mercado Libre and leading courier providers.",
+        "model": "Custom project"
+      },
+      "case7": {
+        "where": "Fintech · Mexico",
+        "title": "Dedicated development team",
+        "desc": "We integrated an engineering and AI team into a high-growth fintech product.",
+        "model": "Dedicated team"
+      },
+      "case8": {
+        "where": "Agtech · Argentina",
+        "title": "MVP for an agricultural cooperative",
+        "desc": "We built a high-impact MVP for an agricultural cooperative in southern Córdoba.",
+        "model": "MVP"
+      }
+    },
+    "models": {
+      "title": "Three models tailored to your needs.",
+      "poc": {
+        "title": "Proof of Concept",
+        "desc": "One week to validate an idea with working software."
+      },
+      "custom": {
+        "title": "Custom Project",
+        "desc": "We design and build the full solution from scope to production."
+      },
+      "team": {
+        "title": "Dedicated Team",
+        "desc": "Engineers and AI integrated directly into your team and product."
+      }
+    },
+    "actions": {
+      "contact": "Tell us about your project",
+      "factory": "Explore the Factory"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "A small team that builds seriously.",
+      "intro": "Born in Córdoba in April 2023. Today we are a 100% remote team of 10 people, working for companies across three countries."
+    },
+    "story": {
+      "p1": "Holocruxe started with a simple belief: artificial intelligence truly matters when it solves a real business problem, not as a gimmick demo.",
+      "p2": "That is why we do two things: we build software and AI for high-growth enterprises, and we develop our own proprietary products. What we learn in one, we apply to the other.",
+      "p3": "We have no physical offices. We operate fully remote, serving clients across Argentina, Chile, and Mexico."
+    },
+    "timeline": {
+      "item1": {
+        "date": "April 2023",
+        "desc": "Holocruxe is founded in Córdoba."
+      },
+      "item2": {
+        "date": "First Clients",
+        "desc": "Logistics and security systems deployed in Chile and Mexico."
+      },
+      "item3": {
+        "date": "Proprietary Products",
+        "desc": "We launch Kira, Vinado, Cruxie, and Cruxie WhatsApp."
+      },
+      "item4": {
+        "date": "Today",
+        "desc": "10 team members, 3 countries, 4 products in production."
+      }
+    },
+    "values": {
+      "title": "What matters to us.",
+      "authenticity": {
+        "title": "Authenticity",
+        "desc": "We are honest about what can and cannot be done before starting."
+      },
+      "connection": {
+        "title": "Connection",
+        "desc": "Technology that brings people closer, rather than replacing them."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "desc": "We protect your data by design, not as an afterthought."
+      }
+    },
+    "team": {
+      "title": "The team making it possible."
+    }
+  },
+  "privacyPage": {
+    "title": "PRIVACY POLICY",
+    "sec1Title": "1. Information We Collect:",
+    "sec1Intro": "Data provided by the user: (e.g. name, email when registering).",
+    "sec1Auto": "Automated data: We may collect technical information such as device model and operating system version.",
+    "sec1Use": "Use of Information: Data is used exclusively to improve user experience and the technical operation of the application.",
+    "sec1Third": "Third parties: This app uses third-party services that may collect identifying information.",
+    "sec1Security": "Security: We implement measures to protect your personal data, though no internet transmission method is 100% secure.",
+    "sec1Links": "Links to other sites: Our app may contain links to external sites not operated by us.",
+    "sec1Minors": "Minors: We do not knowingly collect personal information from children under 13 years of age.",
+    "sec2": "2. Use of Information: Collected data is used solely to personalize the user experience, enhance app functionalities, and provide technical support. We do not sell or rent personal databases to third parties for commercial purposes.",
+    "sec3": "3. Data Minimization Principle: Our technical architecture follows this principle. The application only requests and processes the minimum dataset strictly necessary for automations and AI solutions to operate properly. We do not collect excess data. If data is not essential to deliver the contracted service, it is not stored on our systems.",
+    "sec4": "4. Integration Permissions Management (APIs): As our solutions connect various digital tools, users grant specific permissions for HOLOCRUXE to interact with third-party APIs. We do not store master access credentials; we use temporary, revocable access tokens. Users maintain full control and can revoke these permissions at any time through app settings or the linked third-party platform.",
+    "sec5": "5. Service Providers and Third Parties: We may use third-party services (such as Google Analytics, AdMob, or Firebase) to analyze traffic or display advertisements. These providers have their own privacy policies and may automatically collect technical information to fulfill analytics or advertising functions.",
+    "sec6": "6. Security and Data Retention: We apply reasonable security standards to protect your information against unauthorized access. Personal data will be retained only as long as necessary to fulfill the described purposes or while the user keeps an active account on our platform.",
+    "sec7": "7. User Rights and Minors: Users have the right to request access, rectification, or deletion of their personal data by contacting us via email. This application is not directed at children under 13, and we do not knowingly collect information from minors; if detected, it will be deleted immediately.",
+    "sec8": "8. Financial Data Processing: Our application uses the official Google Play payment gateway to process transactions. CRUXIE does not collect, store, or have access to credit card details, bank accounts, or sensitive billing information. All such information is managed exclusively by Google under their security and privacy standards. We only receive successful payment confirmations to unlock acquired content.",
+    "sec9": "9. International Data Transfers: As we rely on global infrastructure services (such as Google cloud servers), your information may be processed in countries outside your country of residence. By using the app, you consent to this transfer under appropriate security standards.",
+    "sec10Title": "10. Legal Basis for Processing: We process your data based on:",
+    "sec10a": "Your explicit consent upon accepting this policy;",
+    "sec10b": "The necessity to execute the service agreement; and",
+    "sec10c": "Legitimate interest in enhancing application security and performance.",
+    "sec11": "11. Information Retention: We will retain your personal data only as long as your account is active or needed to provide you with the service. Once our relationship ends, data may be blocked or deleted, unless applicable law requires a longer retention period.",
+    "sec12": "12. Communications and Notifications: We may send you technical or administrative emails related to application operations. Marketing communications will only be sent if you have explicitly opted in.",
+    "sec13": "13. Entire Agreement and Modifications: This policy constitutes the entire privacy agreement between the user and HOLOCRUXE. Any future amendments will be posted at this URL and, for material changes, notified through the application interface.",
+    "sec14Pre": "14. Account Deletion: Users may request the permanent deletion of their account and all associated data at any time by sending an email to ",
+    "sec14Post": ". We will process the request within a maximum of 7 business days.",
+    "lastUpdated": "Last updated: January 27, 2026"
+  },
+  "termsPage": {
+    "title": "TERMS AND CONDITIONS OF USE",
+    "sec1": "1. Acceptance: By downloading, installing, and using CRUXIE, the user fully accepts these terms. If you do not agree with any provision herein, you must refrain from using the application.",
+    "sec2": "2. Intellectual Property: All visual content, interfaces, logos, designs, and source code are the exclusive property of HOLOCRUXE. Any reproduction in whole or in part without prior authorization is strictly prohibited.",
+    "sec3": "3. Permitted Use and Restrictions: Users agree to use the application lawfully. It is strictly prohibited to reverse engineer, decompile, extract source code, distribute modified versions, or use the platform for any activity that infringes on third-party rights or applicable laws.",
+    "sec4": "4. Limitation of Liability: CRUXIE is provided on an 'as is' and 'as available' basis. We do not warrant that the service will be uninterrupted or error-free. HOLOCRUXE shall not be liable for direct, indirect, or incidental damages resulting from the use or inability to use the tool.",
+    "sec5": "5. Service Suspension and Updates: We reserve the right to modify, suspend, or discontinue any feature of the application at any time without prior notice. These terms may also be updated to reflect legal or technical changes; continued use of the app after such changes constitutes acceptance of the updated terms.",
+    "sec6": "6. Payments, Subscriptions, and Refunds: By purchasing CRUXIE, users agree to pay the price indicated in the Google Play Store. All financial transactions are processed securely by Google Play. Refund policies are governed by Google's terms, and any refund requests must be handled through their platform. HOLOCRUXE reserves the right to adjust pricing in the future upon notice through the app store or within the app.",
+    "sec7": "7. Account Responsibility: Users are solely responsible for maintaining the confidentiality of their access credentials. Any activity conducted under your account is deemed your responsibility.",
+    "sec8": "8. Responsibility for Information Usage: The application provides tools and information that users must evaluate according to their own judgment. HOLOCRUXE is not responsible for decisions made by the user or outcomes obtained through the app. Any consequences arising from negligent, unlawful, or unauthorized use are the sole responsibility of the end user.",
+    "sec9": "9. System Requirements and Updates: Proper operation of CRUXIE requires a compatible device and internet access. We reserve the right to deploy mandatory updates for security or functionality; users acknowledge that failure to update may restrict app access.",
+    "sec10": "10. Third-Party Services: The application may integrate with external services (such as Google, Notion, OneDrive, etc.). Users agree that using these features is also subject to third-party terms, over which we exercise no control or liability.",
+    "sec11": "11. Disclaimer of Warranties: We do not guarantee that the application will be compatible with all devices or network providers. Use of the app is at the user's sole risk.",
+    "sec12": "12. Jurisdiction and Governing Law: These terms are governed by the laws of Argentina. Any dispute related to the use of the application shall be subject to the exclusive jurisdiction of the ordinary courts of Córdoba City, Argentina.",
+    "sec13": "13. Severability: If any provision of these terms is deemed invalid or unenforceable by a competent court, the remaining provisions shall continue in full force and effect.",
+    "sec14": "14. Prohibition of Fraudulent Activity and Abuse: The use of emulators, automated scripts, or any third-party software altering normal CRUXIE operation is strictly prohibited. Any attempt to manipulate payment gateways, bypass security controls, or conduct fraudulent transactions will result in an immediate, permanent ban without eligibility for refund.",
+    "sec15": "15. Service Termination: We reserve the right to suspend or terminate a user's access to the application at our discretion, particularly upon violation of these terms, fraudulent behavior, or requirement by legal authorities."
   }
 }

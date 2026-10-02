@@ -1,0 +1,15 @@
+export const CAROUSEL_BREAKPOINTS = {
+  MOBILE: 540,
+  TABLET: 820,
+  LAPTOP: 1100,
+};
+
+export const CAROUSEL_VISIBLE_COUNTS = {
+  MOBILE: 1,
+  TABLET: 2,
+  LAPTOP: 3,
+  DESKTOP: 4,
+};
+
+export const CAROUSEL_AUTOPLAY_INTERVAL_MS = 3200;
+export const CAROUSEL_SWIPE_THRESHOLD_PX = 40;

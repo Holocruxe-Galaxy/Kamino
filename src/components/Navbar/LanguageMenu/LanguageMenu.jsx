@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from "react"; 
-import styles from "../Navbar.module.css"; 
+import { useState, useEffect } from "react"; 
+import styles from "./LanguageMenu.module.css"; 
 import { useTranslation } from "react-i18next";
 import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
-import itaFlag from "../../../icons/italy.svg";
 
 const flagMap = {
   es: esFlag,
   en: enFlag,
-  ita: itaFlag,
 };
 
-const languages = ['es', 'en', 'ita'];
+const languages = ['es', 'en'];
 
 const LanguageButton = ({ language, changeLanguage, isSelected }) => (
   <button
@@ -25,11 +23,9 @@ const LanguageButton = ({ language, changeLanguage, isSelected }) => (
 const LanguageMenu = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-  useEffect(() => {
-    setSelectedLanguage(i18n.language);
-  }, [i18n.language]);
+  const rawLang = (i18n.language || "es").split("-")[0].toLowerCase();
+  const selectedLanguage = languages.includes(rawLang) ? rawLang : "es";
 
   const toggleMenu = () => setIsOpen(!isOpen);
 

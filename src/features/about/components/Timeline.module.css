@@ -1,0 +1,19 @@
+.timeline {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  border-left: 2px solid rgba(52, 154, 239, 0.35);
+  padding-left: 28px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    height: auto;
+    gap: 28px;
+    justify-content: flex-start;
+    margin-top: 36px;
+  }
+}

@@ -1,46 +1,39 @@
+import { useCallback } from "react";
+import FooterBrand from "./components/FooterBrand";
+import FooterNavColumn from "./components/FooterNavColumn";
+import FooterLegal from "./components/FooterLegal";
+import { FOOTER_NAV_COLUMNS } from "./data/footerNavigation";
 import styles from "./Footer.module.css";
-import {IoMailOutline} from "react-icons/io5";
-import {FaInstagram} from "react-icons/fa";
-import {TbBrandLinkedin} from "react-icons/tb";
 
 const Footer = () => {
+  const handleContactClick = useCallback((e) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById("contacto");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
-    <>
-      <footer className={styles.footerDistributed}>
-        <div className={styles.footerLeft}>
-          <img src='./footer.png' alt='logo' />
+    <footer className={styles.footer}>
+      <div className={styles.wrap}>
+        <div className={styles.footGrid}>
+          <FooterBrand />
+
+          {FOOTER_NAV_COLUMNS.map((col) => (
+            <FooterNavColumn
+              key={col.id}
+              column={col}
+              onContactClick={handleContactClick}
+            />
+          ))}
         </div>
 
-        <div className={styles.footerCenter}>
-          <p>Holocruxe &copy; 2025</p>
-        </div>
-
-        <div className={styles.footerRight}>
-          {/* <a
-            href="mailto:contacto@holocruxe.com" 
-            className={styles.navlink}
-          >
-            <IoMailOutline className={styles.socialIcon} />
-          </a> */}
-          <a
-            href='https://www.instagram.com/holocruxe/'
-            className={styles.navlink}
-            target='_blank'
-            rel='noreferrer'
-          >
-            <FaInstagram className={styles.socialIcon} />
-          </a>
-          <a
-            href='https://www.linkedin.com/company/holocruxe/'
-            className={styles.navlink}
-            target='_blank'
-            rel='noreferrer'
-          >
-            <TbBrandLinkedin className={styles.socialIcon} />
-          </a>
-        </div>
-      </footer>
-    </>
+        <FooterLegal />
+      </div>
+    </footer>
   );
 };
 

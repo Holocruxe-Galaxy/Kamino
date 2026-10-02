@@ -1,0 +1,37 @@
+.valuesSection {
+  background: var(--color-bg);
+  border-top: 1px solid rgba(52, 154, 239, 0.25);
+  padding: 80px 0 88px;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

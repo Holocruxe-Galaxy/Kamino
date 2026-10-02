@@ -1,0 +1,145 @@
+/* =========================================
+   CASES / PROJECTS SECTION STYLES
+   ========================================= */
+
+.casesSection {
+  padding: 96px 0;
+  width: 100%;
+  background-color: var(--color-bg, #010032);
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.industries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 36px;
+  list-style: none;
+  padding: 0;
+}
+
+.industryTag {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(52, 154, 239, 0.25);
+  background: #08094a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.industryTag:hover {
+  border-color: #349aef;
+  background: rgba(52, 154, 239, 0.15);
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.caseCard {
+  border: 1px solid rgba(52, 154, 239, 0.25);
+  border-radius: 18px;
+  padding: 30px;
+  background: #08094a;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.caseCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(52, 154, 239, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.where {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #349aef;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.caseCard h3 {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: #ffffff;
+  margin: 0;
+}
+
+.caseDesc {
+  color: #b9bbe0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+}
+
+.model {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.85;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.moreWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.moreLink {
+  display: inline-block;
+  font-weight: 700;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  color: #349aef;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.moreLink:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+@media (max-width: 960px) {
+  .casesSection {
+    padding: 72px 0;
+  }
+  .casesGrid {
+    grid-template-columns: 1fr;
+  }
+}
