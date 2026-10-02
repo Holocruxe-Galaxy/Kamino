@@ -1,13 +1,21 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Products.module.css";
 import { forceScrollTop } from "../../utils/scroll";
 import { EXTERNAL_LINKS } from "../../constants/externalLinks";
+import DemoModal from "../../components/DemoModal/DemoModal";
 
 const Products = () => {
   const { t } = useTranslation();
+  const [demoProduct, setDemoProduct] = useState(null);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const demoParam = searchParams.get("demo");
+    if (demoParam) {
+      setDemoProduct(demoParam);
+    }
+
     if (window.location.hash) {
       const el = document.querySelector(window.location.hash);
       if (el) {
@@ -18,9 +26,9 @@ const Products = () => {
     forceScrollTop();
   }, []);
 
-  const handleContactClick = (interest) => (e) => {
+  const handleDemoClick = (productName) => (e) => {
     e.preventDefault();
-    window.location.href = `/#contacto?interes=${encodeURIComponent(interest)}`;
+    setDemoProduct(productName);
   };
 
   const productsList = [
@@ -155,41 +163,44 @@ const Products = () => {
     <div
       className={`${styles.pv} ${styles.k}`}
       role="img"
-      aria-label="Escena animada: Kira traduce la reunión en vivo y, al terminar, genera la minuta"
+      aria-label={t(
+        "productsVisuals.kira.ariaLabel",
+        "Escena animada: Kira traduce la reunión en vivo y, al terminar, genera la minuta"
+      )}
     >
       <div className={styles.kApp}>
         <div className={styles.kBar}>
           <b className={styles.kLogo}>Kira</b>
-          <span className={styles.kOk}><i />CONECTADO</span>
-          <span className={styles.kLang}>EN → ES</span>
-          <span className={styles.kStop}>■ Detener</span>
+          <span className={styles.kOk}><i />{t("productsVisuals.kira.connected", "CONECTADO")}</span>
+          <span className={styles.kLang}>{t("productsVisuals.kira.langPair", "EN → ES")}</span>
+          <span className={styles.kStop}>{t("productsVisuals.kira.stop", "■ Detener")}</span>
           <span className={styles.kTime} />
         </div>
         <div className={styles.kLog}>
           <div className={`${styles.kEnt} ${styles.e1}`}>
-            <small>10:42:07 a. m. · EN → ES</small>
-            <em>Can you send the contract today?</em>
-            <strong>¿Puedes enviar el contrato hoy?</strong>
+            <small>{t("productsVisuals.kira.time1", "10:42:07 a. m. · EN → ES")}</small>
+            <em>{t("productsVisuals.kira.q1Original", "Can you send the contract today?")}</em>
+            <strong>{t("productsVisuals.kira.q1Translated", "¿Puedes enviar el contrato hoy?")}</strong>
           </div>
           <div className={`${styles.kEnt} ${styles.e2}`}>
-            <small>10:42:31 a. m. · EN → ES</small>
-            <em>Sure, I’ll send it this afternoon.</em>
-            <strong>Claro, lo envío esta tarde.</strong>
+            <small>{t("productsVisuals.kira.time2", "10:42:31 a. m. · EN → ES")}</small>
+            <em>{t("productsVisuals.kira.q2Original", "Sure, I’ll send it this afternoon.")}</em>
+            <strong>{t("productsVisuals.kira.q2Translated", "Claro, lo envío esta tarde.")}</strong>
           </div>
           <div className={styles.kLive}>
-            <span className={styles.kEnvivo}><i />EN VIVO</span>
+            <span className={styles.kEnvivo}><i />{t("productsVisuals.kira.live", "EN VIVO")}</span>
             <div className={styles.kSay}>
               <div className={styles.lv}>
-                <em className={styles.v1}>Can you send the contract today?</em>
-                <strong className={styles.v2}>¿Puedes enviar el contrato hoy?</strong>
+                <em className={styles.v1}>{t("productsVisuals.kira.q1Original", "Can you send the contract today?")}</em>
+                <strong className={styles.v2}>{t("productsVisuals.kira.q1Translated", "¿Puedes enviar el contrato hoy?")}</strong>
               </div>
               <div className={styles.lv}>
-                <em className={styles.v3}>Sure, I’ll send it this afternoon.</em>
-                <strong className={styles.v4}>Claro, lo envío esta tarde.</strong>
+                <em className={styles.v3}>{t("productsVisuals.kira.q2Original", "Sure, I’ll send it this afternoon.")}</em>
+                <strong className={styles.v4}>{t("productsVisuals.kira.q2Translated", "Claro, lo envío esta tarde.")}</strong>
               </div>
               <div className={styles.lv}>
-                <em className={styles.v5}>Let’s close the proposal on Friday.</em>
-                <strong className={styles.v6}>Cerremos la propuesta el viernes.</strong>
+                <em className={styles.v5}>{t("productsVisuals.kira.q3Original", "Let’s close the proposal on Friday.")}</em>
+                <strong className={styles.v6}>{t("productsVisuals.kira.q3Translated", "Cerremos la propuesta el viernes.")}</strong>
               </div>
             </div>
           </div>
@@ -201,8 +212,8 @@ const Products = () => {
             <path d="M6 3h8l4 4v14H6z" />
             <path d="M14 3v4h4M9 12h6M9 16h6" />
           </svg>
-          <strong>Minuta de reunión</strong>
-          <span>2 min y 42 seg</span>
+          <strong>{t("productsVisuals.kira.modalTitle", "Minuta de reunión")}</strong>
+          <span>{t("productsVisuals.kira.modalDuration", "2 min y 42 seg")}</span>
           <i className={styles.kmX}>×</i>
         </div>
         <div className={styles.kmSaved}>
@@ -210,26 +221,26 @@ const Products = () => {
             <path d="M7 5l9 7-9 7zM19 5v14" />
           </svg>
           <div>
-            <b>Minuta guardada</b>
-            <p>Podés consultar o exportar el contenido, o reenviarlo por correo.</p>
+            <b>{t("productsVisuals.kira.savedTitle", "Minuta guardada")}</b>
+            <p>{t("productsVisuals.kira.savedDesc", "Podés consultar o exportar el contenido, o reenviarlo por correo.")}</p>
           </div>
         </div>
         <div className={styles.kmDoc}>
-          <h5>Resumen ejecutivo</h5>
-          <p>Se acordó enviar el contrato hoy y cerrar la propuesta el viernes.</p>
-          <h5>Accionables</h5>
+          <h5>{t("productsVisuals.kira.summaryTitle", "Resumen ejecutivo")}</h5>
+          <p>{t("productsVisuals.kira.summaryText", "Se acordó enviar el contrato hoy y cerrar la propuesta el viernes.")}</p>
+          <h5>{t("productsVisuals.kira.actionablesTitle", "Accionables")}</h5>
           <ul>
-            <li><em>A</em>Enviar propuesta</li>
-            <li><em>L</em>Revisar contrato</li>
+            <li><em>A</em>{t("productsVisuals.kira.action1", "Enviar propuesta")}</li>
+            <li><em>L</em>{t("productsVisuals.kira.action2", "Revisar contrato")}</li>
           </ul>
         </div>
         <div className={styles.kmFoot}>
-          <span>Enviar a correo...</span>
-          <b className={styles.bl}>Enviar</b>
-          <b>Copiar</b>
+          <span>{t("productsVisuals.kira.sendEmail", "Enviar a correo...")}</span>
+          <b className={styles.bl}>{t("productsVisuals.kira.sendBtn", "Enviar")}</b>
+          <b>{t("productsVisuals.kira.copyBtn", "Copiar")}</b>
           <b className={styles.md}>.md</b>
           <b className={styles.gr}>.html</b>
-          <b className={styles.bl}>Listo</b>
+          <b className={styles.bl}>{t("productsVisuals.kira.doneBtn", "Listo")}</b>
         </div>
       </div>
     </div>
@@ -239,32 +250,37 @@ const Products = () => {
     <div
       className={`${styles.pv} ${styles.wa}`}
       role="img"
-      aria-label="Escena animada: un cliente pregunta por WhatsApp y Cruxie responde"
+      aria-label={t(
+        "productsVisuals.cruxieWa.ariaLabel",
+        "Escena animada: un cliente pregunta por WhatsApp y Cruxie responde"
+      )}
     >
       <div className={styles.waHead}>
-        <span className={styles.waAv}>T</span>
+        <span className={styles.waAv}>{t("productsVisuals.cruxieWa.businessAvatar", "T")}</span>
         <div>
-          <strong>Tu negocio</strong>
+          <strong>{t("productsVisuals.cruxieWa.businessName", "Tu negocio")}</strong>
           <span className={styles.waSub}>
-            <span className={styles.waOn}>en línea</span>
-            <span className={styles.waTyp}>escribiendo…</span>
+            <span className={styles.waOn}>{t("productsVisuals.cruxieWa.online", "en línea")}</span>
+            <span className={styles.waTyp}>{t("productsVisuals.cruxieWa.typing", "escribiendo…")}</span>
           </span>
         </div>
       </div>
       <div className={styles.waBody}>
-        <span className={styles.waDay}>Hoy</span>
+        <span className={styles.waDay}>{t("productsVisuals.cruxieWa.today", "Hoy")}</span>
         <div className={`${styles.waMsg} ${styles.waIn} ${styles.s1}`}>
-          Hola, ¿hacen envíos a Rosario?
+          {t("productsVisuals.cruxieWa.msgIn", "Hola, ¿hacen envíos a Rosario?")}
           <time>10:42</time>
         </div>
         <div className={`${styles.waMsg} ${styles.waOut} ${styles.s3}`}>
-          ¡Hola! Sí, hacemos envíos. ¿Te paso las opciones?
+          {t("productsVisuals.cruxieWa.msgOut", "¡Hola! Sí, hacemos envíos. ¿Te paso las opciones?")}
           <time>10:42 <em>✓✓</em></time>
         </div>
-        <span className={`${styles.waNote} ${styles.s4}`}>Atendido por Cruxie</span>
+        <span className={`${styles.waNote} ${styles.s4}`}>
+          {t("productsVisuals.cruxieWa.poweredBy", "Atendido por Cruxie")}
+        </span>
       </div>
       <div className={styles.waInput}>
-        <span>Escribí un mensaje</span>
+        <span>{t("productsVisuals.cruxieWa.inputPlaceholder", "Escribí un mensaje")}</span>
         <i>
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <path d="M3 20l18-8L3 4v6l12 2-12 2z" fill="#fff" />
@@ -278,11 +294,14 @@ const Products = () => {
     <div
       className={`${styles.pv} ${styles.vi}`}
       role="img"
-      aria-label="Escena animada: en Vinado se escanea la botella, se registra el legado del vino y se ganan puntos"
+      aria-label={t(
+        "productsVisuals.vinado.ariaLabel",
+        "Escena animada: en Vinado se escanea la botella, se registra el legado del vino y se ganan puntos"
+      )}
     >
       <div className={styles.ph}>
         <div className={`${styles.scr} ${styles.sc1}`}>
-          <div className={styles.scTop}>Escanear botella</div>
+          <div className={styles.scTop}>{t("productsVisuals.vinado.scanTitle", "Escanear botella")}</div>
           <div className={styles.scCam}>
             <svg className={styles.scBottle} viewBox="0 0 60 160" aria-hidden="true">
               <path
@@ -301,8 +320,8 @@ const Products = () => {
             </div>
           </div>
           <div className={styles.scFoot}>
-            <span className={styles.scHint}>Apuntá a la etiqueta</span>
-            <span className={styles.scChip}>✓ Malbec reserva</span>
+            <span className={styles.scHint}>{t("productsVisuals.vinado.scanHint", "Apuntá a la etiqueta")}</span>
+            <span className={styles.scChip}>{t("productsVisuals.vinado.wineFound", "✓ Malbec reserva")}</span>
           </div>
         </div>
         <div className={`${styles.scr} ${styles.sc2}`}>
@@ -310,52 +329,52 @@ const Products = () => {
             <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#5a5963" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Nuevo Legado
+            {t("productsVisuals.vinado.newLegacy", "Nuevo Legado")}
           </div>
           <div className={styles.fBody}>
             <div>
-              <div className={styles.fLab}>1. ¿QUÉ TE PARECIÓ?</div>
+              <div className={styles.fLab}>{t("productsVisuals.vinado.step1", "1. ¿QUÉ TE PARECIÓ?")}</div>
               <div className={styles.fRate}>
                 <div className={`${styles.fCard} ${styles.c1}`}>
                   <svg viewBox="0 0 24 24">
                     <path d="M17 14V2M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z" />
                   </svg>
-                  No me gustó
+                  {t("productsVisuals.vinado.disliked", "No me gustó")}
                 </div>
                 <div className={`${styles.fCard} ${styles.c2}`}>
                   <svg viewBox="0 0 24 24">
                     <path d="M5 12h14" />
                   </svg>
-                  Estuvo bien
+                  {t("productsVisuals.vinado.ok", "Estuvo bien")}
                 </div>
                 <div className={`${styles.fCard} ${styles.c3}`}>
                   <svg viewBox="0 0 24 24">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                   </svg>
-                  ¡Me encantó!
+                  {t("productsVisuals.vinado.loved", "¡Me encantó!")}
                 </div>
               </div>
             </div>
             <div>
-              <div className={styles.fLab}>2. ¿CUÁL FUE EL MOMENTO?</div>
-              <div className={styles.fOpt}>Opcional - Seleccioná todos los que apliquen</div>
+              <div className={styles.fLab}>{t("productsVisuals.vinado.step2", "2. ¿CUÁL FUE EL MOMENTO?")}</div>
+              <div className={styles.fOpt}>{t("productsVisuals.vinado.step2Opt", "Opcional - Seleccioná todos los que apliquen")}</div>
               <div className={styles.fChips}>
-                <span className={styles.fChip}>Cena</span>
-                <span className={`${styles.fChip} ${styles.on}`}>Amigos</span>
-                <span className={styles.fChip}>Pareja</span>
-                <span className={styles.fChip}>Regalo</span>
-                <span className={styles.fChip}>Viaje</span>
-                <span className={styles.fChip}>Casa</span>
+                <span className={styles.fChip}>{t("productsVisuals.vinado.tagDinner", "Cena")}</span>
+                <span className={`${styles.fChip} ${styles.on}`}>{t("productsVisuals.vinado.tagFriends", "Amigos")}</span>
+                <span className={styles.fChip}>{t("productsVisuals.vinado.tagCouple", "Pareja")}</span>
+                <span className={styles.fChip}>{t("productsVisuals.vinado.tagGift", "Regalo")}</span>
+                <span className={styles.fChip}>{t("productsVisuals.vinado.tagTrip", "Viaje")}</span>
+                <span className={styles.fChip}>{t("productsVisuals.vinado.tagHome", "Casa")}</span>
               </div>
             </div>
             <div>
-              <div className={styles.fLab}>3. NOTA PERSONAL</div>
-              <div className={styles.fOpt}>Opcional - ¿Qué lo hizo especial?</div>
-              <div className={styles.fNote}>Ej: Muy frutado, ideal con carnes.</div>
+              <div className={styles.fLab}>{t("productsVisuals.vinado.step3", "3. NOTA PERSONAL")}</div>
+              <div className={styles.fOpt}>{t("productsVisuals.vinado.step3Opt", "Opcional - ¿Qué lo hizo especial?")}</div>
+              <div className={styles.fNote}>{t("productsVisuals.vinado.sampleNote", "Ej: Muy frutado, ideal con carnes.")}</div>
             </div>
           </div>
           <div className={styles.fFoot}>
-            <span className={styles.fBtn}>✓ Guardar Legado</span>
+            <span className={styles.fBtn}>{t("productsVisuals.vinado.saveLegacy", "✓ Guardar Legado")}</span>
           </div>
         </div>
         <div className={`${styles.scr} ${styles.sc3}`}>
@@ -376,20 +395,20 @@ const Products = () => {
               <path d="M5 12.5l4.5 4.5L19 7.5" />
             </svg>
           </div>
-          <h4>¡Guardado!</h4>
-          <p>Tu legado ha sido registrado en tu memoria de vinos</p>
+          <h4>{t("productsVisuals.vinado.savedTitle", "¡Guardado!")}</h4>
+          <p>{t("productsVisuals.vinado.savedDesc", "Tu legado ha sido registrado en tu memoria de vinos")}</p>
           <div className={styles.gold}>
-            <small>GANASTE</small>
+            <small>{t("productsVisuals.vinado.wonBadge", "GANASTE")}</small>
             <div>
               <svg viewBox="0 0 24 24">
                 <path d="M8 4h8v5a4 4 0 01-8 0zM8 6H5v2a3 3 0 003 3M16 6h3v2a3 3 0 01-3 3M12 13v4M8 20h8M9 17h6" />
               </svg>
               <b className={styles.vPts} />
             </div>
-            <em>Puntos</em>
+            <em>{t("productsVisuals.vinado.points", "Puntos")}</em>
           </div>
-          <div className={`${styles.bt} ${styles.w}`}>Volver al Inicio</div>
-          <div className={`${styles.bt} ${styles.g}`}>Compartir en redes</div>
+          <div className={`${styles.bt} ${styles.w}`}>{t("productsVisuals.vinado.backHome", "Volver al Inicio")}</div>
+          <div className={`${styles.bt} ${styles.g}`}>{t("productsVisuals.vinado.share", "Compartir en redes")}</div>
         </div>
       </div>
     </div>
@@ -399,7 +418,10 @@ const Products = () => {
     <div
       className={`${styles.pv} ${styles.cx}`}
       role="img"
-      aria-label="Escena animada: en Cruxie alguien pregunta y el asistente responde citando la fuente"
+      aria-label={t(
+        "productsVisuals.cruxie.ariaLabel",
+        "Escena animada: en Cruxie alguien pregunta y el asistente responde citando la fuente"
+      )}
     >
       <div className={styles.cxHead}>
         <span className={styles.cxBot}>
@@ -414,14 +436,14 @@ const Products = () => {
           <i />
         </span>
         <div>
-          <strong>Asistente de RR. HH.</strong>
-          <small>Gestiona tu contenido</small>
+          <strong>{t("productsVisuals.cruxie.assistantTitle", "Asistente de RR. HH.")}</strong>
+          <small>{t("productsVisuals.cruxie.assistantSubtitle", "Gestiona tu contenido")}</small>
         </div>
-        <span className={styles.cxBtn}>Entrenar Cruxie</span>
+        <span className={styles.cxBtn}>{t("productsVisuals.cruxie.trainBtn", "Entrenar Cruxie")}</span>
       </div>
       <div className={styles.cxBody}>
         <div className={`${styles.cxMsg} ${styles.me} ${styles.s1}`}>
-          ¿Cómo pido el reintegro de viáticos?
+          {t("productsVisuals.cruxie.question", "¿Cómo pido el reintegro de viáticos?")}
         </div>
         <div className={styles.cxAi}>
           <span className={`${styles.cxBot} ${styles.sm} ${styles.s2}`}>
@@ -440,24 +462,27 @@ const Products = () => {
                 <i /><i /><i />
               </span>
               <div className={`${styles.cxMsg} ${styles.ai} ${styles.s3}`}>
-                Sube los comprobantes al portal de gastos, según la política de viáticos.
+                {t(
+                  "productsVisuals.cruxie.answer",
+                  "Sube los comprobantes al portal de gastos, según la política de viáticos."
+                )}
               </div>
             </div>
             <span className={`${styles.src} ${styles.s4}`}>
-              Fuente: Política de viáticos
+              {t("productsVisuals.cruxie.source", "Fuente: Política de viáticos")}
             </span>
           </div>
         </div>
       </div>
       <div className={styles.cxInput}>
         <span>
-          Escribe un mensaje...
+          {t("productsVisuals.cruxie.inputPlaceholder", "Escribe un mensaje...")}
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="9" y="3" width="6" height="12" rx="3" fill="#5aa9f5" />
             <path d="M5 11a7 7 0 0014 0M12 18v3" stroke="#5aa9f5" strokeWidth="2" fill="none" strokeLinecap="round" />
           </svg>
         </span>
-        <b>Enviar</b>
+        <b>{t("productsVisuals.cruxie.sendBtn", "Enviar")}</b>
       </div>
     </div>
   );
@@ -562,7 +587,7 @@ const Products = () => {
                   {prod.ghostText && (
                     <button
                       type="button"
-                      onClick={handleContactClick(prod.name)}
+                      onClick={handleDemoClick(prod.name)}
                       className={prod.visitUrl ? styles.btnGhost : styles.btnPrimary}
                     >
                       {prod.ghostText}
@@ -597,6 +622,12 @@ const Products = () => {
           </a>
         </div>
       </section>
+
+      <DemoModal
+        isOpen={Boolean(demoProduct)}
+        productName={demoProduct || "Kira"}
+        onClose={() => setDemoProduct(null)}
+      />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { validateFormFields } from "../../utils/validation";
 import { EXTERNAL_LINKS } from "../../constants/externalLinks";
+import { sendCustomMail } from "../../services/mailerService";
 import styles from "./ctaBand.module.css";
 
 const MySwal = withReactContent(Swal);
@@ -88,10 +89,10 @@ const CtaBand = () => {
 
     if (validationErrors.length > 0) {
       MySwal.fire({
-        title: "❌ Formulario incompleto",
+        title: t("contact.alerts.incompleteTitle", "❌ Formulario incompleto"),
         html: validationErrors.map((err) => `<p>${err}</p>`).join(""),
         icon: "error",
-        confirmButtonText: "Revisar",
+        confirmButtonText: t("contact.alerts.btnReview", "Revisar"),
         customClass: {
           popup: "swal2-custom-popup",
           confirmButton: "swal2-confirm-button",
@@ -102,57 +103,45 @@ const CtaBand = () => {
 
     setIsSubmitting(true);
 
-    const payload = {
-      name: name.trim(),
-      email: email.trim(),
-      phone: "No especificado",
-      message: `[Interés: ${interest}${company ? ` | Empresa: ${company}` : ""}]\n\n${rawMessage.trim()}`,
-    };
+    const productNames = ["Cruxie", "Cruxie WhatsApp", "Kira", "Vinado"];
+    const isProductDemo = productNames.includes(interest);
 
     try {
-      const response = await fetch(
-        "https://5a3n19yn44.execute-api.us-east-1.amazonaws.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      await sendCustomMail({
+        name: name.trim(),
+        email: email.trim(),
+        company: company.trim(),
+        interest,
+        message: rawMessage.trim(),
+        isDemo: isProductDemo,
+        productName: isProductDemo ? interest : "",
+      });
 
-      if (response.ok) {
-        MySwal.fire({
-          title: "✅ Mensaje enviado",
-          text: "Gracias por contactarnos. Te responderemos para coordinar una primera conversación.",
-          icon: "success",
-          confirmButtonText: "Aceptar",
-          customClass: {
-            popup: "swal2-custom-popup",
-            confirmButton: "swal2-confirm-button",
-          },
-        });
-        form.reset();
-        setSelectedInterest("Un proyecto para la Factory");
-      } else {
-        MySwal.fire({
-          title: "❌ Error",
-          text: "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo o escribinos por WhatsApp.",
-          icon: "error",
-          confirmButtonText: "Cerrar",
-          customClass: {
-            popup: "swal2-custom-popup",
-            confirmButton: "swal2-confirm-button",
-          },
-        });
-      }
+      MySwal.fire({
+        title: t("contact.alerts.successTitle", "✅ Mensaje enviado"),
+        text: t(
+          "contact.alerts.successText",
+          "Gracias por contactarnos. Te responderemos para coordinar una primera reunión."
+        ),
+        icon: "success",
+        confirmButtonText: t("contact.alerts.btnOk", "Aceptar"),
+        customClass: {
+          popup: "swal2-custom-popup",
+          confirmButton: "swal2-confirm-button",
+        },
+      });
+      form.reset();
+      setSelectedInterest("Un proyecto para la Factory");
     } catch (error) {
       console.error("Error sending message:", error);
       MySwal.fire({
-        title: "⚠️ Error de conexión",
-        text: "No se pudo conectar con el servidor. Escribinos directamente por WhatsApp.",
-        icon: "warning",
-        confirmButtonText: "Cerrar",
+        title: t("contact.alerts.errorTitle", "❌ Error al enviar"),
+        text: t(
+          "contact.alerts.errorText",
+          "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo o escribinos por WhatsApp."
+        ),
+        icon: "error",
+        confirmButtonText: t("contact.alerts.btnClose", "Cerrar"),
         customClass: {
           popup: "swal2-custom-popup",
           confirmButton: "swal2-confirm-button",
@@ -223,7 +212,7 @@ const CtaBand = () => {
                 <p className={styles.contactIntro}>
                   {t(
                     "contact.intro",
-                    "Con una idea o un problema alcanza. Te respondemos para coordinar una primera conversación."
+                    "Con una idea o un problema alcanza. Te respondemos para coordinar una primera reunión."
                   )}
                 </p>
                 <div className={styles.altContact}>
@@ -309,15 +298,21 @@ const CtaBand = () => {
                         className={styles.select}
                       >
                         <option value="Un proyecto para la Factory">
-                          Un proyecto para la Factory
+                          {t("contact.interests.factory", "Un proyecto para la Factory")}
                         </option>
-                        <option value="Desarrollo a medida">Desarrollo a medida</option>
-                        <option value="Equipo dedicado">Equipo dedicado</option>
+                        <option value="Desarrollo a medida">
+                          {t("contact.interests.custom", "Desarrollo a medida")}
+                        </option>
+                        <option value="Equipo dedicado">
+                          {t("contact.interests.team", "Equipo dedicado")}
+                        </option>
                         <option value="Cruxie">Cruxie</option>
                         <option value="Cruxie WhatsApp">Cruxie WhatsApp</option>
                         <option value="Kira">Kira</option>
                         <option value="Vinado">Vinado</option>
-                        <option value="Otro tema">Otro tema</option>
+                        <option value="Otro tema">
+                          {t("contact.interests.other", "Otro tema")}
+                        </option>
                       </select>
                     </label>
                   </div>

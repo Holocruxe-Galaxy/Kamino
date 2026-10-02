@@ -38,7 +38,7 @@
     "products": "4 productos",
     "productsLabel": "Propios y en producción",
     "remote": "100% remoto",
-    "remoteLabel": "Un equipo de 10 personas"
+    "remoteLabel": "Un equipo de 13 personas"
   },
   "offer": {
     "title": "Tres formas de trabajar con nosotros.",
@@ -104,6 +104,66 @@
     "talkBtn": "Hablemos",
     "waBtn": "WhatsApp"
   },
+  "contact": {
+    "title": "Hablemos.",
+    "intro": "Con una idea o un problema alcanza. Te respondemos para coordinar una primera reunión.",
+    "altPrompt": "¿Preferís hablar directo?",
+    "altWa": "Escribinos por WhatsApp",
+    "form": {
+      "name": "Nombre y apellido",
+      "namePlaceholder": "Tu nombre y apellido",
+      "email": "Email",
+      "emailPlaceholder": "nombre@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "interest": "¿Sobre qué querés hablar?",
+      "message": "Contanos qué necesitás",
+      "messagePlaceholder": "Describí brevemente tu proyecto, problema o requerimiento...",
+      "submitting": "Enviando mensaje...",
+      "submit": "Enviar mensaje"
+    },
+    "interests": {
+      "factory": "Un proyecto para la Factory",
+      "custom": "Desarrollo a medida",
+      "team": "Equipo dedicado",
+      "cruxie": "Cruxie",
+      "cruxieWa": "Cruxie WhatsApp",
+      "kira": "Kira",
+      "vinado": "Vinado",
+      "other": "Otro tema"
+    },
+    "alerts": {
+      "incompleteTitle": "❌ Formulario incompleto",
+      "successTitle": "✅ Mensaje enviado",
+      "successText": "Gracias por contactarnos. Te responderemos para coordinar una primera reunión.",
+      "errorTitle": "❌ Error al enviar",
+      "errorText": "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo o escribinos por WhatsApp.",
+      "btnReview": "Revisar",
+      "btnOk": "Aceptar",
+      "btnClose": "Cerrar"
+    }
+  },
+  "demoModal": {
+    "badge": "🚀 Demo personalizada",
+    "titlePrefix": "Pedir demo de ",
+    "subtitle": "Completá tus datos y coordinamos una sesión en vivo para mostrarte cómo funciona en tu negocio.",
+    "nameLabel": "Nombre y apellido",
+    "namePlaceholder": "Ej. Juan Pérez",
+    "emailLabel": "Email corporativo",
+    "emailPlaceholder": "juan@empresa.com",
+    "companyLabel": "Empresa u organización",
+    "companyPlaceholder": "Nombre de tu empresa o startup",
+    "messageLabel": "¿Qué te gustaría ver en la demo? (Opcional)",
+    "messagePlaceholder": "Contanos qué desafíos tiene tu equipo o cómo planean utilizar este producto...",
+    "cancelBtn": "Cancelar",
+    "submitBtn": "Solicitar demo",
+    "submittingBtn": "Enviando solicitud...",
+    "successBadge": "✓ ¡Solicitud recibida!",
+    "successGreeting": "¡Gracias, {{name}}!",
+    "successSubtitle": "Recibimos tu pedido de demo de {{product}}. Nos pondremos en contacto contigo a la brevedad para coordinar una sesión personalizada.",
+    "successBtn": "Entendido",
+    "errorGeneral": "Hubo un problema al procesar tu pedido. Por favor intenta de nuevo o escribinos directamente por WhatsApp."
+  },
   "productsPage": {
     "title": "Productos propios,\nen producción.",
     "titlePart1": "Productos propios,",
@@ -164,6 +224,88 @@
       "forDesc": "Negocios con muchas consultas repetidas",
       "visitBtn": "Conocer Cruxie WhatsApp",
       "demoBtn": "Solicitar demo"
+    }
+  },
+  "productsVisuals": {
+    "kira": {
+      "ariaLabel": "Escena animada: Kira traduce la reunión en vivo y, al terminar, genera la minuta",
+      "connected": "CONECTADO",
+      "langPair": "EN → ES",
+      "stop": "■ Detener",
+      "time1": "10:42:07 a. m. · EN → ES",
+      "q1Original": "Can you send the contract today?",
+      "q1Translated": "¿Puedes enviar el contrato hoy?",
+      "time2": "10:42:31 a. m. · EN → ES",
+      "q2Original": "Sure, I’ll send it this afternoon.",
+      "q2Translated": "Claro, lo envío esta tarde.",
+      "live": "EN VIVO",
+      "q3Original": "Let’s close the proposal on Friday.",
+      "q3Translated": "Cerremos la propuesta el viernes.",
+      "modalTitle": "Minuta de reunión",
+      "modalDuration": "2 min y 42 seg",
+      "savedTitle": "Minuta guardada",
+      "savedDesc": "Podés consultar o exportar el contenido, o reenviarlo por correo.",
+      "summaryTitle": "Resumen ejecutivo",
+      "summaryText": "Se acordó enviar el contrato hoy y cerrar la propuesta el viernes.",
+      "actionablesTitle": "Accionables",
+      "action1": "Enviar propuesta",
+      "action2": "Revisar contrato",
+      "sendEmail": "Enviar a correo...",
+      "sendBtn": "Enviar",
+      "copyBtn": "Copiar",
+      "doneBtn": "Listo"
+    },
+    "cruxieWa": {
+      "ariaLabel": "Escena animada: un cliente pregunta por WhatsApp y Cruxie responde",
+      "businessAvatar": "T",
+      "businessName": "Tu negocio",
+      "online": "en línea",
+      "typing": "escribiendo…",
+      "today": "Hoy",
+      "msgIn": "Hola, ¿hacen envíos a Rosario?",
+      "msgOut": "¡Hola! Sí, hacemos envíos. ¿Te paso las opciones?",
+      "poweredBy": "Atendido por Cruxie",
+      "inputPlaceholder": "Escribí un mensaje"
+    },
+    "vinado": {
+      "ariaLabel": "Escena animada: en Vinado se escanea la botella, se registra el legado del vino y se ganan puntos",
+      "scanTitle": "Escanear botella",
+      "scanHint": "Apuntá a la etiqueta",
+      "wineFound": "✓ Malbec reserva",
+      "newLegacy": "Nuevo Legado",
+      "step1": "1. ¿QUÉ TE PARECIÓ?",
+      "disliked": "No me gustó",
+      "ok": "Estuvo bien",
+      "loved": "¡Me encantó!",
+      "step2": "2. ¿CUÁL FUE EL MOMENTO?",
+      "step2Opt": "Opcional - Seleccioná todos los que apliquen",
+      "tagDinner": "Cena",
+      "tagFriends": "Amigos",
+      "tagCouple": "Pareja",
+      "tagGift": "Regalo",
+      "tagTrip": "Viaje",
+      "tagHome": "Casa",
+      "step3": "3. NOTA PERSONAL",
+      "step3Opt": "Opcional - ¿Qué lo hizo especial?",
+      "sampleNote": "Ej: Muy frutado, ideal con carnes.",
+      "saveLegacy": "✓ Guardar Legado",
+      "savedTitle": "¡Guardado!",
+      "savedDesc": "Tu legado ha sido registrado en tu memoria de vinos",
+      "wonBadge": "GANASTE",
+      "points": "Puntos",
+      "backHome": "Volver al Inicio",
+      "share": "Compartir en redes"
+    },
+    "cruxie": {
+      "ariaLabel": "Escena animada: en Cruxie alguien pregunta y el asistente responde citando la fuente",
+      "assistantTitle": "Asistente de RR. HH.",
+      "assistantSubtitle": "Gestiona tu contenido",
+      "trainBtn": "Entrenar Cruxie",
+      "question": "¿Cómo pido el reintegro de viáticos?",
+      "answer": "Sube los comprobantes al portal de gastos, según la política de viáticos.",
+      "source": "Fuente: Política de viáticos",
+      "inputPlaceholder": "Escribe un mensaje...",
+      "sendBtn": "Enviar"
     }
   },
   "landing": {
@@ -238,6 +380,7 @@
     "btn-back-home": "Volver al HOME"
   },
   "common": {
+    "close": "Cerrar",
     "faq_line1": "Preguntas",
     "faq_line2": "Frecuentes"
   },
@@ -359,7 +502,7 @@
       },
       "item4": {
         "date": "Hoy",
-        "desc": "10 personas, 3 países, 4 productos en producción."
+        "desc": "13 personas, 3 países, 4 productos en producción."
       }
     },
     "values": {
@@ -380,5 +523,52 @@
     "team": {
       "title": "El equipo que lo hace posible."
     }
+  },
+  "privacyPage": {
+    "title": "POLÍTICA DE PRIVACIDAD",
+    "sec1Title": "1. Información que recopilamos:",
+    "sec1Intro": "Datos proporcionados por el usuario: (Ejemplo: nombre, correo si hay registro).",
+    "sec1Auto": "Datos automáticos: Podemos recopilar información técnica como el modelo del dispositivo y la versión del sistema operativo.",
+    "sec1Use": "Uso de la Información: Los datos se utilizan exclusivamente para mejorar la experiencia del usuario y el funcionamiento técnico de la app.",
+    "sec1Third": "Terceros: Esta app utiliza servicios de terceros que pueden recopilar información identificativa.",
+    "sec1Security": "Seguridad: Implementamos medidas para proteger sus datos personales, pero recordamos que ningún método de transmisión por internet es 100% seguro.",
+    "sec1Links": "Enlaces a otros sitios: Nuestra app puede contener enlaces a sitios externos no operados por nosotros.",
+    "sec1Minors": "Menores de edad: No recopilamos conscientemente información de niños menores de 13 años.",
+    "sec2": "2. Uso de la Información: Los datos recolectados se destinan exclusivamente a la personalización de la experiencia del usuario, la mejora de las funcionalidades de la app y el soporte técnico. No vendemos ni alquilamos bases de datos personales a terceros con fines comerciales.",
+    "sec3": "3. Principio de Minimización: Nuestra arquitectura técnica sigue este principio. Esto significa que la aplicación solo solicita y procesa el conjunto mínimo de datos estrictamente necesario para que las automatizaciones y soluciones de IA funcionen correctamente. No recolectamos información “de más”. Si un dato no es vital para la ejecución del servicio contratado, no es almacenado en nuestros sistemas.",
+    "sec4": "4. Gestión de Permisos de Integraciones (APIs): Dado que nuestras soluciones permiten conectar diferentes herramientas digitales, el usuario otorga permisos específicos para que HOLOCRUXE interactúe con APIs de terceros. Nosotros no almacenamos las credenciales de acceso maestras; utilizamos tokens de acceso temporales y revocables. El usuario mantiene el control total y puede revocar estos permisos en cualquier momento desde los ajustes de la aplicación o desde la plataforma de terceros vinculada.",
+    "sec5": "5. Proveedores de Servicios y Terceros: Podemos utilizar servicios de terceros (como Google Analytics, AdMob o Firebase) para analizar el tráfico o mostrar anuncios. Estos proveedores tienen sus propias políticas de privacidad y pueden recopilar información técnica de forma automática para cumplir con sus funciones de análisis o publicidad.",
+    "sec6": "6. Seguridad y Retención de Datos: Aplicamos estándares de seguridad razonables para proteger su información contra accesos no autorizados. Los datos personales se conservarán únicamente durante el tiempo necesario para cumplir con las finalidades descritas o mientras el usuario mantenga su cuenta activa en nuestra plataforma.",
+    "sec7": "7. Derechos del Usuario y Menores: El usuario tiene derecho a solicitar el acceso, rectificación o eliminación de sus datos personales enviando una solicitud al correo de contacto. Esta aplicación no está dirigida a menores de 13 años y no recopilamos información de menores de forma consciente; de detectarse, se eliminará de inmediato.",
+    "sec8": "8. Procesamiento de Datos Financieros: Nuestra aplicación utiliza la pasarela de pagos oficial de Google Play para procesar transacciones. CRUXIE no recolecta, almacena ni tiene acceso a los datos de sus tarjetas de crédito, cuentas bancarias o información de facturación sensible. Toda esa información es gestionada exclusivamente por Google bajo sus propios estándares de seguridad y privacidad. Solo recibimos confirmaciones de pago exitosas para habilitar el acceso al contenido adquirido.",
+    "sec9": "9. Transferencia Internacional de Datos: Dado que utilizamos servicios de infraestructura global (como servidores de Google), su información puede ser procesada en países fuera de su lugar de residencia. Al usar la app, usted consiente esta transferencia siempre bajo estándares de seguridad adecuados.",
+    "sec10Title": "10. Base Legal para el Procesamiento: Procesamos sus datos basándonos en:",
+    "sec10a": "Su consentimiento explícito al aceptar esta política;",
+    "sec10b": "La necesidad de ejecutar el contrato de servicio; y",
+    "sec10c": "El interés legítimo para mejorar la seguridad y calidad de la aplicación.",
+    "sec11": "11. Retención de Información: Conservaremos sus datos personales únicamente mientras su cuenta esté activa o sea necesario para prestarle el servicio. Una vez finalizada la relación, los datos podrán ser bloqueados o eliminados, salvo que la ley exija su conservación por un periodo mayor.",
+    "sec12": "12. Comunicaciones y Notificaciones: Podemos enviarle correos electrónicos técnicos o administrativos relacionados con el funcionamiento de la app. Las comunicaciones comerciales solo se enviarán si usted ha optado por recibirlas previamente.",
+    "sec13": "13. Integridad y Modificaciones: Esta política constituye el acuerdo completo sobre privacidad entre el usuario y HOLOCRUXE. Cualquier cambio futuro será publicado en esta misma URL y, en caso de cambios sensibles, se notificará a través de la interfaz de la aplicación.",
+    "sec14Pre": "14. Eliminación de Cuenta: El usuario puede solicitar la eliminación definitiva de su cuenta y todos sus datos asociados en cualquier momento enviando un correo a ",
+    "sec14Post": ". Procesaremos la solicitud en un plazo máximo de 7 días.",
+    "lastUpdated": "Última actualización: 27-01-2026"
+  },
+  "termsPage": {
+    "title": "TÉRMINOS Y CONDICIONES DE USO",
+    "sec1": "1. Aceptación: Al descargar, instalar y usar CRUXIE el usuario acepta de manera íntegra estos términos. Si no está de acuerdo con alguna de las cláusulas aquí expuestas, debe abstenerse de utilizar la aplicación.",
+    "sec2": "2. Propiedad Intelectual: Todo el contenido visual, interfaces, logotipos, diseños y código fuente son propiedad exclusiva de HOLOCRUXE. Queda prohibida la reproducción total o parcial sin autorización previa.",
+    "sec3": "3. Uso Permitido y Restricciones: El usuario se compromete a utilizar la app de manera legal. Queda estrictamente prohibido intentar realizar ingeniería inversa, extraer el código, distribuir versiones modificadas o utilizar la plataforma para cualquier actividad que vulnere derechos de terceros o leyes vigentes.",
+    "sec4": "4. Limitación de Responsabilidad: CRUXIE se proporciona \"tal cual\" y según disponibilidad. No garantizamos que el servicio sea ininterrumpido o libre de errores. HOLOCRUXE no será responsable de daños directos, indirectos o incidentales que resulten del uso o la imposibilidad de uso de la herramienta.",
+    "sec5": "5. Suspensión de Servicio y Actualizaciones: Nos reservamos el derecho de modificar, suspender o retirar cualquier función de la aplicación en cualquier momento y sin previo aviso. Asimismo, estos términos pueden actualizarse para reflejar cambios legales o técnicos; el uso continuado de la app tras dichos cambios implica la aceptación de los nuevos términos.",
+    "sec6": "6. Pagos, Suscripciones y Reembolsos: Al adquirir CRUXIE el usuario acepta pagar el precio estipulado en la Google Play Store. Todas las transacciones financieras son procesadas de forma segura por Google Play. Las políticas de reembolso se rigen por las normativas de Google, y cualquier solicitud de devolución deberá gestionarse a través de su plataforma. HOLOCRUXE se reserva el derecho de cambiar los precios en el futuro, previa notificación a través de la tienda o la propia aplicación.",
+    "sec7": "7. Responsabilidad de la Cuenta: El usuario es el único responsable de mantener la confidencialidad de sus credenciales de acceso. Cualquier actividad realizada bajo su cuenta se considerará responsabilidad suya.",
+    "sec8": "8. Responsabilidad por el Uso de la Información: La aplicación proporciona herramientas y datos que el usuario debe interpretar bajo su propio criterio. HOLOCRUXE no será responsable de las decisiones tomadas por el usuario ni de los resultados obtenidos mediante el uso de la app. Cualquier consecuencia derivada de un uso negligente, ilegal o contrario a las instrucciones de la plataforma será responsabilidad exclusiva del usuario final.",
+    "sec9": "9. Requisitos del Sistema y Actualizaciones: Para el correcto funcionamiento de CRUXIE, se requiere un dispositivo compatible y acceso a internet. Nos reservamos el derecho de lanzar actualizaciones obligatorias para mejorar la seguridad o funcionalidad; el usuario acepta que la falta de actualización puede limitar el uso de la aplicación.",
+    "sec10": "10. Uso de Servicios de Terceros: La aplicación puede integrarse con servicios externos (como Google, Notion, OneDrive, etc). El usuario acepta que el uso de dichas funciones también está sujeto a los términos de esos terceros, sobre los cuales no tenemos control ni responsabilidad.",
+    "sec11": "11. Exclusión de Garantías: No garantizamos que la aplicación sea compatible con todos los dispositivos o proveedores de red. El uso de la app es bajo el propio riesgo del usuario.",
+    "sec12": "12. Jurisdicción y Ley Aplicable: Estos términos se rigen por las leyes de Argentina. Cualquier conflicto relacionado con el uso de la aplicación será sometido a la jurisdicción de los tribunales ordinarios de la Ciudad de Córdoba, Argentina.",
+    "sec13": "13. Divisibilidad: Si alguna de estas cláusulas es declarada nula o inválida por un tribunal competente, las demás cláusulas permanecerán vigentes y seguirán produciendo plenos efectos legales.",
+    "sec14": "14. Prohibición de Actividades Fraudulentas y Abuso: Queda estrictamente prohibido el uso de emuladores, scripts automatizados o cualquier software de terceros que altere el funcionamiento normal de CRUXIE. Cualquier intento de manipular los sistemas de pago, saltarse las restricciones de seguridad o realizar compras fraudulentas resultará en el baneo inmediato y permanente del usuario, sin derecho a reembolso de las cantidades abonadas previamente.",
+    "sec15": "15. Terminación del Servicio: Nos reservamos el derecho de suspender o cancelar el acceso de un usuario a la aplicación de forma discrecional, especialmente en casos de violación de estos términos, conducta fraudulenta o por requerimiento de las autoridades legales."
   }
 }

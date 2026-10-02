@@ -23,11 +23,9 @@ const LanguageButton = ({ language, changeLanguage, isSelected }) => (
 const LanguageMenu = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-  useEffect(() => {
-    setSelectedLanguage(i18n.language);
-  }, [i18n.language]);
+  const rawLang = (i18n.language || "es").split("-")[0].toLowerCase();
+  const selectedLanguage = languages.includes(rawLang) ? rawLang : "es";
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
