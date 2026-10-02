@@ -11,7 +11,7 @@ const FooterBrand = () => {
   return (
     <div className={styles.brandCol}>
       <NavLink to="/" className={styles.logoLink} aria-label="Holocruxe, inicio">
-        <img src="/footer.png" alt="Holocruxe" className={styles.logoImg} />
+        <img src="/images/footer.png" alt="Holocruxe" className={styles.logoImg} />
       </NavLink>
       <p className={styles.tagline}>
         {t(
