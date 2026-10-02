@@ -6,9 +6,9 @@ on:
       - main
 
 env: 
-  VITE_CAPTCHA_KEY: ${{ secrets.VITE_CAPTCHA_KEY }}
-  VITE_BACK_CONECTION: ${{ secrets.VITE_BACK_CONECTION}}
-  VITE_WEBURL: ${{ secrets.VITE_WEBURL}}
+  VITE_MAILING_ENDPOINT: ${{ secrets.VITE_MAILING_ENDPOINT }}
+  VITE_MAILING_RECIPIENT: ${{ secrets.VITE_MAILING_RECIPIENT }}
+  VITE_WHATSAPP_PHONE: ${{ secrets.VITE_WHATSAPP_PHONE}}
 
 jobs: 
   build:
@@ -19,10 +19,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set Node Enviro
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: 'npm'
