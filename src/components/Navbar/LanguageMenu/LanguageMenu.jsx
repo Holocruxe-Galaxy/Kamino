@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"; 
-import styles from "../Navbar.module.css"; 
+import styles from "./LanguageMenu.module.css"; 
 import { useTranslation } from "react-i18next";
 import esFlag from "../../../icons/Espana.svg";
 import enFlag from "../../../icons/english.svg";
