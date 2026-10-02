@@ -1,0 +1,57 @@
+/* Columna Marca / Logo */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoLink {
+  display: inline-block;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.logoImg {
+  max-width: 190px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tagline {
+  color: #b9bbe0;
+  margin-top: 14px;
+  max-width: 32ch;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Redes sociales */
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.socialBtn {
+  color: #b9bbe0;
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.socialBtn:hover {
+  color: #ffffff;
+  background: rgba(0, 97, 233, 0.35);
+  border-color: #349aef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 154, 239, 0.35);
+}

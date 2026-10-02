@@ -1,0 +1,46 @@
+/* Fila legal inferior */
+.legal {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: #b9bbe0;
+  font-size: 0.88rem;
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+}
+
+.legal p {
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legalLinks a {
+  color: #b9bbe0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+  color: #ffffff;
+}
+
+.separator {
+  color: rgba(185, 187, 224, 0.4);
+}
+
+@media (max-width: 540px) {
+  .legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
