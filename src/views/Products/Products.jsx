@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Products.module.css";
 import { forceScrollTop } from "../../utils/scroll";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 
 const Products = () => {
   const { t } = useTranslation();
@@ -49,7 +50,7 @@ const Products = () => {
         "productsPage.kira.forDesc",
         "Equipos con muchas reuniones, también en otros idiomas"
       ),
-      visitUrl: "https://kira.holocruxe.com",
+      visitUrl: EXTERNAL_LINKS.KIRA,
       visitText: t("productsPage.kira.visitBtn", "Visitar Kira"),
       ghostText: t("productsPage.kira.demoBtn", "Pedir demo"),
       isEven: false,
@@ -112,7 +113,7 @@ const Products = () => {
         "productsPage.vinado.forDesc",
         "Quienes disfrutan el vino, y bodegas o vinotecas que quieren llegar a ellos"
       ),
-      visitUrl: "https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR",
+      visitUrl: EXTERNAL_LINKS.GOOGLE_PLAY_VINADO,
       visitText: t("productsPage.vinado.visitBtn", "Descargar Vinado"),
       ghostText: t("productsPage.vinado.partnerBtn", "Soy bodega o vinoteca"),
       isEven: false,
@@ -143,7 +144,7 @@ const Products = () => {
         "productsPage.cruxie.forDesc",
         "Empresas con conocimiento repartido entre personas y documentos"
       ),
-      visitUrl: "https://cruxie.holocruxe.com",
+      visitUrl: EXTERNAL_LINKS.CRUXIE,
       visitText: t("productsPage.cruxie.visitBtn", "Visitar Cruxie"),
       ghostText: t("productsPage.cruxie.demoBtn", "Pedir demo"),
       isEven: true,
@@ -587,7 +588,7 @@ const Products = () => {
             )}
           </h2>
           <a
-            href="https://factory.holocruxe.com/"
+            href={EXTERNAL_LINKS.FACTORY}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btnPrimary}

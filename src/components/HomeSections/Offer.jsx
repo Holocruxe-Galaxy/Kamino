@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./offer.module.css";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 
 const Offer = () => {
   const { t } = useTranslation();
@@ -41,7 +42,7 @@ const Offer = () => {
               </p>
             </div>
             <a
-              href="https://factory.holocruxe.com/"
+              href={EXTERNAL_LINKS.FACTORY}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnWhite}

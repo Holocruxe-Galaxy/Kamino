@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./hero.module.css";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -157,7 +158,7 @@ const Hero = () => {
 
               {/* Nodos Periféricos con Colores de Acento y Pulso Blur como H central */}
               <a
-                href="https://factory.holocruxe.com/"
+                href={EXTERNAL_LINKS.FACTORY}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}
@@ -197,7 +198,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://kira.holocruxe.com"
+                href={EXTERNAL_LINKS.KIRA}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}
@@ -267,7 +268,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://cruxie.holocruxe.com"
+                href={EXTERNAL_LINKS.CRUXIE}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}
@@ -304,7 +305,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR"
+                href={EXTERNAL_LINKS.GOOGLE_PLAY_VINADO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.node}

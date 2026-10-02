@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./homeProducts.module.css";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 
 const HomeProducts = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const HomeProducts = () => {
         "Toma notas, traduce en tiempo real y arma la minuta de tus reuniones."
       ),
       linkText: t("homeProducts.kiraBtn", "Visitar Kira"),
-      url: "https://kira.holocruxe.com",
+      url: EXTERNAL_LINKS.KIRA,
     },
     {
       name: "Cruxie WhatsApp",
@@ -40,7 +41,7 @@ const HomeProducts = () => {
         "Registrá y puntuá los vinos que tomás, sumá puntos y conseguí descuentos."
       ),
       linkText: t("homeProducts.vinadoBtn", "Descargar Vinado"),
-      url: "https://play.google.com/store/apps/details?id=com.vinado.app&hl=es_AR",
+      url: EXTERNAL_LINKS.GOOGLE_PLAY_VINADO,
     },
     {
       name: "Cruxie",
@@ -52,7 +53,7 @@ const HomeProducts = () => {
         "Asistentes de IA entrenados con el conocimiento de tu organización."
       ),
       linkText: t("homeProducts.cruxieBtn", "Visitar Cruxie"),
-      url: "https://cruxie.holocruxe.com",
+      url: EXTERNAL_LINKS.CRUXIE,
     },
   ];
 

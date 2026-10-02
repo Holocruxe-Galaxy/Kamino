@@ -13,6 +13,8 @@ import PrivacyView from './views/Legal/PrivacyView';
 import VinadoDeleteAccount from './views/VinadoDeleteAccount/VinadoDeleteAccount';
 import { forceScrollTop } from './utils/scroll';
 
+import { ROUTES } from "./constants/routes";
+
 function App() {
   const location = useLocation();
   const hasVisited = sessionStorage.getItem('visited');
@@ -50,18 +52,18 @@ function App() {
     >
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/proyects" element={<Projects />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/factory" element={<Blog />} />
-        <Route path="/privacy" element={<PrivacyView />} />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/holocruxe/TermsOfUse" element={<TermsOfUse />} />
-        <Route path="/holocruxe/PrivacyView" element={<PrivacyView />} />
-        <Route path="/vinado/delete-account" element={<VinadoDeleteAccount />} />      
+        <Route path={ROUTES.HOME} element={<Landing />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.PRODUCTS} element={<Products />} />
+        <Route path={ROUTES.FAQS} element={<Faqs />} />
+        <Route path={ROUTES.PROJECTS_LEGACY} element={<Projects />} />
+        <Route path={ROUTES.PROJECTS} element={<Projects />} />
+        <Route path={ROUTES.FACTORY} element={<Blog />} />
+        <Route path={ROUTES.PRIVACY} element={<PrivacyView />} />
+        <Route path={ROUTES.TERMS} element={<TermsOfUse />} />
+        <Route path={ROUTES.TERMS_LEGACY} element={<TermsOfUse />} />
+        <Route path={ROUTES.PRIVACY_LEGACY} element={<PrivacyView />} />
+        <Route path={ROUTES.VINADO_DELETE_ACCOUNT} element={<VinadoDeleteAccount />} />      
       </Routes>
       <Footer />
     </div>

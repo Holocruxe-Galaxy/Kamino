@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Projects.module.css";
 import { forceScrollTop } from "../../utils/scroll";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -177,7 +178,7 @@ const Projects = () => {
               {t("projectsPage.actions.contact", "Contanos tu proyecto")}
             </button>
             <a
-              href="https://factory.holocruxe.com/"
+              href={EXTERNAL_LINKS.FACTORY}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnGhost}

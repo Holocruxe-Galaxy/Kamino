@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { validateFormFields } from "../../helpers/validateForm";
+import { EXTERNAL_LINKS } from "../../constants/externalLinks";
 import styles from "./ctaBand.module.css";
 
 const MySwal = withReactContent(Swal);
@@ -194,7 +195,7 @@ const CtaBand = () => {
             </svg>
           </button>
           <a
-            href="https://wa.me/5490000000000"
+            href={EXTERNAL_LINKS.WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btnGhost}
@@ -230,7 +231,7 @@ const CtaBand = () => {
                     {t("contact.altPrompt", "¿Preferís hablar directo?")}
                   </span>
                   <a
-                    href="https://wa.me/5490000000000"
+                    href={EXTERNAL_LINKS.WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.waLink}
