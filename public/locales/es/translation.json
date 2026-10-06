@@ -38,7 +38,7 @@
     "products": "4 productos",
     "productsLabel": "Propios y en producción",
     "remote": "100% remoto",
-    "remoteLabel": "Un equipo de 13 personas"
+    "remoteLabel": " "
   },
   "offer": {
     "title": "Tres formas de trabajar con nosotros.",
@@ -506,7 +506,7 @@
       },
       "item4": {
         "date": "Hoy",
-        "desc": "13 personas, 3 países, 4 productos en producción."
+        "desc": "3 países, 4 productos en producción."
       }
     },
     "values": {

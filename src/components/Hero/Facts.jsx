@@ -19,7 +19,7 @@ const Facts = () => {
     },
     {
       stat: t("facts.remote", "100% remoto"),
-      label: t("facts.remoteLabel", "Un equipo de 13 personas"),
+      label: t("facts.remoteLabel"),
     },
   ];
 
