@@ -26,7 +26,7 @@ describe('Pruebas de caracterización de About (código actual)', () => {
       { name: 'Bruno', role: 'AI Automation Developer', image: '/images/Bruno.webp' },
       { name: 'Daf', role: 'Growth Marketing Manager', image: '/images/Daff.webp' },
       { name: 'Gera', role: 'Sales Manager', image: '/images/Gera.webp' },
-      { name: 'Gabi', role: 'Product & UX/UI Designer', image: '/images/Gabi.webp' },
+      { name: 'Gaby', role: 'Product & UX/UI Designer', image: '/images/Gabi.webp' },
       { name: 'Gianni', role: 'Frontend Developer', image: '/images/Gianni.webp' },
     ];
 

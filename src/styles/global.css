@@ -125,10 +125,10 @@ body {
   }
 }
 
-.appContainer {
+/* .appContainer {
   -webkit-animation: hide 7.5s;
   animation: hide 7.5s;
-}
+} */
 
 body {
   background-color: var(--color-bg);
